@@ -1,4 +1,4 @@
-package micdoodle8.mods.galacticraft.venus;
+package mods.galacticraft.venus;
 
 import java.io.File;
 import java.util.logging.Level;
