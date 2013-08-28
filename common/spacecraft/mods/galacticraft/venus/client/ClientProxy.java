@@ -1,7 +1,7 @@
-package starcraft.mods.galacticraft.venus.client;
+package spacecraft.mods.galacticraft.venus.client;
 
 import net.minecraftforge.client.MinecraftForgeClient;
-import mods.galacticraft.venus.CommonProxy;
+import spacecraft.mods.galacticraft.venus.CommonProxy;
 
 public class ClientProxy extends CommonProxy {
         

@@ -1,4 +1,4 @@
-package starcraft.mods.galacticraft.venus.wgen;
+package spacecraft.mods.galacticraft.venus.wgen;
 
 import java.util.Random;
 

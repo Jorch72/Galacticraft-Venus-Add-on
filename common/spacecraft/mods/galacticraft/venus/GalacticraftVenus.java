@@ -1,4 +1,4 @@
-package starcraft.mods.galacticraft.venus;
+package spacecraft.mods.galacticraft.venus;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler; // used in 1.6.2
@@ -21,7 +21,7 @@ public class GalacticraftVenus {
         public static GalacticraftVenus instance;
         
         // Says where the client and server 'proxy' code is loaded.
-        @SidedProxy(clientSide="mods.galacticraft.venus.client.ClientProxy", serverSide="tutorial.generic.CommonProxy")
+        @SidedProxy(clientSide="spacecraft.mods.galacticraft.venus.client.ClientProxy", serverSide="spacecraft.mods.galacticraft.venus.CommonProxy")
         public static CommonProxy proxy;
         
         @EventHandler // used in 1.6.2

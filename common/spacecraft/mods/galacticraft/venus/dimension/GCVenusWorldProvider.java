@@ -1,12 +1,12 @@
-package starcraft.mods.galacticraft.venus.dimension;
+package spacecraft.mods.galacticraft.venus.dimension;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
-import micdoodle8.mods.galacticraft.venus.GCVenusConfigManager;
-import micdoodle8.mods.galacticraft.venus.wgen.GCVenusChunkProvider;
-import micdoodle8.mods.galacticraft.venus.wgen.GCVenusWorldChunkManager;
-import micdoodle8.mods.galacticraft.venus.GCVenusConfigManager;
-import micdoodle8.mods.galacticraft.venus.wgen.GCVenusChunkProvider;
-import micdoodle8.mods.galacticraft.venus.wgen.GCVenusWorldChunkManager;
+import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
+import spacecraft.mods.galacticraft.venus.wgen.GCVenusChunkProvider;
+import spacecraft.mods.galacticraft.venus.wgen.GCVenusWorldChunkManager;
+import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
+import spacecraft.mods.galacticraft.venus.wgen.GCVenusChunkProvider;
+import spacecraft.mods.galacticraft.venus.wgen.GCVenusWorldChunkManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;

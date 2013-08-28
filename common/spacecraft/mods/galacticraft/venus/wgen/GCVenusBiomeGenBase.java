@@ -1,4 +1,4 @@
-package starcraft.mods.galacticraft.venus.wgen;
+package spacecraft.mods.galacticraft.venus.wgen;
 
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityZombie;
