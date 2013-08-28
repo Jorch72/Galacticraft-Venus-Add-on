@@ -1,4 +1,4 @@
-package mods.galacticraft.venus.client;
+package starcraft.mods.galacticraft.venus.client;
 
 import net.minecraftforge.client.MinecraftForgeClient;
 import mods.galacticraft.venus.CommonProxy;

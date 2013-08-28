@@ -1,4 +1,4 @@
-package mods.galacticraft.venus;
+package starcraft.mods.galacticraft.venus;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler; // used in 1.6.2
