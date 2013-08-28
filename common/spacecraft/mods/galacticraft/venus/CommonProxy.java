@@ -1,4 +1,4 @@
-package mods.galacticraft.venus;
+package starcraft.mods.galacticraft.venus;
 
 public class CommonProxy {
 
