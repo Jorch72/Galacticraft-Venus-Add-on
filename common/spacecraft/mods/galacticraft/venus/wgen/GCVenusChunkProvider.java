@@ -8,7 +8,6 @@ import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySkeleton;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityZombie;
-import micdoodle8.mods.galacticraft.core.wgen.GCCoreChunk;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
 import net.minecraft.entity.EnumCreatureType;
@@ -165,28 +164,6 @@ public class GCVenusChunkProvider extends ChunkProviderGenerate
 				}
 			}
 		}
-	}
-
-	@Override
-	public Chunk provideChunk(int par1, int par2)
-	{
-		this.rand.setSeed(par1 * 341873128712L + par2 * 132897987541L);
-		final int[] ids = new int[32768];
-		final int[] meta = new int[32768];
-		this.generateTerrain(par1, par2, ids, meta);
-		this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, par1 * 16, par2 * 16, 16, 16);
-		this.replaceBlocksForBiome(par1, par2, ids, meta, this.biomesForGeneration);
-
-		final Chunk var4 = new GCCoreChunk(this.worldObj, ids, meta, par1, par2);
-		final byte[] var5 = var4.getBiomeArray();
-
-		for (int var6 = 0; var6 < var5.length; ++var6) 
-		{
-			var5[var6] = (byte) this.biomesForGeneration[var6].biomeID;
-		}
-		
-		var4.generateSkylightMap();
-		return var4;
 	}
 
 	@Override
@@ -457,11 +434,6 @@ public class GCVenusChunkProvider extends ChunkProviderGenerate
 		return true;
 	}
 
-	@Override
-	public boolean unload100OldestChunks()
-	{
-		return false;
-	}
 
 	@Override
 	public boolean canSave()

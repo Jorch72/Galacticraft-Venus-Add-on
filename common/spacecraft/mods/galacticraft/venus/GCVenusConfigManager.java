@@ -1,10 +1,9 @@
 package spacecraft.mods.galacticraft.venus;
 
 import java.io.File;
-import java.util.logging.Level;
-
+import micdoodle8.mods.galacticraft.core.GCLog;
 import net.minecraftforge.common.Configuration;
-import cpw.mods.fml.common.FMLLog;
+import net.minecraftforge.common.Property;
 
 
 public class GCVenusConfigManager 
@@ -16,12 +15,12 @@ public class GCVenusConfigManager
 	// DIMENSIONS
 	public static int dimensionIDVenus;
 	
-	// BLOCKS
-	public static int idBlock;
+	// Rocket
+	public static int TierLevel;
 	
 	public GCVenusConfigManager(File file)
 	{
-		if (!loaded)
+		if (!GCVenusConfigManager.loaded)
 		{
 			configuration = new Configuration(file);
 			this.setDefaultValues();
@@ -34,18 +33,23 @@ public class GCVenusConfigManager
 		{
 	        configuration.load();
 	        
-	        dimensionIDVenus = 				configuration.get("Dimensions", 										"Venus Dimension ID",				-30)		.getInt(-26);
-	    
-	        idBlock = 						configuration.get(configuration.CATEGORY_BLOCK, 						"idBlockVenus", 					199)	.getInt(199);
+	        GCVenusConfigManager.dimensionIDVenus = GCVenusConfigManager.configuration.get("Dimensions", "Venus Dimension ID", -45).getInt(-45);
+	        
+	        GCVenusConfigManager.TierLevel = GCVenusConfigManager.configuration.get("Rocket", "Tier Level", 2).getInt(2);
+
 		}
 		catch (final Exception e)
 		{
-			FMLLog.log(Level.SEVERE, e, "Galacticraft Venus has a problem loading it's configuration");
+			 GCLog.severe("Problem loading moon config (\"venus.conf\")");
 		}
 		finally 
 		{
-			configuration.save();
-			loaded = true;
+            if (GCVenusConfigManager.configuration.hasChanged())
+            {
+                GCVenusConfigManager.configuration.save();
+            }
+
+            GCVenusConfigManager.loaded = true;
 		}
     }
 }

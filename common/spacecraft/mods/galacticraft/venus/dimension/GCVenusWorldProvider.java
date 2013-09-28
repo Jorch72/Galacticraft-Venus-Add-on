@@ -228,8 +228,20 @@ public class GCVenusWorldProvider extends WorldProvider implements IGalacticraft
 	}
 
 	@Override
-	public float getMeteorFrequency() 
+	public double getMeteorFrequency() 
 	{
 		return 10F;
+	}
+
+	@Override
+	public double getFuelUsageMultiplier() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean canSpaceshipTierPass(int tier) {
+		// TODO Auto-generated method stub
+		return tier >= GCVenusConfigManager.TierLevel;
 	}
 }
