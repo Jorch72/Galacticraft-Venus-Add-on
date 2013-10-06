@@ -1,6 +1,7 @@
 package spacecraft.mods.galacticraft.venus.wgen;
 
 import net.minecraft.world.biome.BiomeGenBase;
+import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
 
 public class GCVenusBiomeGenFlat extends GCVenusBiomeGenBase
 {
@@ -11,6 +12,9 @@ public class GCVenusBiomeGenFlat extends GCVenusBiomeGenBase
         this.setColor(16711680);
         this.minHeight = 45.0F;
         this.maxHeight = 50.F;
+        this.topBlock = (byte)GalacticraftVenus.VenusGrass.blockID;
+		this.fillerBlock = (byte)GalacticraftVenus.VenusDirt.blockID;
+
     }
     
     private BiomeGenBase setTemperatureRainfall2(float par1, float par2)

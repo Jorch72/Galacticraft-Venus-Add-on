@@ -235,13 +235,18 @@ public class GCVenusWorldProvider extends WorldProvider implements IGalacticraft
 
 	@Override
 	public double getFuelUsageMultiplier() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 5;
 	}
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
 		// TODO Auto-generated method stub
 		return tier >= GCVenusConfigManager.TierLevel;
+	}
+
+	@Override
+	public float getFallDamageModifier() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }

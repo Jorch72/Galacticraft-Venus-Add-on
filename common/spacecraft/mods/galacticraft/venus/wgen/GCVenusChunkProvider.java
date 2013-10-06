@@ -16,12 +16,12 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.SpawnListEntry;
-import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.structure.MapGenMineshaft;
 import net.minecraft.world.gen.structure.MapGenVillage;
+import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
 
 public class GCVenusChunkProvider extends ChunkProviderGenerate
 {
@@ -83,9 +83,9 @@ public class GCVenusChunkProvider extends ChunkProviderGenerate
 
 	public void replaceBlocksForBiome(int par1, int par2, int[] arrayOfIDs, int[] arrayOfMeta, BiomeGenBase[] par4ArrayOfBiomeGenBase)
 	{
-		final short topBlockID = (short) Block.stone.blockID;
+		final short topBlockID = (short) GalacticraftVenus.VenusGrass.blockID;
 		final byte topBlockMeta = 0;
-		final short fillBlockID = (short) Block.dirt.blockID;
+		final short fillBlockID = (short) GalacticraftVenus.VenusDirt.blockID;
 		final byte fillBlockMeta = 1;
 		
 		final int var5 = 20;
@@ -123,7 +123,7 @@ public class GCVenusChunkProvider extends ChunkProviderGenerate
 						{
 							var13 = -1;
 						} 
-						else if (var18 == Block.stone.blockID)
+						else if (var18 == GalacticraftVenus.VenusDirt.blockID)
 						{
 							arrayOfMeta[index] = 1;
 							
@@ -132,12 +132,12 @@ public class GCVenusChunkProvider extends ChunkProviderGenerate
 								if (var12 <= 0)
 								{
 									var14 = 0;
-									var15 = (short) Block.stone.blockID;
+									var15 = (short) GalacticraftVenus.VenusDirt.blockID;
 								} 
 								else if (var16 >= var5 - -16 && var16 <= var5 + 1)
 								{
 									var14 = topBlockID;
-									var15 = (short) Block.stone.blockID;
+									var15 = (short) GalacticraftVenus.VenusDirt.blockID;
 								}
 
 								var13 = var12;

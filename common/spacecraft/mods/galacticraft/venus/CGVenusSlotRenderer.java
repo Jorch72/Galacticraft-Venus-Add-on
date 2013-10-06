@@ -11,7 +11,7 @@ public class CGVenusSlotRenderer implements ICelestialBodyRenderer
 	@Override
 	public ResourceLocation getPlanetSprite() 
 	{
-        return new ResourceLocation("GalacticraftVenus:textures/gui/planets/Venus.png");
+        return new ResourceLocation("gcvenus:textures/gui/planets/Venus.png");
 	}
 
 	@Override
