@@ -45,23 +45,35 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		//Adding Creative Tab
 		public static CreativeTabs tabVenus = new CreativeTabs("tabVenus") {
 			public ItemStack getIconItemStack() {
-				return new ItemStack(VenusGrass, 1, 0);
+				return new ItemStack(VenusDirt, 1, 0);
 			}
 		};
 		
-		//Adding Blocks
-		//VenusGrass
+		//Adds Blocks
+		//Venus Grass
 		public final static Block VenusGrass = new VenusBlock(610, Material.ground)
 		.setHardness(0.4F).setStepSound(Block.soundGrassFootstep)
 		.setUnlocalizedName("galacticraftvenus:VenusGrass")
 		.setTextureName("gcvenus:veunsgrass_top");
 		
-		//VenusDirt
+		//Venus Dirt
 		public final static Block VenusDirt = new VenusBlock(611, Material.ground)
 		.setHardness(0.3F).setStepSound(Block.soundGrassFootstep)
 		.setUnlocalizedName("galacticraftvenus:VenusDirt")
 		.setTextureName("gcvenus:veunsdirt");
         
+		//Venus Stone
+		public final static Block VenusStone = new VenusStone(612, Material.ground)
+		.setHardness(1.5F).setStepSound(Block.soundGrassFootstep)
+		.setUnlocalizedName("galacticraftvenus:VenusStone")
+		.setTextureName("gcvenus:Stone");
+		
+		//Venus Cobblestone
+		public final static Block VenusCobblestone = new VenusStone(613, Material.ground)
+		.setHardness(1.5F).setStepSound(Block.soundGrassFootstep)
+		.setUnlocalizedName("galacticraftvenus:VenusCobblestone")
+		.setTextureName("gcvenus:Cobblestone");
+		
         @SidedProxy(clientSide="spacecraft.mods.galacticraft.venus.client.ClientProxy", serverSide="spacecraft.mods.galacticraft.venus.CommonProxy")
         public static CommonProxy proxy;
         
@@ -78,13 +90,18 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
         {
                 proxy.registerRenderers();
  		        //Registering CreativeTab Name
-                LanguageRegistry.instance().addStringLocalization("itemGroup.tabVenus", "en_US", "Venus");
+                LanguageRegistry.instance().addStringLocalization("itemGroup.tabVenus", "en_US", "Spacecraft Venus");
                 //Registering Blocks
                 GameRegistry.registerBlock(VenusGrass, "galacticraftvenus:VenusGrass");
                 GameRegistry.registerBlock(VenusDirt, "galacticraftvenus:VenusDirt");
+				GameRegistry.registerBlock(VenusStone, "galacticraftvenus:VenusStone");
+				GameRegistry.registerBlock(VenusCobblestone, "galacticraftvenus:VenusCobblestone");
                 //Registering Names
                 LanguageRegistry.addName(VenusGrass, "Venus Grass");
                 LanguageRegistry.addName(VenusDirt, "Venus Dirt");
+				LanguageRegistry.addName(VenusStone, "Venus Stone");
+                LanguageRegistry.addName(VenusCobblestone, "Venus Cobblestone");
+
         }
         
         @EventHandler

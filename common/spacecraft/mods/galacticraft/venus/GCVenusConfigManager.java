@@ -15,6 +15,8 @@ public class GCVenusConfigManager
 	// Blocks
 	public static int VenusGrassID;
 	public static int VenusDirtID;
+	public static int VenusStoneID;
+	public static int VenusCobblestoneID;
 	
 	// DIMENSIONS
 	public static int dimensionIDVenus;
@@ -44,6 +46,10 @@ public class GCVenusConfigManager
 	        GCVenusConfigManager.VenusGrassID = GCVenusConfigManager.configuration.get("Blocks", "Venus Grass ID", 504).getInt(504);
 	        
 	        GCVenusConfigManager.VenusDirtID= GCVenusConfigManager.configuration.get("Blocks", "Venus Dirt ID", 505).getInt(505);
+			
+			GCVenusConfigManager.VenusStoneID= GCVenusConfigManager.configuration.get("Blocks", "Venus Stone ID", 506).getInt(506);
+			
+			GCVenusConfigManager.VenusCobblestoneID= GCVenusConfigManager.configuration.get("Blocks", "Venus Cobblestone ID", 507).getInt(507);
 
 		}
 		catch (final Exception e)
