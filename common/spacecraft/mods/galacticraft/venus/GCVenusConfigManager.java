@@ -48,7 +48,7 @@ public class GCVenusConfigManager
 		}
 		catch (final Exception e)
 		{
-			 GCLog.severe("Problem loading moon config (\"venus.conf\")");
+			 GCLog.severe("Problem loading Venus config (\"venus.conf\")");
 		}
 		finally 
 		{
