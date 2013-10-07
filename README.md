@@ -13,9 +13,9 @@ Contributors
 
 Super4Ever4MC - Main Coder & Textures
 
-Mattparks (AKA GalacticraftGamer) - Coder & Textures
+Mattparks (AKA GalacticraftGamer) - Coder, Music & Textures
 
-lewa_j - Codeing assistance 
+lewa_j - Codeing Assistance 
 
 Flashy3 - Textures
 
@@ -28,12 +28,10 @@ Goals
 
 3, Create The Items
 
-4, Fix Bugs
+4, Add dungeon
 
-5, Add dungeon
+5, Add More Fetchers 
 
-6, Add More Fetchers 
+6, Menu name not showing up & Planet icon not using set texture
 
-7, Menu name not showing up & Planet icon not using set texture
-
-8, Create the planet sky
+7, Create the planet sky

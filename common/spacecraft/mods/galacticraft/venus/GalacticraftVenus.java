@@ -58,7 +58,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		
 		//Venus Dirt
 		public final static Block VenusDirt = new VenusBlock(611, Material.ground)
-		.setHardness(0.3F).setStepSound(Block.soundDirtFootstep)
+		.setHardness(0.3F).setStepSound(Block.soundSandFootstep)
 		.setUnlocalizedName("VenusDirt")
 		.setTextureName("gcvenus:venusDirt");
         
