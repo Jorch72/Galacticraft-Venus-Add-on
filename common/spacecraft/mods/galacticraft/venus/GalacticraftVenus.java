@@ -53,26 +53,50 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		//Venus Grass
 		public final static Block VenusGrass = new VenusBlock(610, Material.ground)
 		.setHardness(0.4F).setStepSound(Block.soundGrassFootstep)
-		.setUnlocalizedName("galacticraftvenus:VenusGrass")
-		.setTextureName("gcvenus:veunsgrass_top");
+		.setUnlocalizedName("VenusGrass")
+		.setTextureName("gcvenus:veunsGrass");
 		
 		//Venus Dirt
 		public final static Block VenusDirt = new VenusBlock(611, Material.ground)
-		.setHardness(0.3F).setStepSound(Block.soundGrassFootstep)
-		.setUnlocalizedName("galacticraftvenus:VenusDirt")
-		.setTextureName("gcvenus:veunsdirt");
+		.setHardness(0.3F).setStepSound(Block.soundDirtFootstep)
+		.setUnlocalizedName("VenusDirt")
+		.setTextureName("gcvenus:venusDirt");
         
 		//Venus Stone
 		public final static Block VenusStone = new VenusStone(612, Material.ground)
-		.setHardness(1.5F).setStepSound(Block.soundGrassFootstep)
-		.setUnlocalizedName("galacticraftvenus:VenusStone")
+		.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
+		.setUnlocalizedName("VenusStone")
 		.setTextureName("gcvenus:Stone");
 		
 		//Venus Cobblestone
 		public final static Block VenusCobblestone = new VenusStone(613, Material.ground)
-		.setHardness(1.5F).setStepSound(Block.soundGrassFootstep)
-		.setUnlocalizedName("galacticraftvenus:VenusCobblestone")
+		.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
+		.setUnlocalizedName("VenusCobblestone")
 		.setTextureName("gcvenus:Cobblestone");
+		
+		//Venus Gem Block
+		public final static Block VenusGem = new VenusBlock(614, Material.ground)
+		.setHardness(2.5F).setStepSound(Block.soundStoneFootstep)
+		.setUnlocalizedName("VenusGem")
+		.setTextureName("gcvenus:gemBlock");
+		
+		//Venus Meteor Block
+		public final static Block VenusMeteor = new VenusBlock(615, Material.ground)
+		.setHardness(3.5F).setStepSound(Block.soundStoneFootstep)
+		.setUnlocalizedName("VenusMeteor")
+		.setTextureName("gcvenus:meteorBlock");
+		
+		//Venus Brick
+		public final static Block VenusBrick = new VenusBlock(616, Material.ground)
+		.setHardness(5.0F).setStepSound(Block.soundStoneFootstep)
+		.setUnlocalizedName("VenusBrick")
+		.setTextureName("gcvenus:venusBrick");
+		
+		//Venus Sulfer
+		public final static Block VenusSulfer = new VenusBlock(617, Material.ground)
+		.setHardness(2.5F).setStepSound(Block.soundStoneFootstep)
+		.setUnlocalizedName("VenusSulfer")
+		.setTextureName("gcvenus:venusSulfer");
 		
         @SidedProxy(clientSide="spacecraft.mods.galacticraft.venus.client.ClientProxy", serverSide="spacecraft.mods.galacticraft.venus.CommonProxy")
         public static CommonProxy proxy;
@@ -92,15 +116,23 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
  		        //Registering CreativeTab Name
                 LanguageRegistry.instance().addStringLocalization("itemGroup.tabVenus", "en_US", "Spacecraft Venus");
                 //Registering Blocks
-                GameRegistry.registerBlock(VenusGrass, "galacticraftvenus:VenusGrass");
-                GameRegistry.registerBlock(VenusDirt, "galacticraftvenus:VenusDirt");
-				GameRegistry.registerBlock(VenusStone, "galacticraftvenus:VenusStone");
-				GameRegistry.registerBlock(VenusCobblestone, "galacticraftvenus:VenusCobblestone");
+                GameRegistry.registerBlock(VenusGrass, "VenusGrass");
+                GameRegistry.registerBlock(VenusDirt, "VenusDirt");
+				GameRegistry.registerBlock(VenusStone, "VenusStone");
+				GameRegistry.registerBlock(VenusCobblestone, "VenusCobblestone");
+				GameRegistry.registerBlock(VenusGem, "VenusGem");
+				GameRegistry.registerBlock(VenusMeteor, "VenusMeteor");
+				GameRegistry.registerBlock(VenusBrick, "VenusBrick");
+				GameRegistry.registerBlock(VenusSulfer, "VenusBSulfer");
                 //Registering Names
                 LanguageRegistry.addName(VenusGrass, "Venus Grass");
                 LanguageRegistry.addName(VenusDirt, "Venus Dirt");
 				LanguageRegistry.addName(VenusStone, "Venus Stone");
                 LanguageRegistry.addName(VenusCobblestone, "Venus Cobblestone");
+				LanguageRegistry.addName(VenusGem, "Venus Gem");
+				LanguageRegistry.addName(VenusMeteor, "Venus Meteor");
+                LanguageRegistry.addName(VenusBrick, "Venus Brick");
+				LanguageRegistry.addName(VenusSulfer, "Venus Sulfer");
 
         }
         
