@@ -9,6 +9,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import spacecraft.mods.galacticraft.venus.blocks.VenusBlock;
+import spacecraft.mods.galacticraft.venus.blocks.VenusGrassBlock;
 import spacecraft.mods.galacticraft.venus.dimension.GCVenusWorldProvider;
 import spacecraft.mods.galacticraft.venus.blocks.VenusStone;
 import cpw.mods.fml.common.Mod;
@@ -52,7 +53,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		
 		//Adds Blocks
 		//Venus Grass
-		public final static Block VenusGrass = new VenusBlock(610, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("spacecraft:venusGrass");
+		public final static Block VenusGrass = new VenusGrassBlock(610, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("spacecraft:venusGrass");
 		
 		//Venus Dirt
 		public final static Block VenusDirt = new VenusBlock(611, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("spacecraft:venusDirt");
