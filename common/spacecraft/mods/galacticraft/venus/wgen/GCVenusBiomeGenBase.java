@@ -1,13 +1,14 @@
 package spacecraft.mods.galacticraft.venus.wgen;
 
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityZombie;
+import net.minecraft.util.MathHelper;
+import net.minecraft.world.ColorizerGrass;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.biome.SpawnListEntry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class GCVenusBiomeGenBase extends BiomeGenBase
 {
-    public static final BiomeGenBase VenusFlat = new GCVenusBiomeGenFlat(103).setBiomeName("VenusFlat");
+    public static final BiomeGenBase venusFlat = new GCVenusBiomeGenFlat(102).setBiomeName("venus");
 
     public GCVenusBiomeGenBase(int var1)
     {
@@ -15,20 +16,27 @@ public class GCVenusBiomeGenBase extends BiomeGenBase
         this.spawnableMonsterList.clear();
         this.spawnableWaterCreatureList.clear();
         this.spawnableCreatureList.clear();
-        this.spawnableMonsterList.add(new SpawnListEntry(GCCoreEntityZombie.class, 10, 4, 4));
-        this.spawnableMonsterList.add(new SpawnListEntry(GCCoreEntitySpider.class, 10, 4, 4));
         this.rainfall = 0F;
-    }
-    
-    @Override
-	public GCVenusBiomeGenBase setColor(int var1)
-    {
-        return (GCVenusBiomeGenBase)super.setColor(var1);
     }
 
     @Override
-	public float getSpawningChance()
+    public GCVenusBiomeGenBase setColor(int var1)
     {
-        return 0.01F;
+        return (GCVenusBiomeGenBase) super.setColor(var1);
+    }
+
+    @Override
+    public float getSpawningChance()
+    {
+        return 0.1F;
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public int getBiomeGrassColor()
+    {
+        double d0 = MathHelper.clamp_float(this.getFloatTemperature(), 0.0F, 1.0F);
+        double d1 = MathHelper.clamp_float(this.getFloatRainfall(), 0.0F, 1.0F);
+        return this.getModdedBiomeGrassColor(ColorizerGrass.getGrassColor(d0, d1));
     }
 }

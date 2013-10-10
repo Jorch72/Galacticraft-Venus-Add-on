@@ -1,6 +1,9 @@
-package spacecraft.mods.venus.blocks;
+package spacecraft.mods.galacticraft.venus.blocks;
 
 import java.util.Random;
+
+import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 

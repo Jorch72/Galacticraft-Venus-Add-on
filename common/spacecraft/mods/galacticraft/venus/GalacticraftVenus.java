@@ -10,6 +10,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import spacecraft.mods.galacticraft.venus.blocks.VenusBlock;
 import spacecraft.mods.galacticraft.venus.dimension.GCVenusWorldProvider;
+import spacecraft.mods.galacticraft.venus.blocks.VenusStone;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -51,28 +52,28 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		
 		//Adds Blocks
 		//Venus Grass
-		public final static Block VenusGrass = new VenusBlock(610, Material.ground)
+		public final static Block VenusGrass = new VenusBlock(610, Material.grass)
 		.setHardness(0.4F).setStepSound(Block.soundGrassFootstep)
 		.setUnlocalizedName("VenusGrass")
-		.setTextureName("gcvenus:veunsGrass");
+		.setTextureName("gcvenus:venusGrass");
 		
 		//Venus Dirt
-		public final static Block VenusDirt = new VenusBlock(611, Material.ground)
-		.setHardness(0.3F).setStepSound(Block.soundSandFootstep)
+		public final static Block VenusDirt = new VenusBlock(611, Material.grass)
+		.setHardness(0.3F).setStepSound(Block.soundGravelFootstep)
 		.setUnlocalizedName("VenusDirt")
 		.setTextureName("gcvenus:venusDirt");
         
 		//Venus Stone
-		public final static Block VenusStone = new VenusStone(612, Material.ground)
+		public final static Block VenusStone = new VenusBlock(612, Material.rock)
 		.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 		.setUnlocalizedName("VenusStone")
-		.setTextureName("gcvenus:Stone");
+		.setTextureName("gcvenus:venusStone");
 		
 		//Venus Cobblestone
-		public final static Block VenusCobblestone = new VenusStone(613, Material.ground)
+		public final static Block VenusCobblestone = new VenusBlock(613, Material.rock)
 		.setHardness(1.5F).setStepSound(Block.soundStoneFootstep)
 		.setUnlocalizedName("VenusCobblestone")
-		.setTextureName("gcvenus:Cobblestone");
+		.setTextureName("gcvenus:venusCobblestone");
 		
 		//Venus Gem Block
 		public final static Block VenusGem = new VenusBlock(614, Material.ground)
@@ -96,7 +97,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		public final static Block VenusSulfer = new VenusBlock(617, Material.ground)
 		.setHardness(2.5F).setStepSound(Block.soundStoneFootstep)
 		.setUnlocalizedName("VenusSulfer")
-		.setTextureName("gcvenus:venusSulfer");
+		.setTextureName("gcvenus:sulferBlock");
 		
         @SidedProxy(clientSide="spacecraft.mods.galacticraft.venus.client.ClientProxy", serverSide="spacecraft.mods.galacticraft.venus.CommonProxy")
         public static CommonProxy proxy;

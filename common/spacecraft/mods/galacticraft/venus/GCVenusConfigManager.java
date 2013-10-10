@@ -25,6 +25,12 @@ public class GCVenusConfigManager
 	// DIMENSIONS
 	public static int dimensionIDVenus;
 	
+	// GENERAL
+//    public static boolean disableCheeseMoon; //Disables blocks (copy and rename for more)
+
+    public static boolean generateOtherMods; //disables other mods from generating
+    public static boolean disableVenusVillageGen;
+	
 	// Rocket
 	public static int TierLevel;
 	
@@ -45,7 +51,7 @@ public class GCVenusConfigManager
 	        
 	        GCVenusConfigManager.dimensionIDVenus = GCVenusConfigManager.configuration.get("Dimensions", "Venus Dimension ID", -45).getInt(-45);
 	        
-	        GCVenusConfigManager.TierLevel = GCVenusConfigManager.configuration.get("Rocket", "Tier Level", 2).getInt(2);
+	        GCVenusConfigManager.TierLevel = GCVenusConfigManager.configuration.get("Rocket", "Tier Level", 1).getInt(1);
 	        
 	        GCVenusConfigManager.VenusGrassID = GCVenusConfigManager.configuration.get("Blocks", "Venus Grass ID", 504).getInt(504);
 	        

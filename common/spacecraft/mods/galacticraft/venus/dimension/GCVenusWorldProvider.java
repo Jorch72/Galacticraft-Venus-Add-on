@@ -1,9 +1,8 @@
 package spacecraft.mods.galacticraft.venus.dimension;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
-import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
-import spacecraft.mods.galacticraft.venus.wgen.GCVenusChunkProvider;
-import spacecraft.mods.galacticraft.venus.wgen.GCVenusWorldChunkManager;
+import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
+import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
 import spacecraft.mods.galacticraft.venus.wgen.GCVenusChunkProvider;
 import spacecraft.mods.galacticraft.venus.wgen.GCVenusWorldChunkManager;
@@ -13,20 +12,19 @@ import net.minecraft.util.Vec3;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
-import cpw.mods.fml.relauncher.SideOnly;
 import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
-public class GCVenusWorldProvider extends WorldProvider implements IGalacticraftWorldProvider
+public class GCVenusWorldProvider extends WorldProvider implements IGalacticraftWorldProvider, ISolarLevel
 {
-    private final float[] colorsSunriseSunset = new float[4];
-    
-	public GCVenusWorldProvider()
+    @Override
+    public void setDimension(int var1)
     {
-        this.setDimension(GCVenusConfigManager.dimensionIDVenus);
-        this.dimensionId = GCVenusConfigManager.dimensionIDVenus;
+        this.dimensionId = var1;
+        super.setDimension(var1);
     }
-	
-	@Override
+
+    @Override
     protected void generateLightBrightnessTable()
     {
         final float var1 = 0.0F;
@@ -38,41 +36,36 @@ public class GCVenusWorldProvider extends WorldProvider implements IGalacticraft
         }
     }
 
-	@Override
+    @Override
     public float[] calcSunriseSunsetColors(float var1, float var2)
     {
-		return null;
+        return null;
     }
 
-	@Override
+    @Override
     public void registerWorldChunkManager()
     {
-        this.worldChunkMgr = new GCVenusWorldChunkManager(this.worldObj, 0F);
+        this.worldChunkMgr = new GCVenusWorldChunkManager();
     }
-    
+
+    @SideOnly(Side.CLIENT)
     @Override
-	@SideOnly(Side.CLIENT)
-    public boolean doesXZShowFog(int par1, int par2)
+    public Vec3 getFogColor(float var1, float var2)
     {
-        return false;
+        return this.worldObj.getWorldVec3Pool().getVecFromPool((double) 0F / 255F, (double) 0F / 255F, (double) 0F / 255F);
     }
 
-	@SideOnly(Side.CLIENT)
-	 public Vec3 getFogColor(float var1, float var2)
-    {
-		return this.worldObj.getWorldVec3Pool().getVecFromPool((double)000F / 255F, (double)000F / 255F, (double)00F / 255F);
-    }
-
-     public Vec3 getSkyColor(Entity cameraEntity, float partialTicks)
+    @Override
+    public Vec3 getSkyColor(Entity cameraEntity, float partialTicks)
     {
         return this.worldObj.getWorldVec3Pool().getVecFromPool(0, 0, 0);
     }
-	
-	@Override
+
+    @Override
     public float calculateCelestialAngle(long par1, float par3)
     {
-		final int var4 = (int) (par1 % 1407000L);
-		float var5 = (var4 + par3) / 1407000.0F - 0.25F;
+        final int var4 = (int) (par1 % 24278L);
+        float var5 = (var4 + par3) / 24278.0F - 0.25F;
 
         if (var5 < 0.0F)
         {
@@ -85,54 +78,17 @@ public class GCVenusWorldProvider extends WorldProvider implements IGalacticraft
         }
 
         final float var6 = var5;
-        var5 = 1.0F - (float)((Math.cos(var5 * Math.PI) + 1.0D) / 2.0D);
+        var5 = 1.0F - (float) ((Math.cos(var5 * Math.PI) + 1.0D) / 2.0D);
         var5 = var6 + (var5 - var6) / 3.0F;
         return var5;
     }
-	
-	public float calculatePhobosAngle(long par1, float par3)
-	{
-		return this.calculateCelestialAngle(par1, par3) * 3000;
-	}
-	
-	public float calculateDeimosAngle(long par1, float par3)
-	{
-		return this.calculatePhobosAngle(par1, par3) * 0.0000000001F;
-	}
-
-	@Override
-    public IChunkProvider createChunkGenerator()
-    {
-        return new GCVenusChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
-    }
-	
-	@Override
-	public void updateWeather()
-	{
-        this.worldObj.getWorldInfo().setRainTime(0);
-        this.worldObj.getWorldInfo().setRaining(false);
-        this.worldObj.getWorldInfo().setThunderTime(0);
-        this.worldObj.getWorldInfo().setThundering(false);
-	}
 
     @Override
-	public boolean isSkyColored()
-    {
-        return true;
-    }
-    
-    @Override
-	public double getHorizon()
-    {
-    	return 44.0F;
-    }
-    
-    @Override
-	@SideOnly(Side.CLIENT)
+    @SideOnly(Side.CLIENT)
     public float getStarBrightness(float par1)
     {
         final float var2 = this.worldObj.getCelestialAngle(par1);
-        float var3 = 1.0F - (MathHelper.cos(var2 * (float)Math.PI * 2.0F) * 2.0F + 0.25F);
+        float var3 = 1.0F - (MathHelper.cos(var2 * (float) Math.PI * 2.0F) * 2.0F + 0.25F);
 
         if (var3 < 0.0F)
         {
@@ -147,106 +103,154 @@ public class GCVenusWorldProvider extends WorldProvider implements IGalacticraft
         return var3 * var3 * 0.5F + 0.3F;
     }
 
+    public float calculatePhobosAngle(long par1, float par3)
+    {
+        return this.calculateCelestialAngle(par1, par3) * 3000;
+    }
+
+    public float calculateDeimosAngle(long par1, float par3)
+    {
+        return this.calculatePhobosAngle(par1, par3) * 0.0000000001F;
+    }
+
     @Override
-	public int getAverageGroundLevel()
+    public IChunkProvider createChunkGenerator()
+    {
+        return new GCVenusChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
+    }
+
+    @Override
+    public void updateWeather()
+    {
+        this.worldObj.getWorldInfo().setRainTime(0);
+        this.worldObj.getWorldInfo().setRaining(false);
+        this.worldObj.getWorldInfo().setThunderTime(0);
+        this.worldObj.getWorldInfo().setThundering(false);
+    }
+
+    @Override
+    public boolean isSkyColored()
+    {
+        return false;
+    }
+
+    @Override
+    public double getHorizon()
+    {
+        return 44.0D;
+    }
+
+    @Override
+    public int getAverageGroundLevel()
     {
         return 44;
     }
-    
+
     @Override
-	public boolean isSurfaceWorld()
+    public boolean isSurfaceWorld()
     {
-        return false;
+        return true;
     }
 
     @Override
     public boolean canCoordinateBeSpawn(int var1, int var2)
     {
-    	return true;
-//        int var3 = this.worldObj.getFirstUncoveredBlock(var1, var2);
-//        return var3 == GCMarsBlocks.marsGrass.blockID;
+        return true;
     }
-    
+
     @Override
     public boolean canRespawnHere()
     {
-        return false;
+        return !GCCoreConfigManager.forceOverworldRespawn;
     }
-    
+
     @Override
     public String getSaveFolder()
     {
-    	return "DIM" + GCVenusConfigManager.dimensionIDVenus;
+        return "DIM" + GCVenusConfigManager.dimensionIDVenus;
     }
 
     @Override
-	public String getWelcomeMessage()
+    public String getWelcomeMessage()
     {
-        return "Entering Venus";
+        return "Entering The Venus";
     }
 
     @Override
-	public String getDepartMessage()
+    public String getDepartMessage()
     {
-        return "Leaving Venus";
+        return "Leaving The Venus";
     }
 
-	@Override
-	public String getDimensionName() 
-	{
-		return "Venus";
-	}
+    @Override
+    public String getDimensionName()
+    {
+        return "Venus";
+    }
 
-	@Override
+    @Override
     public boolean canSnowAt(int x, int y, int z)
     {
         return false;
     }
 
-	@Override
+    @Override
     public boolean canBlockFreeze(int x, int y, int z, boolean byWater)
     {
         return false;
     }
-    
+
     @Override
-	public boolean canDoLightning(Chunk chunk)
-    {
-        return false;
-    }
-    
-    @Override
-	public boolean canDoRainSnowIce(Chunk chunk)
+    public boolean canDoLightning(Chunk chunk)
     {
         return false;
     }
 
-	@Override
-	public float getGravity() 
-	{
-		return 0.005F;
-	}
+    @Override
+    public boolean canDoRainSnowIce(Chunk chunk)
+    {
+        return false;
+    }
 
-	@Override
-	public double getMeteorFrequency() 
-	{
-		return 10F;
-	}
+    @Override
+    public float getGravity()
+    {
+        return 0.004F;
+    }
 
-	@Override
-	public double getFuelUsageMultiplier() {
-		return 5;
-	}
+    @Override
+    public int getHeight()
+    {
+        return 800;
+    }
 
-	@Override
-	public boolean canSpaceshipTierPass(int tier) {
-		// TODO Auto-generated method stub
-		return tier >= GCVenusConfigManager.TierLevel;
-	}
+    @Override
+    public double getMeteorFrequency()
+    {
+        return 7.0D;
+    }
 
-	@Override
-	public float getFallDamageModifier() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+    @Override
+    public double getFuelUsageMultiplier()
+    {
+        return 0.7D;
+    }
+
+    @Override
+    public double getSolarEnergyMultiplier()
+    {
+        return 1.4D;
+    }
+
+    @Override
+    public boolean canSpaceshipTierPass(int tier)
+    {
+        return tier > 0;
+    }
+
+    @Override
+    public float getFallDamageModifier()
+    {
+        return 0.18F;
+    }
 }
