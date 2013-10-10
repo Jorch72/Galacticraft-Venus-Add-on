@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
 import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
 import spacecraft.mods.galacticraft.venus.wgen.dungeon.GCVenusRoomBoss;
 import spacecraft.mods.galacticraft.venus.wgen.dungeon.GCVenusRoomChests;
@@ -35,11 +36,11 @@ import net.minecraftforge.common.ForgeDirection;
 
 public class GCVenusChunkProvider extends ChunkProviderGenerate
 {
-    final short topBlockID = (short) GCMoonBlocks.blockMoon.blockID;
+    final short topBlockID = (short) GalacticraftVenus.VenusGrass.blockID;
     final byte topBlockMeta = 5;
-    final short fillBlockID = (short) GCMoonBlocks.blockMoon.blockID;
+    final short fillBlockID = (short) GalacticraftVenus.VenusDirt.blockID;
     final byte fillBlockMeta = 3;
-    final short lowerBlockID = (short) GCMoonBlocks.blockMoon.blockID;
+    final short lowerBlockID = (short) GalacticraftVenus.VenusStone.blockID;
     final byte lowerBlockMeta = 4;
 
     private final Random rand;
