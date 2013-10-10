@@ -6,7 +6,7 @@ Venus Add-on Adds the planet Venus to Galacticraft
 Status
 =========================
 
-Funtining, MC 1.6.4, Wgen only generates bedrock.
+Working, MC 1.6.4, Wgen only generates Moon blocks.
 
 Contributors
 =========================
@@ -22,16 +22,18 @@ Flashy3 - Textures
 Goals
 =========================
 
-1, Fix The Wgen
+1, Fix the wgen
 
-2, Create The Blocks
+2, Add more blocks
 
-3, Create The Items
+3, Create the items
 
-4, Add dungeon
+4, Improve dungeon
 
-5, Add More Fetchers 
+5, Add Venus boss
 
-6, Menu name not showing up & Planet icon not using set texture
+6, Add more fetchers 
 
-7, Create the planet sky
+7, Menu name not showing up & Planet icon not using set texture
+
+8, Create the planet sky (remove clouds)
