@@ -19,9 +19,12 @@ public class VenusGrassBlock extends Block{
             this.setCreativeTab(GalacticraftVenus.tabVenus);
     }
 
-	public boolean isTerraformable(World world, int x, int y, int z) {
-		return true;
-	}
+        @Override
+        public boolean isTerraformable(World world, int x, int y, int z)
+        {
+            return world.getBlockMetadata(x, y, z) == 5 && world.getBlockId(x, y + 1, z) == 0;
+        }
+
 	public boolean isSealed(World world, int x, int y, int z) {
 		return true;
 	}
