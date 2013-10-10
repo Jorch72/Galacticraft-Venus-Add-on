@@ -19,7 +19,12 @@ CHANGELOG
 
 /src/minecraft/*
 !/src/minecraft/spacecraft/
-!/src/minecraft/assets/spacecraft
+!/src/minecraft/assets/
+/src/minecraft/assets/forge
+/src/minecraft/assets/galacticraftcore
+/src/minecraft/assets/galacticraftmars
+/src/minecraft/assets/galacticraftmoon
+/src/minecraft/assets/minecraft
 !/src/minecraft/META-INF/
 !/src/minecraft/starcraft_at.cfg
 !/src/minecraft/mcmod.info

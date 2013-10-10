@@ -1,0 +1,16 @@
+# Galacticraft Venus Language File = UNITED STATES ENGLISH
+
+# GENERAL ITEMS
+
+# FOOD
+
+# TOOLS
+
+# ARMOR
+
+# BLOCKS
+
+# GUI
+dimension.Venus.name=Venus
+itemGroup.GalacticraftVenus=Galacticraft Venus
+gui.choosePlanet.desc.venus=Habitable#Volcanic Activity#Gravity: 90%
