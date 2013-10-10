@@ -14,7 +14,7 @@ public class VenusBlock extends Block {
 	public boolean isSealed(World world, int x, int y, int z) {
 		return true;
 	}
-	public boolean isValueable(int metadata) {
-		return true;
+	public boolean isValueable(World world, int x, int y, int z) {
+		return world.getBlockMetadata(x, y, z) == 5 && world.getBlockId(x, y + 1, z) == 0;
 	}
 }
