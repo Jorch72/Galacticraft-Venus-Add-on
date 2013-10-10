@@ -50,31 +50,49 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				return new ItemStack(VenusDirt, 1, 0);
 			}
 		};
+
+		//Block Venus Grass
+		public final static Block VenusGrass = new VenusGrassBlock(5004) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("spacecraft:venusGrass");
 		
-		//Adds Blocks
-		//Venus Grass
-		public final static Block VenusGrass = new VenusGrassBlock(610, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("spacecraft:venusGrass");
-		
-		//Venus Dirt
-		public final static Block VenusDirt = new VenusBlock(611, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("spacecraft:venusDirt");
+		//Block Venus Dirt
+		public final static Block VenusDirt = new VenusBlock(5005, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("spacecraft:venusDirt");
         
-		//Venus Stone
-		public final static Block VenusStone = new VenusBlock(612, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusStone") .setTextureName("spacecraft:venusStone");
+		//Block Venus Stone
+		public final static Block VenusStone = new VenusBlock(5006, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusStone") .setTextureName("spacecraft:venusStone");
 		
-		//Venus Cobblestone
-		public final static Block VenusCobblestone = new VenusBlock(613, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCobblestone") .setTextureName("spacecraft:venusCobblestone");
+		//Block Venus Cobblestone
+		public final static Block VenusCobblestone = new VenusBlock(5007, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCobblestone") .setTextureName("spacecraft:venusCobblestone");
 		
-		//Venus Gem Block
-		public final static Block VenusGem = new VenusBlock(614, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGem") .setTextureName("spacecraft:gemBlock");
+		//Block Venus Gem Block
+		public final static Block VenusGem = new VenusBlock(5008, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGem") .setTextureName("spacecraft:gemBlock");
 		
-		//Venus Meteor Block
-		public final static Block VenusMeteor = new VenusBlock(615, Material.ground) .setHardness(3.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteor") .setTextureName("spacecraft:meteorBlock");
+		//Block Venus Meteor Block
+		public final static Block VenusMeteor = new VenusBlock(5009, Material.ground) .setHardness(3.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteor") .setTextureName("spacecraft:meteorBlock");
 		
-		//Venus Brick
-		public final static Block VenusBrick = new VenusBlock(616, Material.ground) .setHardness(5.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBrick") .setTextureName("spacecraft:venusBrick");
+		//Block Venus Brick
+		public final static Block VenusBrick = new VenusBlock(5010, Material.ground) .setHardness(5.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBrick") .setTextureName("spacecraft:venusBrick");
 		
-		//Venus Sulfer
-		public final static Block VenusSulfer = new VenusBlock(617, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulfer") .setTextureName("spacecraft:sulferBlock");
+		//Block Venus Sulfer
+		public final static Block VenusSulfer = new VenusBlock(5011, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulfer") .setTextureName("spacecraft:sulferBlock");
+		
+		//Block Venus Sulfer Ore
+		public final static Block VenusSulferOre = new VenusBlock(5012, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulferOre") .setTextureName("spacecraft:venusSulferOre");
+		
+		//Block Venus Meteor Ore
+		public final static Block VenusMeteorOre = new VenusBlock(5013, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteorOre") .setTextureName("spacecraft:venuMetrorOre");
+		
+		//Block Venus Gem Ore
+		public final static Block VenusGemOre = new VenusBlock(5014, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGemOre") .setTextureName("spacecraft:venusGemOre");
+		
+		//Item Sulfer Dust
+		
+		
+		//Item Sulfer Ingot
+		
+		
+		//Item Gem
+		
+		
 		
 		//Where the client and server proxy is loaded.
         @SidedProxy(clientSide="spacecraft.mods.galacticraft.venus.client.ClientProxy", serverSide="spacecraft.mods.galacticraft.venus.CommonProxy")
@@ -103,7 +121,10 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				GameRegistry.registerBlock(VenusGem, "VenusGem");
 				GameRegistry.registerBlock(VenusMeteor, "VenusMeteor");
 				GameRegistry.registerBlock(VenusBrick, "VenusBrick");
-				GameRegistry.registerBlock(VenusSulfer, "VenusBSulfer");
+				GameRegistry.registerBlock(VenusSulfer, "VenusSulfer");
+				GameRegistry.registerBlock(VenusGemOre, "VenusGemOre");
+				GameRegistry.registerBlock(VenusMeteorOre, "VenusMeteorOre");
+				GameRegistry.registerBlock(VenusSulferOre, "VenusSulferOre");
                 
 				//Registering Names
                 LanguageRegistry.addName(VenusGrass, "Venus Grass");
@@ -114,6 +135,9 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				LanguageRegistry.addName(VenusMeteor, "Meteor Block");
                 LanguageRegistry.addName(VenusBrick, "Venus Brick");
 				LanguageRegistry.addName(VenusSulfer, "Sulfer Block");
+				LanguageRegistry.addName(VenusGemOre, "Gem Ore");
+				LanguageRegistry.addName(VenusMeteorOre, "Meteor Ore");
+				LanguageRegistry.addName(VenusSulferOre, "Sulfer Ore");
 
         }
         

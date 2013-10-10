@@ -1,8 +1,9 @@
 package spacecraft.mods.galacticraft.venus.wgen;
 
 import java.util.Random;
+
+import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreMapGenBaseMeta;
-import micdoodle8.mods.galacticraft.moon.blocks.GCMoonBlocks;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
@@ -167,7 +168,8 @@ public class GCVenusGenCaves extends GCCoreMapGenBaseMeta
 
                                         if (yfactor > -0.7D && xfactorSq + yfactorSq + zfactorSq < 1.0D)
                                         {
-                                            if (blockIdArray[coords] == GCMoonBlocks.blockMoon.blockID)
+                                            if (blockIdArray[coords] == GalacticraftVenus.VenusStone.blockID)
+                                            	//VenusStone may be the wrong blocks please change if you know the correct one
                                             {
                                                 if (metaArray[coords] == 3 || metaArray[coords] == 4)
                                                 {

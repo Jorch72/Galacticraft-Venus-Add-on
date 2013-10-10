@@ -14,20 +14,7 @@ public class VenusBlock extends Block {
 	public boolean isSealed(World world, int x, int y, int z) {
 		return true;
 	}
-
-        @Override
-        public boolean isValueable(int metadata)
-        {
-           switch (metadata)
-           {
-           case 0:
-               return true;
-           case 1:
-               return true;
-           case 2:
-               return true;
-           default:
-               return false;
-           }
-        }
+	public boolean isValueable(int metadata) {
+		return true;
+	}
 }
