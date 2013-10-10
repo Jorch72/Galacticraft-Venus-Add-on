@@ -1,3 +1,32 @@
+#################
+## Eclipse
+#################
+
+/bin/*
+/conf/*
+/docs/*
+/eclipse/*
+/forge/*
+/jars/*
+/lib/*
+/logs/*
+/modsrc/*
+/reobf/*
+/runtime/*
+/temp/*
+LICENSE.txt
+CHANGELOG
+
+/src/minecraft/*
+!/src/minecraft/spacecraft/
+!/src/minecraft/assets/spacecraft
+!/src/minecraft/META-INF/
+!/src/minecraft/starcraft_at.cfg
+!/src/minecraft/mcmod.info
+!/src/minecraft/mods/
+!/src/common/mcmod.info
+!/src/common/SP.png
+
 *.bat
 *.sh
 *.pydevproject
@@ -156,5 +185,5 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
-# Mac files
+# Mac crap
 .DS_Store

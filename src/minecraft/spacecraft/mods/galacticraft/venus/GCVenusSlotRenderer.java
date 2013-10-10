@@ -5,7 +5,7 @@ import net.minecraft.util.ResourceLocation;
 import micdoodle8.mods.galacticraft.api.world.ICelestialBodyRenderer;
 import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
 
-public class CGVenusSlotRenderer implements ICelestialBodyRenderer 
+public class GCVenusSlotRenderer implements ICelestialBodyRenderer 
 {
 
 	@Override

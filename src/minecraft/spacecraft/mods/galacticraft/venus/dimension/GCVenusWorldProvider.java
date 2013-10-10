@@ -173,13 +173,13 @@ public class GCVenusWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public String getWelcomeMessage()
     {
-        return "Entering The Venus";
+        return "Entering Venus";
     }
 
     @Override
     public String getDepartMessage()
     {
-        return "Leaving The Venus";
+        return "Leaving Venus";
     }
 
     @Override
@@ -233,7 +233,7 @@ public class GCVenusWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public double getFuelUsageMultiplier()
     {
-        return 0.7D;
+        return 9.0D;
     }
 
     @Override
@@ -245,12 +245,12 @@ public class GCVenusWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier > 0;
+        return tier >= 0;
     }
 
     @Override
     public float getFallDamageModifier()
     {
-        return 0.18F;
+        return 0.50F;
     }
 }
