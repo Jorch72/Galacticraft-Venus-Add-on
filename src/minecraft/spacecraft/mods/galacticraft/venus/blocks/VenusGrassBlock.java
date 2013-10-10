@@ -25,10 +25,23 @@ public class VenusGrassBlock extends Block{
 	public boolean isSealed(World world, int x, int y, int z) {
 		return true;
 	}
-	public boolean isValueable(int metadata) {
-		return true;
-	}
+        @Override
+        public boolean isValueable(int metadata)
+        {
+           switch (metadata)
+           {
+           case 0:
+               return true;
+           case 1:
+               return true;
+           case 2:
+               return true;
+           default:
+               return false;
+           }
+        }
+
 	public int idDropped(int par1, Random random, int zero) {
         return GalacticraftVenus.VenusDirt.blockID;
-	}
+        }
 }
