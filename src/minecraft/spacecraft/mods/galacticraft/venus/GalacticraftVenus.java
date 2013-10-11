@@ -96,17 +96,18 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		public final static Block VenusTinOre = new VenusBlock(623, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusTinOre") .setTextureName("spacecraft:venusTinOre");
 				
 		//Block Venus Coal Ore
-		public final static Block VenusCopperOre = new VenusBlock(624, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCopperOre") .setTextureName("spacecraft:venusCopperOre");
-				
+		public final static Block VenusCopperOre = new VenusBlock(624, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCopperOre") .setTextureName("spacecraft:venusCopperOre");				
+		
+		
 		
 		//Item Sufer Dust
-		public final static Item VenusSulferDust = new VenusItem(623) .setUnlocalizedName("VenusSulferDust") .setTextureName("spacecraft:venusSulferDust");
+		public final static Item VenusSulferDust = new VenusItem(625) .setUnlocalizedName("VenusSulferDust") .setTextureName("spacecraft:venusSulferDust");
 		
 		//Item Sufer Ingot
-		public final static Item VenusSulferIngot = new VenusItem(624) .setUnlocalizedName("VenusSulferIngot") .setTextureName("spacecraft:venusSulferIngot");
+		public final static Item VenusSulferIngot = new VenusItem(626) .setUnlocalizedName("VenusSulferIngot") .setTextureName("spacecraft:venusSulferIngot");
 		
 		//Item Sufer Gem
-		public final static Item VenusGem = new VenusItem(625) .setUnlocalizedName("VenusGem") .setTextureName("spacecraft:venusGem");
+		public final static Item VenusGem = new VenusItem(627) .setUnlocalizedName("VenusGem") .setTextureName("spacecraft:venusGem");
 		
 		//Where the client and server proxy is loaded.
         @SidedProxy(clientSide="spacecraft.mods.galacticraft.venus.client.ClientProxy", serverSide="spacecraft.mods.galacticraft.venus.CommonProxy")
@@ -141,7 +142,9 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				GameRegistry.registerBlock(VenusSulferOre, "VenusSulferOre");
 				GameRegistry.registerBlock(VenusIronOre, "VenusIronOre");
 				GameRegistry.registerBlock(VenusCoalOre, "VenusCoalOre");
-                
+				GameRegistry.registerBlock(VenusTinOre, "VenusTinOre");
+				GameRegistry.registerBlock(VenusCopperOre, "VenusCopperOre");
+				
 				//Registering Block Names
                 LanguageRegistry.addName(VenusGrass, "Venus Grass");
                 LanguageRegistry.addName(VenusDirt, "Venus Dirt");
@@ -173,9 +176,11 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 ItemStack VenusSulfer = new ItemStack(GalacticraftVenus.VenusSulferBlock);
                 ItemStack VenusGem = new ItemStack(GalacticraftVenus.VenusGem);
                 ItemStack VenusGemBlock = new ItemStack(GalacticraftVenus.VenusGemBlock);
-                ItemStack meteoricIronRaw = new ItemStack(GCMoonItems.meteoricIronRaw);               
                 ItemStack VenusCoalOre = new ItemStack(GalacticraftVenus.VenusCoalOre);
+                ItemStack VenusTinOre = new ItemStack(GalacticraftVenus.VenusTinOre);
+                ItemStack VenusCopperOre = new ItemStack(GalacticraftVenus.VenusCopperOre);
                 
+                ItemStack meteoricIronRaw = new ItemStack(GCMoonItems.meteoricIronRaw);      
                 ItemStack coal = new ItemStack(Item.coal);
                 ItemStack ingotIron = new ItemStack(Item.ingotIron);
                 
@@ -191,6 +196,9 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 GameRegistry.addSmelting(GalacticraftVenus.VenusGemOre.blockID, VenusGem, 0.7f);
                 GameRegistry.addSmelting(GalacticraftVenus.VenusCoalOre.blockID, coal, 0.7f);
                 GameRegistry.addSmelting(GalacticraftVenus.VenusIronOre.blockID, ingotIron, 0.7f);
+                
+                GameRegistry.addSmelting(GalacticraftVenus.VenusTinOre.blockID, coal, 0.7f);
+                GameRegistry.addSmelting(GalacticraftVenus.VenusCopperOre.blockID, ingotIron, 0.7f);
         }
         
         @EventHandler
