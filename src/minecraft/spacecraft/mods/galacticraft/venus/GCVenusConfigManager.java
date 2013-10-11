@@ -43,9 +43,10 @@ public class GCVenusConfigManager
 	public static int VenusMeteorOreID;
 	public static int VenusSulferOreID;
 	public static int VenusIronOreID;
+	public static int VenusCoalOreID;
 
     // ITEMS
-
+	public static int VenusSulferDustID;
     // ARMOR
 
     // TOOLS
@@ -61,7 +62,7 @@ public class GCVenusConfigManager
   public static boolean disableSulferOreVenus;
   public static boolean disableMeteorOreVenus;
   public static boolean disableIronOreVenus;
-  
+  public static boolean disableCoalOreVenus;  
   
   public static boolean generateOtherMods;
   public static boolean disableVenusVillageGen;
@@ -72,7 +73,6 @@ public class GCVenusConfigManager
         {
             GCVenusConfigManager.configuration.load();
 
-            
             GCVenusConfigManager.dimensionIDVenus = GCVenusConfigManager.configuration.get("Dimensions", "Venus Dimension ID", -45).getInt(-45);            
             
             GCVenusConfigManager.TierLevel = GCVenusConfigManager.configuration.get("Rocket", "Tier Level", 1).getInt(1);
@@ -89,14 +89,18 @@ public class GCVenusConfigManager
 			GCVenusConfigManager.VenusMeteorOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Meteor Ore ID", 5013).getInt(5013);			
 			GCVenusConfigManager.VenusSulferOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Sulfer Ore ID", 5014).getInt(5014);
 			GCVenusConfigManager.VenusIronOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Iron Ore ID", 5015).getInt(5015);
-
-			GCVenusConfigManager.generateOtherMods = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Generate other mod's features on Venus", false).getBoolean(false);
+			GCVenusConfigManager.VenusCoalOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Coal Ore ID", 5016).getInt(5016);
        
+			GCVenusConfigManager.VenusSulferDustID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Dust ID", 5017).getInt(5017);
+			
 			GCVenusConfigManager.disableGemOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Gem Ore Gen on Venus", false).getBoolean(false);
 			GCVenusConfigManager.disableMeteorOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Meteor Ore Gen on Venus", false).getBoolean(false);
 			GCVenusConfigManager.disableSulferOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Sulfer Ore Gen on Venus", false).getBoolean(false);
 			GCVenusConfigManager.disableIronOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Iron Ore Gen on Venus", false).getBoolean(false);
+			GCVenusConfigManager.disableCoalOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Coal Ore Gen on Venus", false).getBoolean(false);
             
+			GCVenusConfigManager.generateOtherMods = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Generate other mod's features on Venus", false).getBoolean(false);
+			
             GCVenusConfigManager.disableVenusVillageGen = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Venus Village Gen", false).getBoolean(false);
         }
         catch (final Exception e)

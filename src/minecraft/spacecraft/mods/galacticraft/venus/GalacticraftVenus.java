@@ -7,9 +7,11 @@ import micdoodle8.mods.galacticraft.api.world.IPlanet;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import spacecraft.mods.galacticraft.venus.blocks.VenusBlock;
 import spacecraft.mods.galacticraft.venus.dimension.GCVenusWorldProvider;
+import spacecraft.mods.galacticraft.venus.items.VenusItem;
 import spacecraft.mods.galacticraft.venus.blocks.VenusStone;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -86,8 +88,16 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		
 		//Block Venus Iron Ore
 		public final static Block VenusIronOre = new VenusBlock(621, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusIronOre") .setTextureName("spacecraft:venusIronOre");
+		
+		//Block Venus Coal Ore
+		public final static Block VenusCoalOre = new VenusBlock(622, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCoalOre") .setTextureName("spacecraft:venusCoalOre");
 				
-				
+		
+		//Items
+		//Sufer Dust
+		public final static Item VenusSulferDust = new VenusItem(623) .setUnlocalizedName("VenusSulferDust") .setTextureName("spacecraft:venusSulferDust");
+		
+		
 		//Where the client and server proxy is loaded.
         @SidedProxy(clientSide="spacecraft.mods.galacticraft.venus.client.ClientProxy", serverSide="spacecraft.mods.galacticraft.venus.CommonProxy")
         public static CommonProxy proxy;
@@ -120,8 +130,9 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				GameRegistry.registerBlock(VenusMeteorOre, "VenusMeteorOre");
 				GameRegistry.registerBlock(VenusSulferOre, "VenusSulferOre");
 				GameRegistry.registerBlock(VenusIronOre, "VenusIronOre");
+				GameRegistry.registerBlock(VenusCoalOre, "VenusCoalOre");
                 
-				//Registering Names
+				//Registering Block Names
                 LanguageRegistry.addName(VenusGrass, "Venus Grass");
                 LanguageRegistry.addName(VenusDirt, "Venus Dirt");
 				LanguageRegistry.addName(VenusStone, "Venus Stone");
@@ -134,6 +145,10 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				LanguageRegistry.addName(VenusMeteorOre, "Meteor Ore");
 				LanguageRegistry.addName(VenusSulferOre, "Sulfer Ore");
 				LanguageRegistry.addName(VenusIronOre, "Iron Ore");
+				LanguageRegistry.addName(VenusCoalOre, "Coal Ore");
+				
+				//Registring Items Names
+                LanguageRegistry.addName(VenusSulferDust, "Sulfer Dust");
         }
         
         @EventHandler

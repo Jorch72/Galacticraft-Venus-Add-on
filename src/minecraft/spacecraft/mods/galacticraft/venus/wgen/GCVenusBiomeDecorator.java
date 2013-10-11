@@ -24,6 +24,7 @@ public class GCVenusBiomeDecorator
     protected WorldGenerator sulferGen;
     protected WorldGenerator meteorGen;
     protected WorldGenerator ironGen;
+    protected WorldGenerator coalGen;
 
     public GCVenusBiomeDecorator(BiomeGenBase par1BiomeGenBase)
     {
@@ -31,7 +32,8 @@ public class GCVenusBiomeDecorator
         this.sulferGen = new GCCoreWorldGenMinableMeta(GalacticraftVenus.VenusSulferOre.blockID, 4, 1, true, GalacticraftVenus.VenusSulferOre.blockID, 4);
         this.meteorGen = new GCCoreWorldGenMinableMeta(GalacticraftVenus.VenusMeteorOre.blockID, 3, 2, true, GalacticraftVenus.VenusMeteorOre.blockID, 4);
         this.dirtGen = new GCCoreWorldGenMinableMeta(GalacticraftVenus.VenusDirt.blockID, 32, 3, true, GalacticraftVenus.VenusDirt.blockID, 4); 
-        this.ironGen = new GCCoreWorldGenMinableMeta(GalacticraftVenus.VenusIronOre.blockID, 32, 3, true, GalacticraftVenus.VenusIronOre.blockID, 4);      
+        this.ironGen = new GCCoreWorldGenMinableMeta(GalacticraftVenus.VenusIronOre.blockID, 32, 3, true, GalacticraftVenus.VenusIronOre.blockID, 4);  
+        this.coalGen = new GCCoreWorldGenMinableMeta(GalacticraftVenus.VenusCoalOre.blockID, 32, 3, true, GalacticraftVenus.VenusCoalOre.blockID, 4);      
     }
 
     public void decorate(World worldObj, Random rand, int chunkX, int chunkZ)
@@ -71,6 +73,7 @@ public class GCVenusBiomeDecorator
         this.genStandardOre1(23, this.sulferGen, 0, 60);
         this.genStandardOre1(12, this.meteorGen, 0, 128);
         this.genStandardOre1(35, this.ironGen, 0, 128);
+        this.genStandardOre1(36, this.coalGen, 0, 128);
         MinecraftForge.EVENT_BUS.post(new GCCoreEventPopulate.Post(this.worldObj, this.randomGenerator, this.chunkX, this.chunkZ));
     }
 }
