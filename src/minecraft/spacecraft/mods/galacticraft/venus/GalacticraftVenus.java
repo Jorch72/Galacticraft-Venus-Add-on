@@ -53,29 +53,28 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 			}
 		};
 		
-		//Adds Blocks
-		//Venus Grass
+		//Block Venus Grass
 		public final static Block VenusGrass = new VenusBlock(610, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("spacecraft:venusGrass");
 		
-		//Venus Dirt
+		//Block Venus Dirt
 		public final static Block VenusDirt = new VenusBlock(611, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("spacecraft:venusDirt");
         
-		//Venus Stone
+		//Block Venus Stone
 		public final static Block VenusStone = new VenusBlock(612, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusStone") .setTextureName("spacecraft:venusStone");
 		
-		//Venus Cobblestone
+		//Block Venus Cobblestone
 		public final static Block VenusCobblestone = new VenusBlock(613, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCobblestone") .setTextureName("spacecraft:venusCobblestone");
 		
-		//Venus Gem Block
+		//Block Venus Gem Block
 		public final static Block VenusGemBlock = new VenusBlock(614, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGem") .setTextureName("spacecraft:gemBlock");
 		
-		//Venus Meteor Block
+		//Block Venus Meteor Block
 		public final static Block VenusMeteorBlock = new VenusBlock(615, Material.ground) .setHardness(3.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteor") .setTextureName("spacecraft:meteorBlock");
 		
-		//Venus Brick
+		//Block Venus Brick
 		public final static Block VenusBrick = new VenusBlock(616, Material.ground) .setHardness(5.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBrick") .setTextureName("spacecraft:venusBrick");
 		
-		//Venus Sulfer
+		//Block Venus Sulfer
 		public final static Block VenusSulferBlock = new VenusBlock(617, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulfer") .setTextureName("spacecraft:sulferBlock");
 		
 		//Block Venus Sulfer Ore
@@ -92,16 +91,21 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		
 		//Block Venus Coal Ore
 		public final static Block VenusCoalOre = new VenusBlock(622, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCoalOre") .setTextureName("spacecraft:venusCoalOre");
+		
+		//Block Venus Iron Ore
+		public final static Block VenusTinOre = new VenusBlock(623, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusTinOre") .setTextureName("spacecraft:venusTinOre");
+				
+		//Block Venus Coal Ore
+		public final static Block VenusCopperOre = new VenusBlock(624, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCopperOre") .setTextureName("spacecraft:venusCopperOre");
 				
 		
-		//Items
-		//Sufer Dust
+		//Item Sufer Dust
 		public final static Item VenusSulferDust = new VenusItem(623) .setUnlocalizedName("VenusSulferDust") .setTextureName("spacecraft:venusSulferDust");
 		
-		//Sufer Ingot
+		//Item Sufer Ingot
 		public final static Item VenusSulferIngot = new VenusItem(624) .setUnlocalizedName("VenusSulferIngot") .setTextureName("spacecraft:venusSulferIngot");
 		
-		//Sufer Gem
+		//Item Sufer Gem
 		public final static Item VenusGem = new VenusItem(625) .setUnlocalizedName("VenusGem") .setTextureName("spacecraft:venusGem");
 		
 		//Where the client and server proxy is loaded.
@@ -151,7 +155,9 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				LanguageRegistry.addName(VenusMeteorOre, "Meteor Ore");
 				LanguageRegistry.addName(VenusSulferOre, "Sulfer Ore");
 				LanguageRegistry.addName(VenusIronOre, "Iron Ore");
-				LanguageRegistry.addName(VenusCoalOre, "Coal Ore");
+				LanguageRegistry.addName(VenusCoalOre, "Coal Ore");	
+				LanguageRegistry.addName(VenusTinOre, "Tin Ore");
+				LanguageRegistry.addName(VenusCopperOre, "Copper Ore");
                 
 				
 				//Registring Items Names
