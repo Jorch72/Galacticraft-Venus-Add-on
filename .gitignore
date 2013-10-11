@@ -19,7 +19,6 @@ CHANGELOG
 
 /src/minecraft/*
 !/src/minecraft/spacecraft/
-!/src/minecraft/universalelectricity/
 !/src/minecraft/assets/
 /src/minecraft/assets/forge
 /src/minecraft/assets/galacticraftcore
@@ -28,7 +27,6 @@ CHANGELOG
 /src/minecraft/assets/dependencies
 /src/minecraft/assets/minecraft
 !/src/minecraft/META-INF/
-!/src/minecraft/galacticraft_at.cfg
 !/src/minecraft/starcraft_at.cfg
 !/src/minecraft/mcmod.info
 !/src/minecraft/mods/

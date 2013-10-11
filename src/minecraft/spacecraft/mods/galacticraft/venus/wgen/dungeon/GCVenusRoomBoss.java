@@ -1,15 +1,18 @@
 package spacecraft.mods.galacticraft.venus.wgen.dungeon;
 
 import java.util.Random;
-import net.minecraft.block.Block;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ChunkCoordinates;
-import net.minecraftforge.common.ForgeDirection;
 import micdoodle8.mods.galacticraft.core.tile.GCCoreTileEntityDungeonSpawner;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonBoundingBox;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonRoom;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreMapGenDungeon;
 import micdoodle8.mods.galacticraft.moon.blocks.GCMoonBlocks;
+import net.minecraft.block.Block;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ChunkCoordinates;
+import net.minecraftforge.common.ForgeDirection;
+
+//import dependencies.universalelectricity.core.vector.Vector3;
+//Depending where you save UniversalElectricity this may change
 import universalelectricity.core.vector.Vector3;
 
 public class GCVenusRoomBoss extends GCCoreDungeonRoom
