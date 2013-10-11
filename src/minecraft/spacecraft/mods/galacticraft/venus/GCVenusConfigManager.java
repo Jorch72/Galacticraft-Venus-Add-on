@@ -26,7 +26,7 @@ public class GCVenusConfigManager
 
     //Rocket
 	public static int TierLevel;
-	
+
     // DIMENSIONS
     public static int dimensionIDVenus;
 
@@ -46,7 +46,7 @@ public class GCVenusConfigManager
     // ITEMS
 
     // ARMOR
-	
+
     // TOOLS
 
     // ENTITIES
@@ -74,7 +74,7 @@ public class GCVenusConfigManager
             GCVenusConfigManager.dimensionIDVenus = GCVenusConfigManager.configuration.get("Dimensions", "Venus Dimension ID", -45).getInt(-45);            
             
             GCVenusConfigManager.TierLevel = GCVenusConfigManager.configuration.get("Rocket", "Tier Level", 1).getInt(1);
-	        	        
+
 	        GCVenusConfigManager.VenusGrassID = GCVenusConfigManager.configuration.get("Blocks", "Venus Grass ID", 5004).getInt(5004);	        
 	        GCVenusConfigManager.VenusDirtID= GCVenusConfigManager.configuration.get("Blocks", "Venus Dirt ID", 5005).getInt(5005);			
 			GCVenusConfigManager.VenusStoneID= GCVenusConfigManager.configuration.get("Blocks", "Venus Stone ID", 5006).getInt(5006);			
@@ -86,7 +86,7 @@ public class GCVenusConfigManager
 			GCVenusConfigManager.VenusGemOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Gem Ore ID", 5012).getInt(5012);			
 			GCVenusConfigManager.VenusMeteorOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Meteor Ore ID", 5013).getInt(5013);			
 			GCVenusConfigManager.VenusSulferOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Sulfer Ore ID", 5014).getInt(5014);
-			
+
 			GCVenusConfigManager.generateOtherMods = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Generate other mod's features on Venus", false).getBoolean(false);
        
 			GCVenusConfigManager.disableGemOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Gem Ore Gen on Venus", false).getBoolean(false);
@@ -106,4 +106,3 @@ public class GCVenusConfigManager
         }
     }
 }
-

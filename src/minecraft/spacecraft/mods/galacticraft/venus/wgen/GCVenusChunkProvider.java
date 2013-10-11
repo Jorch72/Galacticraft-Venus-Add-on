@@ -21,6 +21,7 @@ import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreCraterSize;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreMapGenBaseMeta;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreMapGenDungeon;
+import micdoodle8.mods.galacticraft.moon.blocks.GCMoonBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
 import net.minecraft.entity.EnumCreatureType;
@@ -54,7 +55,7 @@ public class GCVenusChunkProvider extends ChunkProviderGenerate
     private final World worldObj;
     private final GCVenusMapGenVillage villageGenerator = new GCVenusMapGenVillage();
 
-    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(GalacticraftVenus.VenusBrick.blockID, 14, 8, 16, 3);
+    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(GCMoonBlocks.blockMoon.blockID, 14, 8, 16, 3);
 
     {
         this.dungeonGenerator.otherRooms.add(new GCVenusRoomEmpty(null, 0, 0, 0, ForgeDirection.UNKNOWN));

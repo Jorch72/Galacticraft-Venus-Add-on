@@ -10,6 +10,9 @@ import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.ForgeDirection;
+
+//import dependencies.universalelectricity.core.vector.Vector3;
+//Depending where you save UniversalElectricity this may change
 import universalelectricity.core.vector.Vector3;
 
 public class GCVenusRoomBoss extends GCCoreDungeonRoom
@@ -92,8 +95,6 @@ public class GCVenusRoomBoss extends GCCoreDungeonRoom
         }
 
         this.worldObj.setBlock(this.spawnerCoords.posX, this.spawnerCoords.posY, this.spawnerCoords.posZ, GCMoonBlocks.blockMoon.blockID, 15, 3);
-       
-        //I dont know what blocks GCMoonBlocks.blockMoon spawns in please fix if you know the block
 
         final TileEntity tile = this.worldObj.getBlockTileEntity(this.spawnerCoords.posX, this.spawnerCoords.posY, this.spawnerCoords.posZ);
 
