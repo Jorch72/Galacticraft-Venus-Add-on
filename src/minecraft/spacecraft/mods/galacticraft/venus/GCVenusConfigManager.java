@@ -42,6 +42,7 @@ public class GCVenusConfigManager
 	public static int VenusGemOreID;
 	public static int VenusMeteorOreID;
 	public static int VenusSulferOreID;
+	public static int VenusIronOreID;
 
     // ITEMS
 
@@ -59,9 +60,10 @@ public class GCVenusConfigManager
   public static boolean disableGemOreVenus;
   public static boolean disableSulferOreVenus;
   public static boolean disableMeteorOreVenus;
+  public static boolean disableIronOreVenus;
   
   
-  public static boolean generateOtherMods; //disables other mods from generating
+  public static boolean generateOtherMods;
   public static boolean disableVenusVillageGen;
 
     private void setDefaultValues()
@@ -86,12 +88,14 @@ public class GCVenusConfigManager
 			GCVenusConfigManager.VenusGemOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Gem Ore ID", 5012).getInt(5012);			
 			GCVenusConfigManager.VenusMeteorOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Meteor Ore ID", 5013).getInt(5013);			
 			GCVenusConfigManager.VenusSulferOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Sulfer Ore ID", 5014).getInt(5014);
+			GCVenusConfigManager.VenusIronOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Iron Ore ID", 5015).getInt(5015);
 
 			GCVenusConfigManager.generateOtherMods = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Generate other mod's features on Venus", false).getBoolean(false);
        
 			GCVenusConfigManager.disableGemOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Gem Ore Gen on Venus", false).getBoolean(false);
 			GCVenusConfigManager.disableMeteorOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Meteor Ore Gen on Venus", false).getBoolean(false);
 			GCVenusConfigManager.disableSulferOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Sulfer Ore Gen on Venus", false).getBoolean(false);
+			GCVenusConfigManager.disableIronOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Iron Ore Gen on Venus", false).getBoolean(false);
             
             GCVenusConfigManager.disableVenusVillageGen = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Venus Village Gen", false).getBoolean(false);
         }

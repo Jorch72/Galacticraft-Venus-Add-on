@@ -1,50 +1,81 @@
 package spacecraft.mods.galacticraft.venus;
 
 import java.util.Random;
-
+import micdoodle8.mods.galacticraft.api.vector.Vector.Vector3;
+import micdoodle8.mods.galacticraft.api.world.ITeleportType;
+import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityLander;
+import micdoodle8.mods.galacticraft.core.entities.GCCorePlayerMP;
+import micdoodle8.mods.galacticraft.core.network.GCCorePacketHandlerClient.EnumClientPacket;
+import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
-import micdoodle8.mods.galacticraft.api.vector.Vector.Vector3;
-import micdoodle8.mods.galacticraft.api.world.ITeleportType;
-import micdoodle8.mods.galacticraft.core.entities.GCCorePlayerMP;
 
-public class GCVenusTeleportType implements ITeleportType 
+public class GCVenusTeleportType implements ITeleportType
 {
+    @Override
+    public boolean useParachute()
+    {
+        return GCCoreConfigManager.disableLander;
+    }
 
-	@Override
-	public boolean useParachute() 
-	{
-		return true;
-	}
-
-	@Override
-	public Vector3 getPlayerSpawnLocation(WorldServer world, EntityPlayerMP player) 
-	{
+    @Override
+    public Vector3 getPlayerSpawnLocation(WorldServer world, EntityPlayerMP player)
+    {
         if (player instanceof GCCorePlayerMP)
         {
-            return new Vector3(((GCCorePlayerMP) player).getCoordsTeleportedFromX(), 250.0, ((GCCorePlayerMP) player).getCoordsTeleportedFromZ());
+            return new Vector3(((GCCorePlayerMP) player).getCoordsTeleportedFromX(), GCCoreConfigManager.disableLander ? 250.0 : 900.0, ((GCCorePlayerMP) player).getCoordsTeleportedFromZ());
         }
-		return null;
-	}
 
-	@Override
-	public Vector3 getEntitySpawnLocation(WorldServer world, Entity entity) 
-	{
-        return new Vector3(entity.posX, 250, entity.posZ);
-	}
+        return null;
+    }
 
-	@Override
-	public Vector3 getParaChestSpawnLocation(WorldServer world, EntityPlayerMP player, Random rand) 
-	{
-        return new Vector3(player.posX, 250, player.posZ);
+    @Override
+    public Vector3 getEntitySpawnLocation(WorldServer world, Entity entity)
+    {
+        return new Vector3(entity.posX, GCCoreConfigManager.disableLander ? 250.0 : 900.0, entity.posZ);
+    }
 
-	}
+    @Override
+    public Vector3 getParaChestSpawnLocation(WorldServer world, EntityPlayerMP player, Random rand)
+    {
+        if (GCCoreConfigManager.disableLander)
+        {
+            final double x = (rand.nextDouble() * 2 - 1.0D) * 5.0D;
+            final double z = (rand.nextDouble() * 2 - 1.0D) * 5.0D;
+            return new Vector3(x, 220.0D, z);
+        }
 
-	@Override
-	public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player) 
-	{
-	}
+        return null;
+    }
 
+    @Override
+    public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player)
+    {
+        if (!GCCoreConfigManager.disableLander && player instanceof GCCorePlayerMP && ((GCCorePlayerMP) player).getTeleportCooldown() <= 0)
+        {
+            final GCCorePlayerMP gcPlayer = (GCCorePlayerMP) player;
+
+            if (gcPlayer.capabilities.isFlying)
+            {
+                gcPlayer.capabilities.isFlying = false;
+            }
+
+            final GCCoreEntityLander lander = new GCCoreEntityLander(gcPlayer);
+            lander.setPositionAndRotation(player.posX, player.posY, player.posZ, 0, 0);
+
+            if (!newWorld.isRemote)
+            {
+                newWorld.spawnEntityInWorld(lander);
+            }
+
+            final Object[] toSend2 = { 1 };
+            gcPlayer.playerNetServerHandler.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftCore.CHANNEL, EnumClientPacket.ZOOM_CAMERA, toSend2));
+
+            gcPlayer.setTeleportCooldown(10);
+        }
+    }
 }

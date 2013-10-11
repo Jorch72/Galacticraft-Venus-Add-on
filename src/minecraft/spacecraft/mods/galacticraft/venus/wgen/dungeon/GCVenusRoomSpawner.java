@@ -2,10 +2,9 @@ package spacecraft.mods.galacticraft.venus.wgen.dungeon;
 
 import java.util.ArrayList;
 import java.util.Random;
-
-import micdoodle8.mods.galacticraft.core.wgen.dungeon.GCCoreDungeonBoundingBox;
-import micdoodle8.mods.galacticraft.core.wgen.dungeon.GCCoreDungeonRoom;
-import micdoodle8.mods.galacticraft.core.wgen.dungeon.GCCoreMapGenDungeon;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonBoundingBox;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonRoom;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreMapGenDungeon;
 import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntityMobSpawner;
 import net.minecraft.util.ChunkCoordinates;

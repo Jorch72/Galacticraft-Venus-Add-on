@@ -76,13 +76,16 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		public final static Block VenusSulfer = new VenusBlock(617, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulfer") .setTextureName("spacecraft:sulferBlock");
 		
 		//Block Venus Sulfer Ore
-		public final static Block VenusSulferOre = new VenusBlock(618, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulferOre") .setTextureName("spacecraft:venusSulferOre");
+		public final static Block VenusSulferOre = new VenusBlock(618, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulferOre") .setTextureName("spacecraft:venusSulfurOre");
 
 		//Block Venus Meteor Ore
-		public final static Block VenusMeteorOre = new VenusBlock(619, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteorOre") .setTextureName("spacecraft:venuMetrorOre");
+		public final static Block VenusMeteorOre = new VenusBlock(619, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteorOre") .setTextureName("spacecraft:venusMeteorOre");
 
 		//Block Venus Gem Ore
 		public final static Block VenusGemOre = new VenusBlock(620, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGemOre") .setTextureName("spacecraft:venusGemOre");
+		
+		//Block Venus Iron Ore
+		public final static Block VenusIronOre = new VenusBlock(621, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusIronOre") .setTextureName("spacecraft:venusIronOre");
 				
 				
 		//Where the client and server proxy is loaded.
@@ -116,6 +119,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				GameRegistry.registerBlock(VenusGemOre, "VenusGemOre");
 				GameRegistry.registerBlock(VenusMeteorOre, "VenusMeteorOre");
 				GameRegistry.registerBlock(VenusSulferOre, "VenusSulferOre");
+				GameRegistry.registerBlock(VenusIronOre, "VenusIronOre");
                 
 				//Registering Names
                 LanguageRegistry.addName(VenusGrass, "Venus Grass");
@@ -129,6 +133,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				LanguageRegistry.addName(VenusGemOre, "Gem Ore");
 				LanguageRegistry.addName(VenusMeteorOre, "Meteor Ore");
 				LanguageRegistry.addName(VenusSulferOre, "Sulfer Ore");
+				LanguageRegistry.addName(VenusIronOre, "Iron Ore");
         }
         
         @EventHandler
