@@ -11,9 +11,9 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.ForgeDirection;
 
-//import dependencies.universalelectricity.core.vector.Vector3;
+import dependencies.universalelectricity.core.vector.Vector3;
 //Depending where you save UniversalElectricity this may change
-import universalelectricity.core.vector.Vector3;
+//import universalelectricity.core.vector.Vector3;
 
 public class GCVenusRoomBoss extends GCCoreDungeonRoom
 {
