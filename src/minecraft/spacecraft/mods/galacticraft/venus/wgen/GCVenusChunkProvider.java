@@ -4,23 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
-import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
-import spacecraft.mods.galacticraft.venus.wgen.dungeon.GCVenusRoomBoss;
-import spacecraft.mods.galacticraft.venus.wgen.dungeon.GCVenusRoomChests;
-import spacecraft.mods.galacticraft.venus.wgen.dungeon.GCVenusRoomEmpty;
-import spacecraft.mods.galacticraft.venus.wgen.dungeon.GCVenusRoomSpawner;
-import spacecraft.mods.galacticraft.venus.wgen.dungeon.GCVenusRoomTreasure;
-import spacecraft.mods.galacticraft.venus.wgen.village.GCVenusMapGenVillage;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySkeleton;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityZombie;
 import micdoodle8.mods.galacticraft.core.perlin.NoiseModule;
 import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
-import micdoodle8.mods.galacticraft.core.world.gen.GCCoreCraterSize;
-import micdoodle8.mods.galacticraft.core.world.gen.GCCoreMapGenBaseMeta;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreMapGenDungeon;
+import micdoodle8.mods.galacticraft.core.wgen.GCCoreMapGenBaseMeta;
+import micdoodle8.mods.galacticraft.core.wgen.dungeon.GCCoreMapGenDungeon;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
 import net.minecraft.entity.EnumCreatureType;
@@ -32,6 +23,14 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraftforge.common.ForgeDirection;
+import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
+import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
+import spacecraft.mods.galacticraft.venus.wgen.dungeon.GCVenusRoomBoss;
+import spacecraft.mods.galacticraft.venus.wgen.dungeon.GCVenusRoomChests;
+import spacecraft.mods.galacticraft.venus.wgen.dungeon.GCVenusRoomEmpty;
+import spacecraft.mods.galacticraft.venus.wgen.dungeon.GCVenusRoomSpawner;
+import spacecraft.mods.galacticraft.venus.wgen.dungeon.GCVenusRoomTreasure;
+import spacecraft.mods.galacticraft.venus.wgen.village.GCVenusMapGenVillage;
 
 public class GCVenusChunkProvider extends ChunkProviderGenerate
 {
