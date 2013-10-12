@@ -114,11 +114,11 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		//Item Red Gem
 		public final static Item RedGem = new VenusItem(629) .setUnlocalizedName("RedGem") .setTextureName("spacecraft:redGem");
 		
-		//Item Sufer Plate
-		public final static Item SulferPlate = new VenusItem(630) .setUnlocalizedName("SulferPlate") .setTextureName("spacecraft:sulferPlate");
+		//Item Compressed Sufer
+		public final static Item CompressedSulfer = new VenusItem(630) .setUnlocalizedName("SulferPlate") .setTextureName("spacecraft:compressedSulfer");
 				
-		//Item Red Gem Plate
-		public final static Item RedGemPlate = new VenusItem(631) .setUnlocalizedName("RedGemPlate") .setTextureName("spacecraft:redGemPlate");
+		//Item Compressed Red Gem
+		public final static Item CompressedRedGem = new VenusItem(631) .setUnlocalizedName("CompressedRedGem") .setTextureName("spacecraft:compressedRedGem");
 		
 		//Where the client and server proxy is loaded.
         @SidedProxy(clientSide="spacecraft.mods.galacticraft.venus.client.ClientProxy", serverSide="spacecraft.mods.galacticraft.venus.CommonProxy")
@@ -181,8 +181,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 LanguageRegistry.addName(SulferDust, "Sulfer Dust");
                 LanguageRegistry.addName(SulferIngot, "Sulfer Ingot");
                 LanguageRegistry.addName(RedGem, "Red Gem");
-                LanguageRegistry.addName(SulferPlate, "Sulfer Plate");
-                LanguageRegistry.addName(RedGemPlate, "Red Gem Plate");
+                LanguageRegistry.addName(CompressedSulfer, "Compressed Sulfer");
+                LanguageRegistry.addName(CompressedRedGem, "Compressed Red Gem");
                 
 				//Adding ItemStack for recipes
                 ItemStack VenusCobblestone = new ItemStack(GalacticraftVenus.VenusCobblestone);

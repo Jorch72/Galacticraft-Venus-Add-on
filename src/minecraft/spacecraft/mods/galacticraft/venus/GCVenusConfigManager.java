@@ -53,8 +53,8 @@ public class GCVenusConfigManager
 	public static int SulferDustID;
 	public static int SulferIngotID;
 	public static int RedGemID;
-	public static int SulferPlateID;
-	public static int RedGemPlateID;
+	public static int CompressedSulferID;
+	public static int CompressedRedGemID;
 	
     // ARMOR
     
@@ -110,8 +110,8 @@ public class GCVenusConfigManager
 			GCVenusConfigManager.SulferDustID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Dust ID", 5021).getInt(5021);
 			GCVenusConfigManager.SulferIngotID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Ingot ID", 5022).getInt(5022);
 			GCVenusConfigManager.RedGemID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Red Gem ID", 5023).getInt(5023);
-			GCVenusConfigManager.SulferPlateID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Plate ID", 5024).getInt(5024);
-			GCVenusConfigManager.RedGemPlateID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Red Gem Plate ID", 5025).getInt(5025);
+			GCVenusConfigManager.CompressedSulferID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Compressed Sulfer ID", 5024).getInt(5024);
+			GCVenusConfigManager.CompressedRedGemID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Compressed Red Gem ID", 5025).getInt(5025);
 			
 			
 			GCVenusConfigManager.disableGemOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Gem Ore Gen on Venus", false).getBoolean(false);
