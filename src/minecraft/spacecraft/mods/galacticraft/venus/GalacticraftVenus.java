@@ -1,7 +1,6 @@
 package spacecraft.mods.galacticraft.venus;
 
 import java.io.File;
-
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.world.IPlanet;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
@@ -11,10 +10,14 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import spacecraft.mods.galacticraft.venus.blocks.VenusBlock;
+import spacecraft.mods.galacticraft.venus.block.VenusGrass;
+import spacecraft.mods.galacticraft.venus.block.VenusDirt;
+import spacecraft.mods.galacticraft.venus.block.VenusOre;
+import spacecraft.mods.galacticraft.venus.block.VenusBlock;
+import spacecraft.mods.galacticraft.venus.block.VenusCobblestone;
+import spacecraft.mods.galacticraft.venus.block.VenusStone;
 import spacecraft.mods.galacticraft.venus.dimension.GCVenusWorldProvider;
 import spacecraft.mods.galacticraft.venus.items.VenusItem;
-import spacecraft.mods.galacticraft.venus.blocks.VenusStone;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -55,16 +58,16 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		};
 		
 		//Block Venus Grass
-    	public final static Block VenusGrass = new VenusBlock(610, Material.ground) .setHardness(0.4F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("spacecraft:venusGrass");
+    	public final static Block VenusGrass = new VenusGrass(610, Material.ground) .setHardness(0.4F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("spacecraft:venusGrass");
 		
 		//Block Venus Dirt
-		public final static Block VenusDirt = new VenusBlock(611, Material.ground) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("spacecraft:venusDirt");
+		public final static Block VenusDirt = new VenusDirt(611, Material.ground) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("spacecraft:venusDirt");
         
 		//Block Venus Stone
-		public final static Block VenusStone = new VenusBlock(612, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusStone") .setTextureName("spacecraft:venusStone");
+		public final static Block VenusStone = new VenusStone(612, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusStone") .setTextureName("spacecraft:venusStone");
 		
 		//Block Venus Cobblestone
-		public final static Block VenusCobblestone = new VenusBlock(613, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCobblestone") .setTextureName("spacecraft:venusCobblestone");
+		public final static Block VenusCobblestone = new VenusCobblestone(613, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCobblestone") .setTextureName("spacecraft:venusCobblestone");
 		
 		//Block Venus Gem Block
 		public final static Block VenusGemBlock = new VenusBlock(614, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGem") .setTextureName("spacecraft:gemBlock");
