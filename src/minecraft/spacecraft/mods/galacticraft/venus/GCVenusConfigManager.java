@@ -35,11 +35,11 @@ public class GCVenusConfigManager
 	public static int VenusDirtID;
 	public static int VenusStoneID;
 	public static int VenusCobblestoneID;
-	public static int VenusGemBlockID;
+	public static int VenusRedGemBlockID;
 	public static int VenusMeteorBlockID;
 	public static int VenusBrickID;
 	public static int VenusSulferBlockID;
-	public static int VenusGemOreID;
+	public static int VenusRedGemOreID;
 	public static int VenusMeteorOreID;
 	public static int VenusSulferOreID;
 	public static int VenusIronOreID;
@@ -50,7 +50,7 @@ public class GCVenusConfigManager
     // ITEMS
 	public static int VenusSulferDustID;
 	public static int VenusSulferIngotID;
-	public static int VenusGemID;
+	public static int VenusRedGemID;
 	
     // ARMOR
     
@@ -88,11 +88,11 @@ public class GCVenusConfigManager
 	        GCVenusConfigManager.VenusDirtID= GCVenusConfigManager.configuration.get("Blocks", "Venus Dirt ID", 5005).getInt(5005);			
 			GCVenusConfigManager.VenusStoneID= GCVenusConfigManager.configuration.get("Blocks", "Venus Stone ID", 5006).getInt(5006);			
 			GCVenusConfigManager.VenusCobblestoneID= GCVenusConfigManager.configuration.get("Blocks", "Venus Cobblestone ID", 5007).getInt(5007);			
-			GCVenusConfigManager.VenusGemBlockID= GCVenusConfigManager.configuration.get("Blocks", "Venus Gem Block ID", 5008).getInt(5008);			
+			GCVenusConfigManager.VenusRedGemBlockID= GCVenusConfigManager.configuration.get("Blocks", "Venus Red Gem Block ID", 5008).getInt(5008);			
 			GCVenusConfigManager.VenusMeteorBlockID= GCVenusConfigManager.configuration.get("Blocks", "Venus Meteor Block ID", 5009).getInt(5009);			
 			GCVenusConfigManager.VenusBrickID= GCVenusConfigManager.configuration.get("Blocks", "Venus Brick ID", 5010).getInt(5010);			
 			GCVenusConfigManager.VenusSulferBlockID= GCVenusConfigManager.configuration.get("Blocks", "Venus Sulfer Block ID", 5011).getInt(5011);			
-			GCVenusConfigManager.VenusGemOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Gem Ore ID", 5012).getInt(5012);			
+			GCVenusConfigManager.VenusRedGemOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Red Gem Ore ID", 5012).getInt(5012);			
 			GCVenusConfigManager.VenusMeteorOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Meteor Ore ID", 5013).getInt(5013);			
 			GCVenusConfigManager.VenusSulferOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Sulfer Ore ID", 5014).getInt(5014);
 			GCVenusConfigManager.VenusIronOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Iron Ore ID", 5015).getInt(5015);
@@ -102,7 +102,7 @@ public class GCVenusConfigManager
        
 			GCVenusConfigManager.VenusSulferDustID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Dust ID", 5019).getInt(5019);
 			GCVenusConfigManager.VenusSulferIngotID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Ingot ID", 5020).getInt(5020);
-			GCVenusConfigManager.VenusGemID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Gem ID", 5021).getInt(5021);
+			GCVenusConfigManager.VenusRedGemID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Red Gem ID", 5021).getInt(5021);
 			
 			GCVenusConfigManager.disableGemOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Gem Ore Gen on Venus", false).getBoolean(false);
 			GCVenusConfigManager.disableMeteorOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Meteor Ore Gen on Venus", false).getBoolean(false);

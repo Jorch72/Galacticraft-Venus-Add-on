@@ -29,7 +29,7 @@ public class GCVenusBiomeDecorator
 
     public GCVenusBiomeDecorator(BiomeGenBase par1BiomeGenBase)
     {
-        this.gemGen = new GCCoreWorldGenMinableMeta(GalacticraftVenus.VenusGemOre.blockID, 4, 0, true, GalacticraftVenus.VenusGemOre.blockID, 4);
+        this.gemGen = new GCCoreWorldGenMinableMeta(GalacticraftVenus.VenusRedGemOre.blockID, 4, 0, true, GalacticraftVenus.VenusGemOre.blockID, 4);
         this.sulferGen = new GCCoreWorldGenMinableMeta(GalacticraftVenus.VenusSulferOre.blockID, 4, 1, true, GalacticraftVenus.VenusSulferOre.blockID, 4);
         this.meteorGen = new GCCoreWorldGenMinableMeta(GalacticraftVenus.VenusMeteorOre.blockID, 3, 2, true, GalacticraftVenus.VenusMeteorOre.blockID, 4);
         this.dirtGen = new GCCoreWorldGenMinableMeta(GalacticraftVenus.VenusDirt.blockID, 32, 3, true, GalacticraftVenus.VenusDirt.blockID, 4); 

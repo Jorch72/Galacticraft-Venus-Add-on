@@ -108,10 +108,10 @@ public class VenusGrass extends Block
      */
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.blockIcon = par1IconRegister.registerIcon(this.getTextureName() + "_side");
-        this.iconGrassTop = par1IconRegister.registerIcon(this.getTextureName() + "_top");
-        this.iconSnowSide = par1IconRegister.registerIcon(this.getTextureName() + "_side_snowed");
-        this.iconGrassSideOverlay = par1IconRegister.registerIcon(this.getTextureName() + "_side_overlay");
+        this.blockIcon = par1IconRegister.registerIcon(this.getTextureName() + "venusGrass_side");
+        this.iconGrassTop = par1IconRegister.registerIcon(this.getTextureName() + "venusGrass_top");
+//        this.iconSnowSide = par1IconRegister.registerIcon(this.getTextureName() + "venusGrass_side_snowed");
+//        this.iconGrassSideOverlay = par1IconRegister.registerIcon(this.getTextureName() + "venusGrass_side_overlay");
     }
 
     @SideOnly(Side.CLIENT)

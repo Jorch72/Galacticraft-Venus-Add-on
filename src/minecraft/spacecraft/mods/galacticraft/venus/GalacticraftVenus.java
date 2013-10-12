@@ -58,7 +58,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		};
 		
 		//Block Venus Grass
-    	public final static Block VenusGrass = new VenusGrass(610, Material.ground) .setHardness(0.4F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("spacecraft:venusGrass");
+    	public final static Block VenusGrass = new VenusGrass(610, Material.ground) .setHardness(0.4F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusGrass");
 		
 		//Block Venus Dirt
 		public final static Block VenusDirt = new VenusDirt(611, Material.ground) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("spacecraft:venusDirt");
@@ -70,7 +70,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		public final static Block VenusCobblestone = new VenusCobblestone(613, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCobblestone") .setTextureName("spacecraft:venusCobblestone");
 		
 		//Block Venus Gem Block
-		public final static Block VenusGemBlock = new VenusBlock(614, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGem") .setTextureName("spacecraft:gemBlock");
+		public final static Block VenusRedGemBlock = new VenusBlock(614, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGem") .setTextureName("spacecraft:gemBlock");
 		
 		//Block Venus Meteor Block
 		public final static Block VenusMeteorBlock = new VenusBlock(615, Material.ground) .setHardness(3.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteor") .setTextureName("spacecraft:meteorBlock");
@@ -88,7 +88,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		public final static Block VenusMeteorOre = new VenusBlock(619, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteorOre") .setTextureName("spacecraft:venusMeteorOre");
 
 		//Block Venus Gem Ore
-		public final static Block VenusGemOre = new VenusBlock(620, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGemOre") .setTextureName("spacecraft:venusGemOre");
+		public final static Block VenusRedGemOre = new VenusBlock(620, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGemOre") .setTextureName("spacecraft:venusGemOre");
 		
 		//Block Venus Iron Ore
 		public final static Block VenusIronOre = new VenusBlock(621, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusIronOre") .setTextureName("spacecraft:venusIronOre");
@@ -105,13 +105,13 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		
 		
 		//Item Sufer Dust
-		public final static Item VenusSulferDust = new VenusItem(625) .setUnlocalizedName("VenusSulferDust") .setTextureName("spacecraft:venusSulferDust");
+		public final static Item VenusSulferDust = new VenusItem(625) .setUnlocalizedName("VenusSulferDust") .setTextureName("spacecraft:sulferDust");
 		
 		//Item Sufer Ingot
-		public final static Item VenusSulferIngot = new VenusItem(626) .setUnlocalizedName("VenusSulferIngot") .setTextureName("spacecraft:venusSulferIngot");
+		public final static Item VenusSulferIngot = new VenusItem(626) .setUnlocalizedName("VenusSulferIngot") .setTextureName("spacecraft:sulferIngot");
 		
-		//Item Sufer Gem
-		public final static Item VenusGem = new VenusItem(627) .setUnlocalizedName("VenusGem") .setTextureName("spacecraft:venusGem");
+		//Item Red Gem
+		public final static Item RedGem = new VenusItem(627) .setUnlocalizedName("VenusGem") .setTextureName("spacecraft:redGem");
 		
 		//Where the client and server proxy is loaded.
         @SidedProxy(clientSide="spacecraft.mods.galacticraft.venus.client.ClientProxy", serverSide="spacecraft.mods.galacticraft.venus.CommonProxy")
@@ -137,11 +137,11 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 GameRegistry.registerBlock(VenusDirt, "VenusDirt");
 				GameRegistry.registerBlock(VenusStone, "VenusStone");
 				GameRegistry.registerBlock(VenusCobblestone, "VenusCobblestone");
-				GameRegistry.registerBlock(VenusGemBlock, "VenusGemBlock");
+				GameRegistry.registerBlock(VenusRedGemBlock, "VenusRedGemBlock");
 				GameRegistry.registerBlock(VenusMeteorBlock, "VenusMeteorBlock");
 				GameRegistry.registerBlock(VenusBrick, "VenusBrick");
 				GameRegistry.registerBlock(VenusSulferBlock, "VenusSulferBlock");
-				GameRegistry.registerBlock(VenusGemOre, "VenusGemOre");
+				GameRegistry.registerBlock(VenusRedGemOre, "VenusRedGemOre");
 				GameRegistry.registerBlock(VenusMeteorOre, "VenusMeteorOre");
 				GameRegistry.registerBlock(VenusSulferOre, "VenusSulferOre");
 				GameRegistry.registerBlock(VenusIronOre, "VenusIronOre");
@@ -154,11 +154,11 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 LanguageRegistry.addName(VenusDirt, "Venus Dirt");
 				LanguageRegistry.addName(VenusStone, "Venus Stone");
                 LanguageRegistry.addName(VenusCobblestone, "Venus Cobblestone");
-				LanguageRegistry.addName(VenusGemBlock, "Gem Block");
+				LanguageRegistry.addName(VenusRedGemBlock, "Red Gem Block");
 				LanguageRegistry.addName(VenusMeteorBlock, "Meteor Block");
                 LanguageRegistry.addName(VenusBrick, "Venus Brick");
 				LanguageRegistry.addName(VenusSulferBlock, "Sulfer Block");
-				LanguageRegistry.addName(VenusGemOre, "Gem Ore");
+				LanguageRegistry.addName(VenusRedGemOre, "Red Gem Ore");
 				LanguageRegistry.addName(VenusMeteorOre, "Meteor Ore");
 				LanguageRegistry.addName(VenusSulferOre, "Sulfer Ore");
 				LanguageRegistry.addName(VenusIronOre, "Iron Ore");
@@ -170,7 +170,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				//Registring Items Names
                 LanguageRegistry.addName(VenusSulferDust, "Sulfer Dust");
                 LanguageRegistry.addName(VenusSulferIngot, "Sulfer Ingot");
-                LanguageRegistry.addName(VenusGem, "Venus Gem");
+                LanguageRegistry.addName(RedGem, "Red Gem");
                 
 				//Adding ItemStack for recipes
                 ItemStack VenusCobblestone = new ItemStack(GalacticraftVenus.VenusCobblestone);
@@ -178,8 +178,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 ItemStack VenusSulferIngot = new ItemStack(GalacticraftVenus.VenusSulferIngot);
                 ItemStack VenusSulferDust = new ItemStack(GalacticraftVenus.VenusSulferDust);
                 ItemStack VenusSulfer = new ItemStack(GalacticraftVenus.VenusSulferBlock);
-                ItemStack VenusGem = new ItemStack(GalacticraftVenus.VenusGem);
-                ItemStack VenusGemBlock = new ItemStack(GalacticraftVenus.VenusGemBlock);
+                ItemStack VenusRedGem = new ItemStack(GalacticraftVenus.RedGem);
+                ItemStack VenusRedGemBlock = new ItemStack(GalacticraftVenus.VenusRedGemBlock);
                 ItemStack VenusCoalOre = new ItemStack(GalacticraftVenus.VenusCoalOre);
                 ItemStack VenusTinOre = new ItemStack(GalacticraftVenus.VenusTinOre);
                 ItemStack VenusCopperOre = new ItemStack(GalacticraftVenus.VenusCopperOre);
@@ -187,20 +187,22 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 //                ItemStack ingotTin = new ItemStack(GCCoreItems.ingotTin);  
 //                ItemStack ingotCopper = new ItemStack(GCCoreItems.ingotCopper);
                 
-                ItemStack meteoricIronRaw = new ItemStack(GCMoonItems.meteoricIronRaw);      
+                ItemStack meteoricIronRaw = new ItemStack(GCMoonItems.meteoricIronRaw);
+                ItemStack furnace = new ItemStack(Block.furnaceIdle);
                 ItemStack coal = new ItemStack(Item.coal);
                 ItemStack ingotIron = new ItemStack(Item.ingotIron);
                 
                 //Register Crafting
                 GameRegistry.addRecipe(VenusSulferIngot, "xx ", "xx ", "   ", 'x', VenusSulferDust);
                 GameRegistry.addRecipe(VenusSulfer, "xxx", "xxx", "xxx", 'x', VenusSulferIngot);
-                GameRegistry.addRecipe(VenusGemBlock, "xxx", "xxx", "xxx", 'x', VenusGem);
+                GameRegistry.addRecipe(VenusRedGemBlock, "xxx", "xxx", "xxx", 'x', VenusRedGem);
+                GameRegistry.addRecipe(furnace, "xxx", "x x", "xxx", 'x', VenusCobblestone);
                 
                 //Register Smelting
                 GameRegistry.addSmelting(GalacticraftVenus.VenusCobblestone.blockID, VenusStone, 0.7f);
                 GameRegistry.addSmelting(GalacticraftVenus.VenusSulferOre.blockID, VenusSulferDust, 0.7f);
                 GameRegistry.addSmelting(GalacticraftVenus.VenusMeteorOre.blockID, meteoricIronRaw, 0.7f);
-                GameRegistry.addSmelting(GalacticraftVenus.VenusGemOre.blockID, VenusGem, 0.7f);
+                GameRegistry.addSmelting(GalacticraftVenus.VenusRedGemOre.blockID, VenusRedGem, 0.7f);
                 GameRegistry.addSmelting(GalacticraftVenus.VenusCoalOre.blockID, coal, 0.7f);
                 GameRegistry.addSmelting(GalacticraftVenus.VenusIronOre.blockID, ingotIron, 0.7f);
                 
