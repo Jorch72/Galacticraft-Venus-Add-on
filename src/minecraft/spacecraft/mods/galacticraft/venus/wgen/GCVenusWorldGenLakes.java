@@ -6,11 +6,11 @@ import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-public class GCVenusWorldGenLava extends WorldGenerator
+public class GCVenusWorldGenLakes extends WorldGenerator
 {
     private final int blockIndex;
 
-    public GCVenusWorldGenLava(int par1)
+    public GCVenusWorldGenLakes(int par1)
     {
         this.blockIndex = par1;
     }

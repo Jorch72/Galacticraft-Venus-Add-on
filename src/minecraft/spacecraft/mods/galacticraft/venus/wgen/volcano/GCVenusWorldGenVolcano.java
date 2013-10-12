@@ -1,7 +1,7 @@
 package spacecraft.mods.galacticraft.venus.wgen.volcano;
 
 import java.util.Random;
-import starcraft.mods.galacticraft.venus.GalacticraftVenus;
+import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -30,38 +30,6 @@ public class GCVenusWorldGenVolcano extends WorldGenerator
 	public boolean LocationIsValidSpawn(World world, int i, int j, int k)
 	{
 	return true;
-		// int distanceToAir = 0;
-		// int checkID = world.getBlockId(i, j, k);
-
-		// while (checkID != 0)
-		// {
-			// distanceToAir++;
-			// checkID = world.getBlockId(i, j + distanceToAir, k);
-		// }
-
-		// if (distanceToAir > 3)
-		// {
-			// return false;
-		// }
-		// j += distanceToAir - 1;
-
-		// int blockID = world.getBlockId(i, j, k);
-		// int blockMeta = world.getBlockMetadata(i, j, k);
-		// int blockIDAbove = world.getBlockId(i, j+1, k);
-		// int blockIDBelow = world.getBlockId(i, j-1, k);
-		
-		// for (int x : GetValidSpawnBlocks())
-		// {
-			// if (blockIDAbove != 0)
-			// {
-				// return false;
-			// }
-			// if (blockID == x)
-			// {
-				// return true;
-			// }
-		// }
-		// return false;
 	}
 
 	@Override

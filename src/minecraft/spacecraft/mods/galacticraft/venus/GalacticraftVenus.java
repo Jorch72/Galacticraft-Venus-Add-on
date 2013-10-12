@@ -10,14 +10,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import spacecraft.mods.galacticraft.venus.block.VenusGrass;
-import spacecraft.mods.galacticraft.venus.block.VenusDirt;
-import spacecraft.mods.galacticraft.venus.block.VenusOre;
-import spacecraft.mods.galacticraft.venus.block.VenusBlock;
-import spacecraft.mods.galacticraft.venus.block.VenusCobblestone;
-import spacecraft.mods.galacticraft.venus.block.VenusStone;
+import spacecraft.mods.galacticraft.venus.block.*;
+import spacecraft.mods.galacticraft.venus.items.*;
 import spacecraft.mods.galacticraft.venus.dimension.GCVenusWorldProvider;
-import spacecraft.mods.galacticraft.venus.items.VenusItem;
+import spacecraft.mods.galacticraft.venus.wgen.*;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -29,7 +25,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid="gcvenus", name="Galacticraft Venus", version="0.1.1A-P", dependencies = "required-after:Forge@[9.10.0.789,)")
+@Mod(modid="galacticraftVenus", name="Galacticraft Venus", version="0.1.2A-P", dependencies = "required-after:Forge@[9.10.0.789,)")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
   public class GalacticraftVenus 
   {
