@@ -4,6 +4,7 @@ import java.io.File;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.world.IPlanet;
+import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import micdoodle8.mods.galacticraft.moon.items.GCMoonItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -54,16 +55,16 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		};
 		
 		//Block Venus Grass
-		public final static Block VenusGrass = new VenusBlock(610, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("spacecraft:venusGrass");
+    	public final static Block VenusGrass = new VenusBlock(610, Material.ground) .setHardness(0.4F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("spacecraft:venusGrass");
 		
 		//Block Venus Dirt
-		public final static Block VenusDirt = new VenusBlock(611, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("spacecraft:venusDirt");
+		public final static Block VenusDirt = new VenusBlock(611, Material.ground) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("spacecraft:venusDirt");
         
 		//Block Venus Stone
-		public final static Block VenusStone = new VenusBlock(612, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusStone") .setTextureName("spacecraft:venusStone");
+		public final static Block VenusStone = new VenusBlock(612, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusStone") .setTextureName("spacecraft:venusStone");
 		
 		//Block Venus Cobblestone
-		public final static Block VenusCobblestone = new VenusBlock(613, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCobblestone") .setTextureName("spacecraft:venusCobblestone");
+		public final static Block VenusCobblestone = new VenusBlock(613, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCobblestone") .setTextureName("spacecraft:venusCobblestone");
 		
 		//Block Venus Gem Block
 		public final static Block VenusGemBlock = new VenusBlock(614, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGem") .setTextureName("spacecraft:gemBlock");
@@ -180,6 +181,9 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 ItemStack VenusTinOre = new ItemStack(GalacticraftVenus.VenusTinOre);
                 ItemStack VenusCopperOre = new ItemStack(GalacticraftVenus.VenusCopperOre);
                 
+//                ItemStack ingotTin = new ItemStack(GCCoreItems.ingotTin);  
+//                ItemStack ingotCopper = new ItemStack(GCCoreItems.ingotCopper);
+                
                 ItemStack meteoricIronRaw = new ItemStack(GCMoonItems.meteoricIronRaw);      
                 ItemStack coal = new ItemStack(Item.coal);
                 ItemStack ingotIron = new ItemStack(Item.ingotIron);
@@ -197,8 +201,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 GameRegistry.addSmelting(GalacticraftVenus.VenusCoalOre.blockID, coal, 0.7f);
                 GameRegistry.addSmelting(GalacticraftVenus.VenusIronOre.blockID, ingotIron, 0.7f);
                 
-                GameRegistry.addSmelting(GalacticraftVenus.VenusTinOre.blockID, coal, 0.7f);
-                GameRegistry.addSmelting(GalacticraftVenus.VenusCopperOre.blockID, ingotIron, 0.7f);
+//                GameRegistry.addSmelting(GalacticraftVenus.VenusTinOre.blockID, ingotTin, 0.7f);
+//                GameRegistry.addSmelting(GalacticraftVenus.VenusCopperOre.blockID, ingotCopper, 0.7f);
         }
         
         @EventHandler
