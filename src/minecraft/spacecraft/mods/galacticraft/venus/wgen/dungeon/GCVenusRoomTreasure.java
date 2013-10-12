@@ -2,12 +2,14 @@ package spacecraft.mods.galacticraft.venus.wgen.dungeon;
 
 import java.util.ArrayList;
 import java.util.Random;
+
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import micdoodle8.mods.galacticraft.core.tile.GCCoreTileEntityTreasureChest;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonBoundingBox;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonRoom;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreMapGenDungeon;
+import micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -66,7 +68,7 @@ public class GCVenusRoomTreasure extends GCCoreDungeonRoom
         }
         final int hx = (this.posX + this.posX + this.sizeX) / 2;
         final int hz = (this.posZ + this.posZ + this.sizeZ) / 2;
-        if (this.placeBlock(chunk, meta, hx, this.posY, hz, cx, cz, GCCoreBlocks.treasureChestTier1.blockID, 0))
+        if (this.placeBlock(chunk, meta, hx, this.posY, hz, cx, cz, GCMarsBlocks.tier2TreasureChest.blockID, 0))
         {
             this.chests.add(new ChunkCoordinates(hx, this.posY, hz));
         }

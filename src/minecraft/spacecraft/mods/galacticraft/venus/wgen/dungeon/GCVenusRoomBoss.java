@@ -5,6 +5,7 @@ import micdoodle8.mods.galacticraft.core.tile.GCCoreTileEntityDungeonSpawner;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonBoundingBox;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonRoom;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreMapGenDungeon;
+import micdoodle8.mods.galacticraft.mars.tile.GCMarsTileEntityDungeonSpawner;
 import micdoodle8.mods.galacticraft.moon.blocks.GCMoonBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntity;
@@ -95,9 +96,9 @@ public class GCVenusRoomBoss extends GCCoreDungeonRoom
 
         final TileEntity tile = this.worldObj.getBlockTileEntity(this.spawnerCoords.posX, this.spawnerCoords.posY, this.spawnerCoords.posZ);
 
-        if (tile == null || !(tile instanceof GCCoreTileEntityDungeonSpawner))
+        if (tile == null || !(tile instanceof GCMarsTileEntityDungeonSpawner))
         {
-            GCCoreTileEntityDungeonSpawner spawner = new GCCoreTileEntityDungeonSpawner();
+            GCCoreTileEntityDungeonSpawner spawner = new GCMarsTileEntityDungeonSpawner();
             spawner.setRoom(new Vector3(this.posX, this.posY, this.posZ), new Vector3(this.sizeX, this.sizeY, this.sizeZ));
             this.worldObj.setBlockTileEntity(this.spawnerCoords.posX, this.spawnerCoords.posY, this.spawnerCoords.posZ, spawner);
         }

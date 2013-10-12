@@ -6,11 +6,11 @@ import java.util.Random;
 
 import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
 import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
-import spacecraft.mods.galacticraft.venus.wgen.dungeon.GCVenusRoomBoss;
-import spacecraft.mods.galacticraft.venus.wgen.dungeon.GCVenusRoomChests;
-import spacecraft.mods.galacticraft.venus.wgen.dungeon.GCVenusRoomEmpty;
-import spacecraft.mods.galacticraft.venus.wgen.dungeon.GCVenusRoomSpawner;
-import spacecraft.mods.galacticraft.venus.wgen.dungeon.GCVenusRoomTreasure;
+import spacecraft.mods.galacticraft.venus.wgen.dungeonMars.GCVenusRoomBoss;
+import spacecraft.mods.galacticraft.venus.wgen.dungeonMars.GCVenusRoomChests;
+import spacecraft.mods.galacticraft.venus.wgen.dungeonMars.GCVenusRoomEmpty;
+import spacecraft.mods.galacticraft.venus.wgen.dungeonMars.GCVenusRoomSpawner;
+import spacecraft.mods.galacticraft.venus.wgen.dungeonMars.GCVenusRoomTreasure;
 import spacecraft.mods.galacticraft.venus.wgen.village.GCVenusMapGenVillage;
 import spacecraft.mods.galacticraft.venus.wgen.volcano.GCVenusWorldGenVolcano;
 import spacecraft.mods.galacticraft.venus.wgen.GCVenusWorldGenLakes;
