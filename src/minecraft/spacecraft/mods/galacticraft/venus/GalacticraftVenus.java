@@ -103,13 +103,19 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		
 		
 		//Item Sufer Dust
-		public final static Item VenusSulferDust = new VenusItem(626) .setUnlocalizedName("VenusSulferDust") .setTextureName("spacecraft:sulferDust");
+		public final static Item SulferDust = new VenusItem(626) .setUnlocalizedName("SulferDust") .setTextureName("spacecraft:sulferDust");
 		
 		//Item Sufer Ingot
-		public final static Item VenusSulferIngot = new VenusItem(627) .setUnlocalizedName("VenusSulferIngot") .setTextureName("spacecraft:sulferIngot");
+		public final static Item SulferIngot = new VenusItem(627) .setUnlocalizedName("SulferIngot") .setTextureName("spacecraft:sulferIngot");
 		
 		//Item Red Gem
-		public final static Item RedGem = new VenusItem(628) .setUnlocalizedName("VenusGem") .setTextureName("spacecraft:redGem");
+		public final static Item RedGem = new VenusItem(628) .setUnlocalizedName("RedGem") .setTextureName("spacecraft:redGem");
+		
+		//Item Sufer Plate
+		public final static Item SulferPlate = new VenusItem(629) .setUnlocalizedName("SulferPlate") .setTextureName("spacecraft:sulferPlate");
+				
+		//Item Red Gem Plate
+		public final static Item RedGemPlate = new VenusItem(630) .setUnlocalizedName("RedGemPlate") .setTextureName("spacecraft:redGemPlate");
 		
 		//Where the client and server proxy is loaded.
         @SidedProxy(clientSide="spacecraft.mods.galacticraft.venus.client.ClientProxy", serverSide="spacecraft.mods.galacticraft.venus.CommonProxy")
@@ -167,15 +173,17 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				LanguageRegistry.addName(VenusBasalt, "Venus Basalt");
 				
 				//Registring Items Names
-                LanguageRegistry.addName(VenusSulferDust, "Sulfer Dust");
-                LanguageRegistry.addName(VenusSulferIngot, "Sulfer Ingot");
+                LanguageRegistry.addName(SulferDust, "Sulfer Dust");
+                LanguageRegistry.addName(SulferIngot, "Sulfer Ingot");
                 LanguageRegistry.addName(RedGem, "Red Gem");
+                LanguageRegistry.addName(SulferPlate, "Sulfer Plate");
+                LanguageRegistry.addName(RedGemPlate, "Red Gem Plate");
                 
 				//Adding ItemStack for recipes
                 ItemStack VenusCobblestone = new ItemStack(GalacticraftVenus.VenusCobblestone);
                 ItemStack VenusStone = new ItemStack(GalacticraftVenus.VenusStone);                
-                ItemStack VenusSulferIngot = new ItemStack(GalacticraftVenus.VenusSulferIngot);
-                ItemStack VenusSulferDust = new ItemStack(GalacticraftVenus.VenusSulferDust);
+                ItemStack SulferIngot = new ItemStack(GalacticraftVenus.SulferIngot);
+                ItemStack SulferDust = new ItemStack(GalacticraftVenus.SulferDust);
                 ItemStack VenusSulfer = new ItemStack(GalacticraftVenus.VenusSulferBlock);
                 ItemStack VenusRedGem = new ItemStack(GalacticraftVenus.RedGem);
                 ItemStack VenusRedGemBlock = new ItemStack(GalacticraftVenus.VenusRedGemBlock);
@@ -192,14 +200,14 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 ItemStack ingotIron = new ItemStack(Item.ingotIron);
                 
                 //Register Crafting
-                GameRegistry.addRecipe(VenusSulferIngot, "xx ", "xx ", "   ", 'x', VenusSulferDust);
-                GameRegistry.addRecipe(VenusSulfer, "xxx", "xxx", "xxx", 'x', VenusSulferIngot);
+                GameRegistry.addRecipe(SulferIngot, "xx ", "xx ", "   ", 'x', SulferDust);
+                GameRegistry.addRecipe(VenusSulfer, "xxx", "xxx", "xxx", 'x', SulferIngot);
                 GameRegistry.addRecipe(VenusRedGemBlock, "xxx", "xxx", "xxx", 'x', VenusRedGem);
                 GameRegistry.addRecipe(furnace, "xxx", "x x", "xxx", 'x', VenusCobblestone);
                 
                 //Register Smelting
                 GameRegistry.addSmelting(GalacticraftVenus.VenusCobblestone.blockID, VenusStone, 0.7f);
-                GameRegistry.addSmelting(GalacticraftVenus.VenusSulferOre.blockID, VenusSulferDust, 0.7f);
+                GameRegistry.addSmelting(GalacticraftVenus.VenusSulferOre.blockID, SulferDust, 0.7f);
                 GameRegistry.addSmelting(GalacticraftVenus.VenusMeteorOre.blockID, meteoricIronRaw, 0.7f);
                 GameRegistry.addSmelting(GalacticraftVenus.VenusRedGemOre.blockID, VenusRedGem, 0.7f);
                 GameRegistry.addSmelting(GalacticraftVenus.VenusCoalOre.blockID, coal, 0.7f);

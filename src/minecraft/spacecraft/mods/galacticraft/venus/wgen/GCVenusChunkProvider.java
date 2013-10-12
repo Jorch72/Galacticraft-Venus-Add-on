@@ -297,17 +297,17 @@ public class GCVenusChunkProvider extends ChunkProviderGenerate
             this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, par2, par3);
         }
         
-		int var12;
-		int var13;
-		int var14;
+//		int var12;
+//		int var13;
+//		int var14;
 
-        if (!var11)
-        {
-            var12 = var4 + this.rand.nextInt(16) + 8;
-            var13 = 59;
-            var14 = var5 + this.rand.nextInt(16) + 8;
-            new GCVenusWorldGenLakes(GalacticraftVenus.VenusStone.blockID).generate(this.worldObj, this.rand, var12, var13, var14);
-        }
+//        if (!var11)
+//        {
+//            var12 = var4 + this.rand.nextInt(16) + 8;
+//            var13 = 59;
+//            var14 = var5 + this.rand.nextInt(16) + 8;
+ //           new GCVenusWorldGenLakes(GalacticraftVenus.VenusStone.blockID).generate(this.worldObj, this.rand, var12, var13, var14);
+ //       }
 
 //        if (!var11 && this.rand.nextInt(700) == 0)
 //        {
