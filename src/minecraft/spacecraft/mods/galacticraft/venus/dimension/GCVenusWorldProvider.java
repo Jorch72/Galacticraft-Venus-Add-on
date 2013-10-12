@@ -1,7 +1,6 @@
 package spacecraft.mods.galacticraft.venus.dimension;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
-import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
 import spacecraft.mods.galacticraft.venus.wgen.GCVenusChunkProvider;
@@ -15,7 +14,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GCVenusWorldProvider extends WorldProvider implements IGalacticraftWorldProvider, ISolarLevel
+public class GCVenusWorldProvider extends WorldProvider implements IGalacticraftWorldProvider
 {
     @Override
     public void setDimension(int var1)
@@ -62,28 +61,6 @@ public class GCVenusWorldProvider extends WorldProvider implements IGalacticraft
     }
 
     @Override
-    public float calculateCelestialAngle(long par1, float par3)
-    {
-        final int var4 = (int) (par1 % 24278L);
-        float var5 = (var4 + par3) / 24278.0F - 0.25F;
-
-        if (var5 < 0.0F)
-        {
-            ++var5;
-        }
-
-        if (var5 > 1.0F)
-        {
-            --var5;
-        }
-
-        final float var6 = var5;
-        var5 = 1.0F - (float) ((Math.cos(var5 * Math.PI) + 1.0D) / 2.0D);
-        var5 = var6 + (var5 - var6) / 3.0F;
-        return var5;
-    }
-
-    @Override
     @SideOnly(Side.CLIENT)
     public float getStarBrightness(float par1)
     {
@@ -101,6 +78,12 @@ public class GCVenusWorldProvider extends WorldProvider implements IGalacticraft
         }
 
         return var3 * var3 * 0.5F + 0.3F;
+    }
+
+    @Override
+    public float calculateCelestialAngle(long par1, float par3)
+    {
+        return super.calculateCelestialAngle(par1, par3);
     }
 
     public float calculatePhobosAngle(long par1, float par3)
@@ -131,7 +114,7 @@ public class GCVenusWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public boolean isSkyColored()
     {
-        return false;
+        return true;
     }
 
     @Override
@@ -215,7 +198,7 @@ public class GCVenusWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public float getGravity()
     {
-        return 0.004F;
+        return 0.038F;
     }
 
     @Override
@@ -227,30 +210,30 @@ public class GCVenusWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public double getMeteorFrequency()
     {
-        return 7.0D;
+        return 10.0D;
     }
 
     @Override
     public double getFuelUsageMultiplier()
     {
-        return 9.0D;
-    }
-
-    @Override
-    public double getSolarEnergyMultiplier()
-    {
-        return 1.4D;
+        return 0.9D;
     }
 
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 0;
+        return tier >= 2;
     }
 
     @Override
     public float getFallDamageModifier()
     {
-        return 0.50F;
+        return 0.38F;
+    }
+
+    @Override
+    public float getSoundVolReductionAmount()
+    {
+        return 10.0F;
     }
 }
