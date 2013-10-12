@@ -46,6 +46,7 @@ public class GCVenusConfigManager
 	public static int VenusCoalOreID;
 	public static int VenusTinOreID;
 	public static int VenusCopperOreID;
+	public static int VenusBasaltID;
 
     // ITEMS
 	public static int VenusSulferDustID;
@@ -99,10 +100,13 @@ public class GCVenusConfigManager
 			GCVenusConfigManager.VenusCoalOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Coal Ore ID", 5016).getInt(5016);
 			GCVenusConfigManager.VenusTinOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Tin Ore ID", 5017).getInt(5017);
 			GCVenusConfigManager.VenusCopperOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Copper Ore ID", 5018).getInt(5018);
-       
-			GCVenusConfigManager.VenusSulferDustID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Dust ID", 5019).getInt(5019);
-			GCVenusConfigManager.VenusSulferIngotID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Ingot ID", 5020).getInt(5020);
-			GCVenusConfigManager.VenusRedGemID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Red Gem ID", 5021).getInt(5021);
+			GCVenusConfigManager.VenusBasaltID= GCVenusConfigManager.configuration.get("Blocks", "Venus Basalt ID", 5019).getInt(5019);
+			
+			
+			
+			GCVenusConfigManager.VenusSulferDustID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Dust ID", 5020).getInt(5020);
+			GCVenusConfigManager.VenusSulferIngotID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Ingot ID", 5021).getInt(5021);
+			GCVenusConfigManager.VenusRedGemID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Red Gem ID", 5022).getInt(5022);
 			
 			GCVenusConfigManager.disableGemOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Gem Ore Gen on Venus", false).getBoolean(false);
 			GCVenusConfigManager.disableMeteorOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Meteor Ore Gen on Venus", false).getBoolean(false);

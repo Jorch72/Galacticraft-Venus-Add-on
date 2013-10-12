@@ -3,7 +3,7 @@
 # GENERAL ITEMS
 GalacticraftVenus.VenusSulferDust.name=Sulfer Dust
 GalacticraftVenus.VenusSulferIngot.name=Sulfer Ingot
-GalacticraftVenus.VenusGem.name=Gem
+GalacticraftVenus.VenusRedGem.name=Red Gem
 
 # FOOD
 
@@ -16,17 +16,18 @@ tile.GalacticraftVenus.VenusGrass.name=Venus Grass
 tile.GalacticraftVenus.VenusDirt.name=Venus Dirt
 tile.GalacticraftVenus.VenusStone.name=Venus Stone
 tile.GalacticraftVenus.VenusCobblestone.name=Venus Cobblestone
-tile.GalacticraftVenus.VenusGemBlock.name=Gem Block
+tile.GalacticraftVenus.VenusRedGemBlock.name=Red Gem Block
 tile.GalacticraftVenus.VenusMeteorBlock.name=Meteor Block
 tile.GalacticraftVenus.VenusBrick.name=Venus Brick
 tile.GalacticraftVenus.VenusSulferBlock.name=Sulfer Block
-tile.GalacticraftVenus.VenusGemOre.name=Gem Ore
+tile.GalacticraftVenus.VenusRed GemOre.name=Red Gem Ore
 tile.GalacticraftVenus.VenusMeteorOre.name=Meteor Ore
 tile.GalacticraftVenus.VenusSulferOre.name=Sulfer Ore
 tile.GalacticraftVenus.VenusIronOre.name=Iron Ore
 tile.GalacticraftVenus.VenusCoalOre.name=Coal Ore
 tile.GalacticraftVenus.VenusTinOre.name=Tin Ore
 tile.GalacticraftVenus.VenusCopperOre.name=Copper Ore
+tile.GalacticraftVenus.VenusBasalt.name=Venus Basalt
 				
 # GUI
 itemGroup.GalacticraftVenus=Galacticraft Venus
