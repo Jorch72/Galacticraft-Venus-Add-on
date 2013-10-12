@@ -19,6 +19,7 @@ CHANGELOG
 
 /src/minecraft/*
 !/src/minecraft/spacecraft/
+!/src/minecraft/universalelectricity/
 !/src/minecraft/assets/
 /src/minecraft/assets/forge
 /src/minecraft/assets/galacticraftcore
