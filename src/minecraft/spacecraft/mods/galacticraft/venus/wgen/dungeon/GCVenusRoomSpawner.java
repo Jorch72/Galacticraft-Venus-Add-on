@@ -26,7 +26,7 @@ public class GCVenusRoomSpawner extends GCCoreDungeonRoom
         {
             this.rand = new Random(this.worldObj.getSeed() * posX * posY * 57 * posZ);
             this.sizeX = this.rand.nextInt(5) + 6;
-            this.sizeY = this.rand.nextInt(2) + 4;
+            this.sizeY = this.rand.nextInt(2) + 7;
             this.sizeZ = this.rand.nextInt(5) + 6;
         }
     }
