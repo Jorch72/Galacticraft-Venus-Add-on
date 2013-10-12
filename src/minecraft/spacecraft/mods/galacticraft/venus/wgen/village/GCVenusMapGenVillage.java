@@ -7,7 +7,6 @@ import java.util.Random;
 import spacecraft.mods.galacticraft.venus.wgen.GCVenusBiomeGenBase;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.structure.MapGenStructure;
-import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
 
 public class GCVenusMapGenVillage extends MapGenStructure
@@ -15,23 +14,23 @@ public class GCVenusMapGenVillage extends MapGenStructure
     public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { GCVenusBiomeGenBase.venusFlat });
     private final int terrainType;
 
-    static
-    {
-        GCVenusMapGenVillage.initiateStructures();
-    }
+//    static
+//    {
+//        GCVenusMapGenVillage.initiateStructures();
+//    }
 
-    public static void initiateStructures()
-    {
-        MapGenStructureIO.func_143034_b(GCVenusStructureVillageStart.class, "VenusVillage");
-        MapGenStructureIO.func_143031_a(GCVenusComponentVillageField.class, "VenusField1");
-        MapGenStructureIO.func_143031_a(GCVenusComponentVillageField2.class, "VenusField2");
-        MapGenStructureIO.func_143031_a(GCVenusComponentVillageHouse.class, "VenusHouse");
-        MapGenStructureIO.func_143031_a(GCVenusComponentVillageRoadPiece.class, "VenusRoadPiece");
-        MapGenStructureIO.func_143031_a(GCVenusComponentVillagePathGen.class, "VenusPath");
-        MapGenStructureIO.func_143031_a(GCVenusComponentVillageTorch.class, "VenusTorch");
-        MapGenStructureIO.func_143031_a(GCVenusComponentVillageStartPiece.class, "VenusWell");
-        MapGenStructureIO.func_143031_a(GCVenusComponentVillageWoodHut.class, "VenusWoodHut");
-    }
+//    public static void initiateStructures()
+//    {
+//        MapGenStructureIO.func_143034_b(GCVenusStructureVillageStart.class, "VenusVillage");
+//        MapGenStructureIO.func_143031_a(GCVenusComponentVillageField.class, "VenusField1");
+//        MapGenStructureIO.func_143031_a(GCVenusComponentVillageField2.class, "VenusField2");
+//        MapGenStructureIO.func_143031_a(GCVenusComponentVillageHouse.class, "VenusHouse");
+//        MapGenStructureIO.func_143031_a(GCVenusComponentVillageRoadPiece.class, "VenusRoadPiece");
+//        MapGenStructureIO.func_143031_a(GCVenusComponentVillagePathGen.class, "VenusPath");
+//        MapGenStructureIO.func_143031_a(GCVenusComponentVillageTorch.class, "VenusTorch");
+//        MapGenStructureIO.func_143031_a(GCVenusComponentVillageStartPiece.class, "VenusWell");
+//        MapGenStructureIO.func_143031_a(GCVenusComponentVillageWoodHut.class, "VenusWoodHut");
+//    }
 
     public GCVenusMapGenVillage()
     {
@@ -78,9 +77,9 @@ public class GCVenusMapGenVillage extends MapGenStructure
         return new GCVenusStructureVillageStart(this.worldObj, this.rand, par1, par2, this.terrainType);
     }
 
-    @Override
-    public String func_143025_a()
-    {
-        return "VenusVillage";
-    }
+//    @Override
+//    public String func_143025_a()
+//    {
+//        return "VenusVillage";
+//    }
 }
