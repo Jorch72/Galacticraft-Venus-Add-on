@@ -28,7 +28,7 @@ public class GCVenusRoomChests extends GCCoreDungeonRoom
         {
             final Random rand = new Random(this.worldObj.getSeed() * posX * posY * 57 * posZ);
             this.sizeX = rand.nextInt(5) + 6;
-            this.sizeY = rand.nextInt(2) + 7;
+            this.sizeY = rand.nextInt(2) + 4;
             this.sizeZ = rand.nextInt(5) + 6;
         }
     }
@@ -76,24 +76,15 @@ public class GCVenusRoomChests extends GCCoreDungeonRoom
     @Override
     protected void handleTileEntities(Random rand)
     {
-        if (!this.chests.isEmpty())
+        for (final ChunkCoordinates chestCoords : this.chests)
         {
-            this.worldObj.setBlock(this.chests.get(0).posX, this.chests.get(0).posY, this.chests.get(0).posZ, Block.chest.blockID, 0, 2);
-            TileEntityChest chest = (TileEntityChest) this.worldObj.getBlockTileEntity(this.chests.get(0).posX, this.chests.get(0).posY, this.chests.get(0).posZ);
-            
+            final TileEntityChest chest = (TileEntityChest) this.worldObj.getBlockTileEntity(chestCoords.posX, chestCoords.posY, chestCoords.posZ);
+
             if (chest != null)
             {
-                for (int i = 0; i < chest.getSizeInventory(); i++)
-                {
-                    chest.setInventorySlotContents(i, null);
-                }
-                
                 ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
-
                 WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
             }
-            
-            this.chests.clear();
         }
     }
 }

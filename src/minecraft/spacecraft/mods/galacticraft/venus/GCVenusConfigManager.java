@@ -47,7 +47,6 @@ public class GCVenusConfigManager
 	public static int VenusTinOreID;
 	public static int VenusCopperOreID;
 	public static int VenusBasaltID;
-	public static int VenusHalfBasaltID;
 
     // ITEMS
 	public static int SulferDustID;
@@ -103,15 +102,14 @@ public class GCVenusConfigManager
 			GCVenusConfigManager.VenusCoalOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Coal Ore ID", 5016).getInt(5016);
 			GCVenusConfigManager.VenusTinOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Tin Ore ID", 5017).getInt(5017);
 			GCVenusConfigManager.VenusCopperOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Copper Ore ID", 5018).getInt(5018);
-			GCVenusConfigManager.VenusBasaltID= GCVenusConfigManager.configuration.get("Blocks", "Basalt ID", 5019).getInt(5019);
-			GCVenusConfigManager.VenusHalfBasaltID= GCVenusConfigManager.configuration.get("Blocks", "HalfSlab Basalt ID", 5020).getInt(5020);
+			GCVenusConfigManager.VenusBasaltID= GCVenusConfigManager.configuration.get("Blocks", "Venus Basalt ID", 5019).getInt(5019);
 				
 			
-			GCVenusConfigManager.SulferDustID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Dust ID", 5021).getInt(5021);
-			GCVenusConfigManager.SulferIngotID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Ingot ID", 5022).getInt(5022);
-			GCVenusConfigManager.RedGemID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Red Gem ID", 5023).getInt(5023);
-			GCVenusConfigManager.SulferPlateID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Plate ID", 5024).getInt(5024);
-			GCVenusConfigManager.RedGemPlateID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Red Gem Plate ID", 5025).getInt(5025);
+			GCVenusConfigManager.SulferDustID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Dust ID", 5020).getInt(5020);
+			GCVenusConfigManager.SulferIngotID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Ingot ID", 5021).getInt(5021);
+			GCVenusConfigManager.RedGemID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Red Gem ID", 5022).getInt(5022);
+			GCVenusConfigManager.SulferPlateID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Plate ID", 5023).getInt(5023);
+			GCVenusConfigManager.RedGemPlateID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Red Gem Plate ID", 5024).getInt(5024);
 			
 			
 			GCVenusConfigManager.disableGemOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Gem Ore Gen on Venus", false).getBoolean(false);

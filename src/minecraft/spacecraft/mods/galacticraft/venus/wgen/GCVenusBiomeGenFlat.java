@@ -7,7 +7,7 @@ public class GCVenusBiomeGenFlat extends GCVenusBiomeGenBase
         super(par1);
         this.setBiomeName("venusFlat");
         this.setColor(11111111);
-        this.minHeight = 0.4F;
-        this.maxHeight = 0.8F;
+        this.minHeight = 1.5F;
+        this.maxHeight = 0.4F;
     }
 }

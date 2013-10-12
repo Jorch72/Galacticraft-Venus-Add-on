@@ -20,7 +20,7 @@ public class GCVenusRoomEmpty extends GCCoreDungeonRoom
         {
             final Random rand = new Random(this.worldObj.getSeed() * posX * posY * 57 * posZ);
             this.sizeX = rand.nextInt(4) + 5;
-            this.sizeY = rand.nextInt(2) + 7;
+            this.sizeY = rand.nextInt(2) + 4;
             this.sizeZ = rand.nextInt(4) + 5;
         }
     }
