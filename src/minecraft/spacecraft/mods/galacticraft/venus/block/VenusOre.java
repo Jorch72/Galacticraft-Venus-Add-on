@@ -95,8 +95,12 @@ public class VenusOre extends Block
     /**
      * Determines the damage on the item the block drops. Used in cloth and wood.
      */
-    public int damageDropped(int par1)
-    {
-        return this.blockID == Block.oreLapis.blockID ? 4 : 0;
-    }
+//    public int damageDropped(int par1)
+//    {
+//        return this.blockID == Block.oreLapis.blockID ? 4 : 0;
+//    }
+    public boolean isValueable(int metadata) {
+	return true;
+	}
 }
+
