@@ -37,17 +37,17 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 	    
 	    public static CreativeTabs GalacticraftVenusTab;
 	    
-	    public static final String FILE_PATH = "/spacecraft/mods/galatcicraft/venus/";
+	    public static final String FILE_PATH = "/spacecraft/mods/galacticraft/venus/";
 	    public static final String CLIENT_PATH = "client/";
-	    public static final String LANGUAGE_PATH = "/assets/gcvenus/lang/";
+	    public static final String LANGUAGE_PATH = "/assets/spacecraft/lang/";
 	    public static final String CONFIG_FILE = "Spacecraft/Venus.conf";
 	    private static final String[] LANGUAGES_SUPPORTED = new String[] {"en_US"};
 	    
-	    public static String TEXTURE_DOMAIN = "gcvenus";
+	    public static String TEXTURE_DOMAIN = "galacticraftVenus";
 	    public static String TEXTURE_PREFIX = GalacticraftVenus.TEXTURE_DOMAIN + ":";
 	    public static String TEXTURE_SUFFIX;
 
-	    @Instance("gcvenus")
+	    @Instance("galacticraftVenus")
         public static GalacticraftVenus instance;
 		
 		//Adding Creative Tab
@@ -58,7 +58,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		};
 		
 		//Block Venus Grass
-    	public final static Block VenusGrass = new VenusGrass(610, Material.ground) .setHardness(0.4F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusGrass");
+    	public final static Block VenusGrass = new VenusDirt(610, Material.ground) .setHardness(0.4F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("spacecraft:venusGrass_top");
 		
 		//Block Venus Dirt
 		public final static Block VenusDirt = new VenusDirt(611, Material.ground) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("spacecraft:venusDirt");
