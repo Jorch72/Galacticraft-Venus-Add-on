@@ -1,6 +1,9 @@
 # Galacticraft Venus Language File = UNITED STATES ENGLISH
 
 # GENERAL ITEMS
+GalacticraftVenus.VenusSulferDust.name=Sulfer Dust
+GalacticraftVenus.VenusSulferIngot.name=Sulfer Ingot
+GalacticraftVenus.VenusGem.name=Gem
 
 # FOOD
 
@@ -9,8 +12,24 @@
 # ARMOR
 
 # BLOCKS
-
+tile.GalacticraftVenus.VenusGrass.name=Venus Grass
+tile.GalacticraftVenus.VenusDirt.name=Venus Dirt
+tile.GalacticraftVenus.VenusStone.name=Venus Stone
+tile.GalacticraftVenus.VenusCobblestone.name=Venus Cobblestone
+tile.GalacticraftVenus.VenusGemBlock.name=Gem Block
+tile.GalacticraftVenus.VenusMeteorBlock.name=Meteor Block
+tile.GalacticraftVenus.VenusBrick.name=Venus Brick
+tile.GalacticraftVenus.VenusSulferBlock.name=Sulfer Block
+tile.GalacticraftVenus.VenusGemOre.name=Gem Ore
+tile.GalacticraftVenus.VenusMeteorOre.name=Meteor Ore
+tile.GalacticraftVenus.VenusSulferOre.name=Sulfer Ore
+tile.GalacticraftVenus.VenusIronOre.name=Iron Ore
+tile.GalacticraftVenus.VenusCoalOre.name=Coal Ore
+tile.GalacticraftVenus.VenusTinOre.name=Tin Ore
+tile.GalacticraftVenus.VenusCopperOre.name=Copper Ore
+				
 # GUI
-dimension.Venus.name=Venus
 itemGroup.GalacticraftVenus=Galacticraft Venus
 gui.choosePlanet.desc.venus=Habitable#Volcanic Activity#Gravity: 90%
+
+dimension.GalacticraftVenus.name=Venus
