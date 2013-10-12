@@ -104,21 +104,24 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		//Block Venus Half Basalt
 		public final static Block VenusHalfBasalt = new VenusBlock(626, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusHalfBasalt") .setTextureName("spacecraft:venusBasalt");				
 		
+		//Block Spider Egg
+		public final static Block SpiderEgg = new VenusSpiderEgg(627) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("spiderEgg") .setTextureName("spacecraft:spiderEgg");				
+		
 		
 		//Item Sufer Dust
-		public final static Item SulferDust = new VenusItem(627) .setUnlocalizedName("SulferDust") .setTextureName("spacecraft:sulferDust");
+		public final static Item SulferDust = new VenusItem(628) .setUnlocalizedName("SulferDust") .setTextureName("spacecraft:sulferDust");
 		
 		//Item Sufer Ingot
-		public final static Item SulferIngot = new VenusItem(628) .setUnlocalizedName("SulferIngot") .setTextureName("spacecraft:sulferIngot");
+		public final static Item SulferIngot = new VenusItem(629) .setUnlocalizedName("SulferIngot") .setTextureName("spacecraft:sulferIngot");
 		
 		//Item Red Gem
-		public final static Item RedGem = new VenusItem(629) .setUnlocalizedName("RedGem") .setTextureName("spacecraft:redGem");
+		public final static Item RedGem = new VenusItem(630) .setUnlocalizedName("RedGem") .setTextureName("spacecraft:redGem");
 		
 		//Item Compressed Sufer
-		public final static Item CompressedSulfer = new VenusItem(630) .setUnlocalizedName("SulferPlate") .setTextureName("spacecraft:compressedSulfer");
+		public final static Item CompressedSulfer = new VenusItem(631) .setUnlocalizedName("SulferPlate") .setTextureName("spacecraft:compressedSulfer");
 				
 		//Item Compressed Red Gem
-		public final static Item CompressedRedGem = new VenusItem(631) .setUnlocalizedName("CompressedRedGem") .setTextureName("spacecraft:compressedRedGem");
+		public final static Item CompressedRedGem = new VenusItem(632) .setUnlocalizedName("CompressedRedGem") .setTextureName("spacecraft:compressedRedGem");
 		
 		//Where the client and server proxy is loaded.
         @SidedProxy(clientSide="spacecraft.mods.galacticraft.venus.client.ClientProxy", serverSide="spacecraft.mods.galacticraft.venus.CommonProxy")
@@ -157,6 +160,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				GameRegistry.registerBlock(VenusCopperOre, "VenusCopperOre");
 				GameRegistry.registerBlock(VenusBasalt, "VenusBasalt");
 				GameRegistry.registerBlock(VenusHalfBasalt, "VenusHalfBasalt");
+				GameRegistry.registerBlock(SpiderEgg, "SpiderEgg");
 				
 				//Registering Block Names
                 LanguageRegistry.addName(VenusGrass, "Venus Grass");
@@ -176,6 +180,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				LanguageRegistry.addName(VenusCopperOre, "Copper Ore");
 				LanguageRegistry.addName(VenusBasalt, "Basalt");
 				LanguageRegistry.addName(VenusHalfBasalt, "Basalt Half Slab");
+				LanguageRegistry.addName(SpiderEgg, "Spider Egg");
 				
 				//Registring Items Names
                 LanguageRegistry.addName(SulferDust, "Sulfer Dust");
