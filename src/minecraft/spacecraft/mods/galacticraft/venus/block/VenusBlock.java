@@ -11,7 +11,7 @@ public class VenusBlock extends Block
 {
     public VenusBlock(int id, Material material)
     {
-    	super( id, material);
+    	super( id, material.rock);
         this.setCreativeTab(GalacticraftVenus.tabVenus);
     }
 

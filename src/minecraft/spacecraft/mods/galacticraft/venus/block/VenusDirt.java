@@ -12,7 +12,7 @@ public class VenusDirt extends Block implements IPlantableBlock, ITerraformableB
 {
 	public VenusDirt(int id, Material material)
     {
-    	super( id, material);
+    	super( id, material.grass);
 		this.setCreativeTab(GalacticraftVenus.tabVenus);
 	}
     @Override

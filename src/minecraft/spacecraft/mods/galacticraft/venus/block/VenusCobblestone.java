@@ -11,7 +11,7 @@ public class VenusCobblestone extends Block
 {
     public VenusCobblestone(int id, Material material)
     {
-    	super( id, material);
+    	super( id, material.rock);
         this.setCreativeTab(GalacticraftVenus.tabVenus);
     }
 

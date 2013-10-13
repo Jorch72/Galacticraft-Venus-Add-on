@@ -3,7 +3,6 @@ package spacecraft.mods.galacticraft.venus.block;
 import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.world.World;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
@@ -12,7 +11,7 @@ public class VenusGrass extends Block implements IPlantableBlock, ITerraformable
 {
 	public VenusGrass(int id, Material material)
     {
-    	super( id, material);
+    	super( id, material.grass);
         this.setCreativeTab(GalacticraftVenus.tabVenus);
     }
     public int damageDropped(int par1)

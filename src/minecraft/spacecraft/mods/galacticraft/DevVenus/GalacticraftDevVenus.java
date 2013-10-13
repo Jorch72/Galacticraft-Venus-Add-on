@@ -71,12 +71,12 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		public final static Block copperWire = new GCCoreBlockCopperWire(728, Material.cloth) .setHardness(1.5F).setStepSound(Block.soundClothFootstep) .setUnlocalizedName("copperWire") .setTextureName("devgalacticraftvenus:copperWire");
 
 		
-		//Item T3Spaceship
-		public final static Item spaceshipT3 = new VenusItemSpaceshipTier3(729) .setUnlocalizedName("spaceshipT3"); //.setTextureName("DevGalacticraftvenus:rocketT3");
+//		//Item T3Spaceship
+//		public final static Item spaceshipT3 = new VenusItemSpaceshipTier3(729) .setUnlocalizedName("spaceshipT3"); //.setTextureName("DevGalacticraftvenus:rocketT3");
 		
 		
-		//Item Tier3 Schematic
-		public final static Item tier3Schematic = new VenusItemSchematic(731) .setUnlocalizedName("tier3Schematic") .setTextureName("devgalacticraftvenus:tier3Schematic");
+//		//Item Tier3 Schematic
+//		public final static Item tier3Schematic = new VenusItemSchematic(731) .setUnlocalizedName("tier3Schematic") .setTextureName("devgalacticraftvenus:tier3Schematic");
 
 		
 		//Where the client and server proxy is loaded.
@@ -101,8 +101,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				//Registering Block Names
 				
 				//Registring Items Names
-                LanguageRegistry.addName(spaceshipT3, "Tier 3 Rocket");
-                LanguageRegistry.addName(tier3Schematic, "Tier 3 Rocket Schematic");
+//                LanguageRegistry.addName(spaceshipT3, "Tier 3 Rocket");
+//                LanguageRegistry.addName(tier3Schematic, "Tier 3 Rocket Schematic");
                 
 				//Adding ItemStack for recipes
                 

@@ -16,7 +16,7 @@ public class VenusOre extends Block implements IDetectableResource, IPlantableBl
 {
     public VenusOre(int id, Material material)
     {
-    	super( id, material);
+    	super( id, material.rock);
         this.setCreativeTab(GalacticraftVenus.tabVenus);
     }
 

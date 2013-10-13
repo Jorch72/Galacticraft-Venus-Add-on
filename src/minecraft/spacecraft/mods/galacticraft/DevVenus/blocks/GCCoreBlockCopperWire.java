@@ -1,6 +1,5 @@
 package spacecraft.mods.galacticraft.DevVenus.blocks;
 
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import spacecraft.mods.galacticraft.DevVenus.GalacticraftDevVenus;
 import spacecraft.mods.galacticraft.DevVenus.tile.GCCoreTileEntityCopperWire;
 import net.minecraft.block.Block;
@@ -19,29 +18,29 @@ import universalelectricity.prefab.block.BlockConductor;
  */
 public class GCCoreBlockCopperWire extends BlockConductor
 {
-    public GCCoreBlockCopperWire(int id, Material material)
+    public GCCoreBlockCopperWire(int id, String assetName)
     {
-    	super( id, material.cloth);
+        super(id, Material.cloth);
         this.setStepSound(Block.soundClothFootstep);
         this.setResistance(0.2F);
         this.setHardness(0.1F);
         this.setBlockBounds(0.3F, 0.3F, 0.3F, 0.7F, 0.7F, 0.7F);
         Block.setBurnProperties(this.blockID, 30, 60);
         this.setHardness(0.1F);
-//        this.setTextureName(GalacticraftDevVenus.TEXTURE_PREFIX + assetName);
-//        this.setUnlocalizedName(assetName);
+        this.setTextureName(GalacticraftDevVenus.TEXTURE_PREFIX + assetName);
+        this.setUnlocalizedName(assetName);
     }
 
     @Override
     public CreativeTabs getCreativeTabToDisplayOn()
     {
-        return GalacticraftDevVenus.GalacticraftDevVenusTab;
+        return GalacticraftDevVenus.tabGalacticraftDevVenus;
     }
 
     @Override
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.blockIcon = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + this.getUnlocalizedName().replace("tile.", ""));
+        this.blockIcon = par1IconRegister.registerIcon(GalacticraftDevVenus.TEXTURE_PREFIX + this.getUnlocalizedName().replace("tile.", ""));
     }
 
     @Override
