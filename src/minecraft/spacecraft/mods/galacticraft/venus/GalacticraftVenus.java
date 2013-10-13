@@ -39,14 +39,14 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 	    
 	    public static CreativeTabs GalacticraftVenusTab;
 	    
-	    public static final String CHANNEL = "galacticraftvenus";
+	    public static final String CHANNEL = "GalacticraftVenus";
 	    public static final String FILE_PATH = "/spacecraft/mods/galacticraft/venus/";
 	    public static final String CLIENT_PATH = "client/";
-	    public static final String LANGUAGE_PATH = "/assets/galacticraftvenus/lang/";
+	    public static final String LANGUAGE_PATH = "/assets/GalacticraftVenus/lang/";
 	    public static final String CONFIG_FILE = "Spacecraft/Venus.conf";
 	    private static final String[] LANGUAGES_SUPPORTED = new String[] {"en_US"};
 	    
-	    public static String TEXTURE_DOMAIN = "galacticraftvenus";
+	    public static String TEXTURE_DOMAIN = "GalacticraftVenus";
 	    public static String TEXTURE_PREFIX = GalacticraftVenus.TEXTURE_DOMAIN + ":";
 	    public static String TEXTURE_SUFFIX;
 
@@ -61,86 +61,87 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		};
 		
 		//Block Venus Grass
-    	public final static Block VenusGrass = new VenusGrass(GCVenusConfigManager.VenusGrassID, Material.ground) .setHardness(0.4F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("galacticraftvenus:venusGrass_top");
-		
+    	public final static Block VenusGrass = new VenusGrass(610, Material.ground) .setHardness(0.4F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("galacticraftvenus:venusGrass_top");
+
 		//Block Venus Dirt
-		public final static Block VenusDirt = new VenusDirt(GCVenusConfigManager.VenusDirtID, Material.ground) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("galacticraftvenus:venusDirt");
+		public final static Block VenusDirt = new VenusDirt(611, Material.ground) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("galacticraftvenus:venusDirt");
         
 		//Block Venus Stone
-		public final static Block VenusStone = new VenusStone(GCVenusConfigManager.VenusStoneID, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusStone") .setTextureName("galacticraftvenus:venusStone");
-		
+		public final static Block VenusStone = new VenusStone(612, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusStone") .setTextureName("galacticraftvenus:venusStone");
+
 		//Block Venus Cobblestone
-		public final static Block VenusCobblestone = new VenusCobblestone(GCVenusConfigManager.VenusCobblestoneID, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCobblestone") .setTextureName("galacticraftvenus:venusCobblestone");
-		
+		public final static Block VenusCobblestone = new VenusCobblestone(613, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCobblestone") .setTextureName("galacticraftvenus:venusCobblestone");
+
 		//Block Venus Gem Block
-		public final static Block VenusRedGemBlock = new VenusBlock(GCVenusConfigManager.VenusRedGemBlockID, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGem") .setTextureName("galacticraftvenus:gemBlock");
-		
+		public final static Block VenusRedGemBlock = new VenusBlock(614, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGem") .setTextureName("galacticraftvenus:gemBlock");
+
 		//Block Venus Meteor Block
-		public final static Block VenusMeteorBlock = new VenusBlock(GCVenusConfigManager.VenusMeteorBlockID, Material.ground) .setHardness(3.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteor") .setTextureName("galacticraftvenus:meteorBlock");
-		
+		public final static Block VenusMeteorBlock = new VenusBlock(615, Material.ground) .setHardness(3.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteor") .setTextureName("galacticraftvenus:meteorBlock");
+
 		//Block Venus Brick
-		public final static Block VenusBrick = new VenusBlock(GCVenusConfigManager.VenusBrickID, Material.ground) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBrick") .setTextureName("galacticraftvenus:venusBrick");
-		
+		public final static Block VenusBrick = new VenusBlock(616, Material.ground) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBrick") .setTextureName("galacticraftvenus:venusBrick");
+
 		//Block Venus Sulfer
-		public final static Block VenusSulferBlock = new VenusOre(GCVenusConfigManager.VenusSulferBlockID, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulfer") .setTextureName("galacticraftvenus:sulferBlock");
-		
+		public final static Block VenusSulferBlock = new VenusOre(617, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulfer") .setTextureName("galacticraftvenus:sulferBlock");
+
 		//Block Venus Sulfer Ore
-		public final static Block VenusSulferOre = new VenusOre(GCVenusConfigManager.VenusSulferOreID, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulferOre") .setTextureName("galacticraftvenus:venusSulfurOre");
+		public final static Block VenusSulferOre = new VenusOre(618, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulferOre") .setTextureName("galacticraftvenus:venusSulfurOre");
 
 		//Block Venus Meteor Ore
-		public final static Block VenusMeteorOre = new VenusOre(GCVenusConfigManager.VenusMeteorOreID, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteorOre") .setTextureName("galacticraftvenus:venusMeteorOre");
+		public final static Block VenusMeteorOre = new VenusOre(619, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteorOre") .setTextureName("galacticraftvenus:venusMeteorOre");
 
 		//Block Venus Gem Ore
-		public final static Block VenusRedGemOre = new VenusOre(GCVenusConfigManager.VenusRedGemOreID, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGemOre") .setTextureName("galacticraftvenus:venusGemOre");
-		
+		public final static Block VenusRedGemOre = new VenusOre(620, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGemOre") .setTextureName("galacticraftvenus:venusGemOre");
+
 		//Block Venus Iron Ore
-		public final static Block VenusIronOre = new VenusOre(GCVenusConfigManager.VenusIronOreID, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusIronOre") .setTextureName("galacticraftvenus:venusIronOre");
-		
+		public final static Block VenusIronOre = new VenusOre(621, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusIronOre") .setTextureName("galacticraftvenus:venusIronOre");
+
 		//Block Venus Coal Ore
-		public final static Block VenusCoalOre = new VenusOre(GCVenusConfigManager.VenusCoalOreID, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCoalOre") .setTextureName("galacticraftvenus:venusCoalOre");
-		
+		public final static Block VenusCoalOre = new VenusOre(622, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCoalOre") .setTextureName("galacticraftvenus:venusCoalOre");
+
 		//Block Venus Iron Ore
-		public final static Block VenusTinOre = new VenusOre(GCVenusConfigManager.VenusTinOreID, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusTinOre") .setTextureName("galacticraftvenus:venusTinOre");
-				
+		public final static Block VenusTinOre = new VenusOre(623, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusTinOre") .setTextureName("galacticraftvenus:venusTinOre");
+
 		//Block Venus Coal Ore
-		public final static Block VenusCopperOre = new VenusOre(GCVenusConfigManager.VenusCopperOreID, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCopperOre") .setTextureName("galacticraftvenus:venusCopperOre");				
-		
+		public final static Block VenusCopperOre = new VenusOre(624, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCopperOre") .setTextureName("galacticraftvenus:venusCopperOre");				
+
 		//Block Venus Basalt
-		public final static Block VenusBasalt = new VenusStone(GCVenusConfigManager.VenusBasaltID, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBasalt") .setTextureName("galacticraftvenus:venusBasalt");				
-		
+		public final static Block VenusBasalt = new VenusStone(625, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBasalt") .setTextureName("galacticraftvenus:venusBasalt");				
+
 		//Block Venus Half Basalt
-		public final static Block VenusHalfBasalt = new VenusStone(GCVenusConfigManager.VenusHalfBasaltID, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusHalfBasalt") .setTextureName("galacticraftvenus:venusBasalt");				
-		
+		public final static Block VenusHalfBasalt = new VenusStone(626, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusHalfBasalt") .setTextureName("galacticraftvenus:venusBasalt");				
+
 		//Block Spider Egg
-		public final static Block SpiderEgg = new VenusSpiderEgg(GCVenusConfigManager.SpiderEggID) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("spiderEgg") .setTextureName("galacticraftvenus:spiderEgg");				
-		
+		public final static Block SpiderEgg = new VenusSpiderEgg(627) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("spiderEgg") .setTextureName("galacticraftvenus:spiderEgg");				
+
 		//Block Gem Wire
-		public final static Block gemWire = new VenusGemWire(GCVenusConfigManager.gemWireID, Material.cloth) .setHardness(1.5F).setStepSound(Block.soundClothFootstep) .setUnlocalizedName("gemWire") .setTextureName("galacticraftvenus:gemWire");
+		public final static Block gemWire = new VenusGemWire(628, Material.cloth) .setHardness(1.5F).setStepSound(Block.soundClothFootstep) .setUnlocalizedName("gemWire") .setTextureName("galacticraftvenus:gemWire");
 
 		
 		//Item Sufer Dust
-		public final static Item SulferDust = new VenusItem(GCVenusConfigManager.SulferDustID) .setUnlocalizedName("SulferDust") .setTextureName("galacticraftvenus:sulferDust");
-		
+		public final static Item SulferDust = new VenusItem(631) .setUnlocalizedName("SulferDust") .setTextureName("galacticraftvenus:sulferDust");
+
 		//Item Sufer Ingot
-		public final static Item SulferIngot = new VenusItem(GCVenusConfigManager.SulferIngotID) .setUnlocalizedName("SulferIngot") .setTextureName("galacticraftvenus:sulferIngot");
-		
+		public final static Item SulferIngot = new VenusItem(632) .setUnlocalizedName("SulferIngot") .setTextureName("galacticraftvenus:sulferIngot");
+
 		//Item Red Gem
-		public final static Item RedGem = new VenusItem(GCVenusConfigManager.RedGemID) .setUnlocalizedName("RedGem") .setTextureName("galacticraftvenus:redGem");
-		
+		public final static Item RedGem = new VenusItem(633) .setUnlocalizedName("RedGem") .setTextureName("galacticraftvenus:redGem");
+
 		//Item Compressed Sulfer
-		public final static Item CompressedSulfer = new VenusItem(GCVenusConfigManager.CompressedSulferID) .setUnlocalizedName("SulferPlate") .setTextureName("galacticraftvenus:compressedSulfer");
-				
+		public final static Item CompressedSulfer = new VenusItem(634) .setUnlocalizedName("SulferPlate") .setTextureName("galacticraftvenus:compressedSulfer");
+
 		//Item Compressed Red Gem
-		public final static Item CompressedRedGem = new VenusItem(GCVenusConfigManager.CompressedRedGemID) .setUnlocalizedName("CompressedRedGem") .setTextureName("galacticraftvenus:compressedRedGem");
-		
+		public final static Item CompressedRedGem = new VenusItem(635) .setUnlocalizedName("CompressedRedGem") .setTextureName("galacticraftvenus:compressedRedGem");
+
 		//Item Venus Plate
-		public final static Item VenusPlate = new VenusItem(GCVenusConfigManager.VenusPlateID) .setUnlocalizedName("VenusPlate") .setTextureName("galacticraftvenus:venusPlate");
-		
+		public final static Item VenusPlate = new VenusItem(636) .setUnlocalizedName("VenusPlate") .setTextureName("galacticraftvenus:venusPlate");
+
 		//Item T3Spaceship
-		public final static Item spaceshipT3 = new VenusItemSpaceshipTier3(GCVenusConfigManager.spaceshipT3ID) .setUnlocalizedName("spaceshipT3") .setTextureName("galacticraftvenus:rocketT3");
+		public final static Item spaceshipT3 = new VenusItemSpaceshipTier3(637) .setUnlocalizedName("spaceshipT3") .setTextureName("galacticraftvenus:rocketT3");
 		
 		//Item Tier3 Schematic
-		public final static Item tier3Schematic = new VenusItemSchematic(GCVenusConfigManager.tier3SchematicID) .setUnlocalizedName("tier3Schematic") .setTextureName("galacticraftvenus:tier3Schematic");
+		public final static Item tier3Schematic = new VenusItemSchematic(638) .setUnlocalizedName("tier3Schematic") .setTextureName("galacticraftvenus:tier3Schematic");
+		
 		
 		//Where the client and server proxy is loaded.
         @SidedProxy(clientSide="spacecraft.mods.galacticraft.venus.client.ClientProxy", serverSide="spacecraft.mods.galacticraft.venus.CommonProxy")
