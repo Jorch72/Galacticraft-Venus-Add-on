@@ -11,9 +11,9 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class VenusSpiderEgg extends BlockDragonEgg
+public class VenusBlaseEgg extends BlockDragonEgg
 {
-    public VenusSpiderEgg(int par1)
+    public VenusBlaseEgg(int par1)
     {
         super(par1);
     }

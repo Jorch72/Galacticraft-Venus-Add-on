@@ -26,7 +26,7 @@ public class GCDevVenusConfigManager
     }
 
     // BLOCKS
-	public static int SpiderEggID;
+	public static int EvolvedBlaseEggID;
 	public static int gemWireID;
 	
     // ITEMS
@@ -55,7 +55,7 @@ public class GCDevVenusConfigManager
             GCDevVenusConfigManager.configuration.load();
 
             
-			GCDevVenusConfigManager.SpiderEggID= GCDevVenusConfigManager.configuration.get("Blocks", "Spider Egg ID", 6021).getInt(6021);
+			GCDevVenusConfigManager.EvolvedBlaseEggID= GCDevVenusConfigManager.configuration.get("Blocks", "Evolved Blase Egg ID", 6021).getInt(6021);
 			GCDevVenusConfigManager.gemWireID= GCDevVenusConfigManager.configuration.get("Blocks", "Gem Wire ID", 6022).getInt(6022);
 
             

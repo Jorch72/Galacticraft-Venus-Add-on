@@ -52,20 +52,20 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		
 
 		//Block Spider Egg
-		public final static Block SpiderEgg = new VenusSpiderEgg(627) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("spiderEgg") .setTextureName("galacticraftvenus:spiderEgg");				
+		public final static Block EvolvedBlaseEgg = new VenusBlaseEgg(627) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("EvolvedBlaseEgg") .setTextureName("devgalacticraftvenus:evolvedBlaseEgg");				
 
 		//Block Gem Wire
-		public final static Block gemWire = new VenusGemWire(628, Material.cloth) .setHardness(1.5F).setStepSound(Block.soundClothFootstep) .setUnlocalizedName("gemWire") .setTextureName("galacticraftvenus:gemWire");
+		public final static Block gemWire = new VenusGemWire(628, Material.cloth) .setHardness(1.5F).setStepSound(Block.soundClothFootstep) .setUnlocalizedName("gemWire") .setTextureName("devgalacticraftvenus:gemWire");
 
 		
 		//Item T3Spaceship
 		public final static Item spaceshipT3 = new VenusItemSpaceshipTier3(637) .setUnlocalizedName("spaceshipT3"); //.setTextureName("DevGalacticraftvenus:rocketT3");
 		
 		//Item T3Spaceship
-		public final static Item HeavyVenusPlate = new VenusItem(638) .setUnlocalizedName("Heavy Venus Plate") .setTextureName("DevGalacticraftvenus:HeavyVenusPlate");
+		public final static Item HeavyVenusPlate = new VenusItem(638) .setUnlocalizedName("Heavy Venus Plate") .setTextureName("devgalacticraftvenus:HeavyVenusPlate");
 
 		//Item Tier3 Schematic
-		public final static Item tier3Schematic = new VenusItemSchematic(639) .setUnlocalizedName("tier3Schematic") .setTextureName("DevGalacticraftvenus:tier3Schematic");
+		public final static Item tier3Schematic = new VenusItemSchematic(639) .setUnlocalizedName("tier3Schematic") .setTextureName("devgalacticraftvenus:tier3Schematic");
 
 		
 		//Where the client and server proxy is loaded.
@@ -86,11 +86,11 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 LanguageRegistry.instance().addStringLocalization("itemGroup.tabGalacticraftDevVenus", "en_US", "Galacticraft Dev-Venus");
                 
                 //Registering Blocks
-				GameRegistry.registerBlock(SpiderEgg, "SpiderEgg");
+				GameRegistry.registerBlock(EvolvedBlaseEgg, "EvolvedBlaseEgg");
 				GameRegistry.registerBlock(gemWire, "gemWire");
 				
 				//Registering Block Names
-				LanguageRegistry.addName(SpiderEgg, "Spider Egg");
+				LanguageRegistry.addName(EvolvedBlaseEgg, "Evolved Blase Egg");
 				LanguageRegistry.addName(gemWire, "Gem Wire");
 				
 				//Registring Items Names
