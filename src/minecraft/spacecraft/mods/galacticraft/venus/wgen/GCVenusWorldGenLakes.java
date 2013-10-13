@@ -73,7 +73,7 @@ public class GCVenusWorldGenLakes extends WorldGenerator
                         {
                         	if (par1World.getBlockId(par3 + var8, par4 + var10, par5 + var32) == Block.lavaStill.blockID)
                         	{
-                                par1World.setBlockAndMetadata(par3 + var8, par4 + var10, par5 + var32, this.blockIndex, 0);
+//                                par1World.setBlockAndMetadata(par3 + var8, par4 + var10, par5 + var32, this.blockIndex, 0);
                         	}
                         }
                     }

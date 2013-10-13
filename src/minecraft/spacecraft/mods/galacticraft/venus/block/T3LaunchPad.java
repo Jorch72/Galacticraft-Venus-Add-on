@@ -19,11 +19,11 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class launchPad extends GCCoreBlockAdvanced
+public class T3LaunchPad extends GCCoreBlockAdvanced
 {
     private Icon[] icons = new Icon[3];
 
-    public launchPad(int id, Material material)
+    public T3LaunchPad(int id, Material material)
     {
     	super( id, material);
         this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.2F, 1.0F);
@@ -75,7 +75,7 @@ public class launchPad extends GCCoreBlockAdvanced
     @Override
     public boolean canPlaceBlockOnSide(World par1World, int par2, int par3, int par4, int par5)
     {
-        final int id = GalacticraftVenus.Tier3LaunchPad.blockID;
+        final int id = GalacticraftVenus.T3LaunchPad.blockID;
 
         if (par1World.getBlockId(par2 + 1, par3, par4) == id && par1World.getBlockId(par2 + 2, par3, par4) == id && par1World.getBlockId(par2 + 3, par3, par4) == id)
         {
@@ -97,7 +97,7 @@ public class launchPad extends GCCoreBlockAdvanced
             return false;
         }
 
-        if (par1World.getBlockId(par2, par3 - 1, par4) == GalacticraftVenus.Tier3LaunchPad.blockID && par5 == 1)
+        if (par1World.getBlockId(par2, par3 - 1, par4) == GalacticraftVenus.T3LaunchPad.blockID && par5 == 1)
         {
             return false;
         }

@@ -51,7 +51,9 @@ public class GCVenusConfigManager
 	public static int SpiderEggID;
 	public static int gemWireID;
 	public static int sulferWireID;
-	public static int Tier3LaunchPadID;
+	public static int T3LaunchPadID;
+	public static int T3LaunchPadFullID;
+	public static int VenusPlateID;
 	
     // ITEMS
 	public static int SulferDustID;
@@ -112,7 +114,8 @@ public class GCVenusConfigManager
 			GCVenusConfigManager.SpiderEggID= GCVenusConfigManager.configuration.get("Blocks", "Spider Egg ID", 5021).getInt(5021);
 			GCVenusConfigManager.gemWireID= GCVenusConfigManager.configuration.get("Blocks", "Gem Wire ID", 5022).getInt(5022);
 			GCVenusConfigManager.sulferWireID= GCVenusConfigManager.configuration.get("Blocks", "Sulfer Wire ID", 5023).getInt(5023);
-			GCVenusConfigManager.Tier3LaunchPadID= GCVenusConfigManager.configuration.get("Blocks", "Tier 3 Launch Pad ID", 5024).getInt(5024);
+			GCVenusConfigManager.T3LaunchPadID= GCVenusConfigManager.configuration.get("Blocks", "Tier 3 Launch Pad ID", 5024).getInt(5024);
+			GCVenusConfigManager.T3LaunchPadFullID= GCVenusConfigManager.configuration.get("Blocks", "Tier 3 Launch Pad Full ID", 5031).getInt(5031);
 			
 			
 			GCVenusConfigManager.SulferDustID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Dust ID", 5025).getInt(5025);
@@ -120,6 +123,7 @@ public class GCVenusConfigManager
 			GCVenusConfigManager.RedGemID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Red Gem ID", 5027).getInt(5027);
 			GCVenusConfigManager.CompressedSulferID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Compressed Sulfer ID", 5028).getInt(5028);
 			GCVenusConfigManager.CompressedRedGemID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Compressed Red Gem ID", 5029).getInt(5029);
+			GCVenusConfigManager.VenusPlateID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Venus Plate ID", 5030).getInt(5030);
 			
 			
 			GCVenusConfigManager.disableGemOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Gem Ore Gen on Venus", false).getBoolean(false);

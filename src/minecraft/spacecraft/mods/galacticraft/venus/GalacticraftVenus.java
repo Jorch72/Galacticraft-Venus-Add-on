@@ -5,6 +5,9 @@ import java.io.File;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.world.IPlanet;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
+import micdoodle8.mods.galacticraft.mars.GCMarsConfigManager;
+import micdoodle8.mods.galacticraft.mars.items.GCMarsItemSpaceshipTier2;
+import micdoodle8.mods.galacticraft.mars.items.GCMarsItems;
 import micdoodle8.mods.galacticraft.moon.items.GCMoonItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -115,8 +118,11 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		//Block Gem Wire Heavy
 		public final static Block sulferWire = new VenusSulferWire(629, Material.cloth) .setHardness(1.5F).setStepSound(Block.soundClothFootstep) .setUnlocalizedName("sulferWire") .setTextureName("galacticraftvenus:sulferWire");
 		
-		//Block Tier2 Landing Pad
-		public final static Block Tier3LaunchPad = new launchPad(630, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("Tier3LaunchPad") .setTextureName("galacticraftvenus:Tier3LaunchPad");
+		//Block Tier 3 Launch Pad
+		public final static Block T3LaunchPad = new T3LaunchPad(630, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("T3LaunchPad") .setTextureName("galacticraftvenus:T3LaunchPad");
+		
+		//Block Tier 3 Launch Pad full
+		public final static Block T3LaunchPadFull = new T3LaunchPadFull(638, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("T3LaunchPadFull") .setTextureName("galacticraftvenus:T3LaunchPadFull");
 		
 		
 		//Item Sufer Dust
@@ -133,6 +139,13 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				
 		//Item Compressed Red Gem
 		public final static Item CompressedRedGem = new VenusItem(635) .setUnlocalizedName("CompressedRedGem") .setTextureName("galacticraftvenus:compressedRedGem");
+		
+		//Item Venus Plate
+		public final static Item VenusPlate = new VenusItem(636) .setUnlocalizedName("VenusPlate") .setTextureName("galacticraftvenus:venusPlate");
+		
+		//Item T3Spaceship
+		public final static Item spaceshipTier3 = new VenusSpaceshipTier3(637) .setUnlocalizedName("spaceshipTier3") .setTextureName("galacticraftvenus:rocketT3");
+//		public final static Item T3Spaceship = new GCMarsItemSpaceshipTier2(GCMarsConfigManager.idItemSpaceshipTier2).setUnlocalizedName("spaceshipTier2");
 		
 		
 		//Where the client and server proxy is loaded.
@@ -175,7 +188,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				GameRegistry.registerBlock(SpiderEgg, "SpiderEgg");
 				GameRegistry.registerBlock(gemWire, "gemWire");
 				GameRegistry.registerBlock(sulferWire, "sulferWire");
-				GameRegistry.registerBlock(Tier3LaunchPad, "Tier3LaunchPad");
+				GameRegistry.registerBlock(T3LaunchPad, "Tier3LaunchPad");
+				GameRegistry.registerBlock(T3LaunchPadFull, "T3LaunchPadFull");
 				
 				//Registering Block Names
                 LanguageRegistry.addName(VenusGrass, "Venus Grass");
@@ -198,7 +212,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				LanguageRegistry.addName(SpiderEgg, "Spider Egg");
 				LanguageRegistry.addName(gemWire, "Gem Wire");
 				LanguageRegistry.addName(sulferWire, "Sulfer Wire");
-				LanguageRegistry.addName(Tier3LaunchPad, "Tier 3 Rocket Launch Pad");
+				LanguageRegistry.addName(T3LaunchPad, "Tier 3 Rocket Launch Pad");
+				LanguageRegistry.addName(T3LaunchPadFull, "");
 				
 				//Registring Items Names
                 LanguageRegistry.addName(SulferDust, "Sulfer Dust");
@@ -206,6 +221,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 LanguageRegistry.addName(RedGem, "Red Gem");
                 LanguageRegistry.addName(CompressedSulfer, "Compressed Sulfer");
                 LanguageRegistry.addName(CompressedRedGem, "Compressed Red Gem");
+                LanguageRegistry.addName(VenusPlate, "Venus Plate");
+                LanguageRegistry.addName(spaceshipTier3, "Tier 3 Rocket Ship");
                 
 				//Adding ItemStack for recipes
                 ItemStack VenusCobblestone = new ItemStack(GalacticraftVenus.VenusCobblestone);

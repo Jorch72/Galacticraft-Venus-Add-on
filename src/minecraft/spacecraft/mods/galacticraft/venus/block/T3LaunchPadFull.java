@@ -19,11 +19,11 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class launchPadFull extends GCCoreBlockAdvanced
+public class T3LaunchPadFull extends GCCoreBlockAdvanced
 {
     private Icon[] icons = new Icon[3];
 
-    public launchPadFull(int id, Material material)
+    public T3LaunchPadFull(int id, Material material)
     {
     	super( id, material);
         this.setHardness(1.0F);
@@ -61,7 +61,7 @@ public class launchPadFull extends GCCoreBlockAdvanced
     @Override
     public int idDropped(int par1, Random par2Random, int par3)
     {
-        return GalacticraftVenus.Tier3LaunchPad.blockID;
+        return GalacticraftVenus.T3LaunchPad.blockID;
     }
 
     @Override
