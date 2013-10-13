@@ -5,13 +5,29 @@ import java.io.File;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.world.IPlanet;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import micdoodle8.mods.galacticraft.mars.GCMarsConfigManager;
+import micdoodle8.mods.galacticraft.mars.GalacticraftMars;
+import micdoodle8.mods.galacticraft.mars.entities.GCMarsEntityCreeperBoss;
+import micdoodle8.mods.galacticraft.mars.entities.GCMarsEntitySlimeling;
+import micdoodle8.mods.galacticraft.mars.entities.GCMarsEntitySludgeling;
+import micdoodle8.mods.galacticraft.mars.items.GCMarsItems;
+import micdoodle8.mods.galacticraft.mars.recipe.GCMarsRecipeManager;
+import micdoodle8.mods.galacticraft.mars.tile.GCMarsTileEntityCryogenicChamber;
+import micdoodle8.mods.galacticraft.mars.tile.GCMarsTileEntityDungeonSpawner;
+import micdoodle8.mods.galacticraft.mars.tile.GCMarsTileEntityLaunchController;
+import micdoodle8.mods.galacticraft.mars.tile.GCMarsTileEntitySlimelingEgg;
+import micdoodle8.mods.galacticraft.mars.tile.GCMarsTileEntityTerraformer;
+import micdoodle8.mods.galacticraft.mars.tile.GCMarsTileEntityTreasureChest;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import spacecraft.mods.galacticraft.DevVenus.items.*;
 import spacecraft.mods.galacticraft.DevVenus.blocks.*;
+import spacecraft.mods.galacticraft.DevVenus.client.entity.EntityEvolvedBlaze;
 import spacecraft.mods.galacticraft.venus.CommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -21,6 +37,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -52,7 +69,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		
 
 		//Block Spider Egg
-		public final static Block EvolvedBlaseEgg = new VenusBlaseEgg(627) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("EvolvedBlaseEgg") .setTextureName("devgalacticraftvenus:evolvedBlaseEgg");				
+		public final static Block EvolvedBlazeEgg = new VenusBlazeEgg(627) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("EvolvedBlazeEgg") .setTextureName("devgalacticraftvenus:evolvedBlazeEgg");				
 
 		//Block Gem Wire
 		public final static Block gemWire = new VenusGemWire(628, Material.cloth) .setHardness(1.5F).setStepSound(Block.soundClothFootstep) .setUnlocalizedName("gemWire") .setTextureName("devgalacticraftvenus:gemWire");
@@ -86,11 +103,11 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 LanguageRegistry.instance().addStringLocalization("itemGroup.tabGalacticraftDevVenus", "en_US", "Galacticraft Dev-Venus");
                 
                 //Registering Blocks
-				GameRegistry.registerBlock(EvolvedBlaseEgg, "EvolvedBlaseEgg");
+				GameRegistry.registerBlock(EvolvedBlazeEgg, "EvolvedBlazeEgg");
 				GameRegistry.registerBlock(gemWire, "gemWire");
 				
 				//Registering Block Names
-				LanguageRegistry.addName(EvolvedBlaseEgg, "Evolved Blase Egg");
+				LanguageRegistry.addName(EvolvedBlazeEgg, "Evolved Blaze Egg");
 				LanguageRegistry.addName(gemWire, "Gem Wire");
 				
 				//Registring Items Names
@@ -111,6 +128,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
         {
         	
         }
+        
 }
 
 

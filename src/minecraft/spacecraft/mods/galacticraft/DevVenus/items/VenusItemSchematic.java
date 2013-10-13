@@ -24,7 +24,7 @@ public class VenusItemSchematic extends GCCoreItemSchematic implements ISchemati
 
     public VenusItemSchematic(int itemID)
     {
-        super(itemID, "schematic");
+        super(itemID, "tier3Schematic");
     }
 
     @Override

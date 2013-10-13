@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.logging.Level;
 
 import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
+import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.mars.GCMarsConfigManager;
 import micdoodle8.mods.galacticraft.moon.GCMoonConfigManager;
@@ -26,7 +27,7 @@ public class GCDevVenusConfigManager
     }
 
     // BLOCKS
-	public static int EvolvedBlaseEggID;
+	public static int EvolvedBlazeEggID;
 	public static int gemWireID;
 	
     // ITEMS
@@ -46,6 +47,9 @@ public class GCDevVenusConfigManager
     // SCHEMATIC
     public static int tier3SchematicID;
     
+    // ACHIEVEMENTS
+    public static int idEntityEvolvedBlaze;
+    
     // GENERAL
 
     private void setDefaultValues()
@@ -55,7 +59,7 @@ public class GCDevVenusConfigManager
             GCDevVenusConfigManager.configuration.load();
 
             
-			GCDevVenusConfigManager.EvolvedBlaseEggID= GCDevVenusConfigManager.configuration.get("Blocks", "Evolved Blase Egg ID", 6021).getInt(6021);
+			GCDevVenusConfigManager.EvolvedBlazeEggID= GCDevVenusConfigManager.configuration.get("Blocks", "Evolved Blaze Egg ID", 6021).getInt(6021);
 			GCDevVenusConfigManager.gemWireID= GCDevVenusConfigManager.configuration.get("Blocks", "Gem Wire ID", 6022).getInt(6022);
 
             
@@ -67,6 +71,9 @@ public class GCDevVenusConfigManager
 			
 			
 			GCDevVenusConfigManager.idGuiRocketCraftingBenchT3 = GCDevVenusConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT3", 243).getInt(244);
+			
+			
+			GCDevVenusConfigManager.idEntityEvolvedBlaze = GCDevVenusConfigManager.configuration.get("Entities", "idEntityEvolvedBlaze", 555).getInt(555);
 			
 			
 			GCDevVenusConfigManager.tier3SchematicID = GCDevVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Tier 3 Schematic ID", 6030).getInt(6030);
