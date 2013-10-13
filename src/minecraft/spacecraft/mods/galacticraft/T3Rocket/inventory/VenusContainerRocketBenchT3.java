@@ -3,6 +3,7 @@ package spacecraft.mods.galacticraft.T3Rocket.inventory;
 import micdoodle8.mods.galacticraft.core.inventory.GCCoreSlotRocketBenchResult;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import spacecraft.mods.galacticraft.T3Rocket.util.RecipeUtilVenus;
+import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -137,56 +138,56 @@ public class VenusContainerRocketBenchT3 extends Container
                     return null;
                 }
             }
-            else if (var2.getItem().itemID == GCCoreItems.heavyPlatingTier1.itemID && !((Slot) this.inventorySlots.get(2)).getHasStack())
+            else if (var2.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && !((Slot) this.inventorySlots.get(2)).getHasStack())
             {
                 if (!this.mergeItemStack(var4, 2, 3, false))
                 {
                     return null;
                 }
             }
-            else if (var2.getItem().itemID == GCCoreItems.heavyPlatingTier1.itemID && !((Slot) this.inventorySlots.get(3)).getHasStack())
+            else if (var2.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && !((Slot) this.inventorySlots.get(3)).getHasStack())
             {
                 if (!this.mergeItemStack(var4, 3, 4, false))
                 {
                     return null;
                 }
             }
-            else if (var2.getItem().itemID == GCCoreItems.heavyPlatingTier1.itemID && !((Slot) this.inventorySlots.get(4)).getHasStack())
+            else if (var2.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && !((Slot) this.inventorySlots.get(4)).getHasStack())
             {
                 if (!this.mergeItemStack(var4, 4, 5, false))
                 {
                     return null;
                 }
             }
-            else if (var2.getItem().itemID == GCCoreItems.heavyPlatingTier1.itemID && !((Slot) this.inventorySlots.get(5)).getHasStack())
+            else if (var2.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && !((Slot) this.inventorySlots.get(5)).getHasStack())
             {
                 if (!this.mergeItemStack(var4, 5, 6, false))
                 {
                     return null;
                 }
             }
-            else if (var2.getItem().itemID == GCCoreItems.heavyPlatingTier1.itemID && !((Slot) this.inventorySlots.get(6)).getHasStack())
+            else if (var2.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && !((Slot) this.inventorySlots.get(6)).getHasStack())
             {
                 if (!this.mergeItemStack(var4, 6, 7, false))
                 {
                     return null;
                 }
             }
-            else if (var2.getItem().itemID == GCCoreItems.heavyPlatingTier1.itemID && !((Slot) this.inventorySlots.get(7)).getHasStack())
+            else if (var2.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && !((Slot) this.inventorySlots.get(7)).getHasStack())
             {
                 if (!this.mergeItemStack(var4, 7, 8, false))
                 {
                     return null;
                 }
             }
-            else if (var2.getItem().itemID == GCCoreItems.heavyPlatingTier1.itemID && !((Slot) this.inventorySlots.get(8)).getHasStack())
+            else if (var2.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && !((Slot) this.inventorySlots.get(8)).getHasStack())
             {
                 if (!this.mergeItemStack(var4, 8, 9, false))
                 {
                     return null;
                 }
             }
-            else if (var2.getItem().itemID == GCCoreItems.heavyPlatingTier1.itemID && !((Slot) this.inventorySlots.get(9)).getHasStack())
+            else if (var2.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && !((Slot) this.inventorySlots.get(9)).getHasStack())
             {
                 if (!this.mergeItemStack(var4, 9, 10, false))
                 {

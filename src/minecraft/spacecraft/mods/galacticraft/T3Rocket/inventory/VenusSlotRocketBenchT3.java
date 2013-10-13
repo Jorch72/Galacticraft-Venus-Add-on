@@ -1,9 +1,9 @@
 package spacecraft.mods.galacticraft.T3Rocket.inventory;
 
+import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
-import micdoodle8.mods.galacticraft.mars.items.GCMarsItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.IInventory;
@@ -60,25 +60,25 @@ public class VenusSlotRocketBenchT3 extends Slot
         case 1:
             return par1ItemStack.getItem().itemID == GCCoreItems.partNoseCone.itemID ? true : false;
         case 2:
-            return par1ItemStack.getItem().itemID == GCMarsItems.marsItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 3:
-            return par1ItemStack.getItem().itemID == GCMarsItems.marsItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 4:
-            return par1ItemStack.getItem().itemID == GCMarsItems.marsItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 5:
-            return par1ItemStack.getItem().itemID == GCMarsItems.marsItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 6:
-            return par1ItemStack.getItem().itemID == GCMarsItems.marsItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 7:
-            return par1ItemStack.getItem().itemID == GCMarsItems.marsItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 8:
-            return par1ItemStack.getItem().itemID == GCMarsItems.marsItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 9:
-            return par1ItemStack.getItem().itemID == GCMarsItems.marsItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 10:
-            return par1ItemStack.getItem().itemID == GCMarsItems.marsItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 11:
-            return par1ItemStack.getItem().itemID == GCMarsItems.marsItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GalacticraftVenus.VenusPlate.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 12:
             return par1ItemStack.getItem().itemID == GCCoreItems.rocketEngine.itemID && par1ItemStack.getItemDamage() == 1 ? true : false;
         case 13:

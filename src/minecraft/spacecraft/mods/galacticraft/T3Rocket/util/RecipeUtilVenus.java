@@ -1,8 +1,8 @@
 package spacecraft.mods.galacticraft.T3Rocket.util;
 
+import spacecraft.mods.galacticraft.T3Rocket.inventory.VenusInventoryRocketBenchT3;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
-
 import net.minecraft.item.ItemStack;
 
 public class RecipeUtilVenus

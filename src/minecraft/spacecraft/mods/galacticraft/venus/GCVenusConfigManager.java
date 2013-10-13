@@ -51,7 +51,6 @@ public class GCVenusConfigManager
 	public static int SpiderEggID;
 	public static int gemWireID;
 	public static int VenusPlateID;
-	public static int tier3EngineID;
 	
     // ITEMS
 	public static int SulferDustID;
@@ -124,7 +123,6 @@ public class GCVenusConfigManager
 			GCVenusConfigManager.CompressedSulferID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Compressed Sulfer ID", 6027).getInt(6027);
 			GCVenusConfigManager.CompressedRedGemID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Compressed Red Gem ID", 6028).getInt(6028);
 			GCVenusConfigManager.VenusPlateID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Venus Plate ID", 6029).getInt(6029);
-			GCVenusConfigManager.tier3EngineID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Tier 3 Engine ID", 6031).getInt(6031);
 			
 
 			GCVenusConfigManager.idEntitySpaceshipTier3 = GCVenusConfigManager.configuration.get("Entities", "Entity Spaceship Tier 3", 273).getInt(273);

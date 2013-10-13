@@ -198,7 +198,7 @@ public class GCVenusWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public float getGravity()
     {
-        return 0.038F;
+        return 0.025F;
     }
 
     @Override
