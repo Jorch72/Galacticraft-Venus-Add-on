@@ -58,20 +58,16 @@ public class GCVenusConfigManager
 	public static int RedGemID;
 	public static int CompressedSulferID;
 	public static int CompressedRedGemID;
-	public static int spaceshipT3ID;
 	
     // ARMOR
     
     // TOOLS
 
     // ENTITIES
-	public static int idEntitySpaceshipTier3;
 	
     // GUI
-    public static int idGuiRocketCraftingBenchT3;
 
     // SCHEMATIC
-    public static int tier3SchematicID;
     
     // GENERAL
     public static boolean disableGemOreVenus;
@@ -114,8 +110,7 @@ public class GCVenusConfigManager
 			GCVenusConfigManager.VenusHalfBasaltID= GCVenusConfigManager.configuration.get("Blocks", "HalfSlab Basalt ID", 6020).getInt(6020);
 			GCVenusConfigManager.SpiderEggID= GCVenusConfigManager.configuration.get("Blocks", "Spider Egg ID", 6021).getInt(6021);
 			GCVenusConfigManager.gemWireID= GCVenusConfigManager.configuration.get("Blocks", "Gem Wire ID", 6022).getInt(6022);
-			
-			GCVenusConfigManager.spaceshipT3ID= GCVenusConfigManager.configuration.get("Blocks", "T3RocketID", 6023).getInt(6023);
+
 			
 			GCVenusConfigManager.SulferDustID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Dust ID", 6024).getInt(6024);
 			GCVenusConfigManager.SulferIngotID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Ingot ID", 6025).getInt(6025);
@@ -123,16 +118,7 @@ public class GCVenusConfigManager
 			GCVenusConfigManager.CompressedSulferID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Compressed Sulfer ID", 6027).getInt(6027);
 			GCVenusConfigManager.CompressedRedGemID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Compressed Red Gem ID", 6028).getInt(6028);
 			GCVenusConfigManager.VenusPlateID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Venus Plate ID", 6029).getInt(6029);
-			
 
-			GCVenusConfigManager.idEntitySpaceshipTier3 = GCVenusConfigManager.configuration.get("Entities", "Entity Spaceship Tier 3", 273).getInt(273);
-			
-			
-			GCVenusConfigManager.idGuiRocketCraftingBenchT3 = GCVenusConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT3", 243).getInt(243);
-			
-			
-			GCVenusConfigManager.tier3SchematicID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Tier 3 Schematic ID", 6030).getInt(6030);
-			
 			
 			GCVenusConfigManager.disableGemOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Gem Ore Gen on Venus", false).getBoolean(false);
 			GCVenusConfigManager.disableMeteorOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Meteor Ore Gen on Venus", false).getBoolean(false);

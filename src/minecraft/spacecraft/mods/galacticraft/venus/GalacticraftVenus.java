@@ -14,8 +14,8 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import spacecraft.mods.galacticraft.T3Rocket.items.VenusItemSchematic;
-import spacecraft.mods.galacticraft.T3Rocket.items.VenusItemSpaceshipTier3;
+import spacecraft.mods.galacticraft.DevVenus.items.VenusItemSchematic;
+import spacecraft.mods.galacticraft.DevVenus.items.VenusItemSpaceshipTier3;
 import spacecraft.mods.galacticraft.venus.block.*;
 import spacecraft.mods.galacticraft.venus.items.*;
 import spacecraft.mods.galacticraft.venus.dimension.GCVenusWorldProvider;
@@ -136,12 +136,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		//Item Venus Plate
 		public final static Item VenusPlate = new VenusItem(636) .setUnlocalizedName("VenusPlate") .setTextureName("galacticraftvenus:venusPlate");
 
-		//Item T3Spaceship
-		public final static Item spaceshipT3 = new VenusItemSpaceshipTier3(637) .setUnlocalizedName("spaceshipT3") .setTextureName("galacticraftvenus:rocketT3");
 		
-		//Item Tier3 Schematic
-		public final static Item tier3Schematic = new VenusItemSchematic(638) .setUnlocalizedName("tier3Schematic") .setTextureName("galacticraftvenus:tier3Schematic");
-
 		//Where the client and server proxy is loaded.
         @SidedProxy(clientSide="spacecraft.mods.galacticraft.venus.client.ClientProxy", serverSide="spacecraft.mods.galacticraft.venus.CommonProxy")
         public static CommonProxy proxy;
@@ -210,8 +205,6 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 LanguageRegistry.addName(CompressedSulfer, "Compressed Sulfer");
                 LanguageRegistry.addName(CompressedRedGem, "Compressed Red Gem");
                 LanguageRegistry.addName(VenusPlate, "Venus Plate");
-                LanguageRegistry.addName(spaceshipT3, "Tier 3 Rocket");
-                LanguageRegistry.addName(tier3Schematic, "Tier 3 Rocket Schematic");
                 
 				//Adding ItemStack for recipes
                 ItemStack VenusCobblestone = new ItemStack(GalacticraftVenus.VenusCobblestone);
