@@ -26,7 +26,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid="galacticraftVenus", name="Galacticraft Venus", version="0.1.2A-P", dependencies = "required-after:Forge@[9.10.0.789,)")
+@Mod(modid="GalacticraftVenus", name="Galacticraft Venus", version="0.1.2A-P", dependencies = "required-after:Forge@[9.10.0.789,)")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
   public class GalacticraftVenus 
   {
@@ -37,15 +37,15 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 	    public static final String CHANNEL = "GalacticraftVenus";
 	    public static final String FILE_PATH = "/spacecraft/mods/galacticraft/venus/";
 	    public static final String CLIENT_PATH = "client/";
-	    public static final String LANGUAGE_PATH = "/assets/spacecraft/lang/";
+	    public static final String LANGUAGE_PATH = "/assets/GalacticraftVenus/lang/";
 	    public static final String CONFIG_FILE = "Spacecraft/Venus.conf";
 	    private static final String[] LANGUAGES_SUPPORTED = new String[] {"en_US"};
 	    
-	    public static String TEXTURE_DOMAIN = "galacticraftVenus";
+	    public static String TEXTURE_DOMAIN = "GalacticraftVenus";
 	    public static String TEXTURE_PREFIX = GalacticraftVenus.TEXTURE_DOMAIN + ":";
 	    public static String TEXTURE_SUFFIX;
 
-	    @Instance("galacticraftVenus")
+	    @Instance("GalacticraftVenus")
         public static GalacticraftVenus instance;
 		
 		//Adding Creative Tab
@@ -56,74 +56,84 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		};
 		
 		//Block Venus Grass
-    	public final static Block VenusGrass = new VenusGrass(610, Material.ground) .setHardness(0.4F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("spacecraft:venusGrass_top");
+    	public final static Block VenusGrass = new VenusGrass(610, Material.ground) .setHardness(0.4F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("galacticraftvenus:venusGrass_top");
 		
 		//Block Venus Dirt
-		public final static Block VenusDirt = new VenusDirt(611, Material.ground) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("spacecraft:venusDirt");
+		public final static Block VenusDirt = new VenusDirt(611, Material.ground) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("galacticraftvenus:venusDirt");
         
 		//Block Venus Stone
-		public final static Block VenusStone = new VenusStone(612, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusStone") .setTextureName("spacecraft:venusStone");
+		public final static Block VenusStone = new VenusStone(612, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusStone") .setTextureName("galacticraftvenus:venusStone");
 		
 		//Block Venus Cobblestone
-		public final static Block VenusCobblestone = new VenusCobblestone(613, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCobblestone") .setTextureName("spacecraft:venusCobblestone");
+		public final static Block VenusCobblestone = new VenusCobblestone(613, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCobblestone") .setTextureName("galacticraftvenus:venusCobblestone");
 		
 		//Block Venus Gem Block
-		public final static Block VenusRedGemBlock = new VenusBlock(614, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGem") .setTextureName("spacecraft:gemBlock");
+		public final static Block VenusRedGemBlock = new VenusBlock(614, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGem") .setTextureName("galacticraftvenus:gemBlock");
 		
 		//Block Venus Meteor Block
-		public final static Block VenusMeteorBlock = new VenusBlock(615, Material.ground) .setHardness(3.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteor") .setTextureName("spacecraft:meteorBlock");
+		public final static Block VenusMeteorBlock = new VenusBlock(615, Material.ground) .setHardness(3.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteor") .setTextureName("galacticraftvenus:meteorBlock");
 		
 		//Block Venus Brick
-		public final static Block VenusBrick = new VenusBlock(616, Material.ground) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBrick") .setTextureName("spacecraft:venusBrick");
+		public final static Block VenusBrick = new VenusBlock(616, Material.ground) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBrick") .setTextureName("galacticraftvenus:venusBrick");
 		
 		//Block Venus Sulfer
-		public final static Block VenusSulferBlock = new VenusOre(617, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulfer") .setTextureName("spacecraft:sulferBlock");
+		public final static Block VenusSulferBlock = new VenusOre(617, Material.ground) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulfer") .setTextureName("galacticraftvenus:sulferBlock");
 		
 		//Block Venus Sulfer Ore
-		public final static Block VenusSulferOre = new VenusOre(618, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulferOre") .setTextureName("spacecraft:venusSulfurOre");
+		public final static Block VenusSulferOre = new VenusOre(618, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulferOre") .setTextureName("galacticraftvenus:venusSulfurOre");
 
 		//Block Venus Meteor Ore
-		public final static Block VenusMeteorOre = new VenusOre(619, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteorOre") .setTextureName("spacecraft:venusMeteorOre");
+		public final static Block VenusMeteorOre = new VenusOre(619, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteorOre") .setTextureName("galacticraftvenus:venusMeteorOre");
 
 		//Block Venus Gem Ore
-		public final static Block VenusRedGemOre = new VenusOre(620, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGemOre") .setTextureName("spacecraft:venusGemOre");
+		public final static Block VenusRedGemOre = new VenusOre(620, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGemOre") .setTextureName("galacticraftvenus:venusGemOre");
 		
 		//Block Venus Iron Ore
-		public final static Block VenusIronOre = new VenusOre(621, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusIronOre") .setTextureName("spacecraft:venusIronOre");
+		public final static Block VenusIronOre = new VenusOre(621, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusIronOre") .setTextureName("galacticraftvenus:venusIronOre");
 		
 		//Block Venus Coal Ore
-		public final static Block VenusCoalOre = new VenusOre(622, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCoalOre") .setTextureName("spacecraft:venusCoalOre");
+		public final static Block VenusCoalOre = new VenusOre(622, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCoalOre") .setTextureName("galacticraftvenus:venusCoalOre");
 		
 		//Block Venus Iron Ore
-		public final static Block VenusTinOre = new VenusOre(623, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusTinOre") .setTextureName("spacecraft:venusTinOre");
+		public final static Block VenusTinOre = new VenusOre(623, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusTinOre") .setTextureName("galacticraftvenus:venusTinOre");
 				
 		//Block Venus Coal Ore
-		public final static Block VenusCopperOre = new VenusOre(624, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCopperOre") .setTextureName("spacecraft:venusCopperOre");				
+		public final static Block VenusCopperOre = new VenusOre(624, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCopperOre") .setTextureName("galacticraftvenus:venusCopperOre");				
 		
 		//Block Venus Basalt
-		public final static Block VenusBasalt = new VenusStone(625, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBasalt") .setTextureName("spacecraft:venusBasalt");				
+		public final static Block VenusBasalt = new VenusStone(625, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBasalt") .setTextureName("galacticraftvenus:venusBasalt");				
 		
 		//Block Venus Half Basalt
-		public final static Block VenusHalfBasalt = new VenusStone(626, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusHalfBasalt") .setTextureName("spacecraft:venusBasalt");				
+		public final static Block VenusHalfBasalt = new VenusStone(626, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusHalfBasalt") .setTextureName("galacticraftvenus:venusBasalt");				
 		
 		//Block Spider Egg
-		public final static Block SpiderEgg = new VenusSpiderEgg(627) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("spiderEgg") .setTextureName("spacecraft:spiderEgg");				
+		public final static Block SpiderEgg = new VenusSpiderEgg(627) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("spiderEgg") .setTextureName("galacticraftvenus:spiderEgg");				
+		
+		//Block Gem Wire
+		public final static Block gemWire = new VenusGemWire(628, Material.cloth) .setHardness(1.5F).setStepSound(Block.soundClothFootstep) .setUnlocalizedName("gemWire") .setTextureName("galacticraftvenus:gemWire");
+		
+		//Block Gem Wire Heavy
+		public final static Block sulferWire = new VenusSulferWire(629, Material.cloth) .setHardness(1.5F).setStepSound(Block.soundClothFootstep) .setUnlocalizedName("sulferWire") .setTextureName("galacticraftvenus:sulferWire");
+		
+		//Block Tier2 Landing Pad
+		public final static Block Tier3LaunchPad = new launchPad(630, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("Tier3LaunchPad") .setTextureName("galacticraftvenus:Tier3LaunchPad");
 		
 		
 		//Item Sufer Dust
-		public final static Item SulferDust = new VenusItem(629) .setUnlocalizedName("SulferDust") .setTextureName("spacecraft:sulferDust");
+		public final static Item SulferDust = new VenusItem(631) .setUnlocalizedName("SulferDust") .setTextureName("galacticraftvenus:sulferDust");
 		
 		//Item Sufer Ingot
-		public final static Item SulferIngot = new VenusItem(630) .setUnlocalizedName("SulferIngot") .setTextureName("spacecraft:sulferIngot");
+		public final static Item SulferIngot = new VenusItem(632) .setUnlocalizedName("SulferIngot") .setTextureName("galacticraftvenus:sulferIngot");
 		
 		//Item Red Gem
-		public final static Item RedGem = new VenusItem(631) .setUnlocalizedName("RedGem") .setTextureName("spacecraft:redGem");
+		public final static Item RedGem = new VenusItem(633) .setUnlocalizedName("RedGem") .setTextureName("galacticraftvenus:redGem");
 		
-		//Item Compressed Sufer
-		public final static Item CompressedSulfer = new VenusItem(632) .setUnlocalizedName("SulferPlate") .setTextureName("spacecraft:compressedSulfer");
+		//Item Compressed Sulfer
+		public final static Item CompressedSulfer = new VenusItem(634) .setUnlocalizedName("SulferPlate") .setTextureName("galacticraftvenus:compressedSulfer");
 				
 		//Item Compressed Red Gem
-		public final static Item CompressedRedGem = new VenusItem(633) .setUnlocalizedName("CompressedRedGem") .setTextureName("spacecraft:compressedRedGem");
+		public final static Item CompressedRedGem = new VenusItem(635) .setUnlocalizedName("CompressedRedGem") .setTextureName("galacticraftvenus:compressedRedGem");
+		
 		
 		//Where the client and server proxy is loaded.
         @SidedProxy(clientSide="spacecraft.mods.galacticraft.venus.client.ClientProxy", serverSide="spacecraft.mods.galacticraft.venus.CommonProxy")
@@ -142,7 +152,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
         {
                 proxy.registerRenderers();
  		        //Registering CreativeTab Name
-                LanguageRegistry.instance().addStringLocalization("itemGroup.tabVenus", "en_US", "Spacecraft Venus");
+                LanguageRegistry.instance().addStringLocalization("itemGroup.tabVenus", "en_US", "Galacticraft Venus");
                 
                 //Registering Blocks
                 GameRegistry.registerBlock(VenusGrass, "VenusGrass");
@@ -163,6 +173,9 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				GameRegistry.registerBlock(VenusBasalt, "VenusBasalt");
 				GameRegistry.registerBlock(VenusHalfBasalt, "VenusHalfBasalt");
 				GameRegistry.registerBlock(SpiderEgg, "SpiderEgg");
+				GameRegistry.registerBlock(gemWire, "gemWire");
+				GameRegistry.registerBlock(sulferWire, "sulferWire");
+				GameRegistry.registerBlock(Tier3LaunchPad, "Tier3LaunchPad");
 				
 				//Registering Block Names
                 LanguageRegistry.addName(VenusGrass, "Venus Grass");
@@ -183,6 +196,9 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				LanguageRegistry.addName(VenusBasalt, "Basalt");
 				LanguageRegistry.addName(VenusHalfBasalt, "Basalt Slab");
 				LanguageRegistry.addName(SpiderEgg, "Spider Egg");
+				LanguageRegistry.addName(gemWire, "Gem Wire");
+				LanguageRegistry.addName(sulferWire, "Sulfer Wire");
+				LanguageRegistry.addName(Tier3LaunchPad, "Tier 3 Rocket Launch Pad");
 				
 				//Registring Items Names
                 LanguageRegistry.addName(SulferDust, "Sulfer Dust");
@@ -235,3 +251,5 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
         }
 }
+
+

@@ -3,7 +3,7 @@ package spacecraft.mods.galacticraft.venus.block;
 import java.util.List;
 
 import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
-import spacecraft.mods.galacticraft.venus.tile.VenusTileEntityGemWire;
+import spacecraft.mods.galacticraft.venus.tile.VenusTileEntitySulferWire;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketHandlerClient.EnumClientPacket;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import universalelectricity.core.vector.Vector3;
@@ -21,12 +21,12 @@ import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class VenusGemWire extends BlockConductor
+public class VenusSulferWire extends BlockConductor
 {
-    public static final String[] names = { "gemWire", "gemWireHeavy" };
+    public static final String[] names = { "sulferWire", "sulferWireHeavy" };
     private static Icon[] blockIcons;
 
-    public VenusGemWire(int id, Material material)
+    public VenusSulferWire(int id, Material material)
     {
     	super( id, material.cloth);
         this.setStepSound(Block.soundClothFootstep);
@@ -48,11 +48,11 @@ public class VenusGemWire extends BlockConductor
     @Override
     public void registerIcons(IconRegister par1IconRegister)
     {
-        VenusGemWire.blockIcons = new Icon[VenusGemWire.names.length];
+        VenusSulferWire.blockIcons = new Icon[VenusSulferWire.names.length];
 
-        for (int i = 0; i < VenusGemWire.names.length; i++)
+        for (int i = 0; i < VenusSulferWire.names.length; i++)
         {
-            VenusGemWire.blockIcons[i] = par1IconRegister.registerIcon(GalacticraftVenus.TEXTURE_PREFIX + VenusGemWire.names[i]);
+            VenusSulferWire.blockIcons[i] = par1IconRegister.registerIcon(GalacticraftVenus.TEXTURE_PREFIX + VenusSulferWire.names[i]);
         }
     }
 
@@ -75,11 +75,11 @@ public class VenusGemWire extends BlockConductor
         switch (meta)
         {
         case 0:
-            return VenusGemWire.blockIcons[0];
+            return VenusSulferWire.blockIcons[0];
         case 1:
-            return VenusGemWire.blockIcons[1];
+            return VenusSulferWire.blockIcons[1];
         default:
-            return VenusGemWire.blockIcons[0];
+            return VenusSulferWire.blockIcons[0];
         }
     }
 
@@ -110,9 +110,9 @@ public class VenusGemWire extends BlockConductor
         switch (metadata)
         {
         case 0:
-            return new VenusTileEntityGemWire();
+            return new VenusTileEntitySulferWire();
         case 1:
-            return new VenusTileEntityGemWire(0.025F, 400.0F);
+            return new VenusTileEntitySulferWire(0.025F, 400.0F);
         default:
             return null;
         }
