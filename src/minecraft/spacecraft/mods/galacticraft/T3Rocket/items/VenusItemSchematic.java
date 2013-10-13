@@ -1,6 +1,8 @@
 package spacecraft.mods.galacticraft.T3Rocket.items;
 
 import java.util.List;
+
+import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
 import mekanism.api.EnumColor;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicItem;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItemSchematic;
@@ -28,10 +30,10 @@ public class VenusItemSchematic extends GCCoreItemSchematic implements ISchemati
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GalacticraftMars.galacticraftMarsTab;
+        return GalacticraftVenus.tabVenus;
     }
 
-    @SuppressWarnings({ "unchecked", "rawtypes" })
+//    @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     public void getSubItems(int par1, CreativeTabs par2CreativeTabs, List par3List)
     {
@@ -46,7 +48,7 @@ public class VenusItemSchematic extends GCCoreItemSchematic implements ISchemati
     public void registerIcons(IconRegister iconRegister)
     {
         this.icons = new Icon[1];
-        this.icons[0] = iconRegister.registerIcon(GalacticraftMars.TEXTURE_PREFIX + "schematic_rocketT3");
+        this.icons[0] = iconRegister.registerIcon(GalacticraftVenus.TEXTURE_PREFIX + "schematic_rocketT3");
     }
 
     @Override
@@ -69,10 +71,8 @@ public class VenusItemSchematic extends GCCoreItemSchematic implements ISchemati
         {
             switch (par1ItemStack.getItemDamage())
             {
-            case 0:
-                par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.rocketT3.name"));
-                par3List.add(EnumColor.DARK_AQUA + "COMING SOON");
-                break;
+              case 0:
+              break;
             }
         }
     }
