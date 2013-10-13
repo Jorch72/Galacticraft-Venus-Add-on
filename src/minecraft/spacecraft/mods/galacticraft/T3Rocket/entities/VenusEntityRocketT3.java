@@ -1,10 +1,8 @@
-package spacecraft.mods.galacticraft.venus.entities;
+package spacecraft.mods.galacticraft.T3Rocket.entities;
 
 import icbm.api.IMissile;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.ASMHelper.RuntimeInterface;
@@ -12,11 +10,10 @@ import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.EntityTieredRocket;
 import micdoodle8.mods.galacticraft.core.entities.GCCorePlayerMP;
-import micdoodle8.mods.galacticraft.core.network.GCCorePacketHandlerClient.EnumClientPacket;
 import micdoodle8.mods.galacticraft.core.tile.GCCoreTileEntityLandingPad;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
-//import micdoodle8.mods.galacticraft.mars.items.GCMarsItems;
+import micdoodle8.mods.galacticraft.mars.items.GCMarsItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.IInventory;
@@ -28,14 +25,17 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
-import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
 import universalelectricity.core.vector.Vector3;
-
 import com.google.common.io.ByteArrayDataInput;
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 
+/**
+ * Copyright 2012-2013, micdoodle8
+ * 
+ * All rights reserved.
+ * 
+ */
 public class VenusEntityRocketT3 extends EntityTieredRocket implements IInventory
 {
     protected ItemStack[] cargoItems;
@@ -176,7 +176,7 @@ public class VenusEntityRocketT3 extends EntityTieredRocket implements IInventor
     {
         final GCCorePlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player);
 
-        player.playerNetServerHandler.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftCore.CHANNEL, EnumClientPacket.ZOOM_CAMERA, new Object[] { 0 }));
+        player.playerNetServerHandler.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftCore.CHANNEL, 22, new Object[] { 0 }));
 
         if (playerBase != null)
         {
@@ -190,7 +190,7 @@ public class VenusEntityRocketT3 extends EntityTieredRocket implements IInventor
             }
 
             playerBase.setRocketType(this.rocketType.getIndex());
-            playerBase.setRocketItem(GalacticraftVenus.spaceshipTier3);
+            playerBase.setRocketItem(GCMarsItems.spaceship);
             playerBase.setFuelLevel(this.spaceshipFuelTank.getFluid() == null ? 0 : this.spaceshipFuelTank.getFluid().amount);
         }
     }
@@ -374,7 +374,7 @@ public class VenusEntityRocketT3 extends EntityTieredRocket implements IInventor
     public List<ItemStack> getItemsDropped()
     {
         final List<ItemStack> items = new ArrayList<ItemStack>();
-        items.add(new ItemStack(GalacticraftVenus.spaceshipTier3, 1, this.rocketType.getIndex()));
+        items.add(new ItemStack(GCMarsItems.spaceship, 1, this.rocketType.getIndex()));
 
         if (this.cargoItems != null)
         {
@@ -407,7 +407,7 @@ public class VenusEntityRocketT3 extends EntityTieredRocket implements IInventor
     {
         return this.spaceshipFuelTank.getCapacity();
     }
-
+    
     @RuntimeInterface(clazz = "icbm.api.IMissileLockable", modID = "ICBM|Explosion")
     public boolean canLock(IMissile missile)
     {

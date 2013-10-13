@@ -1,25 +1,27 @@
-package spacecraft.mods.galacticraft.venus.client.gui;
+package spacecraft.mods.galacticraft.T3Rocket.client.gui;
 
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
-import micdoodle8.mods.galacticraft.mars.GalacticraftMars;
-import micdoodle8.mods.galacticraft.mars.inventory.GCMarsContainerRocketBenchT2;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
+
 import org.lwjgl.opengl.GL11;
+
+import spacecraft.mods.galacticraft.T3Rocket.inventory.VenusContainerRocketBenchT3;
+import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
 
 public class VenusGuiSchematicRocketT3 extends GuiContainer implements ISchematicResultPage
 {
-    private static final ResourceLocation tier2SchematicTexture = new ResourceLocation(GalacticraftMars.TEXTURE_DOMAIN, "textures/gui/schematic_rocket_T2.png");
+    private static final ResourceLocation tier3SchematicTexture = new ResourceLocation(GalacticraftVenus.TEXTURE_DOMAIN, "textures/gui/schematic_rocket_T3.png");
 
     private int pageIndex;
 
     public VenusGuiSchematicRocketT3(InventoryPlayer par1InventoryPlayer, int x, int y, int z)
     {
-        super(new GCMarsContainerRocketBenchT2(par1InventoryPlayer, x, y, z));
+        super(new VenusContainerRocketBenchT3(par1InventoryPlayer, x, y, z));
         this.ySize = 238;
     }
 
@@ -29,8 +31,8 @@ public class VenusGuiSchematicRocketT3 extends GuiContainer implements ISchemati
     {
         super.initGui();
         this.buttonList.clear();
-        this.buttonList.add(new GuiButton(0, this.width / 2 - 130, this.height / 2 - 30 + 27 - 12, 40, 20, "Back"));
-        this.buttonList.add(new GuiButton(1, this.width / 2 - 130, this.height / 2 - 30 + 27 + 12, 40, 20, "Next"));
+        this.buttonList.add(new GuiButton(0, this.width / 2 - 130, this.height / 2 - 30 + 27, 40, 20, "Back"));
+        this.buttonList.add(new GuiButton(1, this.width / 2 + 90, this.height / 2 - 30 + 27, 40, 20, "Next"));
     }
 
     @Override
@@ -53,7 +55,7 @@ public class VenusGuiSchematicRocketT3 extends GuiContainer implements ISchemati
     @Override
     protected void drawGuiContainerForegroundLayer(int par1, int par2)
     {
-        this.fontRenderer.drawString("Tier 2 Rocket", 7, -20 + 27, 4210752);
+        this.fontRenderer.drawString("Tier 3 Rocket", 7, -20 + 27, 4210752);
         this.fontRenderer.drawString(StatCollector.translateToLocal("container.inventory"), 8, 220 - 104 + 2 + 27, 4210752);
     }
 
@@ -61,7 +63,7 @@ public class VenusGuiSchematicRocketT3 extends GuiContainer implements ISchemati
     protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)
     {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        this.mc.renderEngine.bindTexture(VenusGuiSchematicRocketT3.tier2SchematicTexture);
+        this.mc.renderEngine.bindTexture(VenusGuiSchematicRocketT3.tier3SchematicTexture);
         final int var5 = (this.width - this.xSize) / 2;
         final int var6 = (this.height - this.ySize) / 2;
         this.drawTexturedModalRect(var5, var6, 0, 0, this.xSize, this.ySize);

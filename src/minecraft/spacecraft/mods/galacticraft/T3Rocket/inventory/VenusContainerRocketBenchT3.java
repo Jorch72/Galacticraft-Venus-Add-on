@@ -1,8 +1,8 @@
-package spacecraft.mods.galacticraft.venus.inventory;
+package spacecraft.mods.galacticraft.T3Rocket.inventory;
 
 import micdoodle8.mods.galacticraft.core.inventory.GCCoreSlotRocketBenchResult;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
-import spacecraft.mods.galacticraft.venus.util.RecipeUtilVenus;
+import spacecraft.mods.galacticraft.T3Rocket.util.RecipeUtilVenus;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;

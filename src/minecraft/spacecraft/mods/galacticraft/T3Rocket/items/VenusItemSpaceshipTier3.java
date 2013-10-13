@@ -1,18 +1,15 @@
-package spacecraft.mods.galacticraft.venus.items;
+package spacecraft.mods.galacticraft.T3Rocket.items;
 
 import java.util.List;
 
-import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
-import spacecraft.mods.galacticraft.venus.entities.VenusEntityRocketT3;
 import mekanism.api.EnumColor;
-import micdoodle8.mods.galacticraft.api.entity.IRocketType;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
 import micdoodle8.mods.galacticraft.api.item.IHoldableItem;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
-import micdoodle8.mods.galacticraft.core.entities.EntitySpaceshipBase;
-import micdoodle8.mods.galacticraft.core.entities.EntityTieredRocket;
+import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
+import spacecraft.mods.galacticraft.T3Rocket.entities.VenusEntityRocketT3;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -24,9 +21,9 @@ import net.minecraftforge.fluids.FluidStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class VenusSpaceshipTier3 extends Item implements IHoldableItem
+public class VenusItemSpaceshipTier3 extends Item implements IHoldableItem
 {
-    public VenusSpaceshipTier3(int par1)
+    public VenusItemSpaceshipTier3(int par1)
     {
         super(par1);
         this.setMaxDamage(0);
@@ -69,7 +66,7 @@ public class VenusSpaceshipTier3 extends Item implements IHoldableItem
                     final int id = par3World.getBlockId(par4 + i, par5, par6 + j);
                     final int id2 = par3World.getBlockId(par4 + i, par5 + 1, par6 + j);
 
-                    if (id == GalacticraftVenus.T3LaunchPad.blockID || id == GalacticraftVenus.T3LaunchPadFull.blockID || id2 == GalacticraftVenus.T3LaunchPadFull.blockID)
+                    if (id == GCCoreBlocks.landingPad.blockID || id == GCCoreBlocks.landingPadFull.blockID || id2 == GCCoreBlocks.landingPadFull.blockID)
                     {
                         amountOfCorrectBlocks++;
 
@@ -77,7 +74,7 @@ public class VenusSpaceshipTier3 extends Item implements IHoldableItem
                         centerY = par5 - 2.2F;
                         centerZ = par6 + j + 0.5F;
 
-                        if (id == GalacticraftVenus.T3LaunchPadFull.blockID || id2 == GalacticraftVenus.T3LaunchPadFull.blockID)
+                        if (id == GCCoreBlocks.landingPadFull.blockID || id2 == GCCoreBlocks.landingPadFull.blockID)
                         {
                             amountOfCorrectBlocks = 9;
                         }
@@ -94,34 +91,17 @@ public class VenusSpaceshipTier3 extends Item implements IHoldableItem
 
             if (amountOfCorrectBlocks == 9)
             {
-                EntitySpaceshipBase rocket = null;
+                final VenusEntityRocketT3 spaceship = new VenusEntityRocketT3(par3World, centerX, centerY + 0.2D, centerZ, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
 
-                if (par1ItemStack.getItemDamage() < 10)
-                {
-                    rocket = new VenusEntityRocketT3(par3World, centerX, centerY + 0.2D, centerZ, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
-                }
-                else
-                {
-//                    rocket = new VenusEntityCargoRocket(par3World, centerX, centerY + 4.2D - 1.6D, centerZ, EnumRocketType.values()[par1ItemStack.getItemDamage() - 10]);
-                }
-
-                par3World.spawnEntityInWorld(rocket);
-
+                par3World.spawnEntityInWorld(spaceship);
                 if (!par2EntityPlayer.capabilities.isCreativeMode)
                 {
                     par2EntityPlayer.inventory.consumeInventoryItem(par1ItemStack.getItem().itemID);
                 }
 
-                if (rocket instanceof IRocketType && ((IRocketType) rocket).getType().getPreFueled())
+                if (spaceship.rocketType.getPreFueled())
                 {
-                    if (rocket instanceof EntityTieredRocket)
-                    {
-                        ((EntityTieredRocket) rocket).spaceshipFuelTank.fill(new FluidStack(GalacticraftCore.FUEL, rocket.getMaxFuel()), true);
-                    }
-                    else if (rocket instanceof VenusEntityCargoRocket)
-                    {
-                        ((VenusEntityCargoRocket) rocket).spaceshipFuelTank.fill(new FluidStack(GalacticraftCore.FUEL, rocket.getMaxFuel()), true);
-                    }
+                    spaceship.spaceshipFuelTank.fill(new FluidStack(GalacticraftCore.FUEL, spaceship.getFuelTankCapacity()), true);
                 }
             }
             else
@@ -140,11 +120,6 @@ public class VenusSpaceshipTier3 extends Item implements IHoldableItem
         {
             par3List.add(new ItemStack(par1, 1, i));
         }
-
-        for (int i = 11; i < 10 + EnumRocketType.values().length - 1; i++)
-        {
-            par3List.add(new ItemStack(par1, 1, i));
-        }
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -152,16 +127,7 @@ public class VenusSpaceshipTier3 extends Item implements IHoldableItem
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack par1ItemStack, EntityPlayer player, List par2List, boolean b)
     {
-        EnumRocketType type = null;
-
-        if (par1ItemStack.getItemDamage() < 10)
-        {
-            type = EnumRocketType.values()[par1ItemStack.getItemDamage()];
-        }
-        else
-        {
-            type = EnumRocketType.values()[par1ItemStack.getItemDamage() - 10];
-        }
+        EnumRocketType type = EnumRocketType.values()[par1ItemStack.getItemDamage()];
 
         if (!type.getTooltip().isEmpty())
         {
@@ -172,17 +138,6 @@ public class VenusSpaceshipTier3 extends Item implements IHoldableItem
         {
             par2List.add(EnumColor.RED + "\u00a7o" + "Creative Only");
         }
-        
-        if (par1ItemStack.getItemDamage() >= 10)
-        {
-            par2List.add(EnumColor.AQUA + "Requires Launch Controller");
-        }
-    }
-
-    @Override
-    public String getUnlocalizedName(ItemStack par1ItemStack)
-    {
-        return super.getUnlocalizedName(par1ItemStack) + (par1ItemStack.getItemDamage() < 10 ? ".t2Rocket" : ".cargoRocket");
     }
 
     @Override

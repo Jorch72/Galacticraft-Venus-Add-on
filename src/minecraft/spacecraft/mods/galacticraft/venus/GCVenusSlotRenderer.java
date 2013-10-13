@@ -11,7 +11,7 @@ public class GCVenusSlotRenderer implements ICelestialBodyRenderer
 	@Override
 	public ResourceLocation getPlanetSprite() 
 	{
-        return new ResourceLocation("spacecraft:textures/gui/planets/venus.png");
+        return new ResourceLocation(GalacticraftVenus.TEXTURE_DOMAIN, "textures/gui/planets/venus.png");
 	}
 
 	@Override
@@ -24,11 +24,10 @@ public class GCVenusSlotRenderer implements ICelestialBodyRenderer
 	public void renderSlot(int index, int x, int y, float slotHeight, Tessellator tessellator) 
 	{
         tessellator.startDrawingQuads();
-        tessellator.addVertexWithUV(x - slotHeight / 2 * 1.25, y + slotHeight / 2 * 1.25, -90.0D, 0.35D, 0.65D);
-        tessellator.addVertexWithUV(x + slotHeight / 2 * 1.25, y + slotHeight / 2 * 1.25, -90.0D, 0.65D, 0.65D);
-        tessellator.addVertexWithUV(x + slotHeight / 2 * 1.25, y - slotHeight / 2 * 1.25, -90.0D, 0.65D, 0.35D);
-        tessellator.addVertexWithUV(x - slotHeight / 2 * 1.25, y - slotHeight / 2 * 1.25, -90.0D, 0.35D, 0.35D);
+        tessellator.addVertexWithUV(x - slotHeight / 2 * 1.15, y + slotHeight / 2 * 1.15, -90.0D, 0.35D, 0.65D);
+        tessellator.addVertexWithUV(x + slotHeight / 2 * 1.15, y + slotHeight / 2 * 1.15, -90.0D, 0.65D, 0.65D);
+        tessellator.addVertexWithUV(x + slotHeight / 2 * 1.15, y - slotHeight / 2 * 1.15, -90.0D, 0.65D, 0.35D);
+        tessellator.addVertexWithUV(x - slotHeight / 2 * 1.15, y - slotHeight / 2 * 1.15, -90.0D, 0.35D, 0.35D);
         tessellator.draw();
 	}
-
 }
