@@ -51,6 +51,7 @@ public class GCVenusConfigManager
 	public static int SpiderEggID;
 	public static int gemWireID;
 	public static int VenusPlateID;
+	public static int tier3EngineID;
 	
     // ITEMS
 	public static int SulferDustID;
@@ -59,29 +60,31 @@ public class GCVenusConfigManager
 	public static int CompressedSulferID;
 	public static int CompressedRedGemID;
 	public static int spaceshipT3ID;
-	public static int tier3SchematicID;
 	
     // ARMOR
     
     // TOOLS
 
     // ENTITIES
-
+	public static int idEntitySpaceshipTier3;
+	
     // GUI
+    public static int idGuiRocketCraftingBenchT3;
 
     // SCHEMATIC
-
+    public static int tier3SchematicID;
+    
     // GENERAL
-  public static boolean disableGemOreVenus;
-  public static boolean disableSulferOreVenus;
-  public static boolean disableMeteorOreVenus;
-  public static boolean disableIronOreVenus;
-  public static boolean disableCoalOreVenus;  
-  public static boolean disableTinOreVenus;
-  public static boolean disableCopperOreVenus;
+    public static boolean disableGemOreVenus;
+    public static boolean disableSulferOreVenus;
+    public static boolean disableMeteorOreVenus;
+    public static boolean disableIronOreVenus;
+    public static boolean disableCoalOreVenus;  
+    public static boolean disableTinOreVenus;
+    public static boolean disableCopperOreVenus;
   
-  public static boolean generateOtherMods;
-  public static boolean disableVenusVillageGen;
+    public static boolean generateOtherMods;
+    public static boolean disableVenusVillageGen;
 
     private void setDefaultValues()
     {
@@ -113,8 +116,7 @@ public class GCVenusConfigManager
 			GCVenusConfigManager.SpiderEggID= GCVenusConfigManager.configuration.get("Blocks", "Spider Egg ID", 6021).getInt(6021);
 			GCVenusConfigManager.gemWireID= GCVenusConfigManager.configuration.get("Blocks", "Gem Wire ID", 6022).getInt(6022);
 			
-			GCVenusConfigManager.spaceshipT3ID= GCVenusConfigManager.configuration.get("Blocks", "Tier 3 Rocket ID", 6023).getInt(6023);
-			
+			GCVenusConfigManager.spaceshipT3ID= GCVenusConfigManager.configuration.get("Blocks", "T3RocketID", 6023).getInt(6023);
 			
 			GCVenusConfigManager.SulferDustID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Dust ID", 6024).getInt(6024);
 			GCVenusConfigManager.SulferIngotID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Ingot ID", 6025).getInt(6025);
@@ -122,6 +124,15 @@ public class GCVenusConfigManager
 			GCVenusConfigManager.CompressedSulferID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Compressed Sulfer ID", 6027).getInt(6027);
 			GCVenusConfigManager.CompressedRedGemID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Compressed Red Gem ID", 6028).getInt(6028);
 			GCVenusConfigManager.VenusPlateID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Venus Plate ID", 6029).getInt(6029);
+			GCVenusConfigManager.tier3EngineID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Tier 3 Engine ID", 6031).getInt(6031);
+			
+
+			GCVenusConfigManager.idEntitySpaceshipTier3 = GCVenusConfigManager.configuration.get("Entities", "Entity Spaceship Tier 3", 273).getInt(273);
+			
+			
+			GCVenusConfigManager.idGuiRocketCraftingBenchT3 = GCVenusConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT3", 243).getInt(243);
+			
+			
 			GCVenusConfigManager.tier3SchematicID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Tier 3 Schematic ID", 6030).getInt(6030);
 			
 			

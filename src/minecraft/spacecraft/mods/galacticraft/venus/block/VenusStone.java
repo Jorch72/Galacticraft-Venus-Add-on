@@ -15,9 +15,6 @@ public class VenusStone extends Block
         this.setCreativeTab(GalacticraftVenus.tabVenus);
     }
 
-    /**
-     * Returns the ID of the items to drop on destruction.
-     */
     public int idDropped(int par1, Random par2Random, int par3)
     {
         return GalacticraftVenus.VenusCobblestone.blockID;

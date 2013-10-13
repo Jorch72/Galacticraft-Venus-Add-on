@@ -3,6 +3,8 @@ package spacecraft.mods.galacticraft.venus.block;
 import java.util.Random;
 
 import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
+import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
+import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -10,7 +12,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class VenusOre extends Block
+public class VenusOre extends Block implements IDetectableResource, IPlantableBlock
 {
     public VenusOre(int id, Material material)
     {
@@ -55,7 +57,38 @@ public class VenusOre extends Block
             return this.quantityDropped(par2Random);
         }
     }
+    @Override
+    public boolean isValueable(int metadata)
+    {
+        switch (metadata)
+        {
+        case 0:
+            return true;
+        case 1:
+            return true;
+        case 2:
+            return true;
+        default:
+            return false;
+        }
+    }
+    
+    @Override
+    public int requiredLiquidBlocksNearby()
+    {
+        return 5; //Set How LiquidBlocks Is Needed Nearby To Plant in.
+    }
+    
+    @Override
+    public boolean isPlantable(int metadata)
+    {
+        if (metadata >= 5 && metadata <= 13)
+        {
+            return true;
+        }
 
+        return false;
+    }
     /**
      * Drops the block items with a specified chance of dropping the specified items
      */
@@ -91,16 +124,6 @@ public class VenusOre extends Block
             this.dropXpOnBlockBreak(par1World, par2, par3, par4, j1);
         }
     }
-
-    /**
-     * Determines the damage on the item the block drops. Used in cloth and wood.
-     */
-//    public int damageDropped(int par1)
-//    {
-//        return this.blockID == Block.oreLapis.blockID ? 4 : 0;
-//    }
-    public boolean isValueable(int metadata) {
-	return true;
-	}
 }
+
 
