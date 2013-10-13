@@ -10,8 +10,8 @@ import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 public class VenusDirt extends Block implements IPlantableBlock
 {
 	public VenusDirt(int id, Material material)
-	{
-		super( id, material);
+    {
+    	super( id, material);
 		this.setCreativeTab(GalacticraftVenus.tabVenus);
 	}
 	@Override

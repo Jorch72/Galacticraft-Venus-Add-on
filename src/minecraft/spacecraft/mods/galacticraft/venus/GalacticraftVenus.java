@@ -39,14 +39,14 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 	    
 	    public static CreativeTabs GalacticraftVenusTab;
 	    
-	    public static final String CHANNEL = "GalacticraftVenus";
+	    public static final String CHANNEL = "galacticraftvenus";
 	    public static final String FILE_PATH = "/spacecraft/mods/galacticraft/venus/";
 	    public static final String CLIENT_PATH = "client/";
-	    public static final String LANGUAGE_PATH = "/assets/GalacticraftVenus/lang/";
+	    public static final String LANGUAGE_PATH = "/assets/galacticraftvenus/lang/";
 	    public static final String CONFIG_FILE = "Spacecraft/Venus.conf";
 	    private static final String[] LANGUAGES_SUPPORTED = new String[] {"en_US"};
 	    
-	    public static String TEXTURE_DOMAIN = "GalacticraftVenus";
+	    public static String TEXTURE_DOMAIN = "galacticraftvenus";
 	    public static String TEXTURE_PREFIX = GalacticraftVenus.TEXTURE_DOMAIN + ":";
 	    public static String TEXTURE_SUFFIX;
 
