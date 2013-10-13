@@ -23,14 +23,14 @@ public class launchPadFull extends GCCoreBlockAdvanced
 {
     private Icon[] icons = new Icon[3];
 
-    public launchPadFull(int id, String assetName)
+    public launchPadFull(int id, Material material)
     {
-        super(id, Material.rock);
+    	super( id, material);
         this.setHardness(1.0F);
         this.setResistance(10.0F);
         this.setStepSound(Block.soundStoneFootstep);
-        this.setTextureName(GalacticraftCore.TEXTURE_PREFIX + assetName);
-        this.setUnlocalizedName(assetName);
+//        this.setTextureName(GalacticraftCore.TEXTURE_PREFIX + assetName);
+//        this.setUnlocalizedName(assetName);
     }
 
     @Override
@@ -61,7 +61,7 @@ public class launchPadFull extends GCCoreBlockAdvanced
     @Override
     public int idDropped(int par1, Random par2Random, int par3)
     {
-        return GalacticraftVenus.Tier2LandingPad.blockID;
+        return GalacticraftVenus.Tier3LaunchPad.blockID;
     }
 
     @Override

@@ -75,7 +75,7 @@ public class launchPad extends GCCoreBlockAdvanced
     @Override
     public boolean canPlaceBlockOnSide(World par1World, int par2, int par3, int par4, int par5)
     {
-        final int id = GalacticraftVenus.Tier2LandingPad.blockID;
+        final int id = GalacticraftVenus.Tier3LaunchPad.blockID;
 
         if (par1World.getBlockId(par2 + 1, par3, par4) == id && par1World.getBlockId(par2 + 2, par3, par4) == id && par1World.getBlockId(par2 + 3, par3, par4) == id)
         {
@@ -97,7 +97,7 @@ public class launchPad extends GCCoreBlockAdvanced
             return false;
         }
 
-        if (par1World.getBlockId(par2, par3 - 1, par4) == GalacticraftVenus.Tier2LandingPad.blockID && par5 == 1)
+        if (par1World.getBlockId(par2, par3 - 1, par4) == GalacticraftVenus.Tier3LaunchPad.blockID && par5 == 1)
         {
             return false;
         }
@@ -114,8 +114,8 @@ public class launchPad extends GCCoreBlockAdvanced
         {
         case 0:
             return new GCCoreTileEntityLandingPadSingle();
-        case 1:
-            return new GCCoreTileEntityBuggyFuelerSingle();
+//        case 1:
+//            return new GCCoreTileEntityBuggyFuelerSingle();
         case 2:
             return new GCCoreTileEntityCargoPadSingle();
         default:
