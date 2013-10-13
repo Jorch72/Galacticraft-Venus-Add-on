@@ -114,16 +114,10 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		
 		//Block Gem Wire
 		public final static Block gemWire = new VenusGemWire(628, Material.cloth) .setHardness(1.5F).setStepSound(Block.soundClothFootstep) .setUnlocalizedName("gemWire") .setTextureName("galacticraftvenus:gemWire");
-		
-		//Block Gem Wire Heavy
-		public final static Block sulferWire = new VenusSulferWire(629, Material.cloth) .setHardness(1.5F).setStepSound(Block.soundClothFootstep) .setUnlocalizedName("sulferWire") .setTextureName("galacticraftvenus:sulferWire");
-		
+
 		//Block Tier 3 Launch Pad
 		public final static Block T3LaunchPad = new T3LaunchPad(630, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("T3LaunchPad") .setTextureName("galacticraftvenus:T3LaunchPad");
-		
-		//Block Tier 3 Launch Pad full
-		public final static Block T3LaunchPadFull = new T3LaunchPadFull(638, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("T3LaunchPadFull") .setTextureName("galacticraftvenus:T3LaunchPadFull");
-		
+
 		
 		//Item Sufer Dust
 		public final static Item SulferDust = new VenusItem(631) .setUnlocalizedName("SulferDust") .setTextureName("galacticraftvenus:sulferDust");
@@ -187,9 +181,6 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				GameRegistry.registerBlock(VenusHalfBasalt, "VenusHalfBasalt");
 				GameRegistry.registerBlock(SpiderEgg, "SpiderEgg");
 				GameRegistry.registerBlock(gemWire, "gemWire");
-				GameRegistry.registerBlock(sulferWire, "sulferWire");
-				GameRegistry.registerBlock(T3LaunchPad, "Tier3LaunchPad");
-				GameRegistry.registerBlock(T3LaunchPadFull, "T3LaunchPadFull");
 				
 				//Registering Block Names
                 LanguageRegistry.addName(VenusGrass, "Venus Grass");
@@ -211,9 +202,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				LanguageRegistry.addName(VenusHalfBasalt, "Basalt Slab");
 				LanguageRegistry.addName(SpiderEgg, "Spider Egg");
 				LanguageRegistry.addName(gemWire, "Gem Wire");
-				LanguageRegistry.addName(sulferWire, "Sulfer Wire");
 				LanguageRegistry.addName(T3LaunchPad, "Tier 3 Rocket Launch Pad");
-				LanguageRegistry.addName(T3LaunchPadFull, "");
 				
 				//Registring Items Names
                 LanguageRegistry.addName(SulferDust, "Sulfer Dust");

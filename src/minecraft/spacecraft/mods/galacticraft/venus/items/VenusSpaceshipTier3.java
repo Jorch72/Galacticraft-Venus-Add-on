@@ -118,9 +118,9 @@ public class VenusSpaceshipTier3 extends Item implements IHoldableItem
                     {
                         ((EntityTieredRocket) rocket).spaceshipFuelTank.fill(new FluidStack(GalacticraftCore.FUEL, rocket.getMaxFuel()), true);
                     }
-//                    else if (rocket instanceof VenusEntityCargoRocket)
+                    else if (rocket instanceof VenusEntityCargoRocket)
                     {
-//                        ((VenusEntityCargoRocket) rocket).spaceshipFuelTank.fill(new FluidStack(GalacticraftCore.FUEL, rocket.getMaxFuel()), true);
+                        ((VenusEntityCargoRocket) rocket).spaceshipFuelTank.fill(new FluidStack(GalacticraftCore.FUEL, rocket.getMaxFuel()), true);
                     }
                 }
             }
