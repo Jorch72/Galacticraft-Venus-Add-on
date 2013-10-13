@@ -27,12 +27,10 @@ public class GCDevVenusConfigManager
     }
 
     // BLOCKS
-	public static int EvolvedBlazeEggID;
-	public static int gemWireID;
+	public static int copperWireID;
 	
     // ITEMS
 	public static int spaceshipT3ID;
-	public static int HeavyVenusPlateID;
 	
     // ARMOR
     
@@ -48,7 +46,6 @@ public class GCDevVenusConfigManager
     public static int tier3SchematicID;
     
     // ACHIEVEMENTS
-    public static int idEntityEvolvedBlaze;
     
     // GENERAL
 
@@ -59,21 +56,16 @@ public class GCDevVenusConfigManager
             GCDevVenusConfigManager.configuration.load();
 
             
-			GCDevVenusConfigManager.EvolvedBlazeEggID= GCDevVenusConfigManager.configuration.get("Blocks", "Evolved Blaze Egg ID", 6021).getInt(6021);
-			GCDevVenusConfigManager.gemWireID= GCDevVenusConfigManager.configuration.get("Blocks", "Gem Wire ID", 6022).getInt(6022);
+			GCDevVenusConfigManager.copperWireID= GCDevVenusConfigManager.configuration.get("Blocks", "Copper Wire ID", 6022).getInt(6022);
 
             
 			GCDevVenusConfigManager.spaceshipT3ID= GCDevVenusConfigManager.configuration.get("Blocks", "T3RocketID", 6023).getInt(6023);
-			GCDevVenusConfigManager.HeavyVenusPlateID= GCDevVenusConfigManager.configuration.get("Blocks", "HeavyVenusPlateID", 6050).getInt(6050);
 
 
 			GCDevVenusConfigManager.idEntitySpaceshipTier3 = GCDevVenusConfigManager.configuration.get("Entities", "Entity Spaceship Tier 3", 273).getInt(273);
 			
 			
 			GCDevVenusConfigManager.idGuiRocketCraftingBenchT3 = GCDevVenusConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT3", 243).getInt(244);
-			
-			
-			GCDevVenusConfigManager.idEntityEvolvedBlaze = GCDevVenusConfigManager.configuration.get("Entities", "idEntityEvolvedBlaze", 555).getInt(555);
 			
 			
 			GCDevVenusConfigManager.tier3SchematicID = GCDevVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Tier 3 Schematic ID", 6030).getInt(6030);

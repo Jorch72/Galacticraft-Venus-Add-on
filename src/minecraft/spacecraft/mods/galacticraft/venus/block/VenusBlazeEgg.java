@@ -1,10 +1,11 @@
-package spacecraft.mods.galacticraft.DevVenus.blocks;
+package spacecraft.mods.galacticraft.venus.block;
 
-import spacecraft.mods.galacticraft.DevVenus.GalacticraftDevVenus;
+import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
 import net.minecraft.block.BlockDragonEgg;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
@@ -27,7 +28,7 @@ public class VenusBlazeEgg extends BlockDragonEgg
     @Override
     public CreativeTabs getCreativeTabToDisplayOn()
     {
-        return GalacticraftDevVenus.tabGalacticraftDevVenus;
+        return GalacticraftVenus.tabVenus;
     }
 
     @Override
@@ -58,7 +59,7 @@ public class VenusBlazeEgg extends BlockDragonEgg
     @SideOnly(Side.CLIENT)
     public int idPicked(World par1World, int par2, int par3, int par4)
     {
-        return 0;
+        return 1;
     }
 
     @Override
@@ -66,9 +67,9 @@ public class VenusBlazeEgg extends BlockDragonEgg
     {
         if (!world.isRemote)
         {
-            GCCoreEntitySpider spider = new GCCoreEntitySpider(world);
-            spider.setPosition(x + 0.5, y + 1, z + 0.5);
-            world.spawnEntityInWorld(spider);
+            EntityBlaze blaze = new EntityBlaze(world);
+            blaze.setPosition(x + 0.5, y + 1, z + 0.5);
+            world.spawnEntityInWorld(blaze);
         }
 
         world.setBlockToAir(x, y, z);

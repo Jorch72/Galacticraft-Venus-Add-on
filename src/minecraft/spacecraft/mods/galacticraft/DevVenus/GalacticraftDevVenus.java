@@ -27,8 +27,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import spacecraft.mods.galacticraft.DevVenus.items.*;
 import spacecraft.mods.galacticraft.DevVenus.blocks.*;
-import spacecraft.mods.galacticraft.DevVenus.client.entity.EntityEvolvedBlaze;
 import spacecraft.mods.galacticraft.venus.CommonProxy;
+import spacecraft.mods.galacticraft.venus.block.VenusBlazeEgg;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -67,22 +67,16 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		return new ItemStack(Item.netherStar, 1, 0);}
 		};
 		
-
-		//Block Spider Egg
-		public final static Block EvolvedBlazeEgg = new VenusBlazeEgg(627) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("EvolvedBlazeEgg") .setTextureName("devgalacticraftvenus:evolvedBlazeEgg");				
-
 		//Block Gem Wire
-		public final static Block gemWire = new VenusGemWire(628, Material.cloth) .setHardness(1.5F).setStepSound(Block.soundClothFootstep) .setUnlocalizedName("gemWire") .setTextureName("devgalacticraftvenus:gemWire");
+		public final static Block copperWire = new GCCoreBlockCopperWire(728, Material.cloth) .setHardness(1.5F).setStepSound(Block.soundClothFootstep) .setUnlocalizedName("copperWire") .setTextureName("devgalacticraftvenus:copperWire");
 
 		
 		//Item T3Spaceship
-		public final static Item spaceshipT3 = new VenusItemSpaceshipTier3(637) .setUnlocalizedName("spaceshipT3"); //.setTextureName("DevGalacticraftvenus:rocketT3");
+		public final static Item spaceshipT3 = new VenusItemSpaceshipTier3(729) .setUnlocalizedName("spaceshipT3"); //.setTextureName("DevGalacticraftvenus:rocketT3");
 		
-		//Item T3Spaceship
-		public final static Item HeavyVenusPlate = new VenusItem(638) .setUnlocalizedName("Heavy Venus Plate") .setTextureName("devgalacticraftvenus:HeavyVenusPlate");
-
+		
 		//Item Tier3 Schematic
-		public final static Item tier3Schematic = new VenusItemSchematic(639) .setUnlocalizedName("tier3Schematic") .setTextureName("devgalacticraftvenus:tier3Schematic");
+		public final static Item tier3Schematic = new VenusItemSchematic(731) .setUnlocalizedName("tier3Schematic") .setTextureName("devgalacticraftvenus:tier3Schematic");
 
 		
 		//Where the client and server proxy is loaded.
@@ -103,16 +97,11 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 LanguageRegistry.instance().addStringLocalization("itemGroup.tabGalacticraftDevVenus", "en_US", "Galacticraft Dev-Venus");
                 
                 //Registering Blocks
-				GameRegistry.registerBlock(EvolvedBlazeEgg, "EvolvedBlazeEgg");
-				GameRegistry.registerBlock(gemWire, "gemWire");
 				
 				//Registering Block Names
-				LanguageRegistry.addName(EvolvedBlazeEgg, "Evolved Blaze Egg");
-				LanguageRegistry.addName(gemWire, "Gem Wire");
 				
 				//Registring Items Names
                 LanguageRegistry.addName(spaceshipT3, "Tier 3 Rocket");
-                LanguageRegistry.addName(HeavyVenusPlate, "Heavy Venus Plate");
                 LanguageRegistry.addName(tier3Schematic, "Tier 3 Rocket Schematic");
                 
 				//Adding ItemStack for recipes
