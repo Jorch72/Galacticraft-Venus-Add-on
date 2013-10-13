@@ -226,10 +226,9 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 ItemStack VenusCopperOre = new ItemStack(GalacticraftVenus.VenusCopperOre);
                 ItemStack CompressedSulfer = new ItemStack(GalacticraftVenus.CompressedSulfer);
                 ItemStack CompressedRedGem = new ItemStack(GalacticraftVenus.CompressedRedGem);
-                ItemStack VenusPlate = new ItemStack(GalacticraftVenus.VenusPlate);
-                
-//                ItemStack ingotTin = new ItemStack(GCCoreItems.basicItem.ingotTin);  
-//                ItemStack ingotCopper = new ItemStack(GCCoreItems.basicItem.ingotCopper);
+                ItemStack VenusPlate = new ItemStack(GalacticraftVenus.VenusPlate);    
+//              ItemStack ingotTin = new ItemStack(GCCoreItems.basicItem.ingotTin);  
+//              ItemStack ingotCopper = new ItemStack(GCCoreItems.basicItem.ingotCopper);
                 
                 ItemStack meteoricIronRaw = new ItemStack(GCMoonItems.meteoricIronRaw);
                 ItemStack furnace = new ItemStack(Block.furnaceIdle);
@@ -249,16 +248,15 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 GameRegistry.addSmelting(GalacticraftVenus.VenusMeteorOre.blockID, meteoricIronRaw, 0.7f);
                 GameRegistry.addSmelting(GalacticraftVenus.VenusRedGemOre.blockID, VenusRedGem, 0.7f);
                 GameRegistry.addSmelting(GalacticraftVenus.VenusCoalOre.blockID, coal, 0.7f);
-                GameRegistry.addSmelting(GalacticraftVenus.VenusIronOre.blockID, ingotIron, 0.7f);
-                
-//                GameRegistry.addSmelting(GalacticraftVenus.VenusTinOre.blockID, ingotTin, 0.7f);
-//                GameRegistry.addSmelting(GalacticraftVenus.VenusCopperOre.blockID, ingotCopper, 0.7f);
+                GameRegistry.addSmelting(GalacticraftVenus.VenusIronOre.blockID, ingotIron, 0.7f); 
+//              GameRegistry.addSmelting(GalacticraftVenus.VenusTinOre.blockID, ingotTin, 0.7f);
+//              GameRegistry.addSmelting(GalacticraftVenus.VenusCopperOre.blockID, ingotCopper, 0.7f);
         }
         
         @EventHandler
         public void postInit(FMLPostInitializationEvent event) 
         {
-
+        	
         }
 }
 
