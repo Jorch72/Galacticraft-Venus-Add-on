@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.venus.tile;
+package spacecraft.mods.galacticraft.DevVenus.tile;
 
 import micdoodle8.mods.galacticraft.core.tile.GCCoreTileEntityUniversalConductor;
 import net.minecraft.nbt.NBTTagCompound;

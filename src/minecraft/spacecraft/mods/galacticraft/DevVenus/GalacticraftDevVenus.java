@@ -5,18 +5,13 @@ import java.io.File;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.world.IPlanet;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
-import micdoodle8.mods.galacticraft.mars.GCMarsConfigManager;
-import micdoodle8.mods.galacticraft.mars.items.GCMarsItemSpaceshipTier2;
-import micdoodle8.mods.galacticraft.mars.items.GCMarsItems;
-import micdoodle8.mods.galacticraft.moon.items.GCMoonItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import spacecraft.mods.galacticraft.DevVenus.items.VenusItem;
-import spacecraft.mods.galacticraft.DevVenus.items.VenusItemSchematic;
-import spacecraft.mods.galacticraft.DevVenus.items.VenusItemSpaceshipTier3;
+import spacecraft.mods.galacticraft.DevVenus.items.*;
+import spacecraft.mods.galacticraft.DevVenus.blocks.*;
 import spacecraft.mods.galacticraft.venus.CommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -55,6 +50,14 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		return new ItemStack(Item.netherStar, 1, 0);}
 		};
 		
+
+		//Block Spider Egg
+		public final static Block SpiderEgg = new VenusSpiderEgg(627) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("spiderEgg") .setTextureName("galacticraftvenus:spiderEgg");				
+
+		//Block Gem Wire
+		public final static Block gemWire = new VenusGemWire(628, Material.cloth) .setHardness(1.5F).setStepSound(Block.soundClothFootstep) .setUnlocalizedName("gemWire") .setTextureName("galacticraftvenus:gemWire");
+
+		
 		//Item T3Spaceship
 		public final static Item spaceshipT3 = new VenusItemSpaceshipTier3(637) .setUnlocalizedName("spaceshipT3"); //.setTextureName("DevGalacticraftvenus:rocketT3");
 		
@@ -83,9 +86,13 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 LanguageRegistry.instance().addStringLocalization("itemGroup.tabGalacticraftDevVenus", "en_US", "Galacticraft Dev-Venus");
                 
                 //Registering Blocks
-                
+				GameRegistry.registerBlock(SpiderEgg, "SpiderEgg");
+				GameRegistry.registerBlock(gemWire, "gemWire");
+				
 				//Registering Block Names
-               
+				LanguageRegistry.addName(SpiderEgg, "Spider Egg");
+				LanguageRegistry.addName(gemWire, "Gem Wire");
+				
 				//Registring Items Names
                 LanguageRegistry.addName(spaceshipT3, "Tier 3 Rocket");
                 LanguageRegistry.addName(HeavyVenusPlate, "Heavy Venus Plate");

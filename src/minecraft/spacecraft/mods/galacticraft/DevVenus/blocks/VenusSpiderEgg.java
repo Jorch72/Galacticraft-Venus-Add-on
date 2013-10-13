@@ -1,6 +1,6 @@
-package spacecraft.mods.galacticraft.venus.block;
+package spacecraft.mods.galacticraft.DevVenus.blocks;
 
-import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
+import spacecraft.mods.galacticraft.DevVenus.GalacticraftDevVenus;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
 import net.minecraft.block.BlockDragonEgg;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -27,7 +27,7 @@ public class VenusSpiderEgg extends BlockDragonEgg
     @Override
     public CreativeTabs getCreativeTabToDisplayOn()
     {
-        return GalacticraftVenus.tabVenus;
+        return GalacticraftDevVenus.tabGalacticraftDevVenus;
     }
 
     @Override

@@ -1,9 +1,9 @@
-package spacecraft.mods.galacticraft.venus.block;
+package spacecraft.mods.galacticraft.DevVenus.blocks;
 
 import java.util.List;
 
-import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
-import spacecraft.mods.galacticraft.venus.tile.VenusTileEntityGemWire;
+import spacecraft.mods.galacticraft.DevVenus.GalacticraftDevVenus;
+import spacecraft.mods.galacticraft.DevVenus.tile.VenusTileEntityGemWire;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketHandlerClient.EnumClientPacket;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import universalelectricity.core.vector.Vector3;
@@ -42,7 +42,7 @@ public class VenusGemWire extends BlockConductor
     @Override
     public CreativeTabs getCreativeTabToDisplayOn()
     {
-        return GalacticraftVenus.tabVenus;
+        return GalacticraftDevVenus.tabGalacticraftDevVenus;
     }
 
     @Override
@@ -52,7 +52,7 @@ public class VenusGemWire extends BlockConductor
 
         for (int i = 0; i < VenusGemWire.names.length; i++)
         {
-            VenusGemWire.blockIcons[i] = par1IconRegister.registerIcon(GalacticraftVenus.TEXTURE_PREFIX + VenusGemWire.names[i]);
+            VenusGemWire.blockIcons[i] = par1IconRegister.registerIcon(GalacticraftDevVenus.TEXTURE_PREFIX + VenusGemWire.names[i]);
         }
     }
 
@@ -94,7 +94,7 @@ public class VenusGemWire extends BlockConductor
         {
             ((TileEntityConductor) tile).adjacentConnections = null;
             Block.blocksList[world.getBlockId(tile.xCoord, tile.yCoord, tile.zCoord)].setBlockBoundsBasedOnState(world, tile.xCoord, tile.yCoord, tile.zCoord);
-            PacketDispatcher.sendPacketToAllAround(x, y, z, 10, world.provider.dimensionId, PacketUtil.createPacket(GalacticraftVenus.CHANNEL, EnumClientPacket.UPDATE_WIRE_BOUNDS, new Object[] { x, y, z }));
+            PacketDispatcher.sendPacketToAllAround(x, y, z, 10, world.provider.dimensionId, PacketUtil.createPacket(GalacticraftDevVenus.CHANNEL, EnumClientPacket.UPDATE_WIRE_BOUNDS, new Object[] { x, y, z }));
         }
     }
 

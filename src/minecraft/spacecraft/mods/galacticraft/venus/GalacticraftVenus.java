@@ -111,12 +111,6 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		//Block Venus Half Basalt
 		public final static Block VenusHalfBasalt = new VenusStone(626, Material.ground) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusHalfBasalt") .setTextureName("galacticraftvenus:venusBasalt");				
 
-		//Block Spider Egg
-		public final static Block SpiderEgg = new VenusSpiderEgg(627) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("spiderEgg") .setTextureName("galacticraftvenus:spiderEgg");				
-
-		//Block Gem Wire
-		public final static Block gemWire = new VenusGemWire(628, Material.cloth) .setHardness(1.5F).setStepSound(Block.soundClothFootstep) .setUnlocalizedName("gemWire") .setTextureName("galacticraftvenus:gemWire");
-
 		
 		//Item Sufer Dust
 		public final static Item SulferDust = new VenusItem(631) .setUnlocalizedName("SulferDust") .setTextureName("galacticraftvenus:sulferDust");
@@ -174,8 +168,6 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				GameRegistry.registerBlock(VenusCopperOre, "VenusCopperOre");
 				GameRegistry.registerBlock(VenusBasalt, "VenusBasalt");
 				GameRegistry.registerBlock(VenusHalfBasalt, "VenusHalfBasalt");
-				GameRegistry.registerBlock(SpiderEgg, "SpiderEgg");
-				GameRegistry.registerBlock(gemWire, "gemWire");
 				
 				//Registering Block Names
                 LanguageRegistry.addName(VenusGrass, "Venus Grass");
@@ -195,9 +187,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				LanguageRegistry.addName(VenusCopperOre, "Copper Ore");
 				LanguageRegistry.addName(VenusBasalt, "Basalt");
 				LanguageRegistry.addName(VenusHalfBasalt, "Basalt Slab");
-				LanguageRegistry.addName(SpiderEgg, "Spider Egg");
-				LanguageRegistry.addName(gemWire, "Gem Wire");
-				
+
 				//Registring Items Names
                 LanguageRegistry.addName(SulferDust, "Sulfer Dust");
                 LanguageRegistry.addName(SulferIngot, "Sulfer Ingot");

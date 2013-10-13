@@ -48,8 +48,6 @@ public class GCVenusConfigManager
 	public static int VenusCopperOreID;
 	public static int VenusBasaltID;
 	public static int VenusHalfBasaltID;
-	public static int SpiderEggID;
-	public static int gemWireID;
 	public static int VenusPlateID;
 	
     // ITEMS
@@ -108,9 +106,7 @@ public class GCVenusConfigManager
 			GCVenusConfigManager.VenusCopperOreID= GCVenusConfigManager.configuration.get("Blocks", "Venus Copper Ore ID", 6018).getInt(6018);
 			GCVenusConfigManager.VenusBasaltID= GCVenusConfigManager.configuration.get("Blocks", "Basalt ID", 6019).getInt(6019);
 			GCVenusConfigManager.VenusHalfBasaltID= GCVenusConfigManager.configuration.get("Blocks", "HalfSlab Basalt ID", 6020).getInt(6020);
-			GCVenusConfigManager.SpiderEggID= GCVenusConfigManager.configuration.get("Blocks", "Spider Egg ID", 6021).getInt(6021);
-			GCVenusConfigManager.gemWireID= GCVenusConfigManager.configuration.get("Blocks", "Gem Wire ID", 6022).getInt(6022);
-
+			
 			
 			GCVenusConfigManager.SulferDustID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Dust ID", 6024).getInt(6024);
 			GCVenusConfigManager.SulferIngotID = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Sulfer Ingot ID", 6025).getInt(6025);

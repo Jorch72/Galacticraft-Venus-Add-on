@@ -3,6 +3,7 @@ package spacecraft.mods.galacticraft.DevVenus;
 import java.io.File;
 import java.util.logging.Level;
 
+import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
 import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.mars.GCMarsConfigManager;
 import micdoodle8.mods.galacticraft.moon.GCMoonConfigManager;
@@ -25,6 +26,8 @@ public class GCDevVenusConfigManager
     }
 
     // BLOCKS
+	public static int SpiderEggID;
+	public static int gemWireID;
 	
     // ITEMS
 	public static int spaceshipT3ID;
@@ -50,6 +53,10 @@ public class GCDevVenusConfigManager
         try
         {
             GCDevVenusConfigManager.configuration.load();
+
+            
+			GCDevVenusConfigManager.SpiderEggID= GCDevVenusConfigManager.configuration.get("Blocks", "Spider Egg ID", 6021).getInt(6021);
+			GCDevVenusConfigManager.gemWireID= GCDevVenusConfigManager.configuration.get("Blocks", "Gem Wire ID", 6022).getInt(6022);
 
             
 			GCDevVenusConfigManager.spaceshipT3ID= GCDevVenusConfigManager.configuration.get("Blocks", "T3RocketID", 6023).getInt(6023);

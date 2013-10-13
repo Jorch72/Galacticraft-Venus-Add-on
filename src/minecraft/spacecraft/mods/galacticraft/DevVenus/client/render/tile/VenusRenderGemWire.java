@@ -1,7 +1,7 @@
-package spacecraft.mods.galacticraft.venus.client.render.tile;
+package spacecraft.mods.galacticraft.DevVenus.client.render.tile;
 
-import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
-import spacecraft.mods.galacticraft.venus.tile.VenusTileEntityGemWire;
+import spacecraft.mods.galacticraft.DevVenus.GalacticraftDevVenus;
+import spacecraft.mods.galacticraft.DevVenus.tile.VenusTileEntityGemWire;
 import universalelectricity.compatibility.Compatibility;
 import universalelectricity.core.block.IConnector;
 import universalelectricity.core.vector.Vector3;
@@ -28,15 +28,15 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class VenusRenderGemWire extends TileEntitySpecialRenderer
 {
-    private static final ResourceLocation gemWireTexture = new ResourceLocation(GalacticraftVenus.TEXTURE_DOMAIN, "textures/model/gemWire.png");
+    private static final ResourceLocation gemWireTexture = new ResourceLocation(GalacticraftDevVenus.TEXTURE_DOMAIN, "textures/model/gemWire.png");
 
     public final IModelCustom model;
     public final IModelCustom model2;
 
     public VenusRenderGemWire()
     {
-        this.model = AdvancedModelLoader.loadModel("/assets/galacticraftvenus/models/wire.obj");
-        this.model2 = AdvancedModelLoader.loadModel("/assets/galacticraftvenus/models/wireHeavy.obj");
+        this.model = AdvancedModelLoader.loadModel("/assets/galacticraftcore/models/aluminumWire.obj");
+        this.model2 = AdvancedModelLoader.loadModel("/assets/galacticraftcore/models/aluminumWireHeavy.obj");
     }
 
     public void renderModelAt(VenusTileEntityGemWire tileEntity, double d, double d1, double d2, float f)
