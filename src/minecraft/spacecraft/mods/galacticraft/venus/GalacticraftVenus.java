@@ -127,12 +127,12 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		public final static Item CompressedRedGem = new VenusItem(631) .setUnlocalizedName("CompressedRedGem") .setTextureName("galacticraftvenus:compressedRedGem");
 
 		//Item Heavy Venus Plate
-		public final static Item HeavyVenusPlate = new VenusItem(732) .setUnlocalizedName("Heavy Venus Plate") .setTextureName("galacticraftvenus:HeavyVenusPlate");
+		public final static Item HeavyVenusPlate = new VenusHeavyPlate(732) .setUnlocalizedName("Heavy Venus Plate") .setTextureName("galacticraftvenus:HeavyVenusPlate");
 
 		//Item Venus Plate
 		public final static Item VenusPlate = new VenusItem(733) .setUnlocalizedName("VenusPlate") .setTextureName("galacticraftvenus:venusPlate");
 
-		//Id 734-736 tooken by GalacticraftDevVenus
+		//Id 734-733 tooken by GalacticraftDevVenus
 		
 		//Where the client and server proxy is loaded.
         @SidedProxy(clientSide="spacecraft.mods.galacticraft.venus.client.ClientProxy", serverSide="spacecraft.mods.galacticraft.venus.CommonProxy")

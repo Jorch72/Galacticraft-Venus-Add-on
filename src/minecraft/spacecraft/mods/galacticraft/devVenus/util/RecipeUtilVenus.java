@@ -5,7 +5,7 @@ import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import micdoodle8.mods.galacticraft.mars.inventory.GCMarsInventoryRocketBenchT2;
 import net.minecraft.item.ItemStack;
 
-public class RecipeUtilMars
+public class RecipeUtilVenus
 {
     public static ItemStack findMatchingSpaceshipT2Recipe(GCMarsInventoryRocketBenchT2 inventoryRocketBench)
     {

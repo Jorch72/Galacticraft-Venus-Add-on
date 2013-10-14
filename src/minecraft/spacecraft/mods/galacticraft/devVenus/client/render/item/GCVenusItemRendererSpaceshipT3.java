@@ -10,9 +10,9 @@ import org.lwjgl.Sys;
 import org.lwjgl.opengl.GL11;
 import cpw.mods.fml.client.FMLClientHandler;
 
-public class GCMarsItemRendererSpaceshipT2 extends GCCoreItemRendererSpaceship
+public class GCVenusItemRendererSpaceshipT3 extends GCCoreItemRendererSpaceship
 {
-    public GCMarsItemRendererSpaceshipT2(EntitySpaceshipBase spaceship, ModelBase model, ResourceLocation texture)
+    public GCVenusItemRendererSpaceshipT3(EntitySpaceshipBase spaceship, ModelBase model, ResourceLocation texture)
     {
         super(spaceship, model, texture);
     }

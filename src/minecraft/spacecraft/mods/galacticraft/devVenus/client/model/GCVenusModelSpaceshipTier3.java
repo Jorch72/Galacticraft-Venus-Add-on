@@ -4,7 +4,7 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class GCMarsModelSpaceshipTier2 extends ModelBase
+public class GCVenusModelSpaceshipTier3 extends ModelBase
 {
     // Roof, Floor, Bottom
     ModelRenderer[] inside = new ModelRenderer[3];
@@ -19,12 +19,12 @@ public class GCMarsModelSpaceshipTier2 extends ModelBase
     // 7 side pars, first four are the front, then right, and so on
     ModelRenderer[] sides = new ModelRenderer[7];
 
-    public GCMarsModelSpaceshipTier2()
+    public GCVenusModelSpaceshipTier3()
     {
         this(0.0F);
     }
 
-    public GCMarsModelSpaceshipTier2(float var1)
+    public GCVenusModelSpaceshipTier3(float var1)
     {
         this.textureWidth = 256;
         this.textureHeight = 256;

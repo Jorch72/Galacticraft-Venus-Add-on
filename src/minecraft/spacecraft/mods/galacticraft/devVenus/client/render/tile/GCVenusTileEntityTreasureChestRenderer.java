@@ -3,28 +3,24 @@ package spacecraft.mods.galacticraft.devVenus.client.render.tile;
 import micdoodle8.mods.galacticraft.core.client.model.block.GCCoreModelTreasureChest;
 import micdoodle8.mods.galacticraft.core.client.model.block.GCCoreModelTreasureChestLarge;
 import micdoodle8.mods.galacticraft.core.tile.GCCoreTileEntityTreasureChest;
-import micdoodle8.mods.galacticraft.mars.GalacticraftMars;
-import micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockT2TreasureChest;
+import spacecraft.mods.galacticraft.devVenus.GalacticraftDevVenus;
+import spacecraft.mods.galacticraft.devVenus.blocks.GCVenusBlockT3TreasureChest;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
+
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-/**
- * Copyright 2012-2013, micdoodle8
- * 
- * All rights reserved.
- * 
- */
 @SideOnly(Side.CLIENT)
-public class GCMarsTileEntityTreasureChestRenderer extends TileEntitySpecialRenderer
+public class GCVenusTileEntityTreasureChestRenderer extends TileEntitySpecialRenderer
 {
-    private static final ResourceLocation treasureChestTexture = new ResourceLocation(GalacticraftMars.TEXTURE_DOMAIN, "textures/model/treasure.png");
-    private static final ResourceLocation treasureLargeChestTexture = new ResourceLocation(GalacticraftMars.TEXTURE_DOMAIN, "textures/model/treasurelarge.png");
+    private static final ResourceLocation treasureChestTexture = new ResourceLocation(GalacticraftDevVenus.TEXTURE_DOMAIN, "textures/model/treasure.png");
+    private static final ResourceLocation treasureLargeChestTexture = new ResourceLocation(GalacticraftDevVenus.TEXTURE_DOMAIN, "textures/model/treasurelarge.png");
 
     private final GCCoreModelTreasureChest chestModel = new GCCoreModelTreasureChest();
     private final GCCoreModelTreasureChestLarge largeChestModel = new GCCoreModelTreasureChestLarge();
@@ -44,7 +40,7 @@ public class GCMarsTileEntityTreasureChestRenderer extends TileEntitySpecialRend
 
             if (var10 != null && var9 == 0)
             {
-                ((GCMarsBlockT2TreasureChest) var10).unifyAdjacentChests(par1GCTileEntityTreasureChest.getWorldObj(), par1GCTileEntityTreasureChest.xCoord, par1GCTileEntityTreasureChest.yCoord, par1GCTileEntityTreasureChest.zCoord);
+                ((GCVenusBlockT3TreasureChest) var10).unifyAdjacentChests(par1GCTileEntityTreasureChest.getWorldObj(), par1GCTileEntityTreasureChest.xCoord, par1GCTileEntityTreasureChest.yCoord, par1GCTileEntityTreasureChest.zCoord);
                 var9 = par1GCTileEntityTreasureChest.getBlockMetadata();
             }
 
@@ -59,12 +55,12 @@ public class GCMarsTileEntityTreasureChestRenderer extends TileEntitySpecialRend
             if (par1GCTileEntityTreasureChest.adjacentChestXPos == null && par1GCTileEntityTreasureChest.adjacentChestZPos == null)
             {
                 var14 = this.chestModel;
-                this.bindTexture(GCMarsTileEntityTreasureChestRenderer.treasureChestTexture);
+                this.bindTexture(GCVenusTileEntityTreasureChestRenderer.treasureChestTexture);
             }
             else
             {
                 var14b = this.largeChestModel;
-                this.bindTexture(GCMarsTileEntityTreasureChestRenderer.treasureLargeChestTexture);
+                this.bindTexture(GCVenusTileEntityTreasureChestRenderer.treasureLargeChestTexture);
             }
 
             GL11.glPushMatrix();

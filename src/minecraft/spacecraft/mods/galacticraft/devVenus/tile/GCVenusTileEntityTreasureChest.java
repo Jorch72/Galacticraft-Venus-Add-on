@@ -2,9 +2,9 @@ package spacecraft.mods.galacticraft.devVenus.tile;
 
 import micdoodle8.mods.galacticraft.core.tile.GCCoreTileEntityTreasureChest;
 
-public class GCMarsTileEntityTreasureChest extends GCCoreTileEntityTreasureChest
+public class GCVenusTileEntityTreasureChest extends GCCoreTileEntityTreasureChest
 {
-    public GCMarsTileEntityTreasureChest()
+    public GCVenusTileEntityTreasureChest()
     {
         super(2);
     }

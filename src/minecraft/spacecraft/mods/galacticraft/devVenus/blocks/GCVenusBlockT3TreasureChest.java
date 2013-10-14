@@ -2,6 +2,8 @@ package spacecraft.mods.galacticraft.devVenus.blocks;
 
 import java.util.Iterator;
 import java.util.Random;
+
+import spacecraft.mods.galacticraft.devVenus.GalacticraftDevVenus;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.tile.GCCoreTileEntityTreasureChest;
 import micdoodle8.mods.galacticraft.mars.GalacticraftMars;
@@ -28,17 +30,11 @@ import net.minecraftforge.common.ForgeDirection;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-/**
- * Copyright 2012-2013, micdoodle8
- * 
- * All rights reserved.
- * 
- */
-public class GCMarsBlockT2TreasureChest extends BlockContainer implements ITileEntityProvider
+public class GCVenusBlockT3TreasureChest extends BlockContainer implements ITileEntityProvider
 {
     private final Random random = new Random();
 
-    protected GCMarsBlockT2TreasureChest(int par1)
+    public GCVenusBlockT3TreasureChest(int par1)
     {
         super(par1, Material.rock);
     }
@@ -59,7 +55,7 @@ public class GCMarsBlockT2TreasureChest extends BlockContainer implements ITileE
     @Override
     public CreativeTabs getCreativeTabToDisplayOn()
     {
-        return GalacticraftMars.galacticraftMarsTab;
+        return GalacticraftDevVenus.tabGalacticraftDevVenus;
     }
 
     @Override
@@ -399,23 +395,23 @@ public class GCMarsBlockT2TreasureChest extends BlockContainer implements ITileE
         {
             return true;
         }
-        else if (GCMarsBlockT2TreasureChest.isOcelotBlockingChest(par1World, par2, par3, par4))
+        else if (GCVenusBlockT3TreasureChest.isOcelotBlockingChest(par1World, par2, par3, par4))
         {
             return true;
         }
-        else if (par1World.getBlockId(par2 - 1, par3, par4) == this.blockID && (par1World.isBlockSolidOnSide(par2 - 1, par3 + 1, par4, ForgeDirection.DOWN) || GCMarsBlockT2TreasureChest.isOcelotBlockingChest(par1World, par2 - 1, par3, par4)))
+        else if (par1World.getBlockId(par2 - 1, par3, par4) == this.blockID && (par1World.isBlockSolidOnSide(par2 - 1, par3 + 1, par4, ForgeDirection.DOWN) || GCVenusBlockT3TreasureChest.isOcelotBlockingChest(par1World, par2 - 1, par3, par4)))
         {
             return true;
         }
-        else if (par1World.getBlockId(par2 + 1, par3, par4) == this.blockID && (par1World.isBlockSolidOnSide(par2 + 1, par3 + 1, par4, ForgeDirection.DOWN) || GCMarsBlockT2TreasureChest.isOcelotBlockingChest(par1World, par2 + 1, par3, par4)))
+        else if (par1World.getBlockId(par2 + 1, par3, par4) == this.blockID && (par1World.isBlockSolidOnSide(par2 + 1, par3 + 1, par4, ForgeDirection.DOWN) || GCVenusBlockT3TreasureChest.isOcelotBlockingChest(par1World, par2 + 1, par3, par4)))
         {
             return true;
         }
-        else if (par1World.getBlockId(par2, par3, par4 - 1) == this.blockID && (par1World.isBlockSolidOnSide(par2, par3 + 1, par4 - 1, ForgeDirection.DOWN) || GCMarsBlockT2TreasureChest.isOcelotBlockingChest(par1World, par2, par3, par4 - 1)))
+        else if (par1World.getBlockId(par2, par3, par4 - 1) == this.blockID && (par1World.isBlockSolidOnSide(par2, par3 + 1, par4 - 1, ForgeDirection.DOWN) || GCVenusBlockT3TreasureChest.isOcelotBlockingChest(par1World, par2, par3, par4 - 1)))
         {
             return true;
         }
-        else if (par1World.getBlockId(par2, par3, par4 + 1) == this.blockID && (par1World.isBlockSolidOnSide(par2, par3 + 1, par4 + 1, ForgeDirection.DOWN) || GCMarsBlockT2TreasureChest.isOcelotBlockingChest(par1World, par2, par3, par4 + 1)))
+        else if (par1World.getBlockId(par2, par3, par4 + 1) == this.blockID && (par1World.isBlockSolidOnSide(par2, par3 + 1, par4 + 1, ForgeDirection.DOWN) || GCVenusBlockT3TreasureChest.isOcelotBlockingChest(par1World, par2, par3, par4 + 1)))
         {
             return true;
         }

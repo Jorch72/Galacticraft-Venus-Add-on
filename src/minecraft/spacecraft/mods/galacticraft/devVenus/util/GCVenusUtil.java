@@ -13,7 +13,7 @@ import micdoodle8.mods.galacticraft.mars.inventory.GCMarsContainerSlimeling;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 
-public class GCMarsUtil
+public class GCVenusUtil
 {
     public static void addRocketBenchT2Recipe(ItemStack result, HashMap<Integer, ItemStack> input)
     {

@@ -30,13 +30,7 @@ import com.google.common.io.ByteArrayDataInput;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 
-/**
- * Copyright 2012-2013, micdoodle8
- * 
- * All rights reserved.
- * 
- */
-public class GCMarsEntityRocketT2 extends EntityTieredRocket implements IInventory
+public class GCVenusEntityRocketT3 extends EntityTieredRocket implements IInventory
 {
     protected ItemStack[] cargoItems;
 
@@ -44,12 +38,12 @@ public class GCMarsEntityRocketT2 extends EntityTieredRocket implements IInvento
 
     private IFuelDock landingPad;
 
-    public GCMarsEntityRocketT2(World par1World)
+    public GCVenusEntityRocketT3(World par1World)
     {
         super(par1World);
     }
 
-    public GCMarsEntityRocketT2(World par1World, double par2, double par4, double par6, EnumRocketType rocketType)
+    public GCVenusEntityRocketT3(World par1World, double par2, double par4, double par6, EnumRocketType rocketType)
     {
         super(par1World);
         this.setPosition(par2, par4 + this.yOffset, par6);
@@ -63,7 +57,7 @@ public class GCMarsEntityRocketT2 extends EntityTieredRocket implements IInvento
         this.cargoItems = new ItemStack[this.getSizeInventory()];
     }
 
-    public GCMarsEntityRocketT2(World par1World, double par2, double par4, double par6, boolean reversed, EnumRocketType rocketType, ItemStack[] inv)
+    public GCVenusEntityRocketT3(World par1World, double par2, double par4, double par6, boolean reversed, EnumRocketType rocketType, ItemStack[] inv)
     {
         this(par1World, par2, par4, par6, rocketType);
         this.cargoItems = inv;

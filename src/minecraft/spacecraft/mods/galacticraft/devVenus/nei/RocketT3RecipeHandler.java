@@ -13,7 +13,7 @@ import codechicken.nei.NEIServerUtils;
 import codechicken.nei.PositionedStack;
 import codechicken.nei.recipe.TemplateRecipeHandler;
 
-public class RocketT2RecipeHandler extends TemplateRecipeHandler
+public class RocketT3RecipeHandler extends TemplateRecipeHandler
 {
     private static final ResourceLocation rocketGuiTexture = new ResourceLocation(GalacticraftMars.TEXTURE_DOMAIN, "textures/gui/schematic_rocket_T2.png");
 
@@ -30,14 +30,14 @@ public class RocketT2RecipeHandler extends TemplateRecipeHandler
 
     public Set<Entry<ArrayList<PositionedStack>, PositionedStack>> getRecipes()
     {
-        return NEIGalacticraftMarsConfig.getRocketBenchRecipes();
+        return NEIGalacticraftVenusConfig.getRocketBenchRecipes();
     }
 
     @Override
     public void drawBackground(int i)
     {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        GuiDraw.changeTexture(RocketT2RecipeHandler.rocketGuiTexture);
+        GuiDraw.changeTexture(RocketT3RecipeHandler.rocketGuiTexture);
         GuiDraw.drawTexturedModalRect(0, -8, 3, 4, 168, 140);
     }
 

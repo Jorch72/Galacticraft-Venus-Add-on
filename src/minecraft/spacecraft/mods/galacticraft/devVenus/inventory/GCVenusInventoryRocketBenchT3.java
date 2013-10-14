@@ -5,13 +5,13 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 
-public class GCMarsInventoryRocketBenchT2 implements IInventory
+public class GCVenusInventoryRocketBenchT3 implements IInventory
 {
     private final ItemStack[] stackList;
     private final int inventoryWidth;
     private final Container eventHandler;
 
-    public GCMarsInventoryRocketBenchT2(Container par1Container)
+    public GCVenusInventoryRocketBenchT3(Container par1Container)
     {
         this.stackList = new ItemStack[24];
         this.eventHandler = par1Container;

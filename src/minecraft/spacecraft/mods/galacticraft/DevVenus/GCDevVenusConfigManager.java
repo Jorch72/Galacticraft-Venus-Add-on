@@ -28,6 +28,7 @@ public class GCDevVenusConfigManager
 
     // BLOCKS
 	public static int copperWireID;
+	public static int idBlockTreasureChestT3;
 	
     // ITEMS
 	public static int spaceshipT3ID;
@@ -56,7 +57,7 @@ public class GCDevVenusConfigManager
             GCDevVenusConfigManager.configuration.load();
 
             
-			GCDevVenusConfigManager.copperWireID= GCDevVenusConfigManager.configuration.get("Blocks", "Copper Wire ID", 6022).getInt(6022);
+			GCDevVenusConfigManager.idBlockTreasureChestT3= GCDevVenusConfigManager.configuration.get("Blocks", "idBlockTreasureChestT3", 6022).getInt(6022);
 
             
 			GCDevVenusConfigManager.spaceshipT3ID= GCDevVenusConfigManager.configuration.get("Blocks", "T3RocketID", 6023).getInt(6023);

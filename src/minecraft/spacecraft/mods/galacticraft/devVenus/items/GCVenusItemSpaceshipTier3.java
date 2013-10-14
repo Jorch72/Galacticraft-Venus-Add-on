@@ -1,14 +1,15 @@
 package spacecraft.mods.galacticraft.devVenus.items;
 
 import java.util.List;
+
 import mekanism.api.EnumColor;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
 import micdoodle8.mods.galacticraft.api.item.IHoldableItem;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
-import micdoodle8.mods.galacticraft.mars.GalacticraftMars;
-import micdoodle8.mods.galacticraft.mars.entities.GCMarsEntityRocketT2;
+import spacecraft.mods.galacticraft.devVenus.GalacticraftDevVenus;
+import spacecraft.mods.galacticraft.devVenus.entities.GCVenusEntityRocketT3;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -20,15 +21,9 @@ import net.minecraftforge.fluids.FluidStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-/**
- * Copyright 2012-2013, micdoodle8
- * 
- * All rights reserved.
- * 
- */
-public class GCMarsItemSpaceshipTier2 extends Item implements IHoldableItem
+public class GCVenusItemSpaceshipTier3 extends Item implements IHoldableItem
 {
-    public GCMarsItemSpaceshipTier2(int par1)
+    public GCVenusItemSpaceshipTier3(int par1)
     {
         super(par1);
         this.setMaxDamage(0);
@@ -46,7 +41,7 @@ public class GCMarsItemSpaceshipTier2 extends Item implements IHoldableItem
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GalacticraftMars.galacticraftMarsTab;
+        return GalacticraftDevVenus.tabGalacticraftDevVenus;
     }
 
     @Override
@@ -96,7 +91,7 @@ public class GCMarsItemSpaceshipTier2 extends Item implements IHoldableItem
 
             if (amountOfCorrectBlocks == 9)
             {
-                final GCMarsEntityRocketT2 spaceship = new GCMarsEntityRocketT2(par3World, centerX, centerY + 0.2D, centerZ, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
+                final GCVenusEntityRocketT3 spaceship = new GCVenusEntityRocketT3(par3World, centerX, centerY + 0.2D, centerZ, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
 
                 par3World.spawnEntityInWorld(spaceship);
                 if (!par2EntityPlayer.capabilities.isCreativeMode)

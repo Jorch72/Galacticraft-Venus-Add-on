@@ -1,6 +1,8 @@
 package spacecraft.mods.galacticraft.devVenus.items;
 
 import java.util.List;
+
+import spacecraft.mods.galacticraft.devVenus.GalacticraftDevVenus;
 import mekanism.api.EnumColor;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicItem;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItemSchematic;
@@ -14,13 +16,13 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GCMarsItemSchematic extends GCCoreItemSchematic implements ISchematicItem
+public class GCVenusItemSchematic extends GCCoreItemSchematic implements ISchematicItem
 {
     protected Icon[] icons = new Icon[1];
 
     public static final String[] names = { "schematic_rocketT3" }; // 15
 
-    public GCMarsItemSchematic(int itemID)
+    public GCVenusItemSchematic(int itemID)
     {
         super(itemID, "schematic");
     }
@@ -28,14 +30,14 @@ public class GCMarsItemSchematic extends GCCoreItemSchematic implements ISchemat
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GalacticraftMars.galacticraftMarsTab;
+        return GalacticraftDevVenus.tabGalacticraftDevVenus;
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     public void getSubItems(int par1, CreativeTabs par2CreativeTabs, List par3List)
     {
-        for (int i = 0; i < GCMarsItemSchematic.names.length; i++)
+        for (int i = 0; i < GCVenusItemSchematic.names.length; i++)
         {
             par3List.add(new ItemStack(par1, 1, i));
         }
@@ -70,8 +72,8 @@ public class GCMarsItemSchematic extends GCCoreItemSchematic implements ISchemat
             switch (par1ItemStack.getItemDamage())
             {
             case 0:
-                par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.rocketT3.name"));
-                par3List.add(EnumColor.DARK_AQUA + "COMING SOON");
+//                par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.rocketT3.name"));
+//                par3List.add(EnumColor.DARK_AQUA + "COMING SOON");
                 break;
             }
         }

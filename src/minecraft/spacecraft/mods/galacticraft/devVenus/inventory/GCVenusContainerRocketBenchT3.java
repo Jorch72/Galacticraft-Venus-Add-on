@@ -13,13 +13,13 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class GCMarsContainerRocketBenchT2 extends Container
+public class GCVenusContainerRocketBenchT3 extends Container
 {
-    public GCMarsInventoryRocketBenchT2 craftMatrix = new GCMarsInventoryRocketBenchT2(this);
+    public GCVenusInventoryRocketBenchT3 craftMatrix = new GCVenusInventoryRocketBenchT3(this);
     public IInventory craftResult = new InventoryCraftResult();
     private final World worldObj;
 
-    public GCMarsContainerRocketBenchT2(InventoryPlayer par1InventoryPlayer, int x, int y, int z)
+    public GCVenusContainerRocketBenchT3(InventoryPlayer par1InventoryPlayer, int x, int y, int z)
     {
         final int change = 27;
         this.worldObj = par1InventoryPlayer.player.worldObj;
@@ -28,37 +28,37 @@ public class GCMarsContainerRocketBenchT2 extends Container
         int var7;
 
         // Cone
-        this.addSlotToContainer(new GCMarsSlotRocketBenchT2(this.craftMatrix, 1, 48, -8 + change, x, y, z, par1InventoryPlayer.player));
+        this.addSlotToContainer(new GCVenusSlotRocketBenchT3(this.craftMatrix, 1, 48, -8 + change, x, y, z, par1InventoryPlayer.player));
 
         // Body
         for (var6 = 0; var6 < 5; ++var6)
         {
-            this.addSlotToContainer(new GCMarsSlotRocketBenchT2(this.craftMatrix, 2 + var6, 39, -6 + var6 * 18 + 16 + change, x, y, z, par1InventoryPlayer.player));
+            this.addSlotToContainer(new GCVenusSlotRocketBenchT3(this.craftMatrix, 2 + var6, 39, -6 + var6 * 18 + 16 + change, x, y, z, par1InventoryPlayer.player));
         }
 
         // Body Right
         for (var6 = 0; var6 < 5; ++var6)
         {
-            this.addSlotToContainer(new GCMarsSlotRocketBenchT2(this.craftMatrix, 7 + var6, 57, -6 + var6 * 18 + 16 + change, x, y, z, par1InventoryPlayer.player));
+            this.addSlotToContainer(new GCVenusSlotRocketBenchT3(this.craftMatrix, 7 + var6, 57, -6 + var6 * 18 + 16 + change, x, y, z, par1InventoryPlayer.player));
         }
 
         // Left fins
-        this.addSlotToContainer(new GCMarsSlotRocketBenchT2(this.craftMatrix, 12, 21, 64 + change, x, y, z, par1InventoryPlayer.player));
-        this.addSlotToContainer(new GCMarsSlotRocketBenchT2(this.craftMatrix, 13, 21, 82 + change, x, y, z, par1InventoryPlayer.player));
-        this.addSlotToContainer(new GCMarsSlotRocketBenchT2(this.craftMatrix, 14, 21, 100 + change, x, y, z, par1InventoryPlayer.player));
+        this.addSlotToContainer(new GCVenusSlotRocketBenchT3(this.craftMatrix, 12, 21, 64 + change, x, y, z, par1InventoryPlayer.player));
+        this.addSlotToContainer(new GCVenusSlotRocketBenchT3(this.craftMatrix, 13, 21, 82 + change, x, y, z, par1InventoryPlayer.player));
+        this.addSlotToContainer(new GCVenusSlotRocketBenchT3(this.craftMatrix, 14, 21, 100 + change, x, y, z, par1InventoryPlayer.player));
 
         // Engine
-        this.addSlotToContainer(new GCMarsSlotRocketBenchT2(this.craftMatrix, 15, 48, 100 + change, x, y, z, par1InventoryPlayer.player));
+        this.addSlotToContainer(new GCVenusSlotRocketBenchT3(this.craftMatrix, 15, 48, 100 + change, x, y, z, par1InventoryPlayer.player));
 
         // Right fins
-        this.addSlotToContainer(new GCMarsSlotRocketBenchT2(this.craftMatrix, 16, 75, 64 + change, x, y, z, par1InventoryPlayer.player));
-        this.addSlotToContainer(new GCMarsSlotRocketBenchT2(this.craftMatrix, 17, 75, 82 + change, x, y, z, par1InventoryPlayer.player));
-        this.addSlotToContainer(new GCMarsSlotRocketBenchT2(this.craftMatrix, 18, 75, 100 + change, x, y, z, par1InventoryPlayer.player));
+        this.addSlotToContainer(new GCVenusSlotRocketBenchT3(this.craftMatrix, 16, 75, 64 + change, x, y, z, par1InventoryPlayer.player));
+        this.addSlotToContainer(new GCVenusSlotRocketBenchT3(this.craftMatrix, 17, 75, 82 + change, x, y, z, par1InventoryPlayer.player));
+        this.addSlotToContainer(new GCVenusSlotRocketBenchT3(this.craftMatrix, 18, 75, 100 + change, x, y, z, par1InventoryPlayer.player));
 
         // Addons
         for (int var8 = 0; var8 < 3; var8++)
         {
-            this.addSlotToContainer(new GCMarsSlotRocketBenchT2(this.craftMatrix, 19 + var8, 93 + var8 * 26, -15 + change, x, y, z, par1InventoryPlayer.player));
+            this.addSlotToContainer(new GCVenusSlotRocketBenchT3(this.craftMatrix, 19 + var8, 93 + var8 * 26, -15 + change, x, y, z, par1InventoryPlayer.player));
         }
 
         // Player inv:

@@ -1,26 +1,22 @@
 package spacecraft.mods.galacticraft.devVenus.client.render.block;
 
-import micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlocks;
-import micdoodle8.mods.galacticraft.mars.tile.GCMarsTileEntityTreasureChest;
+import spacecraft.mods.galacticraft.devVenus.tile.GCVenusTileEntityTreasureChest;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
 import net.minecraft.world.IBlockAccess;
+
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
+
+import spacecraft.mods.galacticraft.devVenus.GalacticraftDevVenus;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 
-/**
- * Copyright 2012-2013, micdoodle8
- * 
- * All rights reserved.
- * 
- */
-public class GCMarsBlockRendererTreasureChest implements ISimpleBlockRenderingHandler
+public class GCVenusBlockRendererTreasureChest implements ISimpleBlockRenderingHandler
 {
     final int renderID;
 
-    public GCMarsBlockRendererTreasureChest(int var1)
+    public GCVenusBlockRendererTreasureChest(int var1)
     {
         this.renderID = var1;
     }
@@ -52,11 +48,11 @@ public class GCMarsBlockRendererTreasureChest implements ISimpleBlockRenderingHa
         return this.renderID;
     }
 
-    private final GCMarsTileEntityTreasureChest chest = new GCMarsTileEntityTreasureChest();
+    private final GCVenusTileEntityTreasureChest chest = new GCVenusTileEntityTreasureChest();
 
     public void renderChest(Block par1Block, int par2, float par3)
     {
-        if (par1Block.blockID == GCMarsBlocks.tier2TreasureChest.blockID)
+        if (par1Block.blockID == GalacticraftDevVenus.tier3TreasureChest.blockID)
         {
             TileEntityRenderer.instance.renderTileEntityAt(this.chest, 0.0D, 0.0D, 0.0D, 0.0F);
         }

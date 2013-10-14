@@ -17,36 +17,36 @@ import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.oredict.OreDictionary;
 import thermalexpansion.api.item.ItemRegistry;
 
-public class GCMarsRecipeManager
+public class GCVenusRecipeManager
 {
     public static void loadRecipes()
     {
         if (GCCoreCompatibilityManager.isTELoaded() && GCCoreConfigManager.useRecipesTE)
         {
-            GCMarsRecipeManager.addThermalExpansionCraftingRecipes();
+            GCVenusRecipeManager.addThermalExpansionCraftingRecipes();
         }
 
         if (GCCoreCompatibilityManager.isBCraftLoaded())
         {
-            GCMarsRecipeManager.addBuildCraftCraftingRecipes();
+            GCVenusRecipeManager.addBuildCraftCraftingRecipes();
         }
 
         if (GCCoreCompatibilityManager.isGTLoaded() && GCCoreConfigManager.useRecipesGT)
         {
-            GCMarsRecipeManager.addGregTechCraftingRecipes();
+            GCVenusRecipeManager.addGregTechCraftingRecipes();
         }
 
         if (GCCoreCompatibilityManager.isIc2Loaded() && GCCoreConfigManager.useRecipesIC2)
         {
-            GCMarsRecipeManager.addIndustrialcraftCraftingRecipes();
+            GCVenusRecipeManager.addIndustrialcraftCraftingRecipes();
         }
 
         if (GCCoreCompatibilityManager.isBCLoaded() && GCCoreConfigManager.useRecipesUE)
         {
-            GCMarsRecipeManager.addBasicComponentsCraftingRecipes();
+            GCVenusRecipeManager.addBasicComponentsCraftingRecipes();
         }
 
-        GCMarsRecipeManager.addUniversalRecipes();
+        GCVenusRecipeManager.addUniversalRecipes();
     }
 
     private static void addUniversalRecipes()

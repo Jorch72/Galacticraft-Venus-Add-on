@@ -12,7 +12,7 @@ import net.minecraft.item.ItemStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GCMarsSchematicRocketT2 implements ISchematicPage
+public class GCVenusSchematicRocketT3 implements ISchematicPage
 {
     @Override
     public int getPageID()

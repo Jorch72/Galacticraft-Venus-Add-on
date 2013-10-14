@@ -13,7 +13,7 @@ import codechicken.nei.PositionedStack;
 import codechicken.nei.api.API;
 import codechicken.nei.api.IConfigureNEI;
 
-public class NEIGalacticraftMarsConfig implements IConfigureNEI
+public class NEIGalacticraftVenusConfig implements IConfigureNEI
 {
     private static HashMap<ArrayList<PositionedStack>, PositionedStack> rocketBenchRecipes = new HashMap<ArrayList<PositionedStack>, PositionedStack>();
 
@@ -21,8 +21,8 @@ public class NEIGalacticraftMarsConfig implements IConfigureNEI
     public void loadConfig()
     {
         this.registerRecipes();
-        API.registerRecipeHandler(new RocketT2RecipeHandler());
-        API.registerUsageHandler(new RocketT2RecipeHandler());
+        API.registerRecipeHandler(new RocketT3RecipeHandler());
+        API.registerUsageHandler(new RocketT3RecipeHandler());
     }
 
     @Override
@@ -39,12 +39,12 @@ public class NEIGalacticraftMarsConfig implements IConfigureNEI
 
     public void registerRocketBenchRecipe(ArrayList<PositionedStack> input, PositionedStack output)
     {
-        NEIGalacticraftMarsConfig.rocketBenchRecipes.put(input, output);
+        NEIGalacticraftVenusConfig.rocketBenchRecipes.put(input, output);
     }
 
     public static Set<Entry<ArrayList<PositionedStack>, PositionedStack>> getRocketBenchRecipes()
     {
-        return NEIGalacticraftMarsConfig.rocketBenchRecipes.entrySet();
+        return NEIGalacticraftVenusConfig.rocketBenchRecipes.entrySet();
     }
 
     public void registerRecipes()

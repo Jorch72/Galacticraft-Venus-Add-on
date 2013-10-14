@@ -10,13 +10,13 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-public class GCMarsSlotRocketBenchT2 extends Slot
+public class GCVenusSlotRocketBenchT3 extends Slot
 {
     private final int index;
     private final int x, y, z;
     private final EntityPlayer player;
 
-    public GCMarsSlotRocketBenchT2(IInventory par2IInventory, int par3, int par4, int par5, int x, int y, int z, EntityPlayer player)
+    public GCVenusSlotRocketBenchT3(IInventory par2IInventory, int par3, int par4, int par5, int x, int y, int z, EntityPlayer player)
     {
         super(par2IInventory, par3, par4, par5);
         this.index = par3;
