@@ -26,7 +26,6 @@ public class VenusHeavyPlate extends Item {
             switch (par1ItemStack.getItemDamage())
             {
             case 0:
-//                par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.rocketT3.name"));
                 par3List.add("Tier 3");
                 break;
             }

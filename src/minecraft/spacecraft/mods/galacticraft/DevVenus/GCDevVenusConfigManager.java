@@ -2,12 +2,6 @@ package spacecraft.mods.galacticraft.devVenus;
 
 import java.io.File;
 import java.util.logging.Level;
-
-import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
-import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
-import micdoodle8.mods.galacticraft.core.GCLog;
-import micdoodle8.mods.galacticraft.mars.GCMarsConfigManager;
-import micdoodle8.mods.galacticraft.moon.GCMoonConfigManager;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.FMLLog;
 
@@ -26,28 +20,27 @@ public class GCDevVenusConfigManager
         }
     }
 
+    // DIMENSIONS
+
     // BLOCKS
-	public static int copperWireID;
-	public static int idBlockTreasureChestT3;
-	
+    public static int idBlockTreasureChestT3;
+
     // ITEMS
-	public static int spaceshipT3ID;
-	
+    public static int idItemSpaceshipTier3;
+    public static int idItemKeyT3;
+
     // ARMOR
-    
+
     // TOOLS
 
     // ENTITIES
-	public static int idEntitySpaceshipTier3;
-	
+
     // GUI
     public static int idGuiRocketCraftingBenchT3;
 
     // SCHEMATIC
-    public static int tier3SchematicID;
-    
-    // ACHIEVEMENTS
-    
+    public static int idSchematicRocketT3;
+
     // GENERAL
 
     private void setDefaultValues()
@@ -56,22 +49,12 @@ public class GCDevVenusConfigManager
         {
             GCDevVenusConfigManager.configuration.load();
 
+            GCDevVenusConfigManager.idBlockTreasureChestT3 = GCDevVenusConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockTreasureChestT3", 5394).getInt(5394);
             
-			GCDevVenusConfigManager.idBlockTreasureChestT3= GCDevVenusConfigManager.configuration.get("Blocks", "idBlockTreasureChestT3", 6022).getInt(6022);
-
-            
-			GCDevVenusConfigManager.spaceshipT3ID= GCDevVenusConfigManager.configuration.get("Blocks", "T3RocketID", 6023).getInt(6023);
-
-
-			GCDevVenusConfigManager.idEntitySpaceshipTier3 = GCDevVenusConfigManager.configuration.get("Entities", "Entity Spaceship Tier 3", 273).getInt(273);
-			
-			
-			GCDevVenusConfigManager.idGuiRocketCraftingBenchT3 = GCDevVenusConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT3", 243).getInt(244);
-			
-			
-			GCDevVenusConfigManager.tier3SchematicID = GCDevVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "Tier 3 Schematic ID", 6030).getInt(6030);
+            GCDevVenusConfigManager.idItemSpaceshipTier3 = GCDevVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier3", 7906).getInt(7906);
+            GCDevVenusConfigManager.idItemKeyT3 = GCDevVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemKeyT3", 8916).getInt(8916);
         
-        
+            GCDevVenusConfigManager.idGuiRocketCraftingBenchT3 = GCDevVenusConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT3", 343).getInt(343);
         }
         catch (final Exception e)
         {
@@ -79,8 +62,8 @@ public class GCDevVenusConfigManager
         }
         finally
         {
-        	GCDevVenusConfigManager.configuration.save();
-        	GCDevVenusConfigManager.loaded = true;
+            GCDevVenusConfigManager.configuration.save();
+            GCDevVenusConfigManager.loaded = true;
         }
     }
 }

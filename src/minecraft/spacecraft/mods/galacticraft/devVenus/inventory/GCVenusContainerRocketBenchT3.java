@@ -2,7 +2,7 @@ package spacecraft.mods.galacticraft.devVenus.inventory;
 
 import micdoodle8.mods.galacticraft.core.inventory.GCCoreSlotRocketBenchResult;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
-import micdoodle8.mods.galacticraft.mars.util.RecipeUtilMars;
+import spacecraft.mods.galacticraft.devVenus.util.RecipeUtilVenus;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -101,7 +101,7 @@ public class GCVenusContainerRocketBenchT3 extends Container
     @Override
     public void onCraftMatrixChanged(IInventory par1IInventory)
     {
-        this.craftResult.setInventorySlotContents(0, RecipeUtilMars.findMatchingSpaceshipT2Recipe(this.craftMatrix));
+        this.craftResult.setInventorySlotContents(0, RecipeUtilVenus.findMatchingSpaceshipT3Recipe(this.craftMatrix));
     }
 
     @Override
