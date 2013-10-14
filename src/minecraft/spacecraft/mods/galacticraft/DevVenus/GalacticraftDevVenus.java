@@ -1,34 +1,16 @@
-package spacecraft.mods.galacticraft.DevVenus;
+package spacecraft.mods.galacticraft.devVenus;
 
 import java.io.File;
 
-import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
-import micdoodle8.mods.galacticraft.api.world.IPlanet;
-import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import micdoodle8.mods.galacticraft.mars.GCMarsConfigManager;
-import micdoodle8.mods.galacticraft.mars.GalacticraftMars;
-import micdoodle8.mods.galacticraft.mars.entities.GCMarsEntityCreeperBoss;
-import micdoodle8.mods.galacticraft.mars.entities.GCMarsEntitySlimeling;
-import micdoodle8.mods.galacticraft.mars.entities.GCMarsEntitySludgeling;
-import micdoodle8.mods.galacticraft.mars.items.GCMarsItems;
-import micdoodle8.mods.galacticraft.mars.recipe.GCMarsRecipeManager;
-import micdoodle8.mods.galacticraft.mars.tile.GCMarsTileEntityCryogenicChamber;
-import micdoodle8.mods.galacticraft.mars.tile.GCMarsTileEntityDungeonSpawner;
-import micdoodle8.mods.galacticraft.mars.tile.GCMarsTileEntityLaunchController;
-import micdoodle8.mods.galacticraft.mars.tile.GCMarsTileEntitySlimelingEgg;
-import micdoodle8.mods.galacticraft.mars.tile.GCMarsTileEntityTerraformer;
-import micdoodle8.mods.galacticraft.mars.tile.GCMarsTileEntityTreasureChest;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import spacecraft.mods.galacticraft.DevVenus.items.*;
-import spacecraft.mods.galacticraft.DevVenus.blocks.*;
+import spacecraft.mods.galacticraft.devVenus.blocks.*;
+import spacecraft.mods.galacticraft.devVenus.items.*;
 import spacecraft.mods.galacticraft.venus.CommonProxy;
-import spacecraft.mods.galacticraft.venus.block.VenusBlazeEgg;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -67,16 +49,16 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		return new ItemStack(Item.netherStar, 1, 0);}
 		};
 		
-		//Block Gem Wire
-		public final static Block copperWire = new GCCoreBlockCopperWire(728, Material.cloth) .setHardness(1.5F).setStepSound(Block.soundClothFootstep) .setUnlocalizedName("copperWire") .setTextureName("devgalacticraftvenus:copperWire");
+		//Block Tier 3 Treasure Chest
+//		public final static Block T3TreasureChest = new GCMarsBlockT2TreasureChest(734, Material.rock) .setHardness(1.5F).setStepSound(Block.soundClothFootstep) .setUnlocalizedName("copperWire") .setTextureName("devgalacticraftvenus:T3TreasureChest");
 
 		
-//		//Item T3Spaceship
-//		public final static Item spaceshipT3 = new VenusItemSpaceshipTier3(729) .setUnlocalizedName("spaceshipT3"); //.setTextureName("DevGalacticraftvenus:rocketT3");
+		//Item T3Spaceship
+//		public final static Item spaceshipT3 = new VenusItemSpaceshipTier3(735) .setUnlocalizedName("spaceshipT3"); //.setTextureName("DevGalacticraftvenus:rocketT3");
 		
 		
-//		//Item Tier3 Schematic
-//		public final static Item tier3Schematic = new VenusItemSchematic(731) .setUnlocalizedName("tier3Schematic") .setTextureName("devgalacticraftvenus:tier3Schematic");
+		//Item Tier3 Schematic
+//		public final static Item tier3Schematic = new GCVenusSchematicRocketT3(736) .setUnlocalizedName("tier3Schematic") .setTextureName("devgalacticraftvenus:tier3Schematic");
 
 		
 		//Where the client and server proxy is loaded.
@@ -97,12 +79,14 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
                 LanguageRegistry.instance().addStringLocalization("itemGroup.tabGalacticraftDevVenus", "en_US", "Galacticraft Dev-Venus");
                 
                 //Registering Blocks
-				
+//                GameRegistry.registerBlock(T3TreasureChest, "T3TreasureChest");
+                
 				//Registering Block Names
-				
+//                LanguageRegistry.addName(T3TreasureChest, "T3TreasureChest");
+                
 				//Registring Items Names
-//                LanguageRegistry.addName(spaceshipT3, "Tier 3 Rocket");
-//                LanguageRegistry.addName(tier3Schematic, "Tier 3 Rocket Schematic");
+//              LanguageRegistry.addName(spaceshipT3, "Tier 3 Rocket");
+//              LanguageRegistry.addName(tier3Schematic, "Tier 3 Rocket Schematic");
                 
 				//Adding ItemStack for recipes
                 

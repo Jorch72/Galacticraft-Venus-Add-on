@@ -111,27 +111,28 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		public final static Block VenusHalfBasalt = new VenusHalfSlab(626, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusHalfBasalt") .setTextureName("galacticraftvenus:venusBasalt");				
 
 		//Block Evolved Blaze Egg
-		public final static Block EvolvedBlazeEgg = new VenusBlazeEgg(727) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("EvolvedBlazeEgg") .setTextureName("galacticraftvenus:evolvedBlazeEgg");				
+		public final static Block EvolvedBlazeEgg = new VenusBlazeEgg(627) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("EvolvedBlazeEgg") .setTextureName("galacticraftvenus:evolvedBlazeEgg");				
 
 
 		//Item Sufer Ingot
-		public final static Item SulferIngot = new VenusItem(632) .setUnlocalizedName("SulferIngot") .setTextureName("galacticraftvenus:sulferIngot");
+		public final static Item SulferIngot = new VenusItem(628) .setUnlocalizedName("SulferIngot") .setTextureName("galacticraftvenus:sulferIngot");
 
 		//Item Red Gem
-		public final static Item RedGem = new VenusItem(633) .setUnlocalizedName("RedGem") .setTextureName("galacticraftvenus:redGem");
+		public final static Item RedGem = new VenusItem(629) .setUnlocalizedName("RedGem") .setTextureName("galacticraftvenus:redGem");
 
 		//Item Compressed Sulfer
-		public final static Item CompressedSulfer = new VenusItem(634) .setUnlocalizedName("SulferPlate") .setTextureName("galacticraftvenus:compressedSulfer");
+		public final static Item CompressedSulfer = new VenusItem(630) .setUnlocalizedName("SulferPlate") .setTextureName("galacticraftvenus:compressedSulfer");
 
 		//Item Compressed Red Gem
-		public final static Item CompressedRedGem = new VenusItem(635) .setUnlocalizedName("CompressedRedGem") .setTextureName("galacticraftvenus:compressedRedGem");
+		public final static Item CompressedRedGem = new VenusItem(631) .setUnlocalizedName("CompressedRedGem") .setTextureName("galacticraftvenus:compressedRedGem");
 
 		//Item Heavy Venus Plate
-		public final static Item HeavyVenusPlate = new VenusItem(730) .setUnlocalizedName("Heavy Venus Plate") .setTextureName("galacticraftvenus:HeavyVenusPlate");
+		public final static Item HeavyVenusPlate = new VenusItem(732) .setUnlocalizedName("Heavy Venus Plate") .setTextureName("galacticraftvenus:HeavyVenusPlate");
 
 		//Item Venus Plate
-		public final static Item VenusPlate = new VenusItem(636) .setUnlocalizedName("VenusPlate") .setTextureName("galacticraftvenus:venusPlate");
+		public final static Item VenusPlate = new VenusItem(733) .setUnlocalizedName("VenusPlate") .setTextureName("galacticraftvenus:venusPlate");
 
+		//Id 734-736 tooken by GalacticraftDevVenus
 		
 		//Where the client and server proxy is loaded.
         @SidedProxy(clientSide="spacecraft.mods.galacticraft.venus.client.ClientProxy", serverSide="spacecraft.mods.galacticraft.venus.CommonProxy")

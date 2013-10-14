@@ -3,10 +3,7 @@ package spacecraft.mods.galacticraft.venus;
 import java.io.File;
 import java.util.logging.Level;
 
-import spacecraft.mods.galacticraft.DevVenus.GCDevVenusConfigManager;
 import micdoodle8.mods.galacticraft.core.GCLog;
-import micdoodle8.mods.galacticraft.mars.GCMarsConfigManager;
-import micdoodle8.mods.galacticraft.moon.GCMoonConfigManager;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.FMLLog;
 

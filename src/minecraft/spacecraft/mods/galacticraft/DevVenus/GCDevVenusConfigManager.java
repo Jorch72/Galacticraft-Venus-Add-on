@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.DevVenus;
+package spacecraft.mods.galacticraft.devVenus;
 
 import java.io.File;
 import java.util.logging.Level;
