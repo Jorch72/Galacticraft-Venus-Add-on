@@ -11,8 +11,6 @@ import micdoodle8.mods.galacticraft.api.world.IGalaxy;
 import micdoodle8.mods.galacticraft.api.world.IMapObject;
 import micdoodle8.mods.galacticraft.api.world.IPlanet;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.mars.client.GCMarsMapPlanet;
-import micdoodle8.mods.galacticraft.mars.dimension.GCMarsWorldProvider;
 import net.minecraft.world.WorldProvider;
 
 public class VenusPlanet implements IPlanet
