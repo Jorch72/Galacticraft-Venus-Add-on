@@ -19,6 +19,10 @@ CHANGELOG
 
 /src/minecraft/*
 !/src/minecraft/spacecraft/
+!/src/minecraft/micdoodle8/
+/src/minecraft/micdoodle8/mods/galacticraft/api
+/src/minecraft/micdoodle8/mods/galacticraft/core
+/src/minecraft/micdoodle8/mods/galacticraft/moon
 !/src/minecraft/universalelectricity/
 !/src/minecraft/assets/
 /src/minecraft/assets/forge
