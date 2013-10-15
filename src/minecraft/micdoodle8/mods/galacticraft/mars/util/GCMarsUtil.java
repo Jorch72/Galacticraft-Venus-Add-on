@@ -10,7 +10,6 @@ import micdoodle8.mods.galacticraft.core.network.GCCorePacketHandlerClient.EnumC
 import micdoodle8.mods.galacticraft.core.recipe.GCCoreNasaWorkbenchRecipe;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import micdoodle8.mods.galacticraft.mars.GalacticraftMars;
-import micdoodle8.mods.galacticraft.mars.entities.GCMarsEntityLandingBalloons;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 
@@ -26,15 +25,15 @@ public class GCMarsUtil
         GalacticraftRegistry.addCargoRocketRecipe(new GCCoreNasaWorkbenchRecipe(result, input));
     }
 
-    public static void openParachestInventory(EntityPlayerMP player, GCMarsEntityLandingBalloons landerInv)
+//    public static void openParachestInventory(EntityPlayerMP player, GCMarsEntityLandingBalloons landerInv)
     {
-        player.incrementWindowID();
-        player.closeContainer();
-        int windowId = player.currentWindowId;
-        player.playerNetServerHandler.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftCore.CHANNEL, EnumClientPacket.OPEN_PARACHEST_GUI, new Object[] { windowId, 1, landerInv.entityId }));
-        player.openContainer = new GCCoreContainerParachest(player.inventory, landerInv);
-        player.openContainer.windowId = windowId;
-        player.openContainer.addCraftingToCrafters(player);
+//        player.incrementWindowID();
+//        player.closeContainer();
+//        int windowId = player.currentWindowId;
+//        player.playerNetServerHandler.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftCore.CHANNEL, EnumClientPacket.OPEN_PARACHEST_GUI, new Object[] { windowId, 1, landerInv.entityId }));
+//        player.openContainer = new GCCoreContainerParachest(player.inventory, landerInv);
+//        player.openContainer.windowId = windowId;
+//        player.openContainer.addCraftingToCrafters(player);
     }
 
 //    public static void openSlimelingInventory(EntityPlayerMP player, GCMarsEntitySlimeling slimeling)

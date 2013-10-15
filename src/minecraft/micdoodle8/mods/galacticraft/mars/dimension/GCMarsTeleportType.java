@@ -9,7 +9,7 @@ import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.GCCorePlayerMP;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketHandlerClient.EnumClientPacket;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
-import micdoodle8.mods.galacticraft.mars.entities.GCMarsEntityLandingBalloons;
+import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityLander;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.world.World;
@@ -58,7 +58,7 @@ public class GCMarsTeleportType implements ITeleportType
                 gcPlayer.capabilities.isFlying = false;
             }
 
-            GCMarsEntityLandingBalloons lander = new GCMarsEntityLandingBalloons(gcPlayer);
+            GCCoreEntityLander lander = new GCCoreEntityLander(gcPlayer);
             lander.setPositionAndRotation(player.posX, player.posY, player.posZ, 0, 0);
 
             if (!newWorld.isRemote)
