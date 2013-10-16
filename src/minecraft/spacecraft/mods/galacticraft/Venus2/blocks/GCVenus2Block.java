@@ -114,7 +114,7 @@ public class GCVenus2Block extends Block implements IDetectableResource, IPlanta
     {
         if (metadata == 10)
         {
-//            return new GCMarsTileEntityDungeonSpawner();
+//            return new GCVenus2TileEntityDungeonSpawner();
         }
 
         return null;
@@ -164,6 +164,16 @@ public class GCVenus2Block extends Block implements IDetectableResource, IPlanta
             return this.marsBlockIcons[8];
         case 10:
             return this.marsBlockIcons[10];
+        case 11:
+            return this.marsBlockIcons[11];
+        case 12:
+            return this.marsBlockIcons[12];
+        case 13:
+            return this.marsBlockIcons[13];
+        case 14:
+            return this.marsBlockIcons[14];
+        case 15:
+            return this.marsBlockIcons[15];
         }
 
         return this.marsBlockIcons[1];

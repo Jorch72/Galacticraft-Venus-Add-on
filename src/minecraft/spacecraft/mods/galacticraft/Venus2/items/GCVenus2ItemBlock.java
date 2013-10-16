@@ -41,50 +41,80 @@ public class GCVenus2ItemBlock extends ItemBlock
         {
         case 0:
         {
-            name = "coppermars";
+            name = "coppervenus";
             break;
         }
         case 1:
         {
-            name = "tinmars";
-            break;
-        }
-        case 3:
-        {
-            name = "ironmars";
+            name = "tinvenus";
             break;
         }
         case 2:
         {
-            name = "deshmars";
+            name = "ironvenus";
+            break;
+        }
+        case 3:
+        {
+            name = "coalmars";
             break;
         }
         case 4:
         {
-            name = "marscobblestone";
+            name = "meteormars";
             break;
         }
         case 5:
         {
-            name = "marsgrass";
+            name = "gemmars";
             break;
         }
         case 6:
         {
-            name = "marsdirt";
+            name = "sulfermars";
             break;
         }
         case 7:
         {
-            name = "marsdungeon";
+            name = "marscobblestone";
             break;
         }
         case 8:
         {
-            name = "marsdeco";
+            name = "marsgrass";
             break;
         }
         case 9:
+        {
+            name = "marsdirt";
+            break;
+        }
+        case 10:
+        {
+            name = "marsdungeon";
+            break;
+        }
+        case 11:
+        {
+            name = "venusgemblock";
+            break;
+        }
+        case 12:
+        {
+            name = "sulferblock";
+            break;
+        }
+        case 13:
+        {
+            name = "gemblock";
+            break;
+        }
+        case 14:
+        {
+            name = "meteorblock";
+            break;
+        }
+        case 15:
         {
             name = "marsstone";
             break;
