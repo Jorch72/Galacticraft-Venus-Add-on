@@ -38,6 +38,7 @@ public class GCMarsConfigManager
     public static int idItemSpaceshipTier2;
     public static int idItemKeyT2;
     public static int idItemSchematicMars;
+    public static int idItemRocketEngine;
 
     // ARMOR
     public static int idArmorDeshHelmet;
@@ -96,6 +97,7 @@ public class GCMarsConfigManager
             GCMarsConfigManager.idItemSpaceshipTier2 = GCMarsConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier2", 9906).getInt(9906);
             GCMarsConfigManager.idItemKeyT2 = GCMarsConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemKeyT2", 9916).getInt(9916);
             GCMarsConfigManager.idItemSchematicMars = GCMarsConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSchematicMars", 9917).getInt(9917);
+            GCMarsConfigManager.idItemRocketEngine = GCMarsConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemRocketEngineMars", 9939).getInt(9939);
 
             GCMarsConfigManager.idToolDeshSword = GCMarsConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolDeshSword", 9907).getInt(9907);
             GCMarsConfigManager.idToolDeshPickaxe = GCMarsConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolDeshPickaxe", 9908).getInt(9908);

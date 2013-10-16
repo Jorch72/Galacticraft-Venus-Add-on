@@ -1,5 +1,8 @@
 package micdoodle8.mods.galacticraft.mars.items;
 
+import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
+import micdoodle8.mods.galacticraft.core.items.GCCoreItemRocketEngine;
+import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import micdoodle8.mods.galacticraft.mars.GCMarsConfigManager;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
@@ -20,6 +23,7 @@ public class GCMarsItems
     public static Item gemLeggings;
     public static Item gemBoots;
     
+    public static Item rocketEngine;
     public static Item spaceship;
     public static Item key;
     public static Item schematic;
@@ -39,6 +43,7 @@ public class GCMarsItems
         GCMarsItems.gemChestplate = new GCMarsItemArmor(GCMarsConfigManager.idArmorDeshChestplate, GCMarsItems.ARMORGEM, 7, 1, false).setUnlocalizedName("gemChestplate");
         GCMarsItems.gemLeggings = new GCMarsItemArmor(GCMarsConfigManager.idArmorDeshLeggings, GCMarsItems.ARMORGEM, 7, 2, false).setUnlocalizedName("gemLeggings");
         GCMarsItems.gemBoots = new GCMarsItemArmor(GCMarsConfigManager.idArmorDeshBoots, GCMarsItems.ARMORGEM, 7, 3, false).setUnlocalizedName("gemBoots");
+        GCMarsItems.rocketEngine = new GCMarsItemRocketEngine(GCMarsConfigManager.idItemRocketEngine, "engine");
         GCMarsItems.spaceship = new GCMarsItemSpaceshipTier2(GCMarsConfigManager.idItemSpaceshipTier2).setUnlocalizedName("spaceshipTier2");
         GCMarsItems.key = new GCMarsItemKey(GCMarsConfigManager.idItemKeyT2).setUnlocalizedName("key");
         GCMarsItems.schematic = new GCMarsItemSchematic(GCMarsConfigManager.idItemSchematicMars).setUnlocalizedName("schematic");
