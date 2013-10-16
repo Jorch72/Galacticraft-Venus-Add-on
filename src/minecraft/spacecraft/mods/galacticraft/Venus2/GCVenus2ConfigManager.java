@@ -30,7 +30,7 @@ public class GCVenus2ConfigManager
     public static int idBlockRock;
     public static int idBlockTreasureChestT3;
 //    public static int idBlockMachine;
-    public static int idBlockCreeperEgg;
+    public static int idBlockBlazeEgg;
 //    public static int idBlockTintedGlassPane;
 
     // ITEMS
@@ -90,7 +90,7 @@ public class GCVenus2ConfigManager
             GCVenus2ConfigManager.idBlockRock = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockRock", 3393).getInt(3393);
             GCVenus2ConfigManager.idBlockTreasureChestT3 = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockTreasureChestT3", 3394).getInt(3394);
 //            GCMarsConfigManager.idBlockMachine = GCMarsConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockMachine", 3395).getInt(3395);
-            GCVenus2ConfigManager.idBlockCreeperEgg = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockCreeperEgg", 3396).getInt(3396);
+            GCVenus2ConfigManager.idBlockBlazeEgg = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockBlazeEgg", 3396).getInt(3396);
 //            GCMarsConfigManager.idBlockTintedGlassPane = GCMarsConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockTintedGlassPane", 3397).getInt(3397);
 
             GCVenus2ConfigManager.idItemMarsBasic = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemMarsBasic", 9905).getInt(9905);

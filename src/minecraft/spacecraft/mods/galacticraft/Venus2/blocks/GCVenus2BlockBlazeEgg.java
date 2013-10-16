@@ -1,28 +1,22 @@
 package spacecraft.mods.galacticraft.Venus2.blocks;
 
 import spacecraft.mods.galacticraft.Venus2.GCVenus2;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
+import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
 import net.minecraft.block.BlockDragonEgg;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GCVenus2BlockCreeperEgg extends BlockDragonEgg
+public class GCVenus2BlockBlazeEgg extends BlockDragonEgg
 {
-    public GCVenus2BlockCreeperEgg(int par1)
+    public GCVenus2BlockBlazeEgg(int par1)
     {
         super(par1);
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister)
-    {
-        this.blockIcon = iconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "creeperEgg");
     }
 
     @Override
@@ -65,7 +59,7 @@ public class GCVenus2BlockCreeperEgg extends BlockDragonEgg
     @SideOnly(Side.CLIENT)
     public int idPicked(World par1World, int par2, int par3, int par4)
     {
-        return 0;
+        return 1;
     }
 
     @Override
@@ -73,9 +67,9 @@ public class GCVenus2BlockCreeperEgg extends BlockDragonEgg
     {
         if (!world.isRemote)
         {
-            GCCoreEntityCreeper creeper = new GCCoreEntityCreeper(world);
-            creeper.setPosition(x + 0.5, y + 1, z + 0.5);
-            world.spawnEntityInWorld(creeper);
+            EntityBlaze blaze = new EntityBlaze(world);
+            blaze.setPosition(x + 0.5, y + 1, z + 0.5);
+            world.spawnEntityInWorld(blaze);
         }
 
         world.setBlockToAir(x, y, z);
