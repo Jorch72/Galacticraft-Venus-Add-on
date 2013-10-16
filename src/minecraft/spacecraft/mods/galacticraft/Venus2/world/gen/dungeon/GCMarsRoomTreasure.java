@@ -1,24 +1,17 @@
-package spacecraft.mods.galacticraft.venus.wgen.dungeon;
+package spacecraft.mods.galacticraft.Venus2.world.gen.dungeon;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 import spacecraft.mods.galacticraft.Venus2.blocks.GCVenus2Blocks;
-import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
-import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
-import micdoodle8.mods.galacticraft.core.tile.GCCoreTileEntityTreasureChest;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonBoundingBox;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonRoom;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreMapGenDungeon;
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
-import net.minecraft.util.WeightedRandomChestContent;
-import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.ForgeDirection;
 
-public class GCVenusRoomTreasure extends GCCoreDungeonRoom
+public class GCMarsRoomTreasure extends GCCoreDungeonRoom
 {
 
     int sizeX;
@@ -27,14 +20,14 @@ public class GCVenusRoomTreasure extends GCCoreDungeonRoom
 
     private final ArrayList<ChunkCoordinates> chests = new ArrayList<ChunkCoordinates>();
 
-    public GCVenusRoomTreasure(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
+    public GCMarsRoomTreasure(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
     {
         super(dungeon, posX, posY, posZ, entranceDir);
         if (this.worldObj != null)
         {
             final Random rand = new Random(this.worldObj.getSeed() * posX * posY * 57 * posZ);
             this.sizeX = rand.nextInt(6) + 7;
-            this.sizeY = rand.nextInt(2) + 5;
+            this.sizeY = rand.nextInt(2) + 8;
             this.sizeZ = rand.nextInt(6) + 7;
         }
     }
@@ -83,36 +76,16 @@ public class GCVenusRoomTreasure extends GCCoreDungeonRoom
     @Override
     protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
     {
-        return new GCVenusRoomTreasure(dungeon, x, y, z, dir);
+        return new GCMarsRoomTreasure(dungeon, x, y, z, dir);
     }
 
     @Override
     protected void handleTileEntities(Random rand)
     {
-        for (final ChunkCoordinates chestCoords : this.chests)
+        if (!this.chests.isEmpty())
         {
-            final TileEntity chest = this.worldObj.getBlockTileEntity(chestCoords.posX, chestCoords.posY, chestCoords.posZ);
-            if (chest != null && chest instanceof GCCoreTileEntityTreasureChest)
-            {
-                ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
-
-                WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), (GCCoreTileEntityTreasureChest) chest, info.getCount(rand));
-
-                ((GCCoreTileEntityTreasureChest) chest).setInventorySlotContents(rand.nextInt(((GCCoreTileEntityTreasureChest) chest).getSizeInventory()), this.getGuaranteedLoot(rand));
-            }
+            this.worldObj.setBlock(this.chests.get(0).posX, this.chests.get(0).posY, this.chests.get(0).posZ, GCVenus2Blocks.tier2TreasureChest.blockID, 0, 2);
+            this.chests.clear();
         }
-    }
-
-    public ItemStack getGuaranteedLoot(Random rand)
-    {
-        switch (rand.nextInt(2))
-        {
-        case 0:
-            return new ItemStack(GCCoreItems.schematic, 1, 0);
-        case 1:
-            return new ItemStack(GCCoreItems.schematic, 1, 1);
-        }
-
-        return null;
     }
 }

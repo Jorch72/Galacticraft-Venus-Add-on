@@ -4,9 +4,9 @@
 item.rawDesh.name=Unrefined Desh
 item.deshStick.name=Desh Stick
 item.ingotDesh.name=Desh Ingot
-item.spaceshipTier2.t2Rocket.name=Tier 2 Rocket
+item.spaceshipTier3.t3Rocket.name=Tier 3 Rocket
 item.reinforcedPlateT2.name=Heavy-Duty Plate
-item.tier2.desc=Tier 2
+item.tier3.desc=Tier 3
 item.slimelingCargo.name=Slimeling Inventory Bag
 item.key.T2.name=Tier 2 Dungeon Key
 item.compressedDesh.name=Compressed Desh
@@ -37,37 +37,12 @@ tile.mars.marsgrass.name=Mars Surface Rock
 tile.mars.marsdeco.name=Block of Desh
 tile.mars.marsdungeon.name=Dungeon Wall
 tile.treasureT2.name=Tier 2 Treasure Chest
-tile.slimelingEgg.redEgg.name=Red Slimeling Egg
-tile.slimelingEgg.blueEgg.name=Blue Slimeling Egg
-tile.slimelingEgg.yellowEgg.name=Yellow Slimeling Egg
-tile.marsMachine.0.name=Terraformer
-tile.marsMachine.1.name=Cryogenic Chamber
-tile.marsMachine.2.name=Launch Controller
-tile.sludge.name=Bacterial Sludge
-tile.creeperEgg.name=Creeper Egg
-tile.cavernVines.name=Cavernous Vines
-tile.tintedGlassPane.white.name=White Tinted Glass Pane
-tile.tintedGlassPane.orange.name=Orange Tinted Glass Pane
-tile.tintedGlassPane.magenta.name=Magenta Tinted Glass Pane
-tile.tintedGlassPane.light_blue.name=Light Blue Tinted Glass Pane
-tile.tintedGlassPane.yellow.name=Yellow Tinted Glass Pane
-tile.tintedGlassPane.lime.name=Lime Tinted Glass Pane
-tile.tintedGlassPane.pink.name=Pink Tinted Glass Pane
-tile.tintedGlassPane.gray.name=Gray Tinted Glass Pane
-tile.tintedGlassPane.silver.name=Silver Tinted Glass Pane
-tile.tintedGlassPane.cyan.name=Cyan Tinted Glass Pane
-tile.tintedGlassPane.purple.name=Purple Tinted Glass Pane
-tile.tintedGlassPane.blue.name=Blue Tinted Glass Pane
-tile.tintedGlassPane.brown.name=Brown Tinted Glass Pane
-tile.tintedGlassPane.green.name=Green Tinted Glass Pane
-tile.tintedGlassPane.red.name=Red Tinted Glass Pane
-tile.tintedGlassPane.black.name=Black Tinted Glass Pane
 
 # GUI
 gui.choosePlanet.desc.mars=Habitable#No Oxygen#Gravity: 38%
 item.deshPickSlime.description.name=Can harvest Slimeling eggs
 
-gui.desc.reinforcedPlateT2.name=Tier 2
+gui.desc.reinforcedPlateT3.name=Tier 3
 
 itemGroup.GalacticraftMars=Galacticraft Mars
 
@@ -78,9 +53,5 @@ schematic.rocketT3.name=Tier 3 Rocket
 schematic.cargoRocket.name=Automatic Cargo Rocket
 
 # Entity
-entity.Sludgeling.name=Sludgeling
-entity.Slimeling.name=Slimeling
-entity.CreeperBoss.name=Evolved Creeper Boss
 
 # Container
-container.launchcontroller.name=Launch Controller
