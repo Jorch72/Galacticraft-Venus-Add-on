@@ -92,7 +92,7 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
     @Override
     public void registerRenderInformation()
     {
-        IModelCustom chamberModel = AdvancedModelLoader.loadModel("/assets/galacticraftvenus2/models/chamber.obj");
+//        IModelCustom chamberModel = AdvancedModelLoader.loadModel("/assets/galacticraftvenus2/models/chamber.obj");
         IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftvenus2/models/cargoRocket.obj");
         ClientRegistry.bindTileEntitySpecialRenderer(GCVenus2TileEntityTreasureChest.class, new GCVenus2TileEntityTreasureChestRenderer());
 //        ClientRegistry.bindTileEntitySpecialRenderer(GCMarsTileEntityCryogenicChamber.class, new GCMarsTileEntityCryogenicChamberRenderer(chamberModel));

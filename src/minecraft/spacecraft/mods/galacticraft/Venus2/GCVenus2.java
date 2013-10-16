@@ -55,7 +55,7 @@ public class GCVenus2
     public static final String CHANNELENTITIES = "GCVenus2Entities";
 
     public static final String LANGUAGE_PATH = "/assets/galacticraftvenus2/lang/";
-    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US", "fi_FI", "ru_RU" };
+    private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
 
     @SidedProxy(clientSide = "spacecraft.mods.galacticraft.Venus2.client.ClientProxyVenus2", serverSide = "spacecraft.mods.galacticraft.Venus2.CommonProxyVenus2")
     public static CommonProxyVenus2 proxy;

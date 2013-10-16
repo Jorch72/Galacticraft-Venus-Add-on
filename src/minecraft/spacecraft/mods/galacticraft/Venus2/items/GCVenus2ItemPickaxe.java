@@ -37,7 +37,7 @@ public class GCVenus2ItemPickaxe extends ItemPickaxe
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "galacticraftmars:"));
+        this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "galacticraftvenus2:"));
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })

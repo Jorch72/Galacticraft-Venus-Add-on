@@ -1,29 +1,32 @@
 # Galacticraft Mars Language File = UNITED STATES ENGLISH
 
 # GENERAL ITEMS
-item.rawDesh.name=Unrefined Desh
-item.deshStick.name=Desh Stick
-item.ingotDesh.name=Desh Ingot
-item.spaceshipTier3.t3Rocket.name=Tier 3 Rocket
+item.ingotSulfer.name=Sulfer Ingot
+item.ingotGem.name=Gem Ingot
+item.itemGem.name=Gem
+item.redGemPlate.name=Red Gem Plate
+item.sulferPlate.name=Sulfer Plate
+item.venusPlate.name=Venus Plate
+item.reinforcedVenusPlateT3.name=Reinforced Venus Plate
+
+item.spaceshipTier3.t2Rocket.name=Tier 3 Rocket
 item.reinforcedPlateT2.name=Heavy-Duty Plate
 item.tier3.desc=Tier 3
-item.slimelingCargo.name=Slimeling Inventory Bag
-item.key.T2.name=Tier 2 Dungeon Key
-item.compressedDesh.name=Compressed Desh
-item.spaceshipTier2.cargoRocket.name=Cargo Rocket
+item.key.T3.name=Tier 3 Dungeon Key
+item.spaceshipTier3.cargoRocket.name=Tier 2 Cargo Rocket
 
 # TOOLS
-item.deshPick.name=Desh Pickaxe
-item.deshAxe.name=Desh Axe
-item.deshHoe.name=Desh Hoe
-item.deshSpade.name=Desh Shovel
-item.deshSword.name=Desh Sword
+item.gemPick.name=Gem Pickaxe
+item.gemAxe.name=Gem Axe
+item.gemHoe.name=Gem Hoe
+item.gemSpade.name=Gem Shovel
+item.gemSword.name=Gem Sword
 
 # ARMOR
-item.deshHelmet.name=Desh Helmet
-item.deshChestplate.name=Desh Chestplate
-item.deshLeggings.name=Desh Leggings
-item.deshBoots.name=Desh Boots
+item.gemHelmet.name=Gem Helmet
+item.gemChestplate.name=Gem Chestplate
+item.gemLeggings.name=Gem Leggings
+item.gemBoots.name=Gem Boots
 
 # BLOCKS
 tile.mars.deshmars.name=Desh Ore
@@ -36,15 +39,14 @@ tile.mars.marsdirt.name=Mars Sub-Surface Rock
 tile.mars.marsgrass.name=Mars Surface Rock
 tile.mars.marsdeco.name=Block of Desh
 tile.mars.marsdungeon.name=Dungeon Wall
-tile.treasureT2.name=Tier 2 Treasure Chest
+tile.treasureT3.name=Tier 3 Treasure Chest
 
 # GUI
 gui.choosePlanet.desc.mars=Habitable#No Oxygen#Gravity: 38%
-item.deshPickSlime.description.name=Can harvest Slimeling eggs
 
 gui.desc.reinforcedPlateT3.name=Tier 3
 
-itemGroup.GalacticraftMars=Galacticraft Mars
+itemGroup.GCVenus2=Galacticraft Venus 2
 
 dimension.Mars.name=Mars
 

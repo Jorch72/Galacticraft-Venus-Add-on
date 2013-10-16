@@ -17,7 +17,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class GCVenus2Item extends Item
 {
-    public static String[] names = { "ingotSulfer", "ingotGem", "itemGem", "redGemPlate", "sulferPlate", "venusPlate", "reinforcedVenusPlateT3" };
+    public static String[] names = { "ingotSulfer", "ingotGem", "itemGem", "reinforcedVenusPlateT3", "venusPlate", "redGemPlate", "sulferPlate" };
     protected Icon[] icons = new Icon[GCVenus2Item.names.length];
 
     public GCVenus2Item(int par1)

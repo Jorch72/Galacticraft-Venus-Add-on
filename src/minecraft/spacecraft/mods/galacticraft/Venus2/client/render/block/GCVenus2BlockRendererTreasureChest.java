@@ -12,12 +12,6 @@ import spacecraft.mods.galacticraft.Venus2.blocks.GCVenus2Blocks;
 import spacecraft.mods.galacticraft.Venus2.tile.GCVenus2TileEntityTreasureChest;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 
-/**
- * Copyright 2012-2013, micdoodle8
- * 
- * All rights reserved.
- * 
- */
 public class GCVenus2BlockRendererTreasureChest implements ISimpleBlockRenderingHandler
 {
     final int renderID;
@@ -58,7 +52,7 @@ public class GCVenus2BlockRendererTreasureChest implements ISimpleBlockRendering
 
     public void renderChest(Block par1Block, int par2, float par3)
     {
-        if (par1Block.blockID == GCVenus2Blocks.tier2TreasureChest.blockID)
+        if (par1Block.blockID == GCVenus2Blocks.tier3TreasureChest.blockID)
         {
             TileEntityRenderer.instance.renderTileEntityAt(this.chest, 0.0D, 0.0D, 0.0D, 0.0F);
         }
