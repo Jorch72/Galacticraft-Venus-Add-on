@@ -11,7 +11,7 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import spacecraft.mods.galacticraft.Venus2.GalacticraftVenus2;
+import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import spacecraft.mods.galacticraft.Venus2.blocks.GCVenus2BlockT3TreasureChest;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -25,8 +25,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class GCVenus2TileEntityTreasureChestRenderer extends TileEntitySpecialRenderer
 {
-    private static final ResourceLocation treasureChestTexture = new ResourceLocation(GalacticraftVenus2.TEXTURE_DOMAIN, "textures/model/treasure.png");
-    private static final ResourceLocation treasureLargeChestTexture = new ResourceLocation(GalacticraftVenus2.TEXTURE_DOMAIN, "textures/model/treasurelarge.png");
+    private static final ResourceLocation treasureChestTexture = new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/model/treasure.png");
+    private static final ResourceLocation treasureLargeChestTexture = new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/model/treasurelarge.png");
 
     private final GCCoreModelTreasureChest chestModel = new GCCoreModelTreasureChest();
     private final GCCoreModelTreasureChestLarge largeChestModel = new GCCoreModelTreasureChestLarge();

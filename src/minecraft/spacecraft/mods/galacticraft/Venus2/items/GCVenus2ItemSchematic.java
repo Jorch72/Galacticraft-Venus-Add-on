@@ -2,7 +2,7 @@ package spacecraft.mods.galacticraft.Venus2.items;
 
 import java.util.List;
 
-import spacecraft.mods.galacticraft.Venus2.GalacticraftVenus2;
+import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import mekanism.api.EnumColor;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicItem;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItemSchematic;
@@ -29,7 +29,7 @@ public class GCVenus2ItemSchematic extends GCCoreItemSchematic implements ISchem
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GalacticraftVenus2.galacticraftVenus2Tab;
+        return GCVenus2.galacticraftVenus2Tab;
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -50,7 +50,7 @@ public class GCVenus2ItemSchematic extends GCCoreItemSchematic implements ISchem
         
         for (int i = 0; i < GCVenus2ItemSchematic.names.length; i++)
         {
-            this.icons[i] = iconRegister.registerIcon(GalacticraftVenus2.TEXTURE_PREFIX + GCVenus2ItemSchematic.names[i]);
+            this.icons[i] = iconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + GCVenus2ItemSchematic.names[i]);
         }
         
     }

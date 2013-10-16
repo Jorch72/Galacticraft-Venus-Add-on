@@ -2,7 +2,7 @@ package spacecraft.mods.galacticraft.Venus2.items;
 
 import java.util.List;
 
-import spacecraft.mods.galacticraft.Venus2.GalacticraftVenus2;
+import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import spacecraft.mods.galacticraft.Venus2.client.ClientProxyVenus2;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -27,13 +27,13 @@ public class GCVenus2ItemRocketEngine extends Item
         this.setMaxDamage(0);
         this.setHasSubtypes(true);
         this.setUnlocalizedName(assetName);
-        this.setTextureName(GalacticraftVenus2.TEXTURE_PREFIX + assetName);
+        this.setTextureName(GCVenus2.TEXTURE_PREFIX + assetName);
     }
 
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GalacticraftVenus2.galacticraftVenus2Tab;
+        return GCVenus2.galacticraftVenus2Tab;
     }
 
     @Override

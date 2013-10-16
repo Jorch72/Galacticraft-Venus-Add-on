@@ -2,7 +2,7 @@ package spacecraft.mods.galacticraft.Venus2.items;
 
 import java.util.List;
 
-import spacecraft.mods.galacticraft.Venus2.GalacticraftVenus2;
+import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import spacecraft.mods.galacticraft.Venus2.entities.GCVenus2EntityRocketT3;
 import mekanism.api.EnumColor;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType;
@@ -44,7 +44,7 @@ public class GCVenus2ItemSpaceshipTier3 extends Item implements IHoldableItem
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GalacticraftVenus2.galacticraftVenus2Tab;
+        return GCVenus2.galacticraftVenus2Tab;
     }
 
     @Override

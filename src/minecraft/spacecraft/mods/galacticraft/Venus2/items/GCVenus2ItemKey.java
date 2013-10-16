@@ -2,7 +2,7 @@ package spacecraft.mods.galacticraft.Venus2.items;
 
 import java.util.List;
 
-import spacecraft.mods.galacticraft.Venus2.GalacticraftVenus2;
+import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import micdoodle8.mods.galacticraft.api.item.IKeyItem;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -30,7 +30,7 @@ public class GCVenus2ItemKey extends Item implements IKeyItem
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GalacticraftVenus2.galacticraftVenus2Tab;
+        return GCVenus2.galacticraftVenus2Tab;
     }
 
     @Override
@@ -54,7 +54,7 @@ public class GCVenus2ItemKey extends Item implements IKeyItem
 
         for (final String name : GCVenus2ItemKey.keyTypes)
         {
-            this.keyIcons[i++] = iconRegister.registerIcon(GalacticraftVenus2.TEXTURE_PREFIX + "key_" + name);
+            this.keyIcons[i++] = iconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "key_" + name);
         }
     }
 

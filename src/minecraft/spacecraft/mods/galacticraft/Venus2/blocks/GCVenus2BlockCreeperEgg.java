@@ -1,6 +1,6 @@
 package spacecraft.mods.galacticraft.Venus2.blocks;
 
-import spacecraft.mods.galacticraft.Venus2.GalacticraftVenus2;
+import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
 import net.minecraft.block.BlockDragonEgg;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -22,7 +22,7 @@ public class GCVenus2BlockCreeperEgg extends BlockDragonEgg
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister iconRegister)
     {
-        this.blockIcon = iconRegister.registerIcon(GalacticraftVenus2.TEXTURE_PREFIX + "creeperEgg");
+        this.blockIcon = iconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "creeperEgg");
     }
 
     @Override
@@ -34,7 +34,7 @@ public class GCVenus2BlockCreeperEgg extends BlockDragonEgg
     @Override
     public CreativeTabs getCreativeTabToDisplayOn()
     {
-        return GalacticraftVenus2.galacticraftVenus2Tab;
+        return GCVenus2.galacticraftVenus2Tab;
     }
 
     @Override

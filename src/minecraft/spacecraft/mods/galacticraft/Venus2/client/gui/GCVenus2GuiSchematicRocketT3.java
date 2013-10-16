@@ -10,12 +10,12 @@ import net.minecraft.util.StatCollector;
 
 import org.lwjgl.opengl.GL11;
 
-import spacecraft.mods.galacticraft.Venus2.GalacticraftVenus2;
+import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import spacecraft.mods.galacticraft.Venus2.inventory.GCVenus2ContainerRocketBenchT3;
 
 public class GCVenus2GuiSchematicRocketT3 extends GuiContainer implements ISchematicResultPage
 {
-    private static final ResourceLocation tier3SchematicTexture = new ResourceLocation(GalacticraftVenus2.TEXTURE_DOMAIN, "textures/gui/schematic_rocket_T3.png");
+    private static final ResourceLocation tier3SchematicTexture = new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/gui/schematic_rocket_T3.png");
 
     private int pageIndex;
 

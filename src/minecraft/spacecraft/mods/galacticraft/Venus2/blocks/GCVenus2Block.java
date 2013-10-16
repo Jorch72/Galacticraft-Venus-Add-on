@@ -3,7 +3,7 @@ package spacecraft.mods.galacticraft.Venus2.blocks;
 import java.util.List;
 import java.util.Random;
 
-import spacecraft.mods.galacticraft.Venus2.GalacticraftVenus2;
+import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import spacecraft.mods.galacticraft.Venus2.items.GCVenus2Items;
 import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
@@ -77,23 +77,23 @@ public class GCVenus2Block extends Block implements IDetectableResource, IPlanta
     public void registerIcons(IconRegister par1IconRegister)
     {
         this.marsBlockIcons = new Icon[11];
-        this.marsBlockIcons[0] = par1IconRegister.registerIcon(GalacticraftVenus2.TEXTURE_PREFIX + "cobblestone");
-        this.marsBlockIcons[1] = par1IconRegister.registerIcon(GalacticraftVenus2.TEXTURE_PREFIX + "decoration_desh");
-        this.marsBlockIcons[2] = par1IconRegister.registerIcon(GalacticraftVenus2.TEXTURE_PREFIX + "middle");
-        this.marsBlockIcons[3] = par1IconRegister.registerIcon(GalacticraftVenus2.TEXTURE_PREFIX + "brick");
-        this.marsBlockIcons[4] = par1IconRegister.registerIcon(GalacticraftVenus2.TEXTURE_PREFIX + "top");
-        this.marsBlockIcons[5] = par1IconRegister.registerIcon(GalacticraftVenus2.TEXTURE_PREFIX + "copper");
-        this.marsBlockIcons[6] = par1IconRegister.registerIcon(GalacticraftVenus2.TEXTURE_PREFIX + "desh");
-        this.marsBlockIcons[7] = par1IconRegister.registerIcon(GalacticraftVenus2.TEXTURE_PREFIX + "tin");
-        this.marsBlockIcons[8] = par1IconRegister.registerIcon(GalacticraftVenus2.TEXTURE_PREFIX + "bottom");
-        this.marsBlockIcons[9] = par1IconRegister.registerIcon(GalacticraftVenus2.TEXTURE_PREFIX + "iron");
+        this.marsBlockIcons[0] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "cobblestone");
+        this.marsBlockIcons[1] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "decoration_desh");
+        this.marsBlockIcons[2] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "middle");
+        this.marsBlockIcons[3] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "brick");
+        this.marsBlockIcons[4] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "top");
+        this.marsBlockIcons[5] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "copper");
+        this.marsBlockIcons[6] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "desh");
+        this.marsBlockIcons[7] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "tin");
+        this.marsBlockIcons[8] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "bottom");
+        this.marsBlockIcons[9] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "iron");
         this.marsBlockIcons[10] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "blank");
     }
 
     @Override
     public CreativeTabs getCreativeTabToDisplayOn()
     {
-        return GalacticraftVenus2.galacticraftVenus2Tab;
+        return GCVenus2.galacticraftVenus2Tab;
     }
 
     @Override
@@ -273,7 +273,7 @@ public class GCVenus2Block extends Block implements IDetectableResource, IPlanta
 
             if (metadata == 7)
             {
-                GalacticraftVenus2.proxy.spawnParticle("sludgeDrip", x + rand.nextDouble(), y, z + rand.nextDouble());
+                GCVenus2.proxy.spawnParticle("sludgeDrip", x + rand.nextDouble(), y, z + rand.nextDouble());
 
                 if (rand.nextInt(100) == 0)
                 {

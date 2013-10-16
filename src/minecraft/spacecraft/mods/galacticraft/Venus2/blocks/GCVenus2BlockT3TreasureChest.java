@@ -3,7 +3,7 @@ package spacecraft.mods.galacticraft.Venus2.blocks;
 import java.util.Iterator;
 import java.util.Random;
 
-import spacecraft.mods.galacticraft.Venus2.GalacticraftVenus2;
+import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import spacecraft.mods.galacticraft.Venus2.tile.GCVenus2TileEntityTreasureChest;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.tile.GCCoreTileEntityTreasureChest;
@@ -54,7 +54,7 @@ public class GCVenus2BlockT3TreasureChest extends BlockContainer implements ITil
     @Override
     public CreativeTabs getCreativeTabToDisplayOn()
     {
-        return GalacticraftVenus2.galacticraftVenus2Tab;
+        return GCVenus2.galacticraftVenus2Tab;
     }
 
     @Override
@@ -72,7 +72,7 @@ public class GCVenus2BlockT3TreasureChest extends BlockContainer implements ITil
     @Override
     public int getRenderType()
     {
-        return GalacticraftVenus2.proxy.getTreasureRenderID();
+        return GCVenus2.proxy.getTreasureRenderID();
     }
 
     @Override

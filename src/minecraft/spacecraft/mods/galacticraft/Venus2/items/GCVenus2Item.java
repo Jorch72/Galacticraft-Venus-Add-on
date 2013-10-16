@@ -2,7 +2,7 @@ package spacecraft.mods.galacticraft.Venus2.items;
 
 import java.util.List;
 
-import spacecraft.mods.galacticraft.Venus2.GalacticraftVenus2;
+import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -30,7 +30,7 @@ public class GCVenus2Item extends Item
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GalacticraftVenus2.galacticraftVenus2Tab;
+        return GCVenus2.galacticraftVenus2Tab;
     }
 
     @Override
@@ -48,7 +48,7 @@ public class GCVenus2Item extends Item
 
         for (String name : GCVenus2Item.names)
         {
-            this.icons[i++] = iconRegister.registerIcon(GalacticraftVenus2.TEXTURE_PREFIX + name);
+            this.icons[i++] = iconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + name);
         }
     }
 

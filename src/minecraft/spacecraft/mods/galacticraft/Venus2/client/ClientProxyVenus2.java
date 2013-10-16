@@ -6,7 +6,7 @@ import java.util.EnumSet;
 
 import spacecraft.mods.galacticraft.Venus2.CommonProxyVenus2;
 import spacecraft.mods.galacticraft.Venus2.GCVenus2ConfigManager;
-import spacecraft.mods.galacticraft.Venus2.GalacticraftVenus2;
+import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import spacecraft.mods.galacticraft.Venus2.blocks.GCVenus2Blocks;
 import spacecraft.mods.galacticraft.Venus2.client.fx.GCVenus2EntityDropParticleFX;
 import spacecraft.mods.galacticraft.Venus2.client.model.GCVenus2ModelSpaceshipTier3;
@@ -71,7 +71,7 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
     public void init(FMLInitializationEvent event)
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GalacticraftVenus2.CHANNEL, Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCVenus2.CHANNEL, Side.CLIENT);
 //        ClientProxyMars.vineRenderID = RenderingRegistry.getNextAvailableRenderId();
 //        RenderingRegistry.registerBlockHandler(new GCMarsBlockRendererVine(ClientProxyMars.vineRenderID));
         ClientProxyVenus2.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
@@ -92,14 +92,14 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
     @Override
     public void registerRenderInformation()
     {
-        IModelCustom chamberModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/chamber.obj");
-        IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftmars/models/cargoRocket.obj");
+        IModelCustom chamberModel = AdvancedModelLoader.loadModel("/assets/galacticraftvenus2/models/chamber.obj");
+        IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftvenus2/models/cargoRocket.obj");
         ClientRegistry.bindTileEntitySpecialRenderer(GCVenus2TileEntityTreasureChest.class, new GCVenus2TileEntityTreasureChestRenderer());
 //        ClientRegistry.bindTileEntitySpecialRenderer(GCMarsTileEntityCryogenicChamber.class, new GCMarsTileEntityCryogenicChamberRenderer(chamberModel));
-        RenderingRegistry.registerEntityRenderingHandler(GCVenus2EntityRocketT3.class, new GCCoreRenderSpaceship(new GCVenus2ModelSpaceshipTier3(), GalacticraftVenus2.TEXTURE_DOMAIN, "rocketT2"));
+        RenderingRegistry.registerEntityRenderingHandler(GCVenus2EntityRocketT3.class, new GCCoreRenderSpaceship(new GCVenus2ModelSpaceshipTier3(), GCVenus2.TEXTURE_DOMAIN, "rocketT2"));
         RenderingRegistry.addNewArmourRendererPrefix("desh");
         MinecraftForgeClient.registerItemRenderer(GCVenus2Items.spaceship.itemID, new GCVenus2ItemRendererSpaceshipT3(cargoRocketModel));
-        MinecraftForgeClient.registerItemRenderer(GCVenus2Items.key.itemID, new GCCoreItemRendererKey(new ResourceLocation(GalacticraftVenus2.TEXTURE_DOMAIN, "textures/model/treasure.png")));
+        MinecraftForgeClient.registerItemRenderer(GCVenus2Items.key.itemID, new GCCoreItemRendererKey(new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/model/treasure.png")));
 //        MinecraftForgeClient.registerItemRenderer(GCMarsBlocks.machine.blockID, new GCMarsItemRendererMachine(chamberModel));
     }
 

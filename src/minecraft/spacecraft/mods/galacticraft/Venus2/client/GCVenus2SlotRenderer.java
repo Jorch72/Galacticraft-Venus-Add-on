@@ -1,6 +1,6 @@
 package spacecraft.mods.galacticraft.Venus2.client;
 
-import spacecraft.mods.galacticraft.Venus2.GalacticraftVenus2;
+import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import micdoodle8.mods.galacticraft.api.world.ICelestialBodyRenderer;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.util.ResourceLocation;
@@ -11,7 +11,7 @@ public class GCVenus2SlotRenderer implements ICelestialBodyRenderer
     @Override
     public ResourceLocation getPlanetSprite()
     {
-        return new ResourceLocation(GalacticraftVenus2.TEXTURE_DOMAIN, "textures/gui/planets/mars.png");
+        return new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/gui/planets/mars.png");
     }
 
     @Override

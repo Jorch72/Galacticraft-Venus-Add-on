@@ -13,19 +13,19 @@ import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.Sys;
 import org.lwjgl.opengl.GL11;
 
-import spacecraft.mods.galacticraft.Venus2.GalacticraftVenus2;
+import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import spacecraft.mods.galacticraft.Venus2.client.model.GCVenus2ModelSpaceshipTier3;
 import spacecraft.mods.galacticraft.Venus2.entities.GCVenus2EntityRocketT3;
 import cpw.mods.fml.client.FMLClientHandler;
 
 public class GCVenus2ItemRendererSpaceshipT3 extends GCCoreItemRendererSpaceship
 {
-    private static final ResourceLocation cargoRocketTexture = new ResourceLocation(GalacticraftVenus2.TEXTURE_DOMAIN, "textures/model/cargoRocket.png");
+    private static final ResourceLocation cargoRocketTexture = new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/model/cargoRocket.png");
     private IModelCustom cargoRocketModel;
 
     public GCVenus2ItemRendererSpaceshipT3(IModelCustom cargoRocketModel)
     {
-        super(new GCVenus2EntityRocketT3(FMLClientHandler.instance().getClient().theWorld), new GCVenus2ModelSpaceshipTier3(), new ResourceLocation(GalacticraftVenus2.TEXTURE_DOMAIN, "textures/model/rocketT2.png"));
+        super(new GCVenus2EntityRocketT3(FMLClientHandler.instance().getClient().theWorld), new GCVenus2ModelSpaceshipTier3(), new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/model/rocketT2.png"));
         this.cargoRocketModel = cargoRocketModel;
     }
 

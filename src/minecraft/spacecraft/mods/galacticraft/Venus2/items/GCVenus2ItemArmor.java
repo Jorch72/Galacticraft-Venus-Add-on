@@ -1,6 +1,6 @@
 package spacecraft.mods.galacticraft.Venus2.items;
 
-import spacecraft.mods.galacticraft.Venus2.GalacticraftVenus2;
+import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -58,7 +58,7 @@ public class GCVenus2ItemArmor extends ItemArmor
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GalacticraftVenus2.galacticraftVenus2Tab;
+        return GCVenus2.galacticraftVenus2Tab;
     }
 
     @Override

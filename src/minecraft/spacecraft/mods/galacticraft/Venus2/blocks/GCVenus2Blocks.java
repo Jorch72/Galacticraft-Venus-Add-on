@@ -1,7 +1,7 @@
 package spacecraft.mods.galacticraft.Venus2.blocks;
 
 import spacecraft.mods.galacticraft.Venus2.GCVenus2ConfigManager;
-import spacecraft.mods.galacticraft.Venus2.GalacticraftVenus2;
+import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import spacecraft.mods.galacticraft.Venus2.items.GCVenus2ItemBlock;
 import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
 import net.minecraft.block.Block;
@@ -46,13 +46,13 @@ public class GCVenus2Blocks
 
     public static void registerBlocks()
     {
-        GameRegistry.registerBlock(GCVenus2Blocks.marsBlock, GCVenus2ItemBlock.class, GCVenus2Blocks.marsBlock.getUnlocalizedName(), GalacticraftVenus2.MODID);
+        GameRegistry.registerBlock(GCVenus2Blocks.marsBlock, GCVenus2ItemBlock.class, GCVenus2Blocks.marsBlock.getUnlocalizedName(), GCVenus2.MODID);
 //        GameRegistry.registerBlock(GCMarsBlocks.blockSludge, ItemBlock.class, GCMarsBlocks.blockSludge.getUnlocalizedName(), GalacticraftMars.MODID);
 //        GameRegistry.registerBlock(GCMarsBlocks.vine, ItemBlock.class, GCMarsBlocks.vine.getUnlocalizedName(), GalacticraftMars.MODID);
 //        GameRegistry.registerBlock(GCMarsBlocks.rock, GCMarsItemBlockRock.class, GCMarsBlocks.rock.getUnlocalizedName(), GalacticraftMars.MODID);
-        GameRegistry.registerBlock(GCVenus2Blocks.tier2TreasureChest, ItemBlock.class, GCVenus2Blocks.tier2TreasureChest.getUnlocalizedName(), GalacticraftVenus2.MODID);
+        GameRegistry.registerBlock(GCVenus2Blocks.tier2TreasureChest, ItemBlock.class, GCVenus2Blocks.tier2TreasureChest.getUnlocalizedName(), GCVenus2.MODID);
 //        GameRegistry.registerBlock(GCMarsBlocks.machine, GCMarsItemBlockMachine.class, GCMarsBlocks.machine.getUnlocalizedName(), GalacticraftMars.MODID);
-        GameRegistry.registerBlock(GCVenus2Blocks.creeperEgg, ItemBlock.class, GCVenus2Blocks.creeperEgg.getUnlocalizedName(), GalacticraftVenus2.MODID);
+        GameRegistry.registerBlock(GCVenus2Blocks.creeperEgg, ItemBlock.class, GCVenus2Blocks.creeperEgg.getUnlocalizedName(), GCVenus2.MODID);
 //        GameRegistry.registerBlock(GCMarsBlocks.tintedGlassPane, GCMarsItemBlockTintedGlassPane.class, GCMarsBlocks.tintedGlassPane.getUnlocalizedName(), GalacticraftMars.MODID);
     }
 }

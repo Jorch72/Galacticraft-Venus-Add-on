@@ -45,28 +45,28 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 
-@Mod(name = GalacticraftVenus2.NAME, version = GalacticraftCore.LOCALMAJVERSION + "." + GalacticraftCore.LOCALMINVERSION + "." + GalacticraftCore.LOCALBUILDVERSION, useMetadata = true, modid = GalacticraftVenus2.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
-@NetworkMod(channels = { GalacticraftVenus2.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
-public class GalacticraftVenus2
+@Mod(name = GCVenus2.NAME, version = GalacticraftCore.LOCALMAJVERSION + "." + GalacticraftCore.LOCALMINVERSION + "." + GalacticraftCore.LOCALBUILDVERSION, useMetadata = true, modid = GCVenus2.MODID, dependencies = "required-after:" + GalacticraftCore.MODID + ";")
+@NetworkMod(channels = { GCVenus2.CHANNEL }, clientSideRequired = true, serverSideRequired = false, connectionHandler = GCCoreConnectionHandler.class, packetHandler = GCCorePacketManager.class)
+public class GCVenus2
 {
-    public static final String NAME = "Galacticraft Venus2";
-    public static final String MODID = "GalacticraftVenus2";
-    public static final String CHANNEL = "GalacticraftVenus2";
+    public static final String NAME = "Galacticraft Venus 2";
+    public static final String MODID = "GCVenus2";
+    public static final String CHANNEL = "GCVenus2";
     public static final String CHANNELENTITIES = "GCVenus2Entities";
 
-    public static final String LANGUAGE_PATH = "/assets/galacticraftmars/lang/";
+    public static final String LANGUAGE_PATH = "/assets/galacticraftvenus2/lang/";
     private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US", "fi_FI", "ru_RU" };
 
     @SidedProxy(clientSide = "spacecraft.mods.galacticraft.Venus2.client.ClientProxyVenus2", serverSide = "spacecraft.mods.galacticraft.Venus2.CommonProxyVenus2")
     public static CommonProxyVenus2 proxy;
 
-    @Instance(GalacticraftVenus2.MODID)
-    public static GalacticraftVenus2 instance;
+    @Instance(GCVenus2.MODID)
+    public static GCVenus2 instance;
 
     public static GCCoreCreativeTab galacticraftVenus2Tab;
 
     public static final String TEXTURE_DOMAIN = "galacticraftvenus2";
-    public static final String TEXTURE_PREFIX = GalacticraftVenus2.TEXTURE_DOMAIN + ":";
+    public static final String TEXTURE_PREFIX = GCVenus2.TEXTURE_DOMAIN + ":";
 
     public static Fluid SLUDGE;
 
@@ -88,7 +88,7 @@ public class GalacticraftVenus2
 
         GCVenus2Items.initItems();
 
-        GalacticraftVenus2.proxy.preInit(event);
+        GCVenus2.proxy.preInit(event);
     }
 
     @EventHandler
@@ -96,9 +96,9 @@ public class GalacticraftVenus2
     {
         int languages = 0;
 
-        for (String language : GalacticraftVenus2.LANGUAGES_SUPPORTED)
+        for (String language : GCVenus2.LANGUAGES_SUPPORTED)
         {
-            LanguageRegistry.instance().loadLocalization(GalacticraftVenus2.LANGUAGE_PATH + language + ".lang", language, false);
+            LanguageRegistry.instance().loadLocalization(GCVenus2.LANGUAGE_PATH + language + ".lang", language, false);
 
             if (LanguageRegistry.instance().getStringLocalization("children", language) != "")
             {
@@ -110,7 +110,7 @@ public class GalacticraftVenus2
                     {
                         if (child != "" || child != null)
                         {
-                            LanguageRegistry.instance().loadLocalization(GalacticraftVenus2.LANGUAGE_PATH + language + ".lang", child, false);
+                            LanguageRegistry.instance().loadLocalization(GCVenus2.LANGUAGE_PATH + language + ".lang", child, false);
                             languages++;
                         }
                     }
@@ -130,16 +130,16 @@ public class GalacticraftVenus2
         SchematicRegistry.registerSchematicRecipe(new GCVenus2SchematicRocketT3());
 //        SchematicRegistry.registerSchematicRecipe(new GCMarsSchematicCargoRocket());
 
-        GalacticraftVenus2.galacticraftVenus2Tab = new GCCoreCreativeTab(CreativeTabs.getNextID(), GalacticraftVenus2.MODID, GCVenus2Items.spaceship.itemID, 5);
-        NetworkRegistry.instance().registerGuiHandler(GalacticraftVenus2.instance, GalacticraftVenus2.proxy);
+        GCVenus2.galacticraftVenus2Tab = new GCCoreCreativeTab(CreativeTabs.getNextID(), GCVenus2.MODID, GCVenus2Items.spaceship.itemID, 5);
+        NetworkRegistry.instance().registerGuiHandler(GCVenus2.instance, GCVenus2.proxy);
         this.registerTileEntities();
         this.registerCreatures();
         this.registerOtherEntities();
-        GalacticraftVenus2.proxy.init(event);
+        GCVenus2.proxy.init(event);
 
         GalacticraftRegistry.registerTeleportType(GCVenus2WorldProvider.class, new GCVenus2TeleportType());
         GalacticraftRegistry.registerCelestialBody(new GCVenus2Planet());
-        GalacticraftRegistry.registerRocketGui(GCVenus2WorldProvider.class, new ResourceLocation(GalacticraftVenus2.TEXTURE_DOMAIN, "textures/gui/marsRocketGui.png"));
+        GalacticraftRegistry.registerRocketGui(GCVenus2WorldProvider.class, new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/gui/marsRocketGui.png"));
         GalacticraftRegistry.addDungeonLoot(2, new ItemStack(GCVenus2Items.schematic, 1, 0));
         GalacticraftRegistry.addDungeonLoot(2, new ItemStack(GCVenus2Items.schematic, 1, 1));
 
@@ -150,7 +150,7 @@ public class GalacticraftVenus2
     @EventHandler
     public void serverStarting(FMLServerStartingEvent event)
     {
-        NetworkRegistry.instance().registerChannel(new GCVenus2PacketHandlerServer(), GalacticraftVenus2.CHANNEL, Side.SERVER);
+        NetworkRegistry.instance().registerChannel(new GCVenus2PacketHandlerServer(), GCVenus2.CHANNEL, Side.SERVER);
     }
 
     public void registerTileEntities()
@@ -183,15 +183,15 @@ public class GalacticraftVenus2
     @EventHandler
     public void postLoad(FMLPostInitializationEvent event)
     {
-        GalacticraftVenus2.proxy.postInit(event);
-        GalacticraftVenus2.proxy.registerRenderInformation();
+        GCVenus2.proxy.postInit(event);
+        GCVenus2.proxy.registerRenderInformation();
         GCVenus2RecipeManager.loadRecipes();
     }
 
     public void registerGalacticraftCreature(Class<? extends Entity> var0, String var1, int id, int back, int fore)
     {
         EntityRegistry.registerGlobalEntityID(var0, var1, id, back, fore);
-        EntityRegistry.registerModEntity(var0, var1, id, GalacticraftVenus2.instance, 80, 3, true);
+        EntityRegistry.registerModEntity(var0, var1, id, GCVenus2.instance, 80, 3, true);
     }
 
     public void registerGalacticraftNonMobEntity(Class<? extends Entity> var0, String var1, int id, int trackingDistance, int updateFreq, boolean sendVel)

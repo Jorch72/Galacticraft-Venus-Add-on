@@ -87,7 +87,7 @@ public class GCVenus2Events
 
                 if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT && event.bypassed && event.entityPlayer instanceof GCCorePlayerSP)
                 {
-                    PacketDispatcher.sendPacketToServer(PacketUtil.createPacket(GalacticraftVenus2.CHANNEL, 3, new Object[] {}));
+                    PacketDispatcher.sendPacketToServer(PacketUtil.createPacket(GCVenus2.CHANNEL, 3, new Object[] {}));
                 }
             }
             else if (event.flag1 == false && event.flag2 == false && event.flag3 == true)

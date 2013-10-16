@@ -16,7 +16,7 @@ import net.minecraftforge.client.IRenderHandler;
 
 import org.lwjgl.opengl.GL11;
 
-import spacecraft.mods.galacticraft.Venus2.GalacticraftVenus2;
+import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import spacecraft.mods.galacticraft.Venus2.dimension.GCVenus2WorldProvider;
 import cpw.mods.fml.client.FMLClientHandler;
 
@@ -29,7 +29,7 @@ import cpw.mods.fml.client.FMLClientHandler;
 public class GCVenus2SkyProvider extends IRenderHandler
 {
     private static final ResourceLocation overworldTexture = new ResourceLocation(GalacticraftCore.TEXTURE_DOMAIN, "textures/gui/planets/overworld.png");
-    private static final ResourceLocation galaxyTexture = new ResourceLocation(GalacticraftVenus2.TEXTURE_DOMAIN, "textures/gui/planets/galaxy.png");
+    private static final ResourceLocation galaxyTexture = new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/gui/planets/galaxy.png");
     private static final ResourceLocation sunTexture = new ResourceLocation("textures/environment/sun.png");
 
     public int starGLCallList = GLAllocation.generateDisplayLists(3);
