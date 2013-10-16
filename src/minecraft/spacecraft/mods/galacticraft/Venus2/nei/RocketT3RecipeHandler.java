@@ -22,7 +22,7 @@ public class RocketT3RecipeHandler extends TemplateRecipeHandler
 
     public String getRecipeId()
     {
-        return "galacticraft.rocketT2";
+        return "galacticraft.rocketT3";
     }
 
     @Override
@@ -143,6 +143,6 @@ public class RocketT3RecipeHandler extends TemplateRecipeHandler
     @Override
     public String getGuiTexture()
     {
-        return "/mods/galacticraftmars/textures/gui/schematic_rocket_T2.png";
+        return "/mods/galacticraftmars/textures/gui/schematic_rocket_T3.png";
     }
 }

@@ -23,13 +23,12 @@ public class GCVenus2EntityDropParticleFX extends EntityFX
         super(par1World, par2, par4, par6, 0.0D, 0.0D, 0.0D);
         this.motionX = this.motionY = this.motionZ = 0.0D;
 
-//        if (par8Material == GCMarsBlocks.bacterialSludge)
         {
             this.particleRed = 0.0F;
             this.particleGreen = 0.0F;
             this.particleBlue = 0.0F;
         }
-//        else
+
         {
             this.particleRed = 1.0F;
             this.particleGreen = 0.0F;
@@ -76,13 +75,12 @@ public class GCVenus2EntityDropParticleFX extends EntityFX
         this.prevPosY = this.posY;
         this.prevPosZ = this.posZ;
 
-//        if (this.materialType == GCMarsBlocks.bacterialSludge)
         {
             this.particleRed = 0.1F;
             this.particleGreen = 0.1F;
             this.particleBlue = 0.1F;
         }
-//        else
+
         {
             this.particleRed = 1.0F;
             this.particleGreen = 16.0F / (40 - this.bobTimer + 16);

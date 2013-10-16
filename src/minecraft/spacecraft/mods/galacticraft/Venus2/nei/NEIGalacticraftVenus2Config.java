@@ -29,7 +29,7 @@ public class NEIGalacticraftVenus2Config implements IConfigureNEI
     @Override
     public String getName()
     {
-        return "Galacticraft Mars NEI Plugin";
+        return "Galacticraft Venus 2 NEI Plugin";
     }
 
     @Override
@@ -55,16 +55,16 @@ public class NEIGalacticraftVenus2Config implements IConfigureNEI
         ArrayList<PositionedStack> input1 = new ArrayList<PositionedStack>();
 
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.partNoseCone), 45, -8 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.marsItemBasic, 1, 3), 36, -6 + 0 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.marsItemBasic, 1, 3), 36, -6 + 1 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.marsItemBasic, 1, 3), 36, -6 + 2 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.marsItemBasic, 1, 3), 36, -6 + 3 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.marsItemBasic, 1, 3), 36, -6 + 4 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.marsItemBasic, 1, 3), 54, -6 + 0 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.marsItemBasic, 1, 3), 54, -6 + 1 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.marsItemBasic, 1, 3), 54, -6 + 2 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.marsItemBasic, 1, 3), 54, -6 + 3 * 18 + 16 + changey));
-        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.marsItemBasic, 1, 3), 54, -6 + 4 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 3), 36, -6 + 0 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 3), 36, -6 + 1 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 3), 36, -6 + 2 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 3), 36, -6 + 3 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 3), 36, -6 + 4 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 3), 54, -6 + 0 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 3), 54, -6 + 1 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 3), 54, -6 + 2 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 3), 54, -6 + 3 * 18 + 16 + changey));
+        input1.add(new PositionedStack(new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 3), 54, -6 + 4 * 18 + 16 + changey));
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.rocketEngine), 45, 100 + changey));
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.rocketEngine, 1, 1), 18, 64 + changey));
         input1.add(new PositionedStack(new ItemStack(GCCoreItems.rocketEngine, 1, 1), 72, 64 + changey));

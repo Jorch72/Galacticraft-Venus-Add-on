@@ -52,58 +52,38 @@ public class GCVenus2PacketHandlerServer implements IPacketHandler
 
             Entity entity = player.worldObj.getEntityByID((Integer) packetReadout[0]);
 
-//            if (entity instanceof GCMarsEntitySlimeling)
             {
-//                GCMarsEntitySlimeling slimeling = (GCMarsEntitySlimeling) entity;
 
                 int subType = (Integer) packetReadout[1];
 
                 switch (subType)
                 {
                 case 0:
-//                    if (player.getCommandSenderName().equalsIgnoreCase(slimeling.getOwnerName()) && !slimeling.worldObj.isRemote)
                     {
-//                        slimeling.getAiSit().setSitting(!slimeling.isSitting());
-//                        slimeling.setJumping(false);
-//                        slimeling.setPathToEntity((PathEntity) null);
-//                        slimeling.setTarget((Entity) null);
-//                        slimeling.setAttackTarget((EntityLivingBase) null);
                     }
                     break;
                 case 1:
-//                    if (player.getCommandSenderName().equalsIgnoreCase(slimeling.getOwnerName()) && !slimeling.worldObj.isRemote)
                     {
-//                        slimeling.slimelingName = (String) packetReadout[2];
                     }
                     break;
                 case 2:
-//                    if (player.getCommandSenderName().equalsIgnoreCase(slimeling.getOwnerName()) && !slimeling.worldObj.isRemote)
                     {
-//                        slimeling.age += 5000;
                     }
                     break;
                 case 3:
-//                    if (slimeling.inLove <= 0 && player.getCommandSenderName().equalsIgnoreCase(slimeling.getOwnerName()) && !slimeling.worldObj.isRemote)
                     {
-//                        slimeling.func_110196_bT();
                     }
                     break;
                 case 4:
-//                    if (player.getCommandSenderName().equalsIgnoreCase(slimeling.getOwnerName()) && !slimeling.worldObj.isRemote)
                     {
-//                        slimeling.attackDamage = Math.min(slimeling.attackDamage + 0.1F, 1.0F);
                     }
                     break;
                 case 5:
-//                    if (player.getCommandSenderName().equalsIgnoreCase(slimeling.getOwnerName()) && !slimeling.worldObj.isRemote)
                     {
-//                        slimeling.setHealth(slimeling.getHealth() + 5.0F);
                     }
                     break;
                 case 6:
-//                    if (player.getCommandSenderName().equalsIgnoreCase(slimeling.getOwnerName()) && !slimeling.worldObj.isRemote)
                     {
-//                        GCMarsUtil.openSlimelingInventory(player, slimeling);
                     }
                     break;
                 }
@@ -111,11 +91,11 @@ public class GCVenus2PacketHandlerServer implements IPacketHandler
         }
         else if (packetType == 1)
         {
-            FMLLog.severe("Galacticraft Mars: Received bad packet!");
+            FMLLog.severe("Galacticraft Venus 2: Received bad packet!");
         }
         else if (packetType == 2)
         {
-            FMLLog.severe("Galacticraft Mars: Received bad packet!");
+            FMLLog.severe("Galacticraft Venus 2: Received bad packet!");
         }
         else if (packetType == 3)
         {
@@ -141,48 +121,7 @@ public class GCVenus2PacketHandlerServer implements IPacketHandler
 
             switch ((Integer) packetReadout[0])
             {
-            case 0:
-//                if (tile instanceof GCMarsTileEntityLaunchController)
-                {
-//                    GCMarsTileEntityLaunchController launchController = (GCMarsTileEntityLaunchController) tile;
-//                    launchController.setFrequency((Integer) packetReadout[4]);
-                }
-                break;
-            case 1:
-//                if (tile instanceof GCMarsTileEntityLaunchController)
-                {
-//                    GCMarsTileEntityLaunchController launchController = (GCMarsTileEntityLaunchController) tile;
-//                    launchController.launchDropdownSelection = (Integer) packetReadout[4];
-                }
-                break;
-            case 2:
-//                if (tile instanceof GCMarsTileEntityLaunchController)
-                {
-//                    GCMarsTileEntityLaunchController launchController = (GCMarsTileEntityLaunchController) tile;
-//                    launchController.setDestinationFrequency((Integer) packetReadout[4]);
-                }
-                break;
-            case 3:
-//                if (tile instanceof GCMarsTileEntityLaunchController)
-                {
-//                    GCMarsTileEntityLaunchController launchController = (GCMarsTileEntityLaunchController) tile;
-//                    launchController.launchPadRemovalDisabled = (Integer) packetReadout[4] == 1 ? true : false;
-                }
-                break;
-            case 4:
-//                if (tile instanceof GCMarsTileEntityLaunchController)
-                {
-//                    GCMarsTileEntityLaunchController launchController = (GCMarsTileEntityLaunchController) tile;
-//                    launchController.launchSchedulingEnabled = (Integer) packetReadout[4] == 1 ? true : false;
-                }
-                break;
-            case 5:
-//                if (tile instanceof GCMarsTileEntityLaunchController)
-                {
-//                    GCMarsTileEntityLaunchController launchController = (GCMarsTileEntityLaunchController) tile;
-//                    launchController.requiresClientUpdate = true;
-                }
-                break;
+
             default:
                 break;
             }
@@ -194,19 +133,14 @@ public class GCVenus2PacketHandlerServer implements IPacketHandler
 
             Entity entity = player.worldObj.getEntityByID((Integer) packetReadout[0]);
 
-//            if (entity instanceof GCMarsEntityCargoRocket)
-            {
-//                GCMarsEntityCargoRocket rocket = (GCMarsEntityCargoRocket) entity;
-
                 int subType = (Integer) packetReadout[1];
                 
                 switch (subType)
                 {
                 default:
-//                    rocket.statusValid = rocket.checkLaunchValidity();
                     break;
                 }
-            }
         }
-    }
+	}
 }
+

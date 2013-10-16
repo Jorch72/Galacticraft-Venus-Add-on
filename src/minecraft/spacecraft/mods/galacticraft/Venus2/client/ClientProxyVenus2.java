@@ -55,11 +55,8 @@ import cpw.mods.fml.relauncher.Side;
 
 public class ClientProxyVenus2 extends CommonProxyVenus2
 {
-//    private static int vineRenderID;
     private static int eggRenderID;
     private static int treasureRenderID;
-//    private static int machineRenderID;
-//    private static int tintedGlassRenderID;
 
     @Override
     public void preInit(FMLPreInitializationEvent event)
@@ -72,42 +69,23 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
         NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCVenus2.CHANNEL, Side.CLIENT);
-//        ClientProxyMars.vineRenderID = RenderingRegistry.getNextAvailableRenderId();
-//        RenderingRegistry.registerBlockHandler(new GCMarsBlockRendererVine(ClientProxyMars.vineRenderID));
         ClientProxyVenus2.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
-//        RenderingRegistry.registerBlockHandler(new GCMarsBlockRendererRock(ClientProxyMars.eggRenderID));
-//        ClientProxyMars.treasureRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new GCVenus2BlockRendererTreasureChest(ClientProxyVenus2.treasureRenderID));
-//        ClientProxyMars.machineRenderID = RenderingRegistry.getNextAvailableRenderId();
-//        RenderingRegistry.registerBlockHandler(new GCMarsBlockRendererMachine(ClientProxyMars.machineRenderID));
-//        ClientProxyMars.tintedGlassRenderID = RenderingRegistry.getNextAvailableRenderId();
-//        RenderingRegistry.registerBlockHandler(new GCMarsBlockRendererTintedGlassPane(ClientProxyMars.tintedGlassRenderID));
     }
 
-//    @Override
-//    public void postInit(FMLPostInitializationEvent event)
-    {
-    }
+
 
     @Override
     public void registerRenderInformation()
     {
-//        IModelCustom chamberModel = AdvancedModelLoader.loadModel("/assets/galacticraftvenus2/models/chamber.obj");
         IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftvenus2/models/cargoRocket.obj");
         ClientRegistry.bindTileEntitySpecialRenderer(GCVenus2TileEntityTreasureChest.class, new GCVenus2TileEntityTreasureChestRenderer());
-//        ClientRegistry.bindTileEntitySpecialRenderer(GCMarsTileEntityCryogenicChamber.class, new GCMarsTileEntityCryogenicChamberRenderer(chamberModel));
         RenderingRegistry.registerEntityRenderingHandler(GCVenus2EntityRocketT3.class, new GCCoreRenderSpaceship(new GCVenus2ModelSpaceshipTier3(), GCVenus2.TEXTURE_DOMAIN, "rocketT2"));
         RenderingRegistry.addNewArmourRendererPrefix("desh");
         MinecraftForgeClient.registerItemRenderer(GCVenus2Items.spaceship.itemID, new GCVenus2ItemRendererSpaceshipT3(cargoRocketModel));
         MinecraftForgeClient.registerItemRenderer(GCVenus2Items.key.itemID, new GCCoreItemRendererKey(new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/model/treasure.png")));
-//        MinecraftForgeClient.registerItemRenderer(GCMarsBlocks.machine.blockID, new GCMarsItemRendererMachine(chamberModel));
     }
 
-//    @Override
-//    public int getVineRenderID()
-    {
-//        return ClientProxyMars.vineRenderID;
-    }
 
     @Override
     public int getEggRenderID()
@@ -121,17 +99,6 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
         return ClientProxyVenus2.treasureRenderID;
     }
 
-//    @Override
-//    public int getMachineRenderID()
-    {
-//        return ClientProxyMars.machineRenderID;
-    }
-
-//    @Override
-//    public int getTintedGlassPaneRenderID()
-    {
-//        return ClientProxyMars.tintedGlassRenderID;
-    }
 
     @Override
     public void spawnParticle(String var1, double var2, double var4, double var6)
@@ -150,7 +117,6 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
             {
                 if (var1.equals("sludgeDrip"))
                 {
-//                    var21 = new GCMarsEntityDropParticleFX(var14.theWorld, var2, var4, var6, GCMarsBlocks.bacterialSludge);
                 }
             }
         }
@@ -179,9 +145,7 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
                     entityID = (Integer) packetReadout[2];
                     entity = player.worldObj.getEntityByID(entityID);
 
-//                    if (entity != null && entity instanceof GCMarsEntitySlimeling)
                     {
-//                        FMLClientHandler.instance().getClient().displayGuiScreen(new GCMarsGuiSlimelingInventory(player, (GCMarsEntitySlimeling) entity));
                     }
 
                     player.openContainer.windowId = (Integer) packetReadout[0];
@@ -190,9 +154,7 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
                     entityID = (Integer) packetReadout[2];
                     entity = player.worldObj.getEntityByID(entityID);
 
-//                    if (entity != null && entity instanceof GCMarsEntityCargoRocket)
                     {
-//                        FMLClientHandler.instance().getClient().displayGuiScreen(new GCMarsGuiCargoRocket(player.inventory, (GCMarsEntityCargoRocket) entity));
                     }
 
                     player.openContainer.windowId = (Integer) packetReadout[0];
@@ -202,9 +164,7 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
         }
     }
 
-//    public static boolean handleBacterialMovement(EntityPlayer player)
     {
-//        return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), GCMarsBlocks.bacterialSludge);
     }
 
     public static boolean handleLavaMovement(EntityPlayer player)
@@ -217,23 +177,7 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
         return player.worldObj.isMaterialInBB(player.boundingBox.expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), Material.water);
     }
 
-//    public static boolean handleLiquidMovement(EntityPlayer player)
     {
-//        return ClientProxyMars.handleBacterialMovement(player) || ClientProxyMars.handleLavaMovement(player) || ClientProxyMars.handleWaterMovement(player);
-    }
-
-//    @Override
-//    public void opengSlimelingGui(GCMarsEntitySlimeling slimeling, int gui)
-    {
-//        switch (gui)
-        {
-//        case 0:
-//            FMLClientHandler.instance().getClient().displayGuiScreen(new GCMarsGuiSlimeling(slimeling));
-//            break;
-//        case 1:
-//            FMLClientHandler.instance().getClient().displayGuiScreen(new GCMarsGuiSlimelingFeed(slimeling));
-//            break;
-        }
     }
 
     public static class TickHandlerClient implements ITickHandler
@@ -291,7 +235,7 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
         @Override
         public String getLabel()
         {
-            return "Galacticraft Mars Client";
+            return "Galacticraft Venus 2 Client";
         }
 
         @Override
@@ -305,18 +249,6 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
     {
         TileEntity tile = world.getBlockTileEntity(x, y, z);
-
-//        if (ID == GCMarsConfigManager.idGuiMachine)
-        {
-//            if (tile instanceof GCMarsTileEntityTerraformer)
-            {
-//                return new GCMarsGuiTerraformer(player.inventory, (GCMarsTileEntityTerraformer) tile);
-            }
-//            else if (tile instanceof GCMarsTileEntityLaunchController)
-            {
-//                return new GCMarsGuiLaunchController(player.inventory, (GCMarsTileEntityLaunchController) tile);
-            }
-        }
 
         return null;
     }

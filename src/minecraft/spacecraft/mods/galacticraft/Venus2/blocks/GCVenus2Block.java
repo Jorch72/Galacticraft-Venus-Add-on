@@ -184,7 +184,7 @@ public class GCVenus2Block extends Block implements IDetectableResource, IPlanta
     {
         if (meta == 2)
         {
-            return GCVenus2Items.marsItemBasic.itemID;
+            return GCVenus2Items.venus2ItemBasic.itemID;
         }
         else if (meta == 10 || meta == 7)
         {

@@ -77,7 +77,6 @@ public class GCVenus2ItemSchematic extends GCCoreItemSchematic implements ISchem
             {
             case 0:
                 par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.rocketT3.name"));
-                par3List.add(EnumColor.DARK_AQUA + "COMING SOON");
                 break;
             case 1:
                 par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.cargoRocket.name"));

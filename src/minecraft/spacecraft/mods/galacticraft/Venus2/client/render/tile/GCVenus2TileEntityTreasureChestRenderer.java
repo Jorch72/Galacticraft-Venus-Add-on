@@ -16,12 +16,6 @@ import spacecraft.mods.galacticraft.Venus2.blocks.GCVenus2BlockT3TreasureChest;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-/**
- * Copyright 2012-2013, micdoodle8
- * 
- * All rights reserved.
- * 
- */
 @SideOnly(Side.CLIENT)
 public class GCVenus2TileEntityTreasureChestRenderer extends TileEntitySpecialRenderer
 {

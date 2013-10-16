@@ -555,7 +555,7 @@ public class GCVenus2EntityRocketT3 extends EntityTieredRocket implements IInven
     @Override
     public int getRocketTier()
     {
-        return 2;
+        return 3;
     }
 
     @Override

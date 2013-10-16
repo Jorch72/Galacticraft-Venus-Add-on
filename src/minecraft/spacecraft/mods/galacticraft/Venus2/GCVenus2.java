@@ -76,14 +76,7 @@ public class GCVenus2
         MinecraftForge.EVENT_BUS.register(new GCVenus2Events());
         new GCVenus2ConfigManager(new File(event.getModConfigurationDirectory(), "Spacecraft/venus2.conf"));
 
-//        GalacticraftMars.SLUDGE = new Fluid("bacterialsludge").setBlockID(GCMarsConfigManager.idBlockBacterialSludge).setViscosity(3000);
-//        if (!FluidRegistry.registerFluid(GalacticraftMars.SLUDGE))
-        {
-//            GCLog.info("\"bacterialsludge\" has already been registered as a fluid, ignoring...");
-        }
-
         GCVenus2Blocks.initBlocks();
-//        GCMarsBlocks.registerBlocks();
         GCVenus2Blocks.setHarvestLevels();
 
         GCVenus2Items.initItems();
@@ -128,7 +121,6 @@ public class GCVenus2
         GCLog.info("Galacticraft Venus2 Loaded: " + languages + " Languages.");
 
         SchematicRegistry.registerSchematicRecipe(new GCVenus2SchematicRocketT3());
-//        SchematicRegistry.registerSchematicRecipe(new GCMarsSchematicCargoRocket());
 
         GCVenus2.galacticraftVenus2Tab = new GCCoreCreativeTab(CreativeTabs.getNextID(), GCVenus2.MODID, GCVenus2Items.spaceship.itemID, 5);
         NetworkRegistry.instance().registerGuiHandler(GCVenus2.instance, GCVenus2.proxy);
@@ -143,8 +135,8 @@ public class GCVenus2
         GalacticraftRegistry.addDungeonLoot(2, new ItemStack(GCVenus2Items.schematic, 1, 0));
         GalacticraftRegistry.addDungeonLoot(2, new ItemStack(GCVenus2Items.schematic, 1, 1));
 
-        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenus2Items.marsItemBasic, 1, 3), new ItemStack(GCCoreItems.heavyPlatingTier1), new ItemStack(GCMoonItems.meteoricIronIngot, 1, 1));
-        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenus2Items.marsItemBasic, 1, 5), new ItemStack(GCVenus2Items.marsItemBasic, 1, 2));
+        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 3), new ItemStack(GCCoreItems.heavyPlatingTier1), new ItemStack(GCMoonItems.meteoricIronIngot, 1, 1));
+        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 5), new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 2));
     }
 
     @EventHandler
@@ -155,29 +147,17 @@ public class GCVenus2
 
     public void registerTileEntities()
     {
-//        GameRegistry.registerTileEntity(GCMarsTileEntitySlimelingEgg.class, "Slimeling Egg");
         GameRegistry.registerTileEntity(GCVenus2TileEntityTreasureChest.class, "Tier 3 Treasure Chest");
-//        GameRegistry.registerTileEntity(GCMarsTileEntityTerraformer.class, "Planet Terraformer");
-//        GameRegistry.registerTileEntity(GCMarsTileEntityCryogenicChamber.class, "Cryogenic Chamber");
-//        GameRegistry.registerTileEntity(GCMarsTileEntityDungeonSpawner.class, "Mars Dungeon Spawner");
-//        GameRegistry.registerTileEntity(GCMarsTileEntityLaunchController.class, "Launch Controller");
     }
 
     public void registerCreatures()
     {
-//        this.registerGalacticraftCreature(GCMarsEntitySludgeling.class, "Sludgeling", GCMarsConfigManager.idEntitySludgeling, GCCoreUtil.convertTo32BitColor(255, 0, 0, 50), GCCoreUtil.convertTo32BitColor(255, 0, 0, 150));
-//        this.registerGalacticraftCreature(GCMarsEntitySlimeling.class, "Slimeling", GCMarsConfigManager.idEntitySlimeling, GCCoreUtil.convertTo32BitColor(255, 0, 0, 50), GCCoreUtil.convertTo32BitColor(255, 0, 0, 150));
-//        this.registerGalacticraftCreature(GCMarsEntityCreeperBoss.class, "CreeperBoss", GCMarsConfigManager.idEntityCreeperBoss, GCCoreUtil.convertTo32BitColor(255, 0, 0, 50), GCCoreUtil.convertTo32BitColor(255, 0, 0, 150));
     }
 
     public void registerOtherEntities()
     {
         this.registerGalacticraftNonMobEntity(GCVenus2EntityRocketT3.class, "SpaceshipT3", GCVenus2ConfigManager.idEntitySpaceshipTier3, 150, 1, true);
         this.registerGalacticraftNonMobEntity(GCVenus2EntityRocketT3.class, "SpaceshipT3", GCVenus2ConfigManager.idEntitySpaceshipTier3, 150, 1, true);
-//        this.registerGalacticraftNonMobEntity(GCMarsEntityTerraformBubble.class, "TerraformBubble", GCMarsConfigManager.idEntityTerraformBubble, 150, 20, false);
-//        this.registerGalacticraftNonMobEntity(GCMarsEntityProjectileTNT.class, "ProjectileTNT", GCMarsConfigManager.idEntityProjectileTNT, 150, 1, true);
-//        this.registerGalacticraftNonMobEntity(GCMarsEntityLandingBalloons.class, "LandingBalloons", GCMarsConfigManager.idEntityLandingBalloons, 150, 5, true);
-//        this.registerGalacticraftNonMobEntity(GCMarsEntityCargoRocket.class, "CargoRocket", GCMarsConfigManager.idEntityCargoRocket, 150, 1, false);
     }
 
     @EventHandler

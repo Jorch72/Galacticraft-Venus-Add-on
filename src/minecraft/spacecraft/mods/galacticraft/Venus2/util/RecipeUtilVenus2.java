@@ -20,16 +20,4 @@ public class RecipeUtilVenus2
         return null;
     }
 
- //   public static ItemStack findMatchingCargoRocketRecipe(GCMarsInventoryCargoRocketBench inventoryRocketBench)
-    {
-        for (INasaWorkbenchRecipe recipe : GalacticraftRegistry.getCargoRocketRecipes())
-        {
-//            if (recipe.matches(inventoryRocketBench))
-            {
-//                return recipe.getRecipeOutput();
-            }
-        }
-
-//        return null;
-    }
 }

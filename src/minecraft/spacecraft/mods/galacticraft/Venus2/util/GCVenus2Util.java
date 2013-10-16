@@ -24,37 +24,5 @@ public class GCVenus2Util
     {
         GalacticraftRegistry.addCargoRocketRecipe(new GCCoreNasaWorkbenchRecipe(result, input));
     }
-
-//    public static void openParachestInventory(EntityPlayerMP player, GCMarsEntityLandingBalloons landerInv)
-    {
-//        player.incrementWindowID();
-//        player.closeContainer();
-//        int windowId = player.currentWindowId;
-//        player.playerNetServerHandler.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftCore.CHANNEL, EnumClientPacket.OPEN_PARACHEST_GUI, new Object[] { windowId, 1, landerInv.entityId }));
-//        player.openContainer = new GCCoreContainerParachest(player.inventory, landerInv);
-//        player.openContainer.windowId = windowId;
-//        player.openContainer.addCraftingToCrafters(player);
-    }
-
-//    public static void openSlimelingInventory(EntityPlayerMP player, GCMarsEntitySlimeling slimeling)
-    {
-//        player.incrementWindowID();
-//        player.closeContainer();
-//        int windowId = player.currentWindowId;
-//        player.playerNetServerHandler.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftMars.CHANNEL, 0, new Object[] { windowId, 0, slimeling.entityId }));
-//        player.openContainer = new GCMarsContainerSlimeling(player.inventory, slimeling);
-//        player.openContainer.windowId = windowId;
-//        player.openContainer.addCraftingToCrafters(player);
-    }
-
-//    public static void openCargoRocketInventory(EntityPlayerMP player, GCMarsEntityCargoRocket rocket)
-    {
-//        player.incrementWindowID();
-//        player.closeContainer();
-//        int windowId = player.currentWindowId;
-//        player.playerNetServerHandler.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftMars.CHANNEL, 0, new Object[] { windowId, 1, rocket.entityId }));
-//        player.openContainer = new GCCoreContainerRocketRefill(player.inventory, rocket, rocket.rocketType);
-//        player.openContainer.windowId = windowId;
-//        player.openContainer.addCraftingToCrafters(player);
-    }
+  
 }

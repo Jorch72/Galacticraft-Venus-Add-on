@@ -63,17 +63,17 @@ public class GCVenus2SlotCargoRocketBench extends Slot
         case 2:
             return par1ItemStack.getItem().itemID == GCCoreItems.basicItem.itemID && par1ItemStack.getItemDamage() == 14 ? true : false;
         case 3:
-            return par1ItemStack.getItem().itemID == GCVenus2Items.marsItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GCVenus2Items.venus2ItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 4:
-            return par1ItemStack.getItem().itemID == GCVenus2Items.marsItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GCVenus2Items.venus2ItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 5:
-            return par1ItemStack.getItem().itemID == GCVenus2Items.marsItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GCVenus2Items.venus2ItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 6:
-            return par1ItemStack.getItem().itemID == GCVenus2Items.marsItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GCVenus2Items.venus2ItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 7:
-            return par1ItemStack.getItem().itemID == GCVenus2Items.marsItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GCVenus2Items.venus2ItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 8:
-            return par1ItemStack.getItem().itemID == GCVenus2Items.marsItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GCVenus2Items.venus2ItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 9:
             return par1ItemStack.getItem().itemID == GCCoreItems.partFins.itemID ? true : false;
         case 10:
