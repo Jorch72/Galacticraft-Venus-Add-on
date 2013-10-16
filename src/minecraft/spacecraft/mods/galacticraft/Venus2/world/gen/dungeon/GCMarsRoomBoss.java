@@ -11,7 +11,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.ForgeDirection;
 import spacecraft.mods.galacticraft.Venus2.blocks.GCVenus2Blocks;
-import spacecraft.mods.galacticraft.Venus2.tile.GCMarsTileEntityDungeonSpawner;
 import universalelectricity.core.vector.Vector3;
 
 public class GCMarsRoomBoss extends GCCoreDungeonRoom
@@ -96,9 +95,9 @@ public class GCMarsRoomBoss extends GCCoreDungeonRoom
 
         final TileEntity tile = this.worldObj.getBlockTileEntity(this.spawnerCoords.posX, this.spawnerCoords.posY, this.spawnerCoords.posZ);
 
-        if (tile == null || !(tile instanceof GCMarsTileEntityDungeonSpawner))
+        if (tile == null || !(tile instanceof GCCoreTileEntityDungeonSpawner))
         {
-            GCCoreTileEntityDungeonSpawner spawner = new GCMarsTileEntityDungeonSpawner();
+            GCCoreTileEntityDungeonSpawner spawner = new GCCoreTileEntityDungeonSpawner();
             spawner.setRoom(new Vector3(this.posX, this.posY, this.posZ), new Vector3(this.sizeX, this.sizeY, this.sizeZ));
             this.worldObj.setBlockTileEntity(this.spawnerCoords.posX, this.spawnerCoords.posY, this.spawnerCoords.posZ, spawner);
         }
