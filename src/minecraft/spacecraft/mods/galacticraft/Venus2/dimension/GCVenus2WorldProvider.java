@@ -150,25 +150,25 @@ public class GCVenus2WorldProvider extends WorldProvider implements IGalacticraf
     @Override
     public String getSaveFolder()
     {
-        return "DIM" + GCVenus2ConfigManager.dimensionIDMars;
+        return "DIM" + GCVenus2ConfigManager.dimensionIDVenus2;
     }
 
     @Override
     public String getWelcomeMessage()
     {
-        return "Entering Mars";
+        return "Entering Venus 2";
     }
 
     @Override
     public String getDepartMessage()
     {
-        return "Leaving Mars";
+        return "Leaving Venus 2";
     }
 
     @Override
     public String getDimensionName()
     {
-        return "Mars";
+        return "Venus 2";
     }
 
     @Override

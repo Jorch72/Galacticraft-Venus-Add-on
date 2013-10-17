@@ -22,7 +22,7 @@ public class GCVenus2Blocks
 
     public static void initBlocks()
     {
-        GCVenus2Blocks.marsBlock = new GCVenus2Block(GCVenus2ConfigManager.idBlockMars).setHardness(2.2F).setUnlocalizedName("mars");
+        GCVenus2Blocks.marsBlock = new GCVenus2Block(GCVenus2ConfigManager.idBlockVenus2).setHardness(2.2F).setUnlocalizedName("mars");
         GCVenus2Blocks.tier3TreasureChest = new GCVenus2BlockT3TreasureChest(GCVenus2ConfigManager.idBlockTreasureChestT3).setHardness(2.5F).setUnlocalizedName("treasureT3");
         GCVenus2Blocks.blazeEgg = new GCVenus2BlockBlazeEgg(GCVenus2ConfigManager.idBlockBlazeEgg).setHardness(-1.0F).setUnlocalizedName("blazeEgg");
 //        GCMarsBlocks.tintedGlassPane = new GCMarsBlockTintedGlassPane(GCMarsConfigManager.idBlockTintedGlassPane).setHardness(0.6F).setUnlocalizedName("tintedGlassPane");

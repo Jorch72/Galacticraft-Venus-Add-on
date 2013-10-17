@@ -10,12 +10,12 @@ import net.minecraft.world.WorldProvider;
 
 public class GCVenus2Planet implements IPlanet
 {
-    private final IMapObject mars = new GCVenus2MapPlanet();
+    private final IMapObject Venus2 = new GCVenus2MapPlanet();
 
     @Override
     public String getName()
     {
-        return "Mars";
+        return "Venus 2";
     }
 
     @Override
@@ -33,7 +33,7 @@ public class GCVenus2Planet implements IPlanet
     @Override
     public IMapObject getMapObject()
     {
-        return this.mars;
+        return this.Venus2;
     }
 
     @Override
@@ -57,6 +57,6 @@ public class GCVenus2Planet implements IPlanet
     @Override
     public int getDimensionID()
     {
-        return GCVenus2ConfigManager.dimensionIDMars;
+        return GCVenus2ConfigManager.dimensionIDVenus2;
     }
 }

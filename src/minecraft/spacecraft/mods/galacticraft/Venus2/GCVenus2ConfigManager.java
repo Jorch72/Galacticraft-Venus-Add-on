@@ -21,11 +21,10 @@ public class GCVenus2ConfigManager
     }
 
     // DIMENSIONS
-    public static int dimensionIDMars;
+    public static int dimensionIDVenus2;
 
     // BLOCKS
-    public static int idBlockMars;
-//    public static int idBlockRock;
+    public static int idBlockVenus2;
     public static int idBlockTreasureChestT3;
     public static int idBlockBlazeEgg;
 
@@ -68,9 +67,9 @@ public class GCVenus2ConfigManager
         {
             GCVenus2ConfigManager.configuration.load();
 
-            GCVenus2ConfigManager.dimensionIDMars = GCVenus2ConfigManager.configuration.get("Dimensions", "Mars Dimension ID", -29).getInt(-29);
+            GCVenus2ConfigManager.dimensionIDVenus2 = GCVenus2ConfigManager.configuration.get("Dimensions", "Venus 2 Dimension ID", -46).getInt(-46);
 
-            GCVenus2ConfigManager.idBlockMars = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockMars", 3390).getInt(3390);
+            GCVenus2ConfigManager.idBlockVenus2 = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockVenus2", 3390).getInt(3390);
             GCVenus2ConfigManager.idBlockTreasureChestT3 = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockTreasureChestT3", 3394).getInt(3394);
             GCVenus2ConfigManager.idBlockBlazeEgg = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockBlazeEgg", 3396).getInt(3396);
 
