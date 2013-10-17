@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.world.gen.dungeon;
+package spacecraft.mods.galacticraft.Venus2.wgen.dungeon;
 
 import java.util.Random;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonBoundingBox;
@@ -6,21 +6,21 @@ import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonRoom;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreMapGenDungeon;
 import net.minecraftforge.common.ForgeDirection;
 
-public class GCMarsRoomEmpty extends GCCoreDungeonRoom
+public class GCVenusRoomEmpty extends GCCoreDungeonRoom
 {
 
     int sizeX;
     int sizeY;
     int sizeZ;
 
-    public GCMarsRoomEmpty(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
+    public GCVenusRoomEmpty(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
     {
         super(dungeon, posX, posY, posZ, entranceDir);
         if (this.worldObj != null)
         {
             final Random rand = new Random(this.worldObj.getSeed() * posX * posY * 57 * posZ);
             this.sizeX = rand.nextInt(4) + 5;
-            this.sizeY = rand.nextInt(2) + 7;
+            this.sizeY = rand.nextInt(2) + 4;
             this.sizeZ = rand.nextInt(4) + 5;
         }
     }
@@ -56,7 +56,7 @@ public class GCMarsRoomEmpty extends GCCoreDungeonRoom
     @Override
     protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
     {
-        return new GCMarsRoomEmpty(dungeon, x, y, z, dir);
+        return new GCVenusRoomEmpty(dungeon, x, y, z, dir);
     }
 
     @Override

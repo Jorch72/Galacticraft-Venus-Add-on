@@ -1,19 +1,12 @@
-package spacecraft.mods.galacticraft.Venus2.world.gen;
+package spacecraft.mods.galacticraft.Venus2.wgen;
 
 import java.util.Random;
-
-import spacecraft.mods.galacticraft.Venus2.blocks.GCVenus2Blocks;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreMapGenBaseMeta;
+import micdoodle8.mods.galacticraft.moon.blocks.GCMoonBlocks;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-/**
- * Copyright 2012-2013, micdoodle8
- * 
- * All rights reserved.
- * 
- */
-public class GCMarsCaveGen extends GCCoreMapGenBaseMeta
+public class GCVenusGenCaves extends GCCoreMapGenBaseMeta
 {
 
     public static final int BREAK_THROUGH_CHANCE = 25; // 1 in n chance
@@ -174,13 +167,13 @@ public class GCMarsCaveGen extends GCCoreMapGenBaseMeta
 
                                         if (yfactor > -0.7D && xfactorSq + yfactorSq + zfactorSq < 1.0D)
                                         {
-                                            if (blockIdArray[coords] == GCVenus2Blocks.marsBlock.blockID)
+                                            if (blockIdArray[coords] == GCMoonBlocks.blockMoon.blockID)
                                             {
-                                                if (metaArray[coords] == 6 || metaArray[coords] == 9)
+                                                if (metaArray[coords] == 3 || metaArray[coords] == 4)
                                                 {
                                                     blockIdArray[coords] = 0;
                                                 }
-                                                else if (metaArray[coords] == 5 && random.nextInt(GCMarsCaveGen.BREAK_THROUGH_CHANCE) == 0)
+                                                else if (metaArray[coords] == 5 && random.nextInt(GCVenusGenCaves.BREAK_THROUGH_CHANCE) == 0)
                                                 {
                                                     blockIdArray[coords] = 0;
                                                 }

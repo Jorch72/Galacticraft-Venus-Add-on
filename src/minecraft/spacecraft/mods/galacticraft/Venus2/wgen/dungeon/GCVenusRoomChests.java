@@ -1,17 +1,18 @@
-package spacecraft.mods.galacticraft.Venus2.world.gen.dungeon;
+package spacecraft.mods.galacticraft.Venus2.wgen.dungeon;
 
 import java.util.ArrayList;
 import java.util.Random;
-
-import spacecraft.mods.galacticraft.Venus2.blocks.GCVenus2Blocks;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonBoundingBox;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreDungeonRoom;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.GCCoreMapGenDungeon;
 import net.minecraft.block.Block;
+import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.ChunkCoordinates;
+import net.minecraft.util.WeightedRandomChestContent;
+import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.ForgeDirection;
 
-public class GCMarsRoomTreasure extends GCCoreDungeonRoom
+public class GCVenusRoomChests extends GCCoreDungeonRoom
 {
 
     int sizeX;
@@ -20,15 +21,15 @@ public class GCMarsRoomTreasure extends GCCoreDungeonRoom
 
     private final ArrayList<ChunkCoordinates> chests = new ArrayList<ChunkCoordinates>();
 
-    public GCMarsRoomTreasure(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
+    public GCVenusRoomChests(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
     {
         super(dungeon, posX, posY, posZ, entranceDir);
         if (this.worldObj != null)
         {
             final Random rand = new Random(this.worldObj.getSeed() * posX * posY * 57 * posZ);
-            this.sizeX = rand.nextInt(6) + 7;
-            this.sizeY = rand.nextInt(2) + 8;
-            this.sizeZ = rand.nextInt(6) + 7;
+            this.sizeX = rand.nextInt(5) + 6;
+            this.sizeY = rand.nextInt(2) + 4;
+            this.sizeZ = rand.nextInt(5) + 6;
         }
     }
 
@@ -37,9 +38,9 @@ public class GCMarsRoomTreasure extends GCCoreDungeonRoom
     {
         for (int i = this.posX - 1; i <= this.posX + this.sizeX; i++)
         {
-            for (int k = this.posZ - 1; k <= this.posZ + this.sizeZ; k++)
+            for (int j = this.posY - 1; j <= this.posY + this.sizeY; j++)
             {
-                for (int j = this.posY - 1; j <= this.posY + this.sizeY; j++)
+                for (int k = this.posZ - 1; k <= this.posZ + this.sizeZ; k++)
                 {
                     if (i == this.posX - 1 || i == this.posX + this.sizeX || j == this.posY - 1 || j == this.posY + this.sizeY || k == this.posZ - 1 || k == this.posZ + this.sizeZ)
                     {
@@ -47,21 +48,14 @@ public class GCMarsRoomTreasure extends GCCoreDungeonRoom
                     }
                     else
                     {
-                        if ((i == this.posX || i == this.posX + this.sizeX - 1) && (k == this.posZ || k == this.posZ + this.sizeZ - 1))
-                        {
-                            this.placeBlock(chunk, meta, i, j, k, cx, cz, Block.glowStone.blockID, 0);
-                        }
-                        else
-                        {
-                            this.placeBlock(chunk, meta, i, j, k, cx, cz, 0, 0);
-                        }
+                        this.placeBlock(chunk, meta, i, j, k, cx, cz, 0, 0);
                     }
                 }
             }
         }
         final int hx = (this.posX + this.posX + this.sizeX) / 2;
         final int hz = (this.posZ + this.posZ + this.sizeZ) / 2;
-        if (this.placeBlock(chunk, meta, hx, this.posY, hz, cx, cz, GCVenus2Blocks.tier3TreasureChest.blockID, 0))
+        if (this.placeBlock(chunk, meta, hx, this.posY, hz, cx, cz, Block.chest.blockID, 0))
         {
             this.chests.add(new ChunkCoordinates(hx, this.posY, hz));
         }
@@ -76,16 +70,21 @@ public class GCMarsRoomTreasure extends GCCoreDungeonRoom
     @Override
     protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
     {
-        return new GCMarsRoomTreasure(dungeon, x, y, z, dir);
+        return new GCVenusRoomChests(dungeon, x, y, z, dir);
     }
 
     @Override
     protected void handleTileEntities(Random rand)
     {
-        if (!this.chests.isEmpty())
+        for (final ChunkCoordinates chestCoords : this.chests)
         {
-            this.worldObj.setBlock(this.chests.get(0).posX, this.chests.get(0).posY, this.chests.get(0).posZ, GCVenus2Blocks.tier3TreasureChest.blockID, 0, 2);
-            this.chests.clear();
+            final TileEntityChest chest = (TileEntityChest) this.worldObj.getBlockTileEntity(chestCoords.posX, chestCoords.posY, chestCoords.posZ);
+
+            if (chest != null)
+            {
+                ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+                WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
+            }
         }
     }
 }

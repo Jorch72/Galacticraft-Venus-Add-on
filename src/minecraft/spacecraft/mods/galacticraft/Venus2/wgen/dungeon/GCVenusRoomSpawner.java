@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.world.gen.dungeon;
+package spacecraft.mods.galacticraft.Venus2.wgen.dungeon;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -10,7 +10,7 @@ import net.minecraft.tileentity.TileEntityMobSpawner;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.ForgeDirection;
 
-public class GCMarsRoomSpawner extends GCCoreDungeonRoom
+public class GCVenusRoomSpawner extends GCCoreDungeonRoom
 {
     int sizeX;
     int sizeY;
@@ -19,14 +19,14 @@ public class GCMarsRoomSpawner extends GCCoreDungeonRoom
 
     private final ArrayList<ChunkCoordinates> spawners = new ArrayList<ChunkCoordinates>();
 
-    public GCMarsRoomSpawner(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
+    public GCVenusRoomSpawner(GCCoreMapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
     {
         super(dungeon, posX, posY, posZ, entranceDir);
         if (this.worldObj != null)
         {
             this.rand = new Random(this.worldObj.getSeed() * posX * posY * 57 * posZ);
             this.sizeX = this.rand.nextInt(5) + 6;
-            this.sizeY = this.rand.nextInt(2) + 7;
+            this.sizeY = this.rand.nextInt(2) + 4;
             this.sizeZ = this.rand.nextInt(5) + 6;
         }
     }
@@ -74,7 +74,7 @@ public class GCMarsRoomSpawner extends GCCoreDungeonRoom
     @Override
     protected GCCoreDungeonRoom makeRoom(GCCoreMapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
     {
-        return new GCMarsRoomSpawner(dungeon, x, y, z, dir);
+        return new GCVenusRoomSpawner(dungeon, x, y, z, dir);
     }
 
     @Override
@@ -85,7 +85,7 @@ public class GCMarsRoomSpawner extends GCCoreDungeonRoom
             final TileEntityMobSpawner spawner = (TileEntityMobSpawner) this.worldObj.getBlockTileEntity(spawnerCoords.posX, spawnerCoords.posY, spawnerCoords.posZ);
             if (spawner != null)
             {
-                spawner.getSpawnerLogic().setMobID(GCMarsRoomSpawner.getMob(rand));
+                spawner.getSpawnerLogic().setMobID(GCVenusRoomSpawner.getMob(rand));
             }
         }
     }
