@@ -84,16 +84,10 @@ public class GCVenus2Block extends Block implements IDetectableResource, IPlanta
         this.venus2BlockIcons[4] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "meteorOre");
         this.venus2BlockIcons[5] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "gemOre");
         this.venus2BlockIcons[6] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "sulferOre");
-        this.venus2BlockIcons[7] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "basaltVenus");
-        this.venus2BlockIcons[8] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "cobblestoneVenus");
-        this.venus2BlockIcons[9] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "grassVenus");
-        this.venus2BlockIcons[10] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "dirtVenus");
-        this.venus2BlockIcons[11] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "stoneVenus");
-        this.venus2BlockIcons[12] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "dungeonVenus");
-        this.venus2BlockIcons[13] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "gemBlock");
-        this.venus2BlockIcons[14] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "sulferBlock");
-        this.venus2BlockIcons[15] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "meteorBlock");;
-        this.venus2BlockIcons[16] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "blank");
+        this.venus2BlockIcons[7] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "cobblestoneVenus");
+        this.venus2BlockIcons[8] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "grassVenus");
+        this.venus2BlockIcons[9] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "dirtVenus");
+        this.venus2BlockIcons[10] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "stoneVenus");
     }
 
     @Override
@@ -170,16 +164,6 @@ public class GCVenus2Block extends Block implements IDetectableResource, IPlanta
             return this.venus2BlockIcons[9];
         case 10:
             return this.venus2BlockIcons[10];
-        case 11:
-            return this.venus2BlockIcons[11];
-        case 12:
-            return this.venus2BlockIcons[12];
-        case 13:
-            return this.venus2BlockIcons[13];
-        case 14:
-            return this.venus2BlockIcons[14];
-        case 15:
-            return this.venus2BlockIcons[15];
         }
 
         return this.venus2BlockIcons[1];

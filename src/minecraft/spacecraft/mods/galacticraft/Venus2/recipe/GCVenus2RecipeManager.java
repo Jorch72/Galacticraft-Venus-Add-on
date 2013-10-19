@@ -30,8 +30,6 @@ public class GCVenus2RecipeManager
 
         RecipeUtil.addRecipe(new ItemStack(GCVenus2Items.gemBoots), new Object[] { "X X", "X X", 'X', new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 2) });
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenus2Blocks.marsBlock, 1, 8), new Object[] { "XXX", "XXX", "XXX", 'X', "ingotDesh" });
-        
         RecipeUtil.addRecipe(new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 1), new Object[] { "X", "X", 'X', "ingotDesh" });
 
         RecipeUtil.addRecipe(new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 4), new Object[] { "XWX", "XYX", " Z ", 'W', Item.diamond, 'X', Item.leather, 'Y', Item.slimeBall, 'Z', Block.chest });
@@ -56,16 +54,11 @@ public class GCVenus2RecipeManager
 
         RecipeUtil.addRecipe(new ItemStack(GCVenus2Items.gemLeggings), new Object[] { "XXX", "X X", "X X", 'X', new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 2) });
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenus2Items.venus2ItemBasic, 9, 2), new Object[] { "X", 'X', new ItemStack(GCVenus2Blocks.marsBlock, 1, 8) });
+        RecipeUtil.addRecipe(new ItemStack(GCVenus2Items.venus2ItemBasic, 9, 2), new Object[] { "X", 'X', new ItemStack(GCVenus2Blocks.venus2Block, 1, 8) });
 
         
         // Smelting
         FurnaceRecipes.smelting().addSmelting(GCVenus2Items.venus2ItemBasic.itemID, 0, new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 2), 0.2F);
-        FurnaceRecipes.smelting().addSmelting(GCVenus2Blocks.marsBlock.blockID, 4, new ItemStack(GCVenus2Blocks.marsBlock, 1, 9), 0.0F);
-        FurnaceRecipes.smelting().addSmelting(GCVenus2Blocks.marsBlock.blockID, 0, OreDictionary.getOres("ingotCopper").get(0), 1.0F);
-        FurnaceRecipes.smelting().addSmelting(GCVenus2Blocks.marsBlock.blockID, 1, OreDictionary.getOres("ingotTin").get(0), 1.0F);
-        FurnaceRecipes.smelting().addSmelting(GCVenus2Blocks.marsBlock.blockID, 2, new ItemStack(GCVenus2Items.venus2ItemBasic, 1, 2), 0.2F);
-        FurnaceRecipes.smelting().addSmelting(GCVenus2Blocks.marsBlock.blockID, 3, new ItemStack(Item.ingotIron), 0.2F);
 
         // Schematic
         HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();

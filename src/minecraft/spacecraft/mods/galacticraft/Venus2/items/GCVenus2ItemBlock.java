@@ -74,49 +74,24 @@ public class GCVenus2ItemBlock extends ItemBlock
             name = "sulferOre";
             break;
         }
-		case 7:
-        {
-            name = "basaltVenus";
-            break;
-        }
-        case 8:
+        case 7:
         {
             name = "cobblestoneVenus";
             break;
         }
-        case 9:
+        case 8:
         {
             name = "grassVenus";
             break;
         }
-        case 10:
+        case 9:
         {
             name = "dirtVenus";
             break;
         }
-        case 11:
+        case 10:
         {
             name = "stoneVenus";
-            break;
-        }
-        case 12:
-        {
-            name = "dungeonVenus";
-            break;
-        }
-        case 13:
-        {
-            name = "gemBlock";
-            break;
-        }
-        case 14:
-        {
-            name = "sulferBlock";
-            break;
-        }
-        case 15:
-        {
-            name = "meteorBlock";
             break;
         }
         default:

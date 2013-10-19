@@ -198,7 +198,7 @@ public class GCVenusWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public float getGravity()
     {
-        return 0.025F;
+        return 0.018F;
     }
 
     @Override
@@ -216,7 +216,7 @@ public class GCVenusWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public double getFuelUsageMultiplier()
     {
-        return 0.9D;
+        return 2.10D;
     }
 
     @Override
@@ -228,7 +228,7 @@ public class GCVenusWorldProvider extends WorldProvider implements IGalacticraft
     @Override
     public float getFallDamageModifier()
     {
-        return 0.38F;
+        return 0.90F;
     }
 
     @Override

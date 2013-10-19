@@ -33,4 +33,4 @@ tile.GalacticraftVenus.VenusBasalt.name=Venus Basalt
 itemGroup.GalacticraftVenus=Galacticraft Venus
 gui.choosePlanet.desc.venus=Habitable#Volcanic Activity#Gravity: 90%
 
-dimension.GalacticraftVenus.name=Venus
+dimension.Venus.name=Venus
