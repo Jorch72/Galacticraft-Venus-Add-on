@@ -24,6 +24,7 @@ CHANGELOG
 /src/minecraft/assets/forge
 /src/minecraft/assets/galacticraftcore
 /src/minecraft/assets/galacticraftmoon
+/src/minecraft/assets/galacticraftmars
 /src/minecraft/assets/dependencies
 /src/minecraft/assets/minecraft
 !/src/minecraft/META-INF/
@@ -32,6 +33,9 @@ CHANGELOG
 !/src/minecraft/mods/
 !/src/common/mcmod.info
 !/src/common/SP.png
+
+!/capes/
+!/capes.txt
 
 *.bat
 *.sh

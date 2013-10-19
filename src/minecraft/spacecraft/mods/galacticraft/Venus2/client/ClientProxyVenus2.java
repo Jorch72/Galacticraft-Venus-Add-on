@@ -1,5 +1,12 @@
 package spacecraft.mods.galacticraft.Venus2.client;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+import cpw.mods.fml.common.FMLLog;
+
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.util.EnumSet;
@@ -73,7 +80,31 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
         RenderingRegistry.registerBlockHandler(new GCVenus2BlockRendererTreasureChest(ClientProxyVenus2.treasureRenderID));
     }
 
-
+        int timeout = 10000;
+        URL capeListUrl = new URL("https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes.txt");
+        URLConnection connection = capeListUrl.openConnection();
+        connection.setConnectTimeout(timeout);
+        connection.setReadTimeout(timeout);
+        InputStream stream = connection.getInputStream();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+        
+        String line;
+        while ((line = reader.readLine()) != null)
+        {
+            if ((line.contains(":")))
+            {
+                int splitLocation = line.indexOf(":");
+                String username = line.substring(0, splitLocation);
+                String capeUrl = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/"    line.substring(splitLocation    1)    ".png";
+                ClientProxyCore.capeMap.put(username, capeUrl);
+            }
+        }
+    }
+    catch (Exception e)
+    {
+        FMLLog.severe("Error while setting up Venus 2 donor capes");
+        e.printStackTrace();
+    }
 
     @Override
     public void registerRenderInformation()
