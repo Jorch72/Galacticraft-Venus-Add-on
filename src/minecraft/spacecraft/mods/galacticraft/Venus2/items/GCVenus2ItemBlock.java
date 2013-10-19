@@ -66,12 +66,12 @@ public class GCVenus2ItemBlock extends ItemBlock
         }
         case 5:
         {
-            name = "gemVenus";
+            name = "gemOre";
             break;
         }
         case 6:
         {
-            name = "sulferVenus";
+            name = "sulferOre";
             break;
         }
 		case 7:
@@ -96,32 +96,27 @@ public class GCVenus2ItemBlock extends ItemBlock
         }
         case 11:
         {
-            name = "dungeonVenusBrick";
+            name = "stoneVenus";
             break;
         }
         case 12:
         {
-            name = "gemBlockVenus";
+            name = "dungeonVenus";
             break;
         }
         case 13:
         {
-            name = "sulferBlockVenus";
+            name = "gemBlock";
             break;
         }
         case 14:
         {
-            name = "gemBlockVenus";
+            name = "sulferBlock";
             break;
         }
         case 15:
         {
-            name = "meteorBlockVenus";
-            break;
-        }
-        case 16:
-        {
-            name = "stoneVenus";
+            name = "meteorBlock";
             break;
         }
         default:

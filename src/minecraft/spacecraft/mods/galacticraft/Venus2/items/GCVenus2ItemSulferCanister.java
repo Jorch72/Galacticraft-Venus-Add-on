@@ -3,7 +3,6 @@ package spacecraft.mods.galacticraft.Venus2.items;
 import java.util.List;
 
 import spacecraft.mods.galacticraft.Venus2.GCVenus2;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -27,7 +26,7 @@ public class GCVenus2ItemSulferCanister extends Item
         this.setMaxStackSize(1);
         this.setNoRepair();
         this.setUnlocalizedName(assetName);
-        this.setTextureName(GalacticraftCore.TEXTURE_PREFIX + assetName);
+        this.setTextureName(GCVenus2.TEXTURE_PREFIX + assetName);
     }
 
     @Override
@@ -56,11 +55,6 @@ public class GCVenus2ItemSulferCanister extends Item
     @Override
     public String getUnlocalizedName(ItemStack itemStack)
     {
-        if (itemStack.getMaxDamage() - itemStack.getItemDamage() == 0)
-        {
-            return "item.emptyLiquidCanister";
-        }
-
         if (itemStack.getItemDamage() == 1)
         {
             return "item.sulferCanister";

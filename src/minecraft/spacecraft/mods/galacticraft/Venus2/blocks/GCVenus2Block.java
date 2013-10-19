@@ -29,7 +29,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class GCVenus2Block extends Block implements IDetectableResource, IPlantableBlock, ITileEntityProvider, ITerraformableBlock
 {
     @SideOnly(Side.CLIENT)
-    private Icon[] marsBlockIcons;
+    private Icon[] venus2BlockIcons;
 
     public GCVenus2Block(int i)
     {
@@ -76,18 +76,24 @@ public class GCVenus2Block extends Block implements IDetectableResource, IPlanta
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.marsBlockIcons = new Icon[11];
-        this.marsBlockIcons[0] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "cobblestone");
-        this.marsBlockIcons[1] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "decoration_desh");
-        this.marsBlockIcons[2] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "middle");
-        this.marsBlockIcons[3] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "brick");
-        this.marsBlockIcons[4] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "top");
-        this.marsBlockIcons[5] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "copper");
-        this.marsBlockIcons[6] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "desh");
-        this.marsBlockIcons[7] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "tin");
-        this.marsBlockIcons[8] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "bottom");
-        this.marsBlockIcons[9] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "iron");
-        this.marsBlockIcons[10] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "blank");
+        this.venus2BlockIcons = new Icon[11];
+        this.venus2BlockIcons[0] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "copperOre");
+        this.venus2BlockIcons[1] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "tinOre");
+        this.venus2BlockIcons[2] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "ironOre");
+        this.venus2BlockIcons[3] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "coalOre");
+        this.venus2BlockIcons[4] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "meteorOre");
+        this.venus2BlockIcons[5] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "gemOre");
+        this.venus2BlockIcons[6] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "sulferOre");
+        this.venus2BlockIcons[7] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "basaltVenus");
+        this.venus2BlockIcons[8] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "cobblestoneVenus");
+        this.venus2BlockIcons[9] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "grassVenus");
+        this.venus2BlockIcons[10] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "dirtVenus");
+        this.venus2BlockIcons[11] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "stoneVenus");
+        this.venus2BlockIcons[12] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "dungeonVenus");
+        this.venus2BlockIcons[13] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "gemBlock");
+        this.venus2BlockIcons[14] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "sulferBlock");
+        this.venus2BlockIcons[15] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "meteorBlock");;
+        this.venus2BlockIcons[16] = par1IconRegister.registerIcon(GCVenus2.TEXTURE_PREFIX + "blank");
     }
 
     @Override
@@ -143,40 +149,40 @@ public class GCVenus2Block extends Block implements IDetectableResource, IPlanta
         switch (meta)
         {
         case 0:
-            return this.marsBlockIcons[5];
+            return this.venus2BlockIcons[0];
         case 1:
-            return this.marsBlockIcons[7];
+            return this.venus2BlockIcons[1];
         case 2:
-            return this.marsBlockIcons[6];
+            return this.venus2BlockIcons[2];
         case 3:
-            return this.marsBlockIcons[9];
+            return this.venus2BlockIcons[3];
         case 4:
-            return this.marsBlockIcons[0];
+            return this.venus2BlockIcons[4];
         case 5:
-            return this.marsBlockIcons[4];
+            return this.venus2BlockIcons[5];
         case 6:
-            return this.marsBlockIcons[2];
+            return this.venus2BlockIcons[6];
         case 7:
-            return this.marsBlockIcons[3];
+            return this.venus2BlockIcons[7];
         case 8:
-            return this.marsBlockIcons[1];
+            return this.venus2BlockIcons[8];
         case 9:
-            return this.marsBlockIcons[8];
+            return this.venus2BlockIcons[9];
         case 10:
-            return this.marsBlockIcons[10];
+            return this.venus2BlockIcons[10];
         case 11:
-            return this.marsBlockIcons[11];
+            return this.venus2BlockIcons[11];
         case 12:
-            return this.marsBlockIcons[12];
+            return this.venus2BlockIcons[12];
         case 13:
-            return this.marsBlockIcons[13];
+            return this.venus2BlockIcons[13];
         case 14:
-            return this.marsBlockIcons[14];
+            return this.venus2BlockIcons[14];
         case 15:
-            return this.marsBlockIcons[15];
+            return this.venus2BlockIcons[15];
         }
 
-        return this.marsBlockIcons[1];
+        return this.venus2BlockIcons[1];
     }
 
     @Override
@@ -250,6 +256,14 @@ public class GCVenus2Block extends Block implements IDetectableResource, IPlanta
         case 2:
             return true;
         case 3:
+            return true;
+        case 4:
+            return true;
+        case 5:
+            return true;
+        case 6:
+            return true;
+        case 7:
             return true;
         default:
             return false;
