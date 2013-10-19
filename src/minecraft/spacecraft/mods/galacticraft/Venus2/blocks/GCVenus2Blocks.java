@@ -15,7 +15,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class GCVenus2Blocks
 {
     public static Block marsBlock;
-	public static Block BasaltSlab;
+	public static Block basaltSlab;
     public static Block VenusCobblestone;
     public static Block rock;
     public static Block tier3TreasureChest;
@@ -26,7 +26,7 @@ public class GCVenus2Blocks
         GCVenus2Blocks.marsBlock = new GCVenus2Block(GCVenus2ConfigManager.idBlockVenus2).setHardness(2.2F).setUnlocalizedName("mars");
         GCVenus2Blocks.tier3TreasureChest = new GCVenus2BlockT3TreasureChest(GCVenus2ConfigManager.idBlockTreasureChestT3).setHardness(2.5F).setUnlocalizedName("treasureT3");
         GCVenus2Blocks.blazeEgg = new GCVenus2BlockBlazeEgg(GCVenus2ConfigManager.idBlockBlazeEgg).setHardness(-1.0F).setUnlocalizedName("blazeEgg");
-		GCVenus2Blocks.basaltSlab = new GCVenus2BasaltSlab(GCVenus2ConfigManager.idBlockBasaltSlab).setHardness(-1.0F).setUnlocalizedName("basaltSlab");
+		GCVenus2Blocks.basaltSlab = new GCVenus2BlockBasaltSlab(GCVenus2ConfigManager.idBlockBasaltSlab).setHardness(-1.0F).setUnlocalizedName("basaltSlab");
 //        GCMarsBlocks.tintedGlassPane = new GCMarsBlockTintedGlassPane(GCMarsConfigManager.idBlockTintedGlassPane).setHardness(0.6F).setUnlocalizedName("tintedGlassPane");
     }
 

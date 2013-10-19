@@ -27,6 +27,8 @@ public class GCVenus2Items
     public static Item spaceship;
     public static Item key;
     public static Item schematic;
+    public static Item sulferFuel;
+    public static Item sulferCanister;
 
     public static EnumArmorMaterial ARMORGEM = EnumHelper.addArmorMaterial("GEM", 42, new int[] { 4, 9, 7, 4 }, 12);
     public static EnumToolMaterial TOOLGEM = EnumHelper.addToolMaterial("GEM", 3, 1024, 5.0F, 2.5F, 8);
@@ -47,6 +49,8 @@ public class GCVenus2Items
         GCVenus2Items.spaceship = new GCVenus2ItemSpaceshipTier3(GCVenus2ConfigManager.idItemSpaceshipTier3).setUnlocalizedName("spaceshipTier3");
         GCVenus2Items.key = new GCVenus2ItemKey(GCVenus2ConfigManager.idItemKeyT2).setUnlocalizedName("key");
         GCVenus2Items.schematic = new GCVenus2ItemSchematic(GCVenus2ConfigManager.idItemSchematicMars).setUnlocalizedName("schematic");
+        GCVenus2Items.sulferFuel = new GCVenus2ItemSulferFuel(GCVenus2ConfigManager.idItemSulferFuel, "sulferFuel");
+        GCVenus2Items.sulferCanister = new GCVenus2ItemSulferCanister(GCVenus2ConfigManager.idItemSulferCanister, "sulferCanister");
     }
 
     public static void registerHarvestLevels()

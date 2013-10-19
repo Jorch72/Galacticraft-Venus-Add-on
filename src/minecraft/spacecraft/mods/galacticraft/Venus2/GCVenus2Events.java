@@ -65,8 +65,8 @@ public class GCVenus2Events
 
 //                if (entitywolf.isTamed())
                 {
-                    event.entityLiving.recentlyHit = 100;
-                    event.entityLiving.attackingPlayer = null;
+//                    event.entityLiving.recentlyHit = 100;
+//                    event.entityLiving.attackingPlayer = null;
                 }
             }
         }

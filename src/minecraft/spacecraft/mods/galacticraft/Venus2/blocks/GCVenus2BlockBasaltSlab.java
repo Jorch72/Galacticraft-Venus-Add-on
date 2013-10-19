@@ -6,6 +6,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import java.util.List;
 import java.util.Random;
 
+import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -15,14 +16,14 @@ import net.minecraft.util.Facing;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class GCVenus2BasaltSlab extends Block
+public class GCVenus2BlockBasaltSlab extends Block
 {
     private boolean isDoubleSlab;
 
-	public GCVenus2BasaltSlab(int id, Material material)
+	public GCVenus2BlockBasaltSlab(int i)
     {
-    	super( id, material.rock);
-        this.setCreativeTab(GalacticraftVenus3.GalacticraftVenus2Tab);
+        super(i, Material.rock);
+        this.setCreativeTab(GCVenus2.galacticraftVenus2Tab);
     }
 
     /**

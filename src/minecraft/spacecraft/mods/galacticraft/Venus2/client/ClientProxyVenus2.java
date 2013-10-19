@@ -7,6 +7,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 import cpw.mods.fml.common.FMLLog;
+
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.util.EnumSet;
@@ -27,6 +28,7 @@ import spacecraft.mods.galacticraft.Venus2.dimension.GCVenus2WorldProvider;
 import spacecraft.mods.galacticraft.Venus2.entities.GCVenus2EntityRocketT3;
 import spacecraft.mods.galacticraft.Venus2.items.GCVenus2Items;
 import spacecraft.mods.galacticraft.Venus2.tile.GCVenus2TileEntityTreasureChest;
+import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderSpaceship;
 import micdoodle8.mods.galacticraft.core.client.render.item.GCCoreItemRendererKey;
@@ -81,37 +83,35 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
         NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCVenus2.CHANNEL, Side.CLIENT);
         ClientProxyVenus2.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new GCVenus2BlockRendererTreasureChest(ClientProxyVenus2.treasureRenderID));
-    }
-    
-//    try
-    {
-        int timeout = 10000;
-        URL capeListUrl = new URL("https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes.txt");
-        URLConnection connection = capeListUrl.openConnection();
-        connection.setConnectTimeout(timeout);
-        connection.setReadTimeout(timeout);
-        InputStream stream = connection.getInputStream();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
-        
-        String line;
-        while ((line = reader.readLine()) != null)
+
+        try
         {
-            if ((line.contains(":")))
+            int timeout = 10000;
+            URL capeListUrl = new URL("https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-ont/master/capes.txt");
+            URLConnection connection = capeListUrl.openConnection();
+            connection.setConnectTimeout(timeout);
+            connection.setReadTimeout(timeout);
+            InputStream stream = connection.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+            
+            String line;
+            while ((line = reader.readLine()) != null)
             {
-                int splitLocation = line.indexOf(":");
-                String username = line.substring(0, splitLocation);
-                String capeUrl = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/" + line.substring(splitLocation + 1) + ".png";
-                ClientProxyVenus2.capeMap.put(username, capeUrl);
+                if ((line.contains(":")))
+                {
+                    int splitLocation = line.indexOf(":");
+                    String username = line.substring(0, splitLocation);
+                    String capeUrl = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/" + line.substring(splitLocation + 1) + ".png";
+                    ClientProxyVenus2.capeMap.put(username, capeUrl);
+                }
             }
         }
-    }
-    catch (Exception e)
-    {
-        FMLLog.severe("Error while setting up Venus donor capes");
-        e.printStackTrace();
-    }
-
-
+        catch (Exception e)
+        {
+            FMLLog.severe("Error while setting up Venus donor capes");
+            e.printStackTrace();
+        }
+     
     @Override
     public void registerRenderInformation()
     {

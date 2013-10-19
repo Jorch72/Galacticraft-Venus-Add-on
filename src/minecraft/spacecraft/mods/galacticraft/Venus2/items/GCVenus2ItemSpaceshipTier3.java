@@ -116,7 +116,7 @@ public class GCVenus2ItemSpaceshipTier3 extends Item implements IHoldableItem
                 {
                     if (rocket instanceof EntityTieredRocket)
                     {
-                        ((EntityTieredRocket) rocket).spaceshipFuelTank.fill(new FluidStack(GalacticraftCore.FUEL, rocket.getMaxFuel()), true);
+                        ((EntityTieredRocket) rocket).spaceshipFuelTank.fill(new FluidStack(GalacticraftCore.fluidFuel, rocket.getMaxFuel()), true);
                     }
 //                    else if (rocket instanceof GCMarsEntityCargoRocket)
                     {
