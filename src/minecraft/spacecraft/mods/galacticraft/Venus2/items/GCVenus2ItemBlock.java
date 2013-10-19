@@ -41,82 +41,87 @@ public class GCVenus2ItemBlock extends ItemBlock
         {
         case 0:
         {
-            name = "coppervenus";
+            name = "copperOreVenus";
             break;
         }
         case 1:
         {
-            name = "tinvenus";
+            name = "tinOreVenus";
             break;
         }
         case 2:
         {
-            name = "ironvenus";
+            name = "ironOreVenus";
             break;
         }
         case 3:
         {
-            name = "coalmars";
+            name = "coalOreVenus";
             break;
         }
         case 4:
         {
-            name = "meteormars";
+            name = "meteorOreVenus";
             break;
         }
         case 5:
         {
-            name = "gemmars";
+            name = "gemVenus";
             break;
         }
         case 6:
         {
-            name = "sulfermars";
+            name = "sulferVenus";
             break;
         }
-        case 7:
+		case 7:
         {
-            name = "marscobblestone";
+            name = "basaltVenus";
             break;
         }
         case 8:
         {
-            name = "marsgrass";
+            name = "cobblestoneVenus";
             break;
         }
         case 9:
         {
-            name = "marsdirt";
+            name = "grassVenus";
             break;
         }
         case 10:
         {
-            name = "marsdungeon";
+            name = "dirtVenus";
             break;
         }
         case 11:
         {
-            name = "venusgemblock";
+            name = "dungeonVenusBrick";
             break;
         }
         case 12:
         {
-            name = "sulferblock";
+            name = "gemBlockVenus";
             break;
         }
         case 13:
         {
-            name = "gemblock";
+            name = "sulferBlockVenus";
             break;
         }
         case 14:
         {
-            name = "meteorblock";
+            name = "gemBlockVenus";
             break;
         }
         case 15:
         {
-            name = "marsstone";
+            name = "meteorBlockVenus";
+            break;
+        }
+        case 16:
+        {
+            name = "stoneVenus";
             break;
         }
         default:

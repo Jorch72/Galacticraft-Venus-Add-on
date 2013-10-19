@@ -27,6 +27,7 @@ public class GCVenus2ConfigManager
     public static int idBlockVenus2;
     public static int idBlockTreasureChestT3;
     public static int idBlockBlazeEgg;
+	public static int idBlockBasaltSlab;
 
     // ITEMS
     public static int idItemVenus2Basic;
@@ -72,6 +73,7 @@ public class GCVenus2ConfigManager
             GCVenus2ConfigManager.idBlockVenus2 = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockVenus2", 3390).getInt(3390);
             GCVenus2ConfigManager.idBlockTreasureChestT3 = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockTreasureChestT3", 3394).getInt(3394);
             GCVenus2ConfigManager.idBlockBlazeEgg = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockBlazeEgg", 3396).getInt(3396);
+			GCVenus2ConfigManager.idBlockBasaltSlab = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockBasaltSlab", 3700).getInt(3700);
 
             GCVenus2ConfigManager.idItemVenus2Basic = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemvenus2ItemBasic", 9905).getInt(9905);
             GCVenus2ConfigManager.idItemSpaceshipTier3 = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier3", 9906).getInt(9906);
