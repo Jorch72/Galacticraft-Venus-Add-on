@@ -1,5 +1,5 @@
-mattparks:capeDevGreen
-flashy3:capeDevYellow
-ghostheart305:capeSupOrange
-dinammar:capeSupGreen
-goldenkat99:capeSupViolet
+mattparks:capeGreen
+flashy3:capeOrange
+ghostheart305:capeBlue
+dinammar:capeViolet
+goldenkat99:capeRed
