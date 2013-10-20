@@ -72,7 +72,6 @@ public class GCVenus2
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        MinecraftForge.EVENT_BUS.register(new GCVenus2Events());
         new GCVenus2ConfigManager(new File(event.getModConfigurationDirectory(), "Spacecraft/venus2.conf"));
 
         GCVenus2Blocks.initBlocks();

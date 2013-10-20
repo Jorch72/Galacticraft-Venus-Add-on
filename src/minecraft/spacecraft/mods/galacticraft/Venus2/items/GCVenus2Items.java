@@ -23,6 +23,7 @@ public class GCVenus2Items
     public static Item gemLeggings;
     public static Item gemBoots;
     
+    public static Item venusBattery;
     public static Item rocketEngine;
     public static Item spaceship;
     public static Item key;
@@ -51,6 +52,7 @@ public class GCVenus2Items
         GCVenus2Items.schematic = new GCVenus2ItemSchematic(GCVenus2ConfigManager.idItemSchematicMars).setUnlocalizedName("schematic");
         GCVenus2Items.sulferFuel = new GCVenus2ItemSulferFuel(GCVenus2ConfigManager.idItemSulferFuel, "sulferFuel");
         GCVenus2Items.sulferCanister = new GCVenus2ItemSulferCanister(GCVenus2ConfigManager.idItemSulferCanister, "sulferCanister");
+        GCVenus2Items.venusBattery = new GCVenus2ItemBattery(GCVenus2ConfigManager.idItemVenusBattery, "venusBattery");
     }
 
     public static void registerHarvestLevels()

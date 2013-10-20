@@ -15,6 +15,9 @@ item.key.T3.name=Tier 3 Dungeon Key
 item.spaceshipTier3.cargoRocket.name=Tier 2 Cargo Rocket
 item.engine.tier2booster.name=Tier 2 Rocket Booster
 item.engine.tier3engine.name=Tier 3 Rocket Engine
+item.venusPowerCrystal.name=Venus Power Crystal
+item.venusPowerCell.name=Venus Power Cell
+item.venusBattery.name=Venus Battery
 
 # TOOLS
 item.gemPick.name=Gem Pickaxe

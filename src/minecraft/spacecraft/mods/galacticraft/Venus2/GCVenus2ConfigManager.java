@@ -37,6 +37,7 @@ public class GCVenus2ConfigManager
     public static int idItemRocketEngine;
     public static int idItemSulferFuel;
     public static int idItemSulferCanister;
+    public static int idItemVenusBattery;
     
     // ARMOR
     public static int idArmorGemHelmet;
@@ -84,6 +85,7 @@ public class GCVenus2ConfigManager
             GCVenus2ConfigManager.idItemRocketEngine = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemRocketEngineMars", 9939).getInt(9939);
             GCVenus2ConfigManager.idItemSulferFuel = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSulferFuel", 9993).getInt(9993);
             GCVenus2ConfigManager.idItemSulferCanister = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSulferCanister", 9994).getInt(9994);
+            GCVenus2ConfigManager.idItemVenusBattery = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemVenusBattery", 9995).getInt(9995);
 
             GCVenus2ConfigManager.idToolGemSword = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemSword", 9907).getInt(9907);
             GCVenus2ConfigManager.idToolGemPickaxe = GCVenus2ConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemPickaxe", 9908).getInt(9908);
