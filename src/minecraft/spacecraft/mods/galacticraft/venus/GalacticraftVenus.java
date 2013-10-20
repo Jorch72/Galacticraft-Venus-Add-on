@@ -6,8 +6,6 @@ import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.world.IPlanet;
 import spacecraft.mods.galacticraft.venus.block.*;
-import spacecraft.mods.galacticraft.venus.dimension.GCVenusWorldProvider;
-import spacecraft.mods.galacticraft.venus.wgen.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -28,8 +26,6 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
   public class GalacticraftVenus 
   {
-	    public static final IPlanet VenusPlanet = new VenusPlanet();
-	    
 	    public static CreativeTabs GalacticraftVenusTab;
 	    
 	    public static final String CHANNEL = "GalacticraftVenus";
@@ -113,8 +109,6 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
         @EventHandler
         public void preInit(FMLPreInitializationEvent event) 
         {
-            GalacticraftRegistry.registerTeleportType(GCVenusWorldProvider.class, new GCVenusTeleportType());
-    		GalacticraftRegistry.registerCelestialBody(new VenusPlanet());
     		new GCVenusConfigManager(new File(event.getModConfigurationDirectory(), GalacticraftVenus.CONFIG_FILE));
         }
         
