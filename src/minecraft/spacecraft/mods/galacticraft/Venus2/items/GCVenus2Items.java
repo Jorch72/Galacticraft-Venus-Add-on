@@ -54,7 +54,7 @@ public class GCVenus2Items
         GCVenus2Items.sulferCanister = new GCVenus2ItemSulferCanister(GCVenus2ConfigManager.idItemSulferCanister, "sulferCanister");
         GCVenus2Items.venusBattery = new GCVenus2ItemBattery(GCVenus2ConfigManager.idItemVenusBattery, "venusBattery");
     }
-
+    
     public static void registerHarvestLevels()
     {
         MinecraftForge.setToolClass(GCVenus2Items.gemPickaxe, "pickaxe", 4);

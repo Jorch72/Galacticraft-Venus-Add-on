@@ -29,7 +29,7 @@ import cpw.mods.fml.client.FMLClientHandler;
 public class GCVenus2SkyProvider extends IRenderHandler
 {
     private static final ResourceLocation overworldTexture = new ResourceLocation(GalacticraftCore.TEXTURE_DOMAIN, "textures/gui/planets/overworld.png");
-    private static final ResourceLocation galaxyTexture = new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/gui/planets/galaxy.png");
+    private static final ResourceLocation satelliteTexture = new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/gui/planets/satellite.png");
     private static final ResourceLocation sunTexture = new ResourceLocation("textures/environment/sun.png");
 
     public int starGLCallList = GLAllocation.generateDisplayLists(3);
@@ -140,11 +140,11 @@ public class GCVenus2SkyProvider extends IRenderHandler
 
         GL11.glEnable(GL11.GL_TEXTURE_2D);
 
-        // Distant Galaxy:
+        // Satellite:
         var12 = 10.5F;
         GL11.glRotatef(0.0F, 0.0F, 0.0F, 1.0F);
         GL11.glRotatef(150F, 1.0F, 0.0F, 0.0F);
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCVenus2SkyProvider.galaxyTexture);
+        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCVenus2SkyProvider.satelliteTexture);
         GL11.glColor4f(0.4F, 0.4F, 0.4F, 1.0F);
         var23.startDrawingQuads();
         var23.addVertexWithUV(-var12, -100.0D, var12, 0, 1);
