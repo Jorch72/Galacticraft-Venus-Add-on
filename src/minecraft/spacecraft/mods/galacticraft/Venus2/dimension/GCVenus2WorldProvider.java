@@ -3,8 +3,8 @@ package spacecraft.mods.galacticraft.venus2.dimension;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import spacecraft.mods.galacticraft.venus2.GCVenus2ConfigManager;
-import spacecraft.mods.galacticraft.venus2.wgen.GCVenusChunkProvider;
-import spacecraft.mods.galacticraft.venus2.wgen.GCVenusWorldChunkManager;
+import spacecraft.mods.galacticraft.venus2.wgen.GCVenus2ChunkProvider;
+import spacecraft.mods.galacticraft.venus2.wgen.GCVenus2WorldChunkManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
@@ -44,7 +44,7 @@ public class GCVenus2WorldProvider extends WorldProvider implements IGalacticraf
     @Override
     public void registerWorldChunkManager()
     {
-        this.worldChunkMgr = new GCVenusWorldChunkManager();
+        this.worldChunkMgr = new GCVenus2WorldChunkManager();
     }
 
     @SideOnly(Side.CLIENT)
@@ -99,7 +99,7 @@ public class GCVenus2WorldProvider extends WorldProvider implements IGalacticraf
     @Override
     public IChunkProvider createChunkGenerator()
     {
-        return new GCVenusChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
+        return new GCVenus2ChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
     }
 
     @Override

@@ -5,10 +5,7 @@ import java.io.File;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.world.IPlanet;
-import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
-import micdoodle8.mods.galacticraft.moon.items.GCMoonItems;
 import spacecraft.mods.galacticraft.venus.block.*;
-import spacecraft.mods.galacticraft.venus.items.*;
 import spacecraft.mods.galacticraft.venus.dimension.GCVenusWorldProvider;
 import spacecraft.mods.galacticraft.venus.wgen.*;
 import net.minecraft.block.Block;
@@ -110,9 +107,6 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		//Block Evolved Blaze Egg
 		public final static Block EvolvedBlazeEgg = new VenusBlazeEgg(627) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("EvolvedBlazeEgg") .setTextureName("galacticraftvenus:evolvedBlazeEgg");				
 
-		//Id 734-733 tooken by GalacticraftDevVenus
-		
-		//Where the client and server proxy is loaded.
         @SidedProxy(clientSide="spacecraft.mods.galacticraft.venus.client.ClientProxy", serverSide="spacecraft.mods.galacticraft.venus.CommonProxy")
         public static CommonProxy proxy;
         
@@ -170,47 +164,13 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				LanguageRegistry.addName(VenusBasalt, "Basalt");
 				LanguageRegistry.addName(VenusHalfBasalt, "Basalt Slab");
 				LanguageRegistry.addName(EvolvedBlazeEgg, "Evolved Blaze Egg");
-
-				//Registring Item Names
-                
-				//Adding ItemStack for recipes
-                ItemStack VenusCobblestone = new ItemStack(GalacticraftVenus.VenusCobblestone);
-                ItemStack VenusStone = new ItemStack(GalacticraftVenus.VenusStone);                
-                ItemStack VenusSulferBlock = new ItemStack(GalacticraftVenus.VenusSulferBlock);
-                ItemStack VenusRedGemBlock = new ItemStack(GalacticraftVenus.VenusRedGemBlock);
-                ItemStack VenusCoalOre = new ItemStack(GalacticraftVenus.VenusCoalOre);
-                ItemStack VenusTinOre = new ItemStack(GalacticraftVenus.VenusTinOre);
-                ItemStack VenusCopperOre = new ItemStack(GalacticraftVenus.VenusCopperOre);  
-//              ItemStack ingotTin = new ItemStack(GCCoreItems.basicItem.ingotTin);  
-//              ItemStack ingotCopper = new ItemStack(GCCoreItems.basicItem.ingotCopper);
-                
-                ItemStack meteoricIronRaw = new ItemStack(GCMoonItems.meteoricIronRaw);
-                ItemStack furnace = new ItemStack(Block.furnaceIdle);
-                ItemStack coal = new ItemStack(Item.coal);
-                ItemStack ingotIron = new ItemStack(Item.ingotIron);
-                
-                //Register Crafting
-                GameRegistry.addRecipe(furnace, "xxx", "x x", "xxx", 'x', VenusCobblestone);
-                
-                //Register Galacticraft Compressor Recipes
-//              CompressorRecipes.recipes.add(VenusPlate, "xxx", "   ", "yyy", 'x', SulferIngot, 'y', RedGem);
-//              CompressorRecipes.recipes.add(HeavyVenusPlate, "xxx", "   ", "xxx", 'x', VenusPlate);
-                
-                
-                //Register Smelting
-                GameRegistry.addSmelting(GalacticraftVenus.VenusCobblestone.blockID, VenusStone, 0.7f);
-                GameRegistry.addSmelting(GalacticraftVenus.VenusMeteorOre.blockID, meteoricIronRaw, 0.7f);;
-                GameRegistry.addSmelting(GalacticraftVenus.VenusCoalOre.blockID, coal, 0.7f);
-                GameRegistry.addSmelting(GalacticraftVenus.VenusIronOre.blockID, ingotIron, 0.7f); 
-//              GameRegistry.addSmelting(GalacticraftVenus.VenusTinOre.blockID, ingotTin, 0.7f);
-//              GameRegistry.addSmelting(GalacticraftVenus.VenusCopperOre.blockID, ingotCopper, 0.7f);
         }
         
         @EventHandler
         public void postInit(FMLPostInitializationEvent event) 
         {
-        	
         }
 }
+
 
 
