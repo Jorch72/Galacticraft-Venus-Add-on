@@ -15,7 +15,7 @@ import net.minecraft.item.ItemStack;
 
 public class GCVenus2Util
 {
-    public static void addRocketBenchT2Recipe(ItemStack result, HashMap<Integer, ItemStack> input)
+    public static void addRocketBenchT3Recipe(ItemStack result, HashMap<Integer, ItemStack> input)
     {
         GalacticraftRegistry.addT2RocketRecipe(new GCCoreNasaWorkbenchRecipe(result, input));
     }

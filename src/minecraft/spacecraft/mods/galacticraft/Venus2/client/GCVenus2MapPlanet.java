@@ -16,19 +16,19 @@ public class GCVenus2MapPlanet implements IMapObject
     @Override
     public float getDistanceFromCenter()
     {
-        return 1.52F;
+        return 0.8F;
     }
 
     @Override
     public float getPhaseShift()
     {
-        return 480.0F;
+        return 950F;
     }
 
     @Override
     public float getStretchValue()
     {
-        return 1.88F;
+        return 1.5F;
     }
 
     @Override

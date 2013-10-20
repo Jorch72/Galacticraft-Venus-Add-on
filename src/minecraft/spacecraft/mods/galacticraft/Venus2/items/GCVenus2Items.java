@@ -2,6 +2,7 @@ package spacecraft.mods.galacticraft.venus2.items;
 
 import spacecraft.mods.galacticraft.venus2.GCVenus2ConfigManager;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
+import micdoodle8.mods.galacticraft.core.items.GCCoreItemBow;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItemRocketEngine;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import net.minecraft.item.EnumArmorMaterial;
@@ -22,6 +23,7 @@ public class GCVenus2Items
     public static Item gemChestplate;
     public static Item gemLeggings;
     public static Item gemBoots;
+    public static Item bowVenus;
     
     public static Item venusBattery;
     public static Item rocketEngine;
@@ -46,6 +48,7 @@ public class GCVenus2Items
         GCVenus2Items.gemChestplate = new GCVenus2ItemArmor(GCVenus2ConfigManager.idArmorGemChestplate, GCVenus2Items.ARMORGEM, 7, 1, false).setUnlocalizedName("gemChestplate");
         GCVenus2Items.gemLeggings = new GCVenus2ItemArmor(GCVenus2ConfigManager.idArmorGemLeggings, GCVenus2Items.ARMORGEM, 7, 2, false).setUnlocalizedName("gemLeggings");
         GCVenus2Items.gemBoots = new GCVenus2ItemArmor(GCVenus2ConfigManager.idArmorGemBoots, GCVenus2Items.ARMORGEM, 7, 3, false).setUnlocalizedName("gemBoots");
+        GCVenus2Items.bowVenus = new GCVenus2ItemBow(GCVenus2ConfigManager.idItemVenusBow, "venusBow");
         GCVenus2Items.rocketEngine = new GCVenus2ItemRocketEngine(GCVenus2ConfigManager.idItemRocketEngine, "engine");
         GCVenus2Items.spaceship = new GCVenus2ItemSpaceshipTier3(GCVenus2ConfigManager.idItemSpaceshipTier3).setUnlocalizedName("spaceshipTier3");
         GCVenus2Items.key = new GCVenus2ItemKey(GCVenus2ConfigManager.idItemKeyT2).setUnlocalizedName("key");

@@ -83,49 +83,49 @@ public class GCVenus2RecipeManager
         input.put(19, null);
         input.put(20, null);
         input.put(21, null);
-        GCVenus2Util.addRocketBenchT2Recipe(new ItemStack(GCVenus2Items.spaceship, 1, 0), input);
+        GCVenus2Util.addRocketBenchT3Recipe(new ItemStack(GCVenus2Items.spaceship, 1, 0), input);
 
         HashMap<Integer, ItemStack> input2 = new HashMap<Integer, ItemStack>(input);
         input2.put(19, new ItemStack(Block.chest));
         input2.put(20, null);
         input2.put(21, null);
-        GCVenus2Util.addRocketBenchT2Recipe(new ItemStack(GCVenus2Items.spaceship, 1, 1), input2);
+        GCVenus2Util.addRocketBenchT3Recipe(new ItemStack(GCVenus2Items.spaceship, 1, 1), input2);
 
         input2 = new HashMap<Integer, ItemStack>(input);
         input2.put(19, null);
         input2.put(20, new ItemStack(Block.chest));
         input2.put(21, null);
-        GCVenus2Util.addRocketBenchT2Recipe(new ItemStack(GCVenus2Items.spaceship, 1, 1), input2);
+        GCVenus2Util.addRocketBenchT3Recipe(new ItemStack(GCVenus2Items.spaceship, 1, 1), input2);
 
         input2 = new HashMap<Integer, ItemStack>(input);
         input2.put(19, null);
         input2.put(20, null);
         input2.put(21, new ItemStack(Block.chest));
-        GCVenus2Util.addRocketBenchT2Recipe(new ItemStack(GCVenus2Items.spaceship, 1, 1), input2);
+        GCVenus2Util.addRocketBenchT3Recipe(new ItemStack(GCVenus2Items.spaceship, 1, 1), input2);
 
         input2 = new HashMap<Integer, ItemStack>(input);
         input2.put(19, new ItemStack(Block.chest));
         input2.put(20, new ItemStack(Block.chest));
         input2.put(21, null);
-        GCVenus2Util.addRocketBenchT2Recipe(new ItemStack(GCVenus2Items.spaceship, 1, 2), input2);
+        GCVenus2Util.addRocketBenchT3Recipe(new ItemStack(GCVenus2Items.spaceship, 1, 2), input2);
 
         input2 = new HashMap<Integer, ItemStack>(input);
         input2.put(19, new ItemStack(Block.chest));
         input2.put(20, null);
         input2.put(21, new ItemStack(Block.chest));
-        GCVenus2Util.addRocketBenchT2Recipe(new ItemStack(GCVenus2Items.spaceship, 1, 2), input2);
+        GCVenus2Util.addRocketBenchT3Recipe(new ItemStack(GCVenus2Items.spaceship, 1, 2), input2);
 
         input2 = new HashMap<Integer, ItemStack>(input);
         input2.put(19, null);
         input2.put(20, new ItemStack(Block.chest));
         input2.put(21, new ItemStack(Block.chest));
-        GCVenus2Util.addRocketBenchT2Recipe(new ItemStack(GCVenus2Items.spaceship, 1, 2), input2);
+        GCVenus2Util.addRocketBenchT3Recipe(new ItemStack(GCVenus2Items.spaceship, 1, 2), input2);
 
         input2 = new HashMap<Integer, ItemStack>(input);
         input2.put(19, new ItemStack(Block.chest));
         input2.put(20, new ItemStack(Block.chest));
         input2.put(21, new ItemStack(Block.chest));
-        GCVenus2Util.addRocketBenchT2Recipe(new ItemStack(GCVenus2Items.spaceship, 1, 3), input2);
+        GCVenus2Util.addRocketBenchT3Recipe(new ItemStack(GCVenus2Items.spaceship, 1, 3), input2);
         
         //
         

@@ -77,24 +77,24 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
         ClientProxyVenus2.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new GCVenus2BlockRendererTreasureChest(ClientProxyVenus2.treasureRenderID));
 
-        //Blue
+        //Blue Cape
         String capeBlueString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeBlue.png";
-        //Green
+        //Green Cape
         String capeGreenString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeGreen.png";
-        //Orange
+        //Orange Cape
         String capeOrangeString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeOrange.png";
-        //Red
+        //Red Cape
         String capeRedString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeRed.png";
-        //Violet
+        //Violet Cape
         String capeVioletString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeViolet.png";
-        //Yellow
+        //Yellow Cape
         String capeYellowString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeYellow.png";
 
         ClientProxyCore.capeMap.put("mattparks", capeBlueString);     
         ClientProxyCore.capeMap.put("flashy3", capeOrangeString); 
-        ClientProxyCore.capeMap.put("ghostheart305", capeBlueString); 
+        ClientProxyCore.capeMap.put("ghostheart305", capeRedString); 
         ClientProxyCore.capeMap.put("dinammar", capeVioletString); 
-        ClientProxyCore.capeMap.put("goldenkat99", capeRedString); 
+        ClientProxyCore.capeMap.put("goldenkat99", capeOrangeString); 
     }
 
     @Override
@@ -102,8 +102,8 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
     {
         IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftvenus2/models/cargoRocket.obj");
         ClientRegistry.bindTileEntitySpecialRenderer(GCVenus2TileEntityTreasureChest.class, new GCVenus2TileEntityTreasureChestRenderer());
-        RenderingRegistry.registerEntityRenderingHandler(GCVenus2EntityRocketT3.class, new GCCoreRenderSpaceship(new GCVenus2ModelSpaceshipTier3(), GCVenus2.TEXTURE_DOMAIN, "rocketT2"));
-        RenderingRegistry.addNewArmourRendererPrefix("desh");
+        RenderingRegistry.registerEntityRenderingHandler(GCVenus2EntityRocketT3.class, new GCCoreRenderSpaceship(new GCVenus2ModelSpaceshipTier3(), GCVenus2.TEXTURE_DOMAIN, "rocketT3"));
+        RenderingRegistry.addNewArmourRendererPrefix("gem");
         MinecraftForgeClient.registerItemRenderer(GCVenus2Items.spaceship.itemID, new GCVenus2ItemRendererSpaceshipT3(cargoRocketModel));
         MinecraftForgeClient.registerItemRenderer(GCVenus2Items.key.itemID, new GCCoreItemRendererKey(new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/model/treasure.png")));
     }

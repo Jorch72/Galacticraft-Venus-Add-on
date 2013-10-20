@@ -67,8 +67,6 @@ public class GCVenus2
     public static final String TEXTURE_DOMAIN = "galacticraftvenus2";
     public static final String TEXTURE_PREFIX = GCVenus2.TEXTURE_DOMAIN + ":";
 
-    public static Fluid SLUDGE;
-
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
@@ -129,7 +127,7 @@ public class GCVenus2
 
         GalacticraftRegistry.registerTeleportType(GCVenus2WorldProvider.class, new GCVenus2TeleportType());
         GalacticraftRegistry.registerCelestialBody(new GCVenus2Planet());
-        GalacticraftRegistry.registerRocketGui(GCVenus2WorldProvider.class, new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/gui/marsRocketGui.png"));
+        GalacticraftRegistry.registerRocketGui(GCVenus2WorldProvider.class, new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/gui/venusRocketGui.png"));
         GalacticraftRegistry.addDungeonLoot(2, new ItemStack(GCVenus2Items.schematic, 1, 0));
         GalacticraftRegistry.addDungeonLoot(2, new ItemStack(GCVenus2Items.schematic, 1, 1));
 

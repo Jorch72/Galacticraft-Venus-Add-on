@@ -11,13 +11,13 @@ public class GCVenus2SlotRenderer implements ICelestialBodyRenderer
     @Override
     public ResourceLocation getPlanetSprite()
     {
-        return new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/gui/planets/mars.png");
+        return new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/gui/planets/venus.png");
     }
 
     @Override
     public String getPlanetName()
     {
-        return "Mars";
+        return "Venus2";
     }
 
     @Override

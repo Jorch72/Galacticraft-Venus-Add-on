@@ -25,7 +25,7 @@ public class GCVenus2ItemRendererSpaceshipT3 extends GCCoreItemRendererSpaceship
 
     public GCVenus2ItemRendererSpaceshipT3(IModelCustom cargoRocketModel)
     {
-        super(new GCVenus2EntityRocketT3(FMLClientHandler.instance().getClient().theWorld), new GCVenus2ModelSpaceshipTier3(), new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/model/rocketT2.png"));
+        super(new GCVenus2EntityRocketT3(FMLClientHandler.instance().getClient().theWorld), new GCVenus2ModelSpaceshipTier3(), new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/model/rocketT3.png"));
         this.cargoRocketModel = cargoRocketModel;
     }
 

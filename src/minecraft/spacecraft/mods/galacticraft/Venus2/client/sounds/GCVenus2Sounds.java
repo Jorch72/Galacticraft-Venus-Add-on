@@ -3,12 +3,6 @@ package spacecraft.mods.galacticraft.venus2.client.sounds;
 import net.minecraftforge.client.event.sound.SoundLoadEvent;
 import net.minecraftforge.event.ForgeSubscribe;
 
-/**
- * Copyright 2012-2013, micdoodle8
- * 
- * All rights reserved.
- * 
- */
 public class GCVenus2Sounds
 {
     @ForgeSubscribe
@@ -40,7 +34,7 @@ public class GCVenus2Sounds
         }
         catch (final Exception e)
         {
-            System.err.println("[GCMars] Failed to register one or more sounds.");
+            System.err.println("[GCVenus2] Failed to register one or more sounds.");
         }
     }
 }

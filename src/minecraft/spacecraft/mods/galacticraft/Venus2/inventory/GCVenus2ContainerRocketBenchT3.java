@@ -101,7 +101,7 @@ public class GCVenus2ContainerRocketBenchT3 extends Container
     @Override
     public void onCraftMatrixChanged(IInventory par1IInventory)
     {
-        this.craftResult.setInventorySlotContents(0, RecipeUtilVenus2.findMatchingSpaceshipT2Recipe(this.craftMatrix));
+        this.craftResult.setInventorySlotContents(0, RecipeUtilVenus2.findMatchingSpaceshipT3Recipe(this.craftMatrix));
     }
 
     @Override
