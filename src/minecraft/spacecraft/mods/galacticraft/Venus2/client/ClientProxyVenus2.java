@@ -87,41 +87,41 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
         NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCVenus2.CHANNEL, Side.CLIENT);
         ClientProxyVenus2.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new GCVenus2BlockRendererTreasureChest(ClientProxyVenus2.treasureRenderID));
-    
-        String capeString = "https://dl.dropboxusercontent.com/u/35470426/capes/venusCape.png";
-        ClientProxyCore.capeMap.put("mattparks", capeString);     
-        ClientProxyCore.capeMap.put("flashy3", capeString); 
-        ClientProxyCore.capeMap.put("ghostheart305", capeString); 
-        ClientProxyCore.capeMap.put("dinammar", capeString); 
-        ClientProxyCore.capeMap.put("goldenkat99", capeString); 
 
-//        try
-//        {
-//            int timeout = 10000;
-//            URL capeListUrl = new URL("https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes.txt");
-//            URLConnection connection = capeListUrl.openConnection();
-//            connection.setConnectTimeout(timeout);
-//            connection.setReadTimeout(timeout);
-//            InputStream stream = connection.getInputStream();
-//            BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
-//            
-//            String line;
-//            while ((line = reader.readLine()) != null)
-//            {
-//                if ((line.contains(":")))
-//                {
-//                    int splitLocation = line.indexOf(":");
-//                    String username = line.substring(0, splitLocation);
-//                    String capeUrl = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/" + line.substring(splitLocation + 1) + ".png";
-//                    ClientProxyVenus2.capeMap.put(username, capeUrl);
-//                }
-//            }
-//        }
-//        catch (Exception e)
-//        {
-//            FMLLog.severe("Error while setting up Venus-2 donor capes");
-//            e.printStackTrace();
-//        }
+//        String capeString = "https://dl.dropboxusercontent.com/u/35470426/capes/venusCape.png";
+//        ClientProxyCore.capeMap.put("mattparks", capeString);     
+//        ClientProxyCore.capeMap.put("flashy3", capeString); 
+//        ClientProxyCore.capeMap.put("ghostheart305", capeString); 
+//        ClientProxyCore.capeMap.put("dinammar", capeString); 
+//        ClientProxyCore.capeMap.put("goldenkat99", capeString); 
+
+        try
+        {
+            int timeout = 10000;
+            URL capeListUrl = new URL("https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes.txt");
+            URLConnection connection = capeListUrl.openConnection();
+            connection.setConnectTimeout(timeout);
+            connection.setReadTimeout(timeout);
+            InputStream stream = connection.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+            
+            String line;
+            while ((line = reader.readLine()) != null)
+            {
+                if ((line.contains(":")))
+                {
+                    int splitLocation = line.indexOf(":");
+                    String username = line.substring(0, splitLocation);
+                    String capeUrl = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/" + line.substring(splitLocation + 1) + ".png";
+                    ClientProxyVenus2.capeMap.put(username, capeUrl);
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            FMLLog.severe("Error while setting up Venus-2 donor capes");
+            e.printStackTrace();
+        }
 
     }
 
