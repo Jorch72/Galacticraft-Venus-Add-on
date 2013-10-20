@@ -1,6 +1,6 @@
-package spacecraft.mods.galacticraft.Venus2.inventory;
+package spacecraft.mods.galacticraft.venus2.inventory;
 
-import spacecraft.mods.galacticraft.Venus2.items.GCVenus2Items;
+import spacecraft.mods.galacticraft.venus2.items.GCVenus2Items;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketHandlerClient.EnumClientPacket;

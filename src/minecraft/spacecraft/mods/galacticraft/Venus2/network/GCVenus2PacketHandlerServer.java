@@ -1,9 +1,9 @@
-package spacecraft.mods.galacticraft.Venus2.network;
+package spacecraft.mods.galacticraft.venus2.network;
 
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 
-import spacecraft.mods.galacticraft.Venus2.util.GCVenus2Util;
+import spacecraft.mods.galacticraft.venus2.util.GCVenus2Util;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityLander;
 import micdoodle8.mods.galacticraft.core.entities.GCCorePlayerMP;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketLanderUpdate;

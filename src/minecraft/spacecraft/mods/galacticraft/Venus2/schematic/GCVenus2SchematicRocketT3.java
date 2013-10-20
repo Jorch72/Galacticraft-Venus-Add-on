@@ -1,8 +1,8 @@
-package spacecraft.mods.galacticraft.Venus2.schematic;
+package spacecraft.mods.galacticraft.venus2.schematic;
 
-import spacecraft.mods.galacticraft.Venus2.GCVenus2ConfigManager;
-import spacecraft.mods.galacticraft.Venus2.client.gui.GCVenus2GuiSchematicRocketT3;
-import spacecraft.mods.galacticraft.Venus2.inventory.GCVenus2ContainerRocketBenchT3;
+import spacecraft.mods.galacticraft.venus2.GCVenus2ConfigManager;
+import spacecraft.mods.galacticraft.venus2.client.gui.GCVenus2GuiSchematicRocketT3;
+import spacecraft.mods.galacticraft.venus2.inventory.GCVenus2ContainerRocketBenchT3;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicPage;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import net.minecraft.client.gui.GuiScreen;

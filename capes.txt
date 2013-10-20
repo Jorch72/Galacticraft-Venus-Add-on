@@ -1,4 +1,3 @@
-mattparks:capeDeveloper
-flashy3:capeDeveloper
-dinammar:capeSupporter
-goldenkat99:capeSupporter
+mattparks:capeDevBlack
+flashy3:capeDevBlackdinammar:capeSupBlack
+goldenkat99:capeSupBlack

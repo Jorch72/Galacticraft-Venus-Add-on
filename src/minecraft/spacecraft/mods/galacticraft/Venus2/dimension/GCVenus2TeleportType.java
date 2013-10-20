@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.dimension;
+package spacecraft.mods.galacticraft.venus2.dimension;
 
 import java.util.Random;
 

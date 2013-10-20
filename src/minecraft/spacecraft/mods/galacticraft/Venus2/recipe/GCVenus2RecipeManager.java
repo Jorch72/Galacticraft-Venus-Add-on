@@ -1,10 +1,10 @@
-package spacecraft.mods.galacticraft.Venus2.recipe;
+package spacecraft.mods.galacticraft.venus2.recipe;
 
 import java.util.HashMap;
 
-import spacecraft.mods.galacticraft.Venus2.blocks.GCVenus2Blocks;
-import spacecraft.mods.galacticraft.Venus2.items.GCVenus2Items;
-import spacecraft.mods.galacticraft.Venus2.util.GCVenus2Util;
+import spacecraft.mods.galacticraft.venus2.blocks.GCVenus2Blocks;
+import spacecraft.mods.galacticraft.venus2.items.GCVenus2Items;
+import spacecraft.mods.galacticraft.venus2.util.GCVenus2Util;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import micdoodle8.mods.galacticraft.core.util.RecipeUtil;

@@ -1,10 +1,10 @@
-package spacecraft.mods.galacticraft.Venus2.blocks;
+package spacecraft.mods.galacticraft.venus2.blocks;
 
 import java.util.Iterator;
 import java.util.Random;
 
-import spacecraft.mods.galacticraft.Venus2.GCVenus2;
-import spacecraft.mods.galacticraft.Venus2.tile.GCVenus2TileEntityTreasureChest;
+import spacecraft.mods.galacticraft.venus2.GCVenus2;
+import spacecraft.mods.galacticraft.venus2.tile.GCVenus2TileEntityTreasureChest;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.tile.GCCoreTileEntityTreasureChest;
 import net.minecraft.block.Block;

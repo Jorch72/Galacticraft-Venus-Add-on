@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.client.sounds;
+package spacecraft.mods.galacticraft.venus2.client.sounds;
 
 import net.minecraftforge.client.event.sound.SoundLoadEvent;
 import net.minecraftforge.event.ForgeSubscribe;

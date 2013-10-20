@@ -1,6 +1,6 @@
-package spacecraft.mods.galacticraft.Venus2.inventory;
+package spacecraft.mods.galacticraft.venus2.inventory;
 
-import spacecraft.mods.galacticraft.Venus2.util.RecipeUtilVenus2;
+import spacecraft.mods.galacticraft.venus2.util.RecipeUtilVenus2;
 import micdoodle8.mods.galacticraft.core.inventory.GCCoreSlotRocketBenchResult;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import net.minecraft.block.Block;

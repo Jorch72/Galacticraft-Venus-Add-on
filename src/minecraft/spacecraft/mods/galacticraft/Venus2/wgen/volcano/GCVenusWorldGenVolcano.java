@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.wgen.volcano;
+package spacecraft.mods.galacticraft.venus2.wgen.volcano;
 
 import java.util.Random;
 import spacecraft.mods.galacticraft.venus.GalacticraftVenus;

@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.client.render.tile;
+package spacecraft.mods.galacticraft.venus2.client.render.tile;
 
 import micdoodle8.mods.galacticraft.core.client.model.block.GCCoreModelTreasureChest;
 import micdoodle8.mods.galacticraft.core.client.model.block.GCCoreModelTreasureChestLarge;
@@ -11,8 +11,8 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import spacecraft.mods.galacticraft.Venus2.GCVenus2;
-import spacecraft.mods.galacticraft.Venus2.blocks.GCVenus2BlockT3TreasureChest;
+import spacecraft.mods.galacticraft.venus2.GCVenus2;
+import spacecraft.mods.galacticraft.venus2.blocks.GCVenus2BlockT3TreasureChest;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

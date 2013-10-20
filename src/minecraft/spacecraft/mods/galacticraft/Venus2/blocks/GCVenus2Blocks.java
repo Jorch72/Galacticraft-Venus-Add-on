@@ -1,9 +1,9 @@
-package spacecraft.mods.galacticraft.Venus2.blocks;
+package spacecraft.mods.galacticraft.venus2.blocks;
 
-import spacecraft.mods.galacticraft.Venus2.GCVenus2ConfigManager;
-import spacecraft.mods.galacticraft.Venus2.GCVenus2;
-import spacecraft.mods.galacticraft.Venus2.items.GCVenus2ItemBlock;
 import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
+import spacecraft.mods.galacticraft.venus2.GCVenus2;
+import spacecraft.mods.galacticraft.venus2.GCVenus2ConfigManager;
+import spacecraft.mods.galacticraft.venus2.items.GCVenus2ItemBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;

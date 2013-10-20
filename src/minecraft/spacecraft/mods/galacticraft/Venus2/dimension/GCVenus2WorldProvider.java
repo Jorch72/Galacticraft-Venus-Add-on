@@ -1,10 +1,10 @@
-package spacecraft.mods.galacticraft.Venus2.dimension;
+package spacecraft.mods.galacticraft.venus2.dimension;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
-import spacecraft.mods.galacticraft.Venus2.GCVenus2ConfigManager;
-import spacecraft.mods.galacticraft.Venus2.wgen.GCVenusChunkProvider;
-import spacecraft.mods.galacticraft.Venus2.wgen.GCVenusWorldChunkManager;
+import spacecraft.mods.galacticraft.venus2.GCVenus2ConfigManager;
+import spacecraft.mods.galacticraft.venus2.wgen.GCVenusChunkProvider;
+import spacecraft.mods.galacticraft.venus2.wgen.GCVenusWorldChunkManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;

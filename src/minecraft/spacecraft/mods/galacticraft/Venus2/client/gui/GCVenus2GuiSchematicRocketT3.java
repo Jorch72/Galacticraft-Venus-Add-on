@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.client.gui;
+package spacecraft.mods.galacticraft.venus2.client.gui;
 
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -10,8 +10,8 @@ import net.minecraft.util.StatCollector;
 
 import org.lwjgl.opengl.GL11;
 
-import spacecraft.mods.galacticraft.Venus2.GCVenus2;
-import spacecraft.mods.galacticraft.Venus2.inventory.GCVenus2ContainerRocketBenchT3;
+import spacecraft.mods.galacticraft.venus2.GCVenus2;
+import spacecraft.mods.galacticraft.venus2.inventory.GCVenus2ContainerRocketBenchT3;
 
 public class GCVenus2GuiSchematicRocketT3 extends GuiContainer implements ISchematicResultPage
 {

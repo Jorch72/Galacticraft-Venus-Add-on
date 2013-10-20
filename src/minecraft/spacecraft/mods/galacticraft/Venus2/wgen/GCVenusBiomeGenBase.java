@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.wgen;
+package spacecraft.mods.galacticraft.venus2.wgen;
 
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.ColorizerGrass;

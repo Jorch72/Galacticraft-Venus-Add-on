@@ -1,6 +1,6 @@
-package spacecraft.mods.galacticraft.Venus2.client;
+package spacecraft.mods.galacticraft.venus2.client;
 
-import spacecraft.mods.galacticraft.Venus2.GCVenus2;
+import spacecraft.mods.galacticraft.venus2.GCVenus2;
 import micdoodle8.mods.galacticraft.api.world.ICelestialBodyRenderer;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.util.ResourceLocation;

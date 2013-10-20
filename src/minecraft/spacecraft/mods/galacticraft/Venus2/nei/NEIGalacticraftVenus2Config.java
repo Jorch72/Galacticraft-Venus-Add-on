@@ -1,11 +1,11 @@
-package spacecraft.mods.galacticraft.Venus2.nei;
+package spacecraft.mods.galacticraft.venus2.nei;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import spacecraft.mods.galacticraft.Venus2.items.GCVenus2Items;
+import spacecraft.mods.galacticraft.venus2.items.GCVenus2Items;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import net.minecraft.block.Block;

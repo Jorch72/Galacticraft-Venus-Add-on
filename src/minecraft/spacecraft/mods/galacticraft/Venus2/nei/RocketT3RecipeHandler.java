@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.nei;
+package spacecraft.mods.galacticraft.venus2.nei;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -10,7 +10,7 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import spacecraft.mods.galacticraft.Venus2.GCVenus2;
+import spacecraft.mods.galacticraft.venus2.GCVenus2;
 import codechicken.core.gui.GuiDraw;
 import codechicken.nei.NEIServerUtils;
 import codechicken.nei.PositionedStack;

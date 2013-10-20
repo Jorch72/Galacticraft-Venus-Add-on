@@ -1,9 +1,9 @@
-package spacecraft.mods.galacticraft.Venus2.wgen.dungeon;
+package spacecraft.mods.galacticraft.venus2.wgen.dungeon;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import spacecraft.mods.galacticraft.Venus2.blocks.GCVenus2Blocks;
+import spacecraft.mods.galacticraft.venus2.blocks.GCVenus2Blocks;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import micdoodle8.mods.galacticraft.core.tile.GCCoreTileEntityTreasureChest;

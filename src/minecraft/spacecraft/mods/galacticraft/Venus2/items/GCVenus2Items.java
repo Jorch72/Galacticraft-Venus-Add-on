@@ -1,6 +1,6 @@
-package spacecraft.mods.galacticraft.Venus2.items;
+package spacecraft.mods.galacticraft.venus2.items;
 
-import spacecraft.mods.galacticraft.Venus2.GCVenus2ConfigManager;
+import spacecraft.mods.galacticraft.venus2.GCVenus2ConfigManager;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItemRocketEngine;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;

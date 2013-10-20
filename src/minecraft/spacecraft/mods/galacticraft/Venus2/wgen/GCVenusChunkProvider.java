@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.wgen;
+package spacecraft.mods.galacticraft.venus2.wgen;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,20 +1,19 @@
-package spacecraft.mods.galacticraft.Venus2;
+package spacecraft.mods.galacticraft.venus2;
 
 import java.io.File;
 
-import spacecraft.mods.galacticraft.Venus2.blocks.GCVenus2Blocks;
-import spacecraft.mods.galacticraft.Venus2.dimension.GCVenus2TeleportType;
-import spacecraft.mods.galacticraft.Venus2.dimension.GCVenus2WorldProvider;
-import spacecraft.mods.galacticraft.Venus2.entities.GCVenus2EntityRocketT3;
-import spacecraft.mods.galacticraft.Venus2.items.GCVenus2Items;
-import spacecraft.mods.galacticraft.Venus2.network.GCVenus2PacketHandlerServer;
-import spacecraft.mods.galacticraft.Venus2.recipe.GCVenus2RecipeManager;
-import spacecraft.mods.galacticraft.Venus2.schematic.GCVenus2SchematicRocketT3;
-import spacecraft.mods.galacticraft.Venus2.tile.GCVenus2TileEntityTreasureChest;
+import spacecraft.mods.galacticraft.venus2.blocks.GCVenus2Blocks;
+import spacecraft.mods.galacticraft.venus2.dimension.GCVenus2TeleportType;
+import spacecraft.mods.galacticraft.venus2.dimension.GCVenus2WorldProvider;
+import spacecraft.mods.galacticraft.venus2.entities.GCVenus2EntityRocketT3;
+import spacecraft.mods.galacticraft.venus2.items.GCVenus2Items;
+import spacecraft.mods.galacticraft.venus2.network.GCVenus2PacketHandlerServer;
+import spacecraft.mods.galacticraft.venus2.recipe.GCVenus2RecipeManager;
+import spacecraft.mods.galacticraft.venus2.schematic.GCVenus2SchematicRocketT3;
+import spacecraft.mods.galacticraft.venus2.tile.GCVenus2TileEntityTreasureChest;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
-import micdoodle8.mods.galacticraft.core.GCCoreCreativeTab;
 import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
@@ -57,13 +56,13 @@ public class GCVenus2
     public static final String LANGUAGE_PATH = "/assets/galacticraftvenus2/lang/";
     private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
 
-    @SidedProxy(clientSide = "spacecraft.mods.galacticraft.Venus2.client.ClientProxyVenus2", serverSide = "spacecraft.mods.galacticraft.Venus2.CommonProxyVenus2")
+    @SidedProxy(clientSide = "spacecraft.mods.galacticraft.venus2.client.ClientProxyVenus2", serverSide = "spacecraft.mods.galacticraft.venus2.CommonProxyVenus2")
     public static CommonProxyVenus2 proxy;
 
     @Instance(GCVenus2.MODID)
     public static GCVenus2 instance;
 
-    public static GCCoreCreativeTab galacticraftVenus2Tab;
+    public static GCVenus2CreativeTab galacticraftVenus2Tab;
 
     public static final String TEXTURE_DOMAIN = "galacticraftvenus2";
     public static final String TEXTURE_PREFIX = GCVenus2.TEXTURE_DOMAIN + ":";
@@ -122,7 +121,7 @@ public class GCVenus2
 
         SchematicRegistry.registerSchematicRecipe(new GCVenus2SchematicRocketT3());
 
-        GCVenus2.galacticraftVenus2Tab = new GCCoreCreativeTab(CreativeTabs.getNextID(), GCVenus2.MODID, GCVenus2Items.spaceship.itemID, 5);
+        GCVenus2.galacticraftVenus2Tab = new GCVenus2CreativeTab(CreativeTabs.getNextID(), GCVenus2.MODID, GCVenus2Items.spaceship.itemID, 5);
         NetworkRegistry.instance().registerGuiHandler(GCVenus2.instance, GCVenus2.proxy);
         this.registerTileEntities();
         this.registerCreatures();

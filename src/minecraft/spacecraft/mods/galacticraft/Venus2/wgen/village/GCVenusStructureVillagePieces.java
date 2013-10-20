@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.wgen.village;
+package spacecraft.mods.galacticraft.venus2.wgen.village;
 
 import java.util.ArrayList;
 import java.util.Iterator;

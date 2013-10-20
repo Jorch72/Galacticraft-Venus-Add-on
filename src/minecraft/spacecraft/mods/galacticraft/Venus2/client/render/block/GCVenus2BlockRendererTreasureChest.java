@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.client.render.block;
+package spacecraft.mods.galacticraft.venus2.client.render.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
@@ -8,8 +8,8 @@ import net.minecraft.world.IBlockAccess;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import spacecraft.mods.galacticraft.Venus2.blocks.GCVenus2Blocks;
-import spacecraft.mods.galacticraft.Venus2.tile.GCVenus2TileEntityTreasureChest;
+import spacecraft.mods.galacticraft.venus2.blocks.GCVenus2Blocks;
+import spacecraft.mods.galacticraft.venus2.tile.GCVenus2TileEntityTreasureChest;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 
 public class GCVenus2BlockRendererTreasureChest implements ISimpleBlockRenderingHandler

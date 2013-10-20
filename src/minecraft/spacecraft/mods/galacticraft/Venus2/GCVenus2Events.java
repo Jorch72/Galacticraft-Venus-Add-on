@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2;
+package spacecraft.mods.galacticraft.venus2;
 
 import micdoodle8.mods.galacticraft.api.event.wgen.GCCoreEventPopulate;
 import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
@@ -29,8 +29,8 @@ import net.minecraftforge.event.entity.living.LivingDeathEvent;
 
 import org.lwjgl.opengl.GL11;
 
-import spacecraft.mods.galacticraft.Venus2.blocks.GCVenus2Blocks;
-import spacecraft.mods.galacticraft.Venus2.dimension.GCVenus2WorldProvider;
+import spacecraft.mods.galacticraft.venus2.blocks.GCVenus2Blocks;
+import spacecraft.mods.galacticraft.venus2.dimension.GCVenus2WorldProvider;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.relauncher.Side;

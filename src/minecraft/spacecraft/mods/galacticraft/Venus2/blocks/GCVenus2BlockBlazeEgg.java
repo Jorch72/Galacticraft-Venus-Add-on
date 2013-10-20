@@ -1,6 +1,6 @@
-package spacecraft.mods.galacticraft.Venus2.blocks;
+package spacecraft.mods.galacticraft.venus2.blocks;
 
-import spacecraft.mods.galacticraft.Venus2.GCVenus2;
+import spacecraft.mods.galacticraft.venus2.GCVenus2;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
 import net.minecraft.block.BlockDragonEgg;
 import net.minecraft.client.renderer.texture.IconRegister;

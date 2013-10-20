@@ -1,7 +1,7 @@
-package spacecraft.mods.galacticraft.Venus2;
+package spacecraft.mods.galacticraft.venus2;
 
-import spacecraft.mods.galacticraft.Venus2.client.GCVenus2MapPlanet;
-import spacecraft.mods.galacticraft.Venus2.dimension.GCVenus2WorldProvider;
+import spacecraft.mods.galacticraft.venus2.client.GCVenus2MapPlanet;
+import spacecraft.mods.galacticraft.venus2.dimension.GCVenus2WorldProvider;
 import micdoodle8.mods.galacticraft.api.world.IGalaxy;
 import micdoodle8.mods.galacticraft.api.world.IMapObject;
 import micdoodle8.mods.galacticraft.api.world.IPlanet;

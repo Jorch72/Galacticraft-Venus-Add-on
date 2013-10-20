@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.client;
+package spacecraft.mods.galacticraft.venus2.client;
 
 import micdoodle8.mods.galacticraft.api.world.ICelestialBodyRenderer;
 import micdoodle8.mods.galacticraft.api.world.IGalaxy;

@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.wgen.dungeon;
+package spacecraft.mods.galacticraft.venus2.wgen.dungeon;
 
 import java.util.ArrayList;
 import java.util.Random;

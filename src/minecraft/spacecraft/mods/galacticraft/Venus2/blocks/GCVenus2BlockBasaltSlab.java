@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.blocks;
+package spacecraft.mods.galacticraft.venus2.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -6,8 +6,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 import java.util.List;
 import java.util.Random;
 
-import spacecraft.mods.galacticraft.Venus2.GCVenus2;
 import spacecraft.mods.galacticraft.venus.GalacticraftVenus;
+import spacecraft.mods.galacticraft.venus2.GCVenus2;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;

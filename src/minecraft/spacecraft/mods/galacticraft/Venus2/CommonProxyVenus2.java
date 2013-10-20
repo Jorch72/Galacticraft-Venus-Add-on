@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2;
+package spacecraft.mods.galacticraft.venus2;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;

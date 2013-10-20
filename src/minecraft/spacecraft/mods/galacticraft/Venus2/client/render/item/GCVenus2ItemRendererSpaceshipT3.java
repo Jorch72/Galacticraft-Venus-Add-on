@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.client.render.item;
+package spacecraft.mods.galacticraft.venus2.client.render.item;
 
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
 import micdoodle8.mods.galacticraft.core.client.render.item.GCCoreItemRendererSpaceship;
@@ -13,9 +13,9 @@ import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.Sys;
 import org.lwjgl.opengl.GL11;
 
-import spacecraft.mods.galacticraft.Venus2.GCVenus2;
-import spacecraft.mods.galacticraft.Venus2.client.model.GCVenus2ModelSpaceshipTier3;
-import spacecraft.mods.galacticraft.Venus2.entities.GCVenus2EntityRocketT3;
+import spacecraft.mods.galacticraft.venus2.GCVenus2;
+import spacecraft.mods.galacticraft.venus2.client.model.GCVenus2ModelSpaceshipTier3;
+import spacecraft.mods.galacticraft.venus2.entities.GCVenus2EntityRocketT3;
 import cpw.mods.fml.client.FMLClientHandler;
 
 public class GCVenus2ItemRendererSpaceshipT3 extends GCCoreItemRendererSpaceship

@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.tile;
+package spacecraft.mods.galacticraft.venus2.tile;
 
 import micdoodle8.mods.galacticraft.core.tile.GCCoreTileEntityTreasureChest;
 

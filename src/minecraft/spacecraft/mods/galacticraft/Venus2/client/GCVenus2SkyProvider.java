@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.client;
+package spacecraft.mods.galacticraft.venus2.client;
 
 import java.util.Random;
 
@@ -16,8 +16,8 @@ import net.minecraftforge.client.IRenderHandler;
 
 import org.lwjgl.opengl.GL11;
 
-import spacecraft.mods.galacticraft.Venus2.GCVenus2;
-import spacecraft.mods.galacticraft.Venus2.dimension.GCVenus2WorldProvider;
+import spacecraft.mods.galacticraft.venus2.GCVenus2;
+import spacecraft.mods.galacticraft.venus2.dimension.GCVenus2WorldProvider;
 import cpw.mods.fml.client.FMLClientHandler;
 
 /**

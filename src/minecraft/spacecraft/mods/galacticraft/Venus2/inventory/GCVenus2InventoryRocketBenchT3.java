@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.inventory;
+package spacecraft.mods.galacticraft.venus2.inventory;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;

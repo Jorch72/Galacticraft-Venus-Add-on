@@ -1,10 +1,10 @@
-package spacecraft.mods.galacticraft.Venus2.blocks;
+package spacecraft.mods.galacticraft.venus2.blocks;
 
 import java.util.List;
 import java.util.Random;
 
-import spacecraft.mods.galacticraft.Venus2.GCVenus2;
-import spacecraft.mods.galacticraft.Venus2.items.GCVenus2Items;
+import spacecraft.mods.galacticraft.venus2.GCVenus2;
+import spacecraft.mods.galacticraft.venus2.items.GCVenus2Items;
 import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;

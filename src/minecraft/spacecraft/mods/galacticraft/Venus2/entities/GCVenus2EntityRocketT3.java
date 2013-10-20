@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.Venus2.entities;
+package spacecraft.mods.galacticraft.venus2.entities;
 
 import icbm.api.IMissile;
 
@@ -27,7 +27,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
-import spacecraft.mods.galacticraft.Venus2.items.GCVenus2Items;
+import spacecraft.mods.galacticraft.venus2.items.GCVenus2Items;
 import universalelectricity.core.vector.Vector3;
 
 import com.google.common.io.ByteArrayDataInput;

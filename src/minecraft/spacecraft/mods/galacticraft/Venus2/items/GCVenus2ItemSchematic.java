@@ -1,8 +1,8 @@
-package spacecraft.mods.galacticraft.Venus2.items;
+package spacecraft.mods.galacticraft.venus2.items;
 
 import java.util.List;
 
-import spacecraft.mods.galacticraft.Venus2.GCVenus2;
+import spacecraft.mods.galacticraft.venus2.GCVenus2;
 import mekanism.api.EnumColor;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicItem;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItemSchematic;
