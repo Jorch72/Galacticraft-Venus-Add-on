@@ -16,8 +16,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class GCVenus2ItemRocketEngine extends Item
 {
-    public static final String[] names = { //"tier1engine", // 0
-    "tier1booster" }; // 1
+    public static final String[] names = { "tier3engine", // 0
+    "tier2booster" }; // 1
 
     protected Icon[] icons = new Icon[GCVenus2ItemRocketEngine.names.length];
 
