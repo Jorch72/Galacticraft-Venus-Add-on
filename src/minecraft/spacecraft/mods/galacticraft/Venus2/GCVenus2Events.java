@@ -120,33 +120,6 @@ public class GCVenus2Events
         }
     }
 
-    private WorldGenerator eggGenerator;
-
-    @ForgeSubscribe
-    public void onPlanetDecorated(GCCoreEventPopulate.Post event)
-    {
-        if (this.eggGenerator == null)
-        {
-//            this.eggGenerator = new GCMarsWorldGenEggs(GCMarsBlocks.rock.blockID);
-        }
-
-        if (event.worldObj.provider instanceof GCVenus2WorldProvider)
-        {
-            int eggsPerChunk = 2;
-            int x;
-            int y;
-            int z;
-
-            for (int eggCount = 0; eggCount < eggsPerChunk; ++eggCount)
-            {
-                x = event.chunkX + event.rand.nextInt(16) + 8;
-                y = event.rand.nextInt(128);
-                z = event.chunkZ + event.rand.nextInt(16) + 8;
-                this.eggGenerator.generate(event.worldObj, event.rand, x, y, z);
-            }
-        }
-    }
-
     @SideOnly(Side.CLIENT)
     @ForgeSubscribe
     public void orientCamera(OrientCameraEvent event)
