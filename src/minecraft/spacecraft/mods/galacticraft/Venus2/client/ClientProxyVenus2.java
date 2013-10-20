@@ -74,8 +74,6 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
         MinecraftForge.EVENT_BUS.register(new GCVenus2Sounds());
     }
     
-    public static Map<String, String> capeMap = new HashMap<String, String>();
-
     @Override
     public void init(FMLInitializationEvent event)
     {
@@ -84,34 +82,7 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
         ClientProxyVenus2.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new GCVenus2BlockRendererTreasureChest(ClientProxyVenus2.treasureRenderID));
     }
-//        try
-//        {
-//            int timeout = 10000;
-//            URL capeListUrl = new URL("https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-ont/master/capes.txt");
-//            URLConnection connection = capeListUrl.openConnection();
-//            connection.setConnectTimeout(timeout);
-//            connection.setReadTimeout(timeout);
-//            InputStream stream = connection.getInputStream();
-//            BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
-//            
-//            String line;
-//            while ((line = reader.readLine()) != null)
-//            {
-//                if ((line.contains(":")))
-//                {
-//                    int splitLocation = line.indexOf(":");
-//                    String username = line.substring(0, splitLocation);
-//                    String capeUrl = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/" + line.substring(splitLocation + 1) + ".png";
-//                    ClientProxyVenus2.capeMap.put(username, capeUrl);
-//                }
-//            }
-//        }
-//        catch (Exception e)
-//        {
-//            FMLLog.severe("Error while setting up Venus donor capes");
-//            e.printStackTrace();
-//        }
-     
+
     @Override
     public void registerRenderInformation()
     {

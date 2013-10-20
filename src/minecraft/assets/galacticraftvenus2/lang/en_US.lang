@@ -8,12 +8,13 @@ item.redGemPlate.name=Red Gem Plate
 item.sulferPlate.name=Sulfer Plate
 item.venusPlate.name=Venus Plate
 item.reinforcedVenusPlateT3.name=Reinforced Venus Plate
-
 item.spaceshipTier3.t2Rocket.name=Tier 3 Rocket
 item.reinforcedPlateT2.name=Heavy-Duty Plate
 item.tier3.desc=Tier 3
 item.key.T3.name=Tier 3 Dungeon Key
 item.spaceshipTier3.cargoRocket.name=Tier 2 Cargo Rocket
+item.engine.tier2booster.name=Tier 2 Rocket Booster
+item.engine.tier3engine.name=Tier 3 Rocket Engine
 
 # TOOLS
 item.gemPick.name=Gem Pickaxe
