@@ -10,6 +10,7 @@ import cpw.mods.fml.common.FMLLog;
 
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
+import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
@@ -36,6 +37,7 @@ import micdoodle8.mods.galacticraft.core.client.sounds.GCCoreSoundUpdaterSpacesh
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.audio.SoundPoolEntry;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.particle.EntityFX;
 import net.minecraft.entity.Entity;
@@ -67,6 +69,10 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
 {
     private static int eggRenderID;
     private static int treasureRenderID;
+    
+    public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
+    
+    public static Map<String, String> capeMap = new HashMap<String, String>();
 
     @Override
     public void preInit(FMLPreInitializationEvent event)
@@ -81,6 +87,35 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
         NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCVenus2.CHANNEL, Side.CLIENT);
         ClientProxyVenus2.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new GCVenus2BlockRendererTreasureChest(ClientProxyVenus2.treasureRenderID));
+    
+        try
+        {
+            int timeout = 10000;
+            URL capeListUrl = new URL("https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes.txt");
+            URLConnection connection = capeListUrl.openConnection();
+            connection.setConnectTimeout(timeout);
+            connection.setReadTimeout(timeout);
+            InputStream stream = connection.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+            
+            String line;
+            while ((line = reader.readLine()) != null)
+            {
+                if ((line.contains(":")))
+                {
+                    int splitLocation = line.indexOf(":");
+                    String username = line.substring(0, splitLocation);
+                    String capeUrl = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/" + line.substring(splitLocation + 1) + ".png";
+                    ClientProxyVenus2.capeMap.put(username, capeUrl);
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            FMLLog.severe("Error while setting up Venus-2 donor capes");
+            e.printStackTrace();
+        }
+
     }
 
     @Override
