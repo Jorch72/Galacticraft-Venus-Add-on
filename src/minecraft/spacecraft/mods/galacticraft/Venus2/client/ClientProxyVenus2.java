@@ -1,20 +1,5 @@
 package spacecraft.mods.galacticraft.venus2.client;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.net.URLConnection;
-
-import cpw.mods.fml.common.FMLLog;
-
-import java.io.ByteArrayInputStream;
-import java.io.DataInputStream;
-import java.util.ArrayList;
-import java.util.EnumSet;
-import java.util.HashMap;
-import java.util.Map;
-
 import spacecraft.mods.galacticraft.venus2.CommonProxyVenus2;
 import spacecraft.mods.galacticraft.venus2.GCVenus2;
 import spacecraft.mods.galacticraft.venus2.GCVenus2ConfigManager;
@@ -64,6 +49,12 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.Player;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
+import java.io.ByteArrayInputStream;
+import java.io.DataInputStream;
+import java.util.ArrayList;
+import java.util.EnumSet;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ClientProxyVenus2 extends CommonProxyVenus2
 {
@@ -72,8 +63,6 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
     
     public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
     
-    public static Map<String, String> capeMap = new HashMap<String, String>();
-
     @Override
     public void preInit(FMLPreInitializationEvent event)
     {
@@ -88,41 +77,24 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
         ClientProxyVenus2.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new GCVenus2BlockRendererTreasureChest(ClientProxyVenus2.treasureRenderID));
 
-//        String capeString = "https://dl.dropboxusercontent.com/u/35470426/capes/venusCape.png";
-//        ClientProxyCore.capeMap.put("mattparks", capeString);     
-//        ClientProxyCore.capeMap.put("flashy3", capeString); 
-//        ClientProxyCore.capeMap.put("ghostheart305", capeString); 
-//        ClientProxyCore.capeMap.put("dinammar", capeString); 
-//        ClientProxyCore.capeMap.put("goldenkat99", capeString); 
+        //Blue
+        String capeBlueString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeBlue.png";
+        //Green
+        String capeGreenString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeGreen.png";
+        //Orange
+        String capeOrangeString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeOrange.png";
+        //Red
+        String capeRedString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeRed.png";
+        //Violet
+        String capeVioletString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeViolet.png";
+        //Yellow
+        String capeYellowString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeYellow.png";
 
-        try
-        {
-            int timeout = 10000;
-            URL capeListUrl = new URL("https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes.txt");
-            URLConnection connection = capeListUrl.openConnection();
-            connection.setConnectTimeout(timeout);
-            connection.setReadTimeout(timeout);
-            InputStream stream = connection.getInputStream();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
-            
-            String line;
-            while ((line = reader.readLine()) != null)
-            {
-                if ((line.contains(":")))
-                {
-                    int splitLocation = line.indexOf(":");
-                    String username = line.substring(0, splitLocation);
-                    String capeUrl = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/" + line.substring(splitLocation + 1) + ".png";
-                    ClientProxyVenus2.capeMap.put(username, capeUrl);
-                }
-            }
-        }
-        catch (Exception e)
-        {
-            FMLLog.severe("Error while setting up Venus-2 donor capes");
-            e.printStackTrace();
-        }
-
+        ClientProxyCore.capeMap.put("mattparks", capeBlueString);     
+        ClientProxyCore.capeMap.put("flashy3", capeOrangeString); 
+        ClientProxyCore.capeMap.put("ghostheart305", capeBlueString); 
+        ClientProxyCore.capeMap.put("dinammar", capeVioletString); 
+        ClientProxyCore.capeMap.put("goldenkat99", capeRedString); 
     }
 
     @Override
