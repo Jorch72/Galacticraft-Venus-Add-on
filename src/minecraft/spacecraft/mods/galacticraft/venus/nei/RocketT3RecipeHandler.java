@@ -10,7 +10,7 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import spacecraft.mods.galacticraft.venus.GCVenus2;
+import spacecraft.mods.galacticraft.venus.GCVenus;
 import codechicken.core.gui.GuiDraw;
 import codechicken.nei.NEIServerUtils;
 import codechicken.nei.PositionedStack;
@@ -18,7 +18,7 @@ import codechicken.nei.recipe.TemplateRecipeHandler;
 
 public class RocketT3RecipeHandler extends TemplateRecipeHandler
 {
-    private static final ResourceLocation rocketGuiTexture = new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/gui/schematic_rocket_T3.png");
+    private static final ResourceLocation rocketGuiTexture = new ResourceLocation(GCVenus.TEXTURE_DOMAIN, "textures/gui/schematic_rocket_T3.png");
 
     public String getRecipeId()
     {
@@ -33,7 +33,7 @@ public class RocketT3RecipeHandler extends TemplateRecipeHandler
 
     public Set<Entry<ArrayList<PositionedStack>, PositionedStack>> getRecipes()
     {
-        return NEIGalacticraftVenus2Config.getRocketBenchRecipes();
+        return NEIGalacticraftVenusConfig.getRocketBenchRecipes();
     }
 
     @Override
