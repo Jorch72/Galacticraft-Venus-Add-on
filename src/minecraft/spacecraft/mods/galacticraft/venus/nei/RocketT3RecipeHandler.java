@@ -18,7 +18,7 @@ import codechicken.nei.recipe.TemplateRecipeHandler;
 
 public class RocketT3RecipeHandler extends TemplateRecipeHandler
 {
-    private static final ResourceLocation rocketGuiTexture = new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/gui/schematic_rocket_T2.png");
+    private static final ResourceLocation rocketGuiTexture = new ResourceLocation(GCVenus2.TEXTURE_DOMAIN, "textures/gui/schematic_rocket_T3.png");
 
     public String getRecipeId()
     {

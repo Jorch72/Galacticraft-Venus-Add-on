@@ -17,13 +17,11 @@ public class GCVenus2Blocks
     public static Block venus2Block;
 	public static Block basaltSlab;
     public static Block VenusCobblestone;
-    public static Block tier3TreasureChest;
     public static Block blazeEgg;
 
     public static void initBlocks()
     {
         GCVenus2Blocks.venus2Block = new GCVenus2Block(GCVenus2ConfigManager.idBlockVenus2).setHardness(2.2F).setUnlocalizedName("venus2");
-        GCVenus2Blocks.tier3TreasureChest = new GCVenus2BlockT3TreasureChest(GCVenus2ConfigManager.idBlockTreasureChestT3).setHardness(2.5F).setUnlocalizedName("treasureT3");
         GCVenus2Blocks.blazeEgg = new GCVenus2BlockBlazeEgg(GCVenus2ConfigManager.idBlockBlazeEgg).setHardness(-1.0F).setUnlocalizedName("blazeEgg");
 		GCVenus2Blocks.basaltSlab = new GCVenus2BlockBasaltSlab(GCVenus2ConfigManager.idBlockBasaltSlab).setHardness(-1.0F).setUnlocalizedName("basaltSlab");
     }
@@ -37,7 +35,6 @@ public class GCVenus2Blocks
     public static void registerBlocks()
     {
         GameRegistry.registerBlock(GCVenus2Blocks.venus2Block, GCVenus2ItemBlock.class, GCVenus2Blocks.venus2Block.getUnlocalizedName(), GCVenus2.MODID);
-        GameRegistry.registerBlock(GCVenus2Blocks.tier3TreasureChest, ItemBlock.class, GCVenus2Blocks.tier3TreasureChest.getUnlocalizedName(), GCVenus2.MODID);
 		GameRegistry.registerBlock(GCVenus2Blocks.blazeEgg, ItemBlock.class, GCVenus2Blocks.blazeEgg.getUnlocalizedName(), GCVenus2.MODID);
 		GameRegistry.registerBlock(GCVenus2Blocks.basaltSlab, ItemBlock.class, GCVenus2Blocks.basaltSlab.getUnlocalizedName(), GCVenus2.MODID);
 	}

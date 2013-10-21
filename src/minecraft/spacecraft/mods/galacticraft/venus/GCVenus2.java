@@ -10,7 +10,6 @@ import spacecraft.mods.galacticraft.venus.items.GCVenus2Items;
 import spacecraft.mods.galacticraft.venus.network.GCVenus2PacketHandlerServer;
 import spacecraft.mods.galacticraft.venus.recipe.GCVenus2RecipeManager;
 import spacecraft.mods.galacticraft.venus.schematic.GCVenus2SchematicRocketT3;
-import spacecraft.mods.galacticraft.venus.tile.GCVenus2TileEntityTreasureChest;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -143,7 +142,6 @@ public class GCVenus2
 
     public void registerTileEntities()
     {
-        GameRegistry.registerTileEntity(GCVenus2TileEntityTreasureChest.class, "Tier 3 Treasure Chest");
     }
 
     public void registerCreatures()

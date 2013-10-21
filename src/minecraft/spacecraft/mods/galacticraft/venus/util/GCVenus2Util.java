@@ -19,10 +19,4 @@ public class GCVenus2Util
     {
         GalacticraftRegistry.addT2RocketRecipe(new GCCoreNasaWorkbenchRecipe(result, input));
     }
-
-    public static void adCargoRocketRecipe(ItemStack result, HashMap<Integer, ItemStack> input)
-    {
-        GalacticraftRegistry.addCargoRocketRecipe(new GCCoreNasaWorkbenchRecipe(result, input));
-    }
-  
 }

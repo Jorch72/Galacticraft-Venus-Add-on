@@ -6,14 +6,11 @@ import spacecraft.mods.galacticraft.venus.GCVenus2ConfigManager;
 import spacecraft.mods.galacticraft.venus.blocks.GCVenus2Blocks;
 import spacecraft.mods.galacticraft.venus.client.fx.GCVenus2EntityDropParticleFX;
 import spacecraft.mods.galacticraft.venus.client.model.GCVenus2ModelSpaceshipTier3;
-import spacecraft.mods.galacticraft.venus.client.render.block.GCVenus2BlockRendererTreasureChest;
 import spacecraft.mods.galacticraft.venus.client.render.item.GCVenus2ItemRendererSpaceshipT3;
-import spacecraft.mods.galacticraft.venus.client.render.tile.GCVenus2TileEntityTreasureChestRenderer;
 import spacecraft.mods.galacticraft.venus.client.sounds.GCVenus2Sounds;
 import spacecraft.mods.galacticraft.venus.dimension.GCVenus2WorldProvider;
 import spacecraft.mods.galacticraft.venus.entities.GCVenus2EntityRocketT3;
 import spacecraft.mods.galacticraft.venus.items.GCVenus2Items;
-import spacecraft.mods.galacticraft.venus.tile.GCVenus2TileEntityTreasureChest;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderSpaceship;
@@ -76,7 +73,6 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
         NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCVenus2.CHANNEL, Side.CLIENT);
         ClientProxyVenus2.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
-        RenderingRegistry.registerBlockHandler(new GCVenus2BlockRendererTreasureChest(ClientProxyVenus2.treasureRenderID));
 
         //Blue Cape
         String capeBlueString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeBlue.png";
@@ -102,7 +98,6 @@ public class ClientProxyVenus2 extends CommonProxyVenus2
     public void registerRenderInformation()
     {
         IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftvenus2/models/cargoRocket.obj");
-        ClientRegistry.bindTileEntitySpecialRenderer(GCVenus2TileEntityTreasureChest.class, new GCVenus2TileEntityTreasureChestRenderer());
         RenderingRegistry.registerEntityRenderingHandler(GCVenus2EntityRocketT3.class, new GCCoreRenderSpaceship(new GCVenus2ModelSpaceshipTier3(), GCVenus2.TEXTURE_DOMAIN, "rocketT3"));
         RenderingRegistry.addNewArmourRendererPrefix("gem");
         MinecraftForgeClient.registerItemRenderer(GCVenus2Items.spaceship.itemID, new GCVenus2ItemRendererSpaceshipT3(cargoRocketModel));

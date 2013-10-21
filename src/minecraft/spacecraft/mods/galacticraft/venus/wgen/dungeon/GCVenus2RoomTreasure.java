@@ -68,7 +68,7 @@ public class GCVenus2RoomTreasure extends GCCoreDungeonRoom
         }
         final int hx = (this.posX + this.posX + this.sizeX) / 2;
         final int hz = (this.posZ + this.posZ + this.sizeZ) / 2;
-        if (this.placeBlock(chunk, meta, hx, this.posY, hz, cx, cz, GCVenus2Blocks.tier3TreasureChest.blockID, 0))
+        if (this.placeBlock(chunk, meta, hx, this.posY, hz, cx, cz, GCCoreBlocks.treasureChestTier1.blockID, 0))
         {
             this.chests.add(new ChunkCoordinates(hx, this.posY, hz));
         }

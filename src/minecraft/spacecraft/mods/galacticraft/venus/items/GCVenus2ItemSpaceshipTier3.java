@@ -172,11 +172,6 @@ public class GCVenus2ItemSpaceshipTier3 extends Item implements IHoldableItem
         {
             par2List.add(EnumColor.RED + "\u00a7o" + "Creative Only");
         }
-        
-        if (par1ItemStack.getItemDamage() >= 10)
-        {
-            par2List.add(EnumColor.AQUA + "Requires Launch Controller");
-        }
     }
 
     @Override

@@ -19,7 +19,7 @@ public class GCVenus2ItemSchematic extends GCCoreItemSchematic implements ISchem
 {
     protected Icon[] icons = new Icon[1];
 
-    public static final String[] names = { "schematic_rocketT3", "schematic_rocket_cargo" };
+    public static final String[] names = { "schematic_rocketT3" };
 
     public GCVenus2ItemSchematic(int itemID)
     {
@@ -77,9 +77,6 @@ public class GCVenus2ItemSchematic extends GCCoreItemSchematic implements ISchem
             {
             case 0:
                 par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.rocketT3.name"));
-                break;
-            case 1:
-                par3List.add(LanguageRegistry.instance().getStringLocalization("schematic.cargoRocket.name"));
                 break;
             }
         }

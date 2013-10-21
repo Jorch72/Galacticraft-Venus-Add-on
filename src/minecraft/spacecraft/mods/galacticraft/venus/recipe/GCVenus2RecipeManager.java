@@ -148,42 +148,5 @@ public class GCVenus2RecipeManager
         input2.put(14, new ItemStack(Block.chest));
         input2.put(15, null);
         input2.put(16, null);
-        GCVenus2Util.adCargoRocketRecipe(new ItemStack(GCVenus2Items.spaceship, 1, 11), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(14, null);
-        input2.put(15, new ItemStack(Block.chest));
-        input2.put(16, null);
-        GCVenus2Util.adCargoRocketRecipe(new ItemStack(GCVenus2Items.spaceship, 1, 11), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(14, null);
-        input2.put(15, null);
-        input2.put(16, new ItemStack(Block.chest));
-        GCVenus2Util.adCargoRocketRecipe(new ItemStack(GCVenus2Items.spaceship, 1, 11), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(14, new ItemStack(Block.chest));
-        input2.put(15, new ItemStack(Block.chest));
-        input2.put(16, null);
-        GCVenus2Util.adCargoRocketRecipe(new ItemStack(GCVenus2Items.spaceship, 1, 12), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(14, new ItemStack(Block.chest));
-        input2.put(15, null);
-        input2.put(16, new ItemStack(Block.chest));
-        GCVenus2Util.adCargoRocketRecipe(new ItemStack(GCVenus2Items.spaceship, 1, 12), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(14, null);
-        input2.put(15, new ItemStack(Block.chest));
-        input2.put(16, new ItemStack(Block.chest));
-        GCVenus2Util.adCargoRocketRecipe(new ItemStack(GCVenus2Items.spaceship, 1, 12), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(14, new ItemStack(Block.chest));
-        input2.put(15, new ItemStack(Block.chest));
-        input2.put(16, new ItemStack(Block.chest));
-        GCVenus2Util.adCargoRocketRecipe(new ItemStack(GCVenus2Items.spaceship, 1, 13), input2);
     }
 }
