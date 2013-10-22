@@ -5,6 +5,7 @@ import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItemBow;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItemRocketEngine;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
+import net.minecraft.block.Block;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
@@ -13,6 +14,12 @@ import net.minecraftforge.common.MinecraftForge;
 
 public class GCVenusItems
 {
+    public static Item reinforcedBucketEmpty;
+    public static Item reinforcedBucketMilk;
+    public static Item reinforcedBucketWater;
+    public static Item reinforcedBucketLava;
+    public static Item reinforcedBucketBacteria;
+	
     public static Item venus2ItemBasic;
     public static Item gemPickaxe;
     public static Item gemAxe;
@@ -38,6 +45,11 @@ public class GCVenusItems
     
     public static void initItems()
     {
+    	GCVenusItems.reinforcedBucketEmpty = new GCVenusItemReinforcedBucket(GCVenusConfigManager.idItemReinforcedBucket, 0).getIconIndex(0).setItemName("reinfocedBucket");
+    	GCVenusItems.reinforcedBucketMilk = new GCVenusItemReinforcedBucket(GCVenusConfigManager.idItemReinforcedBucketMilk, 1).getIconIndex(3).setItemName("reinfocedBucketMilk");
+    	GCVenusItems.reinforcedBucketWater = new GCVenusItemReinforcedBucket(GCVenusConfigManager.idItemReinforcedBucketWater, Block.waterMoving.blockID).getIconIndex(1).setItemName("reinfocedBucketWater");
+    	GCVenusItems.reinforcedBucketLava = new GCVenusItemReinforcedBucket(GCVenusConfigManager.idItemReinforcedBucketLava, Block.lavaMoving.blockID).getIconIndex(2).setItemName("reinfocedBucketLava");
+
         GCVenusItems.venus2ItemBasic = new GCVenusItem(GCVenusConfigManager.idItemVenus2Basic);
         GCVenusItems.gemPickaxe = new GCVenusItemPickaxe(GCVenusConfigManager.idToolGemPickaxe, GCVenusItems.TOOLGEM).setUnlocalizedName("gemPick");
         GCVenusItems.gemAxe = new GCVenusItemAxe(GCVenusConfigManager.idToolGemAxe, GCVenusItems.TOOLGEM).setUnlocalizedName("gemAxe");
@@ -49,7 +61,7 @@ public class GCVenusItems
         GCVenusItems.gemLeggings = new GCVenusItemArmor(GCVenusConfigManager.idArmorGemLeggings, GCVenusItems.ARMORGEM, 7, 2, false).setUnlocalizedName("gemLeggings");
         GCVenusItems.gemBoots = new GCVenusItemArmor(GCVenusConfigManager.idArmorGemBoots, GCVenusItems.ARMORGEM, 7, 3, false).setUnlocalizedName("gemBoots");
         
-        GCVenusItems.jetpack = new GCVenusItemJetpack(GCVenusConfigManager.idArmorJetpack, GCVenusItems.ARMORJETPACK, 11, 1, false, null).setUnlocalizedName("jetpack");
+//        GCVenusItems.jetpack = new GCVenusItemJetpack(GCVenusConfigManager.idArmorJetpack, GCVenusItems.ARMORJETPACK, 11, 1, false, null).setUnlocalizedName("jetpack");
         
         GCVenusItems.rocketEngine = new GCVenusItemRocketEngine(GCVenusConfigManager.idItemRocketEngine, "engine");
         GCVenusItems.spaceship = new GCVenusItemSpaceshipTier3(GCVenusConfigManager.idItemSpaceshipTier3).setUnlocalizedName("spaceshipTier3");

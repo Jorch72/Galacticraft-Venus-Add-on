@@ -13,9 +13,9 @@ public class GCVenusItemJetpack extends ItemArmor
 {
         public boolean active;
 
-        public GCVenusItemJetpack(int par1, EnumArmorMaterial material, int par3, int par4)
+        public GCVenusItemJetpack(int par1, EnumArmorMaterial par2EnumArmorMaterial, int par3, int par4, boolean breathable)
         {
-                super(par1, material, par3, par4);
+            super(par1, par2EnumArmorMaterial, par3, par4);
                 this.setMaxStackSize(1);
                 this.setMaxDamage(256);
                 this.setCreativeTab(GCVenus.galacticraftVenusTab);
