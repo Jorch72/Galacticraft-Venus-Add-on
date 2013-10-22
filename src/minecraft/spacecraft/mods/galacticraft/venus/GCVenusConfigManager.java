@@ -38,6 +38,7 @@ public class GCVenusConfigManager
     public static int idItemSulferFuel;
     public static int idItemSulferCanister;
     public static int idItemVenusBattery;
+    public static int idArmorJetpack;
     
     // ARMOR
     public static int idArmorGemHelmet;
@@ -84,6 +85,7 @@ public class GCVenusConfigManager
             GCVenusConfigManager.idItemSulferFuel = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSulferFuel", 9993).getInt(9993);
             GCVenusConfigManager.idItemSulferCanister = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSulferCanister", 9994).getInt(9994);
             GCVenusConfigManager.idItemVenusBattery = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemVenusBattery", 9995).getInt(9995);
+            GCVenusConfigManager.idArmorJetpack = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorJetpack", 8995).getInt(8995);
 
             GCVenusConfigManager.idToolGemSword = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemSword", 9907).getInt(9907);
             GCVenusConfigManager.idToolGemPickaxe = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemPickaxe", 9908).getInt(9908);

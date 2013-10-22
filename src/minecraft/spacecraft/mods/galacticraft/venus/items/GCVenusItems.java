@@ -23,6 +23,7 @@ public class GCVenusItems
     public static Item gemChestplate;
     public static Item gemLeggings;
     public static Item gemBoots;
+    public static Item jetpack;
     
     public static Item venusBattery;
     public static Item rocketEngine;
@@ -33,7 +34,8 @@ public class GCVenusItems
 
     public static EnumArmorMaterial ARMORGEM = EnumHelper.addArmorMaterial("GEM", 42, new int[] { 4, 9, 7, 4 }, 12);
     public static EnumToolMaterial TOOLGEM = EnumHelper.addToolMaterial("GEM", 3, 1024, 5.0F, 2.5F, 8);
-
+    public static EnumArmorMaterial ARMORJETPACK = EnumHelper.addArmorMaterial("JETPACK", 200, new int[] {0, 0, 0, 0}, 0);
+    
     public static void initItems()
     {
         GCVenusItems.venus2ItemBasic = new GCVenusItem(GCVenusConfigManager.idItemVenus2Basic);
@@ -46,6 +48,9 @@ public class GCVenusItems
         GCVenusItems.gemChestplate = new GCVenusItemArmor(GCVenusConfigManager.idArmorGemChestplate, GCVenusItems.ARMORGEM, 7, 1, false).setUnlocalizedName("gemChestplate");
         GCVenusItems.gemLeggings = new GCVenusItemArmor(GCVenusConfigManager.idArmorGemLeggings, GCVenusItems.ARMORGEM, 7, 2, false).setUnlocalizedName("gemLeggings");
         GCVenusItems.gemBoots = new GCVenusItemArmor(GCVenusConfigManager.idArmorGemBoots, GCVenusItems.ARMORGEM, 7, 3, false).setUnlocalizedName("gemBoots");
+        
+        GCVenusItems.jetpack = new GCVenusItemJetpack(GCVenusConfigManager.idArmorJetpack, GCVenusItems.ARMORJETPACK, 11, 1, false, null).setUnlocalizedName("jetpack");
+        
         GCVenusItems.rocketEngine = new GCVenusItemRocketEngine(GCVenusConfigManager.idItemRocketEngine, "engine");
         GCVenusItems.spaceship = new GCVenusItemSpaceshipTier3(GCVenusConfigManager.idItemSpaceshipTier3).setUnlocalizedName("spaceshipTier3");
         GCVenusItems.schematic = new GCVenusItemSchematic(GCVenusConfigManager.idItemSchematicMars).setUnlocalizedName("schematic");

@@ -70,6 +70,9 @@ public class GCVenus
     public static final String TEXTURE_DOMAIN = "galacticraftvenus";
     public static final String TEXTURE_PREFIX = GCVenus.TEXTURE_DOMAIN + ":";
     
+    public static long tick;
+    public static long slowTick;
+    
     public static HashMap<String, ItemStack> blocksList = new HashMap<String, ItemStack>();
 
     @EventHandler
