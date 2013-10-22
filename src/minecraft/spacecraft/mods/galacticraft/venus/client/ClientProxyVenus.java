@@ -90,6 +90,8 @@ public class ClientProxyVenus extends CommonProxyVenus
         ClientProxyCore.capeMap.put("mattparks", capeBlueString);     
         ClientProxyCore.capeMap.put("flashy3", capeOrangeString); 
         ClientProxyCore.capeMap.put("ghostheart305", capeRedString); 
+        ClientProxyCore.capeMap.put("langjam350roxsox", capeBlueString); 
+        ClientProxyCore.capeMap.put("_Ja1m3", capeRedString); 
         ClientProxyCore.capeMap.put("dinammar", capeVioletString); 
         ClientProxyCore.capeMap.put("goldenkat99", capeOrangeString); 
     }
