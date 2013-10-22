@@ -29,7 +29,7 @@ public class GCVenusItemSchematic extends GCCoreItemSchematic implements ISchema
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GCVenus.galacticraftVenus2Tab;
+        return GCVenus.galacticraftVenusTab;
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })

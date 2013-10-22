@@ -39,7 +39,7 @@ public class GCVenusItemSulferCanister extends Item
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GCVenus.galacticraftVenus2Tab;
+        return GCVenus.galacticraftVenusTab;
     }
 
     @Override

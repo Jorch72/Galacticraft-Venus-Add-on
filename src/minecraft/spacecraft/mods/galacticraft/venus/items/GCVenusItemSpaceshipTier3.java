@@ -44,7 +44,7 @@ public class GCVenusItemSpaceshipTier3 extends Item implements IHoldableItem
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GCVenus.galacticraftVenus2Tab;
+        return GCVenus.galacticraftVenusTab;
     }
 
     @Override

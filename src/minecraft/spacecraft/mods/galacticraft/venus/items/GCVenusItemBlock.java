@@ -104,7 +104,7 @@ public class GCVenusItemBlock extends ItemBlock
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GCVenus.galacticraftVenus2Tab;
+        return GCVenus.galacticraftVenusTab;
     }
 
     @Override

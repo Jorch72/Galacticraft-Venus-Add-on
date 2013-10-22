@@ -97,11 +97,10 @@ public class ClientProxyVenus extends CommonProxyVenus
     @Override
     public void registerRenderInformation()
     {
-        IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftvenus2/models/cargoRocket.obj");
+        IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftvenus/models/cargoRocket.obj");
         RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityRocketT3.class, new GCCoreRenderSpaceship(new GCVenusModelSpaceshipTier3(), GCVenus.TEXTURE_DOMAIN, "rocketT3"));
         RenderingRegistry.addNewArmourRendererPrefix("gem");
         MinecraftForgeClient.registerItemRenderer(GCVenusItems.spaceship.itemID, new GCVenusItemRendererSpaceshipT3(cargoRocketModel));
-        MinecraftForgeClient.registerItemRenderer(GCVenusItems.key.itemID, new GCCoreItemRendererKey(new ResourceLocation(GCVenus.TEXTURE_DOMAIN, "textures/model/treasure.png")));
     }
 
 

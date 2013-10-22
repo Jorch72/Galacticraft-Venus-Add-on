@@ -27,7 +27,6 @@ public class GCVenusItems
     public static Item venusBattery;
     public static Item rocketEngine;
     public static Item spaceship;
-    public static Item key;
     public static Item schematic;
     public static Item sulferFuel;
     public static Item sulferCanister;
@@ -49,7 +48,6 @@ public class GCVenusItems
         GCVenusItems.gemBoots = new GCVenusItemArmor(GCVenusConfigManager.idArmorGemBoots, GCVenusItems.ARMORGEM, 7, 3, false).setUnlocalizedName("gemBoots");
         GCVenusItems.rocketEngine = new GCVenusItemRocketEngine(GCVenusConfigManager.idItemRocketEngine, "engine");
         GCVenusItems.spaceship = new GCVenusItemSpaceshipTier3(GCVenusConfigManager.idItemSpaceshipTier3).setUnlocalizedName("spaceshipTier3");
-        GCVenusItems.key = new GCVenusItemKey(GCVenusConfigManager.idItemKeyT2).setUnlocalizedName("key");
         GCVenusItems.schematic = new GCVenusItemSchematic(GCVenusConfigManager.idItemSchematicMars).setUnlocalizedName("schematic");
         GCVenusItems.sulferFuel = new GCVenusItemSulferFuel(GCVenusConfigManager.idItemSulferFuel, "sulferFuel");
         GCVenusItems.sulferCanister = new GCVenusItemSulferCanister(GCVenusConfigManager.idItemSulferCanister, "sulferCanister");

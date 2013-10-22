@@ -41,7 +41,7 @@ public class GCVenusItemSulferFuel extends Item
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GCVenus.galacticraftVenus2Tab;
+        return GCVenus.galacticraftVenusTab;
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })

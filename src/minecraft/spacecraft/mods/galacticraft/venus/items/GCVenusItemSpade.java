@@ -28,7 +28,7 @@ public class GCVenusItemSpade extends ItemSpade
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GCVenus.galacticraftVenus2Tab;
+        return GCVenus.galacticraftVenusTab;
     }
 
     @Override
