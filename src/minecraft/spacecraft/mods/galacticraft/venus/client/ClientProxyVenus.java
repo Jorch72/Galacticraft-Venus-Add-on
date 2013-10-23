@@ -113,7 +113,7 @@ public class ClientProxyVenus extends CommonProxyVenus
         MinecraftForgeClient.registerItemRenderer(GCVenusItems.spaceship.itemID, new GCVenusItemRendererSpaceshipT3(cargoRocketModel));
     
         RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityAlienVillager.class, new GCVenusRenderAlienVillager());
-        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityEvolvedBlaze.class, new GCVenusRenderEvolvedBlaze());
+//        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityEvolvedBlaze.class, new GCVenusRenderEvolvedBlaze());
     }
 
 

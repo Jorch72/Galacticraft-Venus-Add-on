@@ -9,6 +9,7 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
+import spacecraft.mods.galacticraft.venus.GCVenus;
 import spacecraft.mods.galacticraft.venusMobs.client.model.GCVenusModelVillager;
 import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityAlienVillager;
 import cpw.mods.fml.relauncher.Side;
@@ -17,7 +18,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class GCVenusRenderAlienVillager extends RenderLiving
 {
-    private static final ResourceLocation villagerTexture = new ResourceLocation(GalacticraftCore.TEXTURE_DOMAIN, "textures/model/villager.png");
+    private static final ResourceLocation villagerTexture = new ResourceLocation(GCVenus.TEXTURE_DOMAIN, "textures/model/villager.png");
 
     protected GCVenusModelVillager villagerModel;
 
