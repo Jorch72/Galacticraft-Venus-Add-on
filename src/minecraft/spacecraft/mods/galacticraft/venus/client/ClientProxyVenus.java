@@ -13,9 +13,11 @@ import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityRocketT3;
 import spacecraft.mods.galacticraft.venus.items.GCVenusItems;
 import spacecraft.mods.galacticraft.venusMobs.client.render.entities.GCVenusRenderAlienVillager;
 import spacecraft.mods.galacticraft.venusMobs.client.render.entities.GCVenusRenderEvolvedBlaze;
+import spacecraft.mods.galacticraft.venusMobs.client.render.entities.GCVenusRenderFlameling;
 import spacecraft.mods.galacticraft.venusMobs.entities.EntitySlime;
 import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityAlienVillager;
 import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityEvolvedBlaze;
+import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityFlameling;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderAlienVillager;
@@ -116,6 +118,7 @@ public class ClientProxyVenus extends CommonProxyVenus
     
         RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityAlienVillager.class, new GCVenusRenderAlienVillager());
         RenderingRegistry.registerEntityRenderingHandler(EntitySlime.class, new RenderSlime(null, null, 0));
+        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityFlameling.class, new GCVenusRenderFlameling());
         //        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityEvolvedBlaze.class, new GCVenusRenderEvolvedBlaze());
     }
 

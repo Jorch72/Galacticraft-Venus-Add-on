@@ -68,6 +68,7 @@ public class GCVenusConfigManager
     public static int idEntityEvolvedBlaze;
     public static int idEntityAlienVillager;
     public static int idEntitySlime;
+    public static int idEntityFlameling;
     
     // GENERAL
     public static boolean disableGemOreVenus;
@@ -121,7 +122,8 @@ public class GCVenusConfigManager
             GCVenusConfigManager.idEntityEvolvedBlaze = GCVenusConfigManager.configuration.get("Entities", "idEntityEvolvedBlaze", 257).getInt(257);
             GCVenusConfigManager.idEntityAlienVillager = GCVenusConfigManager.configuration.get("Entities", "idEntityAlienVillager", 258).getInt(258);
             GCVenusConfigManager.idEntitySlime = GCVenusConfigManager.configuration.get("Entities", "idEntitySlime", 259).getInt(259);
-            
+            GCVenusConfigManager.idEntityFlameling = GCVenusConfigManager.configuration.get("Entities", "idEntityFlameling", 260).getInt(260);
+
             GCVenusConfigManager.disableGemOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Gem Ore Gen on Venus", false).getBoolean(false);
             GCVenusConfigManager.disableMeteorOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Meteor Ore Gen on Venus", false).getBoolean(false);
             GCVenusConfigManager.disableSulferOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Sulfer Ore Gen on Venus", false).getBoolean(false);
