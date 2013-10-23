@@ -13,6 +13,7 @@ import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityRocketT3;
 import spacecraft.mods.galacticraft.venus.items.GCVenusItems;
 import spacecraft.mods.galacticraft.venusMobs.client.render.entities.GCVenusRenderAlienVillager;
 import spacecraft.mods.galacticraft.venusMobs.client.render.entities.GCVenusRenderEvolvedBlaze;
+import spacecraft.mods.galacticraft.venusMobs.entities.EntitySlime;
 import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityAlienVillager;
 import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityEvolvedBlaze;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
@@ -30,6 +31,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.SoundPoolEntry;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.particle.EntityFX;
+import net.minecraft.client.renderer.entity.RenderSlime;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.network.INetworkManager;
@@ -113,7 +115,8 @@ public class ClientProxyVenus extends CommonProxyVenus
         MinecraftForgeClient.registerItemRenderer(GCVenusItems.spaceship.itemID, new GCVenusItemRendererSpaceshipT3(cargoRocketModel));
     
         RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityAlienVillager.class, new GCVenusRenderAlienVillager());
-//        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityEvolvedBlaze.class, new GCVenusRenderEvolvedBlaze());
+        RenderingRegistry.registerEntityRenderingHandler(EntitySlime.class, new RenderSlime(null, null, 0));
+        //        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityEvolvedBlaze.class, new GCVenusRenderEvolvedBlaze());
     }
 
 
