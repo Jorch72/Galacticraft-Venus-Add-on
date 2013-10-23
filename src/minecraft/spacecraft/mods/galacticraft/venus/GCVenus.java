@@ -137,10 +137,9 @@ public class GCVenus
         GalacticraftRegistry.registerCelestialBody(new GCVenusPlanet());
         GalacticraftRegistry.registerRocketGui(GCVenusWorldProvider.class, new ResourceLocation(GCVenus.TEXTURE_DOMAIN, "textures/gui/venusRocketGui.png"));
         GalacticraftRegistry.addDungeonLoot(2, new ItemStack(GCVenusItems.schematic, 1, 0));
-        GalacticraftRegistry.addDungeonLoot(2, new ItemStack(GCVenusItems.schematic, 1, 1));
-
-        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3), new ItemStack(GCCoreItems.heavyPlatingTier1), new ItemStack(GCMoonItems.meteoricIronIngot, 1, 1));
-        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venus2ItemBasic, 1, 5), new ItemStack(GCVenusItems.venus2ItemBasic, 1, 2));
+        
+        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), new ItemStack(GCCoreItems.heavyPlatingTier1), new ItemStack(GCMoonItems.meteoricIronIngot, 1, 1));
+        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 5), new ItemStack(GCVenusItems.venusItemBasic, 1, 2));
     
         GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(GalacticraftVenus.VenusRedGemOre, 5, 24, 0, 75, 7));
         GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(GalacticraftVenus.VenusMeteorOre, 6, 22, 0, 60, 7));

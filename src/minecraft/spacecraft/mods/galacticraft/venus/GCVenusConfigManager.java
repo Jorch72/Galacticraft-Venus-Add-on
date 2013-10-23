@@ -26,17 +26,12 @@ public class GCVenusConfigManager
     public static int dimensionIDVenus;
 
     // BLOCKS
-    public static int idBlockVenus2;
+    public static int idBlockVenus;
     public static int idBlockBlazeEgg;
 	public static int idBlockBasaltSlab;
 
     // ITEMS
-    public static int idItemReinforcedBucket;
-    public static int idItemReinforcedBucketMilk;
-    public static int idItemReinforcedBucketLava;
-    public static int idItemReinforcedBucketWater;
-	
-    public static int idItemVenus2Basic;
+    public static int idItemVenusBasic;
     public static int idItemSpaceshipTier3;
     public static int idItemSchematicMars;
     public static int idItemRocketEngine;
@@ -79,17 +74,11 @@ public class GCVenusConfigManager
 
             GCVenusConfigManager.dimensionIDVenus = GCVenusConfigManager.configuration.get("Dimensions", "Venus Dimension ID", -46).getInt(-46);
 
-            GCVenusConfigManager.idBlockVenus2 = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockVenus2", 3390).getInt(3390);
+            GCVenusConfigManager.idBlockVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockVenus", 3390).getInt(3390);
             GCVenusConfigManager.idBlockBlazeEgg = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockBlazeEgg", 3396).getInt(3396);
             GCVenusConfigManager.idBlockBasaltSlab = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockBasaltSlab", 3700).getInt(3700);
 
-            GCVenusConfigManager.idItemReinforcedBucket = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemReinforcedBucket", 5900).getInt(5900);
-            GCVenusConfigManager.idItemReinforcedBucketMilk = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemReinforcedBucketMilk", 5901).getInt(5901);
-            GCVenusConfigManager.idItemReinforcedBucketWater = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemReinforcedBucketWater", 5902).getInt(5902);
-            GCVenusConfigManager.idItemReinforcedBucketLava = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemReinforcedBucketLava", 5903).getInt(5903);
-
-            
-            GCVenusConfigManager.idItemVenus2Basic = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemvenus2ItemBasic", 9905).getInt(9905);
+            GCVenusConfigManager.idItemVenusBasic = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemvenusItemBasic", 9905).getInt(9905);
             GCVenusConfigManager.idItemSpaceshipTier3 = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier3", 9906).getInt(9906);
             GCVenusConfigManager.idItemSchematicMars = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSchematicMars", 9917).getInt(9917);
             GCVenusConfigManager.idItemRocketEngine = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemRocketEngineMars", 9939).getInt(9939);

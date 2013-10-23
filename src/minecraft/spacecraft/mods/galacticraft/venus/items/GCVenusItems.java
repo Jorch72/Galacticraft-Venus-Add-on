@@ -5,7 +5,6 @@ import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItemBow;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItemRocketEngine;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
-import net.minecraft.block.Block;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
@@ -14,13 +13,7 @@ import net.minecraftforge.common.MinecraftForge;
 
 public class GCVenusItems
 {
-    public static Item reinforcedBucketEmpty;
-    public static Item reinforcedBucketMilk;
-    public static Item reinforcedBucketWater;
-    public static Item reinforcedBucketLava;
-    public static Item reinforcedBucketBacteria;
-	
-    public static Item venus2ItemBasic;
+    public static Item venusItemBasic;
     public static Item gemPickaxe;
     public static Item gemAxe;
     public static Item gemHoe;
@@ -41,16 +34,11 @@ public class GCVenusItems
 
     public static EnumArmorMaterial ARMORGEM = EnumHelper.addArmorMaterial("GEM", 42, new int[] { 4, 9, 7, 4 }, 12);
     public static EnumToolMaterial TOOLGEM = EnumHelper.addToolMaterial("GEM", 3, 1024, 5.0F, 2.5F, 8);
-    public static EnumArmorMaterial ARMORJETPACK = EnumHelper.addArmorMaterial("JETPACK", 200, new int[] {0, 0, 0, 0}, 0);
+//    public static EnumArmorMaterial ARMORJETPACK = EnumHelper.addArmorMaterial("JETPACK", 200, new int[] {0, 0, 0, 0}, 0);
     
     public static void initItems()
     {
-    	GCVenusItems.reinforcedBucketEmpty = new GCVenusItemReinforcedBucket(GCVenusConfigManager.idItemReinforcedBucket, 0).getIconIndex(0).setItemName("reinfocedBucket");
-    	GCVenusItems.reinforcedBucketMilk = new GCVenusItemReinforcedBucket(GCVenusConfigManager.idItemReinforcedBucketMilk, 1).getIconIndex(3).setItemName("reinfocedBucketMilk");
-    	GCVenusItems.reinforcedBucketWater = new GCVenusItemReinforcedBucket(GCVenusConfigManager.idItemReinforcedBucketWater, Block.waterMoving.blockID).getIconIndex(1).setItemName("reinfocedBucketWater");
-    	GCVenusItems.reinforcedBucketLava = new GCVenusItemReinforcedBucket(GCVenusConfigManager.idItemReinforcedBucketLava, Block.lavaMoving.blockID).getIconIndex(2).setItemName("reinfocedBucketLava");
-
-        GCVenusItems.venus2ItemBasic = new GCVenusItem(GCVenusConfigManager.idItemVenus2Basic);
+        GCVenusItems.venusItemBasic = new GCVenusItem(GCVenusConfigManager.idItemVenusBasic);
         GCVenusItems.gemPickaxe = new GCVenusItemPickaxe(GCVenusConfigManager.idToolGemPickaxe, GCVenusItems.TOOLGEM).setUnlocalizedName("gemPick");
         GCVenusItems.gemAxe = new GCVenusItemAxe(GCVenusConfigManager.idToolGemAxe, GCVenusItems.TOOLGEM).setUnlocalizedName("gemAxe");
         GCVenusItems.gemHoe = new GCVenusItemHoe(GCVenusConfigManager.idToolGemHoe, GCVenusItems.TOOLGEM).setUnlocalizedName("gemHoe");

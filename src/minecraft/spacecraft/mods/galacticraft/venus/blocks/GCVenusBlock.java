@@ -174,7 +174,7 @@ public class GCVenusBlock extends Block implements IDetectableResource, IPlantab
     {
         if (meta == 2)
         {
-            return GCVenusItems.venus2ItemBasic.itemID;
+            return GCVenusItems.venusItemBasic.itemID;
         }
         else if (meta == 10 || meta == 7)
         {

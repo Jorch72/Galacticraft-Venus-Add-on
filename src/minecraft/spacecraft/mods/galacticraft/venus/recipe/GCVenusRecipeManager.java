@@ -24,55 +24,55 @@ public class GCVenusRecipeManager
 
     private static void addUniversalRecipes()
     {
-        OreDictionary.registerOre("ingotDesh", new ItemStack(GCVenusItems.venus2ItemBasic, 1, 2));
-        OreDictionary.registerOre("plateDesh", new ItemStack(GCVenusItems.venus2ItemBasic, 1, 5));
-        OreDictionary.registerOre("plateHeavyT2", new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3));
+        OreDictionary.registerOre("ingotDesh", new ItemStack(GCVenusItems.venusItemBasic, 1, 2));
+        OreDictionary.registerOre("plateDesh", new ItemStack(GCVenusItems.venusItemBasic, 1, 5));
+        OreDictionary.registerOre("plateHeavyT2", new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemBoots), new Object[] { "X X", "X X", 'X', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 2) });
+        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemBoots), new Object[] { "X X", "X X", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2) });
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venus2ItemBasic, 1, 1), new Object[] { "X", "X", 'X', "ingotDesh" });
+        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 1), new Object[] { "X", "X", 'X', "ingotDesh" });
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venus2ItemBasic, 1, 4), new Object[] { "XWX", "XYX", " Z ", 'W', Item.diamond, 'X', Item.leather, 'Y', Item.slimeBall, 'Z', Block.chest });
+        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 4), new Object[] { "XWX", "XYX", " Z ", 'W', Item.diamond, 'X', Item.leather, 'Y', Item.slimeBall, 'Z', Block.chest });
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemSword), new Object[] { "X", "X", "Y", 'X', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 2), 'Y', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 1) });
+        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemSword), new Object[] { "X", "X", "Y", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2), 'Y', new ItemStack(GCVenusItems.venusItemBasic, 1, 1) });
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemPickaxe), new Object[] { "XXX", " Y ", " Y ", 'X', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 2), 'Y', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 1) });
+        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemPickaxe), new Object[] { "XXX", " Y ", " Y ", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2), 'Y', new ItemStack(GCVenusItems.venusItemBasic, 1, 1) });
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemSpade), new Object[] { "X", "Y", "Y", 'X', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 2), 'Y', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 1) });
+        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemSpade), new Object[] { "X", "Y", "Y", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2), 'Y', new ItemStack(GCVenusItems.venusItemBasic, 1, 1) });
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemHoe), new Object[] { "XX", "Y ", "Y ", 'X', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 2), 'Y', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 1) });
+        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemHoe), new Object[] { "XX", "Y ", "Y ", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2), 'Y', new ItemStack(GCVenusItems.venusItemBasic, 1, 1) });
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemHoe), new Object[] { "XX", " Y", " Y", 'X', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 2), 'Y', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 1) });
+        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemHoe), new Object[] { "XX", " Y", " Y", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2), 'Y', new ItemStack(GCVenusItems.venusItemBasic, 1, 1) });
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemAxe), new Object[] { "XX", "XY", " Y", 'X', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 2), 'Y', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 1) });
+        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemAxe), new Object[] { "XX", "XY", " Y", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2), 'Y', new ItemStack(GCVenusItems.venusItemBasic, 1, 1) });
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemAxe), new Object[] { "XX", "YX", "Y ", 'X', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 2), 'Y', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 1) });
+        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemAxe), new Object[] { "XX", "YX", "Y ", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2), 'Y', new ItemStack(GCVenusItems.venusItemBasic, 1, 1) });
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemHelmet), new Object[] { "XXX", "X X", 'X', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 2) });
+        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemHelmet), new Object[] { "XXX", "X X", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2) });
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemChestplate), new Object[] { "X X", "XXX", "XXX", 'X', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 2) });
+        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemChestplate), new Object[] { "X X", "XXX", "XXX", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2) });
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemLeggings), new Object[] { "XXX", "X X", "X X", 'X', new ItemStack(GCVenusItems.venus2ItemBasic, 1, 2) });
+        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemLeggings), new Object[] { "XXX", "X X", "X X", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2) });
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venus2ItemBasic, 9, 2), new Object[] { "X", 'X', new ItemStack(GCVenusBlocks.venus2Block, 1, 8) });
+        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 9, 2), new Object[] { "X", 'X', new ItemStack(GCVenusBlocks.venusBlock, 1, 8) });
 
         
         // Smelting
-        FurnaceRecipes.smelting().addSmelting(GCVenusItems.venus2ItemBasic.itemID, 0, new ItemStack(GCVenusItems.venus2ItemBasic, 1, 2), 0.2F);
+        FurnaceRecipes.smelting().addSmelting(GCVenusItems.venusItemBasic.itemID, 0, new ItemStack(GCVenusItems.venusItemBasic, 1, 2), 0.2F);
 
         // Schematic
         HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
         input.put(1, new ItemStack(GCCoreItems.partNoseCone));
-        input.put(2, new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3));
-        input.put(3, new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3));
-        input.put(4, new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3));
-        input.put(5, new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3));
-        input.put(6, new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3));
-        input.put(7, new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3));
-        input.put(8, new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3));
-        input.put(9, new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3));
-        input.put(10, new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3));
-        input.put(11, new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3));
+        input.put(2, new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
+        input.put(3, new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
+        input.put(4, new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
+        input.put(5, new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
+        input.put(6, new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
+        input.put(7, new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
+        input.put(8, new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
+        input.put(9, new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
+        input.put(10, new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
+        input.put(11, new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
         input.put(12, new ItemStack(GCCoreItems.rocketEngine, 1, 1));
         input.put(13, new ItemStack(GCCoreItems.partFins));
         input.put(14, new ItemStack(GCCoreItems.partFins));
@@ -132,12 +132,12 @@ public class GCVenusRecipeManager
         input = new HashMap<Integer, ItemStack>();
         input.put(1, new ItemStack(GCCoreItems.partNoseCone));
         input.put(2, new ItemStack(GCCoreItems.basicItem, 1, 14));
-        input.put(3, new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3));
-        input.put(4, new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3));
-        input.put(5, new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3));
-        input.put(6, new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3));
-        input.put(7, new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3));
-        input.put(8, new ItemStack(GCVenusItems.venus2ItemBasic, 1, 3));
+        input.put(3, new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
+        input.put(4, new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
+        input.put(5, new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
+        input.put(6, new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
+        input.put(7, new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
+        input.put(8, new ItemStack(GCVenusItems.venusItemBasic, 1, 3));
         input.put(9, new ItemStack(GCCoreItems.partFins));
         input.put(10, new ItemStack(GCCoreItems.partFins));
         input.put(11, new ItemStack(GCCoreItems.rocketEngine));

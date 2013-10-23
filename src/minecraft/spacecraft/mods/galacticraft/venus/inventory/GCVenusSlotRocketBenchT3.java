@@ -61,25 +61,25 @@ public class GCVenusSlotRocketBenchT3 extends Slot
         case 1:
             return par1ItemStack.getItem().itemID == GCCoreItems.partNoseCone.itemID ? true : false;
         case 2:
-            return par1ItemStack.getItem().itemID == GCVenusItems.venus2ItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GCVenusItems.venusItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 3:
-            return par1ItemStack.getItem().itemID == GCVenusItems.venus2ItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GCVenusItems.venusItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 4:
-            return par1ItemStack.getItem().itemID == GCVenusItems.venus2ItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GCVenusItems.venusItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 5:
-            return par1ItemStack.getItem().itemID == GCVenusItems.venus2ItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GCVenusItems.venusItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 6:
-            return par1ItemStack.getItem().itemID == GCVenusItems.venus2ItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GCVenusItems.venusItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 7:
-            return par1ItemStack.getItem().itemID == GCVenusItems.venus2ItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GCVenusItems.venusItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 8:
-            return par1ItemStack.getItem().itemID == GCVenusItems.venus2ItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GCVenusItems.venusItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 9:
-            return par1ItemStack.getItem().itemID == GCVenusItems.venus2ItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GCVenusItems.venusItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 10:
-            return par1ItemStack.getItem().itemID == GCVenusItems.venus2ItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GCVenusItems.venusItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 11:
-            return par1ItemStack.getItem().itemID == GCVenusItems.venus2ItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
+            return par1ItemStack.getItem().itemID == GCVenusItems.venusItemBasic.itemID && par1ItemStack.getItemDamage() == 3 ? true : false;
         case 12:
             return par1ItemStack.getItem().itemID == GCCoreItems.rocketEngine.itemID && par1ItemStack.getItemDamage() == 1 ? true : false;
         case 13:
