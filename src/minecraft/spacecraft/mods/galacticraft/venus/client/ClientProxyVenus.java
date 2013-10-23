@@ -11,11 +11,19 @@ import spacecraft.mods.galacticraft.venus.client.sounds.GCVenusSounds;
 import spacecraft.mods.galacticraft.venus.dimension.GCVenusWorldProvider;
 import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityRocketT3;
 import spacecraft.mods.galacticraft.venus.items.GCVenusItems;
+import spacecraft.mods.galacticraft.venusMobs.client.render.entities.GCVenusRenderAlienVillager;
+import spacecraft.mods.galacticraft.venusMobs.client.render.entities.GCVenusRenderEvolvedBlaze;
+import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityAlienVillager;
+import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityEvolvedBlaze;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
+import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderAlienVillager;
 import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderSpaceship;
+import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderZombie;
 import micdoodle8.mods.galacticraft.core.client.render.item.GCCoreItemRendererKey;
 import micdoodle8.mods.galacticraft.core.client.sounds.GCCoreSoundUpdaterSpaceship;
+import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityAlienVillager;
+import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityZombie;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -103,6 +111,9 @@ public class ClientProxyVenus extends CommonProxyVenus
         RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityRocketT3.class, new GCCoreRenderSpaceship(new GCVenusModelSpaceshipTier3(), GCVenus.TEXTURE_DOMAIN, "rocketT3"));
         RenderingRegistry.addNewArmourRendererPrefix("gem");
         MinecraftForgeClient.registerItemRenderer(GCVenusItems.spaceship.itemID, new GCVenusItemRendererSpaceshipT3(cargoRocketModel));
+    
+        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityAlienVillager.class, new GCVenusRenderAlienVillager());
+        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityEvolvedBlaze.class, new GCVenusRenderEvolvedBlaze());
     }
 
 

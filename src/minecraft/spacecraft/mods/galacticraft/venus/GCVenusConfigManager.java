@@ -3,6 +3,7 @@ package spacecraft.mods.galacticraft.venus;
 import java.io.File;
 import java.util.logging.Level;
 
+import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.FMLLog;
@@ -63,6 +64,10 @@ public class GCVenusConfigManager
     public static int idSchematicRocketT3;
     public static int idSchematicCargoRocket;
 
+    // ACHIEVEMENTS
+    public static int idEntityEvolvedBlaze;
+    public static int idEntityAlienVillager;
+    
     // GENERAL
     public static boolean disableGemOreVenus;
     public static boolean disableSulferOreVenus;
@@ -111,6 +116,9 @@ public class GCVenusConfigManager
             GCVenusConfigManager.idGuiRocketCraftingBenchT3 = GCVenusConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT3", 143).getInt(143);
 
             GCVenusConfigManager.idSchematicRocketT3 = GCVenusConfigManager.configuration.get("Schematic", "idSchematicRocketT3", 2).getInt(2);
+
+            GCVenusConfigManager.idEntityEvolvedBlaze = GCVenusConfigManager.configuration.get("Entities", "idEntityEvolvedBlaze", 257).getInt(257);
+            GCVenusConfigManager.idEntityAlienVillager = GCVenusConfigManager.configuration.get("Entities", "idEntityAlienVillager", 266).getInt(266);
             
             GCVenusConfigManager.disableGemOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Gem Ore Gen on Venus", false).getBoolean(false);
             GCVenusConfigManager.disableMeteorOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Meteor Ore Gen on Venus", false).getBoolean(false);

@@ -13,7 +13,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class GCVenusEntityBlaze extends EntityMob implements IEntityBreathable
+public class GCVenusEntityEvolvedBlaze extends EntityMob implements IEntityBreathable
 {
     /** Random offset used in floating behaviour */
     private float heightOffset = 0.5F;
@@ -22,7 +22,7 @@ public class GCVenusEntityBlaze extends EntityMob implements IEntityBreathable
     private int heightOffsetUpdateTime;
     private int field_70846_g;
 
-    public GCVenusEntityBlaze(World par1World)
+    public GCVenusEntityEvolvedBlaze(World par1World)
     {
         super(par1World);
         this.isImmuneToFire = true;

@@ -12,12 +12,18 @@ import spacecraft.mods.galacticraft.venus.network.GCVenusPacketHandlerServer;
 import spacecraft.mods.galacticraft.venus.recipe.GCVenusRecipeManager;
 import spacecraft.mods.galacticraft.venus.schematic.GCVenusSchematicRocketT3;
 import spacecraft.mods.galacticraft.venusBlocks.GalacticraftVenus;
+import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityAlienVillager;
+import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityEvolvedBlaze;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
+import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.GCLog;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
+import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityAlienVillager;
+import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
+import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityZombie;
 import micdoodle8.mods.galacticraft.core.items.GCCoreItems;
 import micdoodle8.mods.galacticraft.core.network.GCCoreConnectionHandler;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketManager;
@@ -163,6 +169,9 @@ public class GCVenus
 
     public void registerCreatures()
     {
+    	GCCoreUtil.registerGalacticraftCreature(GCVenusEntityAlienVillager.class, "AlienVillager", GCVenusConfigManager.idEntityAlienVillager, GCCoreUtil.convertTo32BitColor(255, 103, 181, 145), 12422002);
+        GCCoreUtil.registerGalacticraftCreature(GCVenusEntityEvolvedBlaze.class, "EvolvedBlaze", GCVenusConfigManager.idEntityEvolvedBlaze, 44975, 7969893);
+
     }
 
     public void registerOtherEntities()

@@ -1,7 +1,7 @@
 package spacecraft.mods.galacticraft.venusBlocks.block;
 
 import spacecraft.mods.galacticraft.venusBlocks.GalacticraftVenus;
-import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityBlaze;
+import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityEvolvedBlaze;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
 import net.minecraft.block.BlockDragonEgg;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -68,7 +68,7 @@ public class VenusBlazeEgg extends BlockDragonEgg
     {
         if (!world.isRemote)
         {
-        	GCVenusEntityBlaze blaze = new GCVenusEntityBlaze(world);
+        	GCVenusEntityEvolvedBlaze blaze = new GCVenusEntityEvolvedBlaze(world);
             blaze.setPosition(x + 0.5, y + 1, z + 0.5);
             world.spawnEntityInWorld(blaze);
         }
