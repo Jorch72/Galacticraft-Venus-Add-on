@@ -74,7 +74,7 @@ public class GCVenus
     @Instance(GCVenus.MODID)
     public static GCVenus instance;
 
-    public static GCVenusCreativeTab galacticraftVenusTab;
+    public static CreativeTabs galacticraftVenusTab = new GCVenusCreativeTab(CreativeTabs.getNextID(),"galacticraftVenusTab");
 
     public static final String TEXTURE_DOMAIN = "galacticraftvenus";
     public static final String TEXTURE_PREFIX = GCVenus.TEXTURE_DOMAIN + ":";
@@ -84,7 +84,7 @@ public class GCVenus
     
     public static HashMap<String, ItemStack> blocksList = new HashMap<String, ItemStack>();
 
-  //Block Venus Grass
+    //Block Venus Grass
 	public final static Block VenusGrass = new VenusGrass(610, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("galacticraftvenus:grassVenus");
 
 	//Block Venus Dirt
@@ -155,6 +155,44 @@ public class GCVenus
     @EventHandler
     public void load(FMLInitializationEvent event)
     {
+        GameRegistry.registerBlock(VenusGrass, "VenusGrass");
+        GameRegistry.registerBlock(VenusDirt, "VenusDirt");
+		GameRegistry.registerBlock(VenusStone, "VenusStone");
+		GameRegistry.registerBlock(VenusCobblestone, "VenusCobblestone");
+		GameRegistry.registerBlock(VenusRedGemBlock, "VenusRedGemBlock");
+		GameRegistry.registerBlock(VenusMeteorBlock, "VenusMeteorBlock");
+		GameRegistry.registerBlock(VenusBrick, "VenusBrick");
+		GameRegistry.registerBlock(VenusSulferBlock, "VenusSulferBlock");
+		GameRegistry.registerBlock(VenusRedGemOre, "VenusRedGemOre");
+		GameRegistry.registerBlock(VenusMeteorOre, "VenusMeteorOre");
+		GameRegistry.registerBlock(VenusSulferOre, "VenusSulferOre");
+		GameRegistry.registerBlock(VenusIronOre, "VenusIronOre");
+		GameRegistry.registerBlock(VenusCoalOre, "VenusCoalOre");
+		GameRegistry.registerBlock(VenusTinOre, "VenusTinOre");
+		GameRegistry.registerBlock(VenusCopperOre, "VenusCopperOre");
+		GameRegistry.registerBlock(VenusBasalt, "VenusBasalt");
+		GameRegistry.registerBlock(VenusHalfBasalt, "VenusHalfBasalt");
+		GameRegistry.registerBlock(EvolvedBlazeEgg, "EvolvedBlazeEgg");
+
+        LanguageRegistry.addName(VenusGrass, "Venus Grass");
+        LanguageRegistry.addName(VenusDirt, "Venus Dirt");
+		LanguageRegistry.addName(VenusStone, "Venus Stone");
+        LanguageRegistry.addName(VenusCobblestone, "Venus Cobblestone");
+		LanguageRegistry.addName(VenusRedGemBlock, "Red Gem Block");
+		LanguageRegistry.addName(VenusMeteorBlock, "Meteor Block");
+        LanguageRegistry.addName(VenusBrick, "Venus Brick");
+		LanguageRegistry.addName(VenusSulferBlock, "Sulfer Block");
+		LanguageRegistry.addName(VenusRedGemOre, "Red Gem Ore");
+		LanguageRegistry.addName(VenusMeteorOre, "Meteor Ore");
+		LanguageRegistry.addName(VenusSulferOre, "Sulfer Ore");
+		LanguageRegistry.addName(VenusIronOre, "Iron Ore");
+		LanguageRegistry.addName(VenusCoalOre, "Coal Ore");	
+		LanguageRegistry.addName(VenusTinOre, "Tin Ore");
+		LanguageRegistry.addName(VenusCopperOre, "Copper Ore");
+		LanguageRegistry.addName(VenusBasalt, "Basalt");
+		LanguageRegistry.addName(VenusHalfBasalt, "Basalt Slab");
+		LanguageRegistry.addName(EvolvedBlazeEgg, "Evolved Blaze Egg");
+        
         int languages = 0;
 
         for (String language : GCVenus.LANGUAGES_SUPPORTED)
@@ -188,49 +226,8 @@ public class GCVenus
 
         GCLog.info("Galacticraft Venus Loaded: " + languages + " Languages.");
 
-        //Registering Blocks
-        GameRegistry.registerBlock(VenusGrass, "VenusGrass");
-        GameRegistry.registerBlock(VenusDirt, "VenusDirt");
-		GameRegistry.registerBlock(VenusStone, "VenusStone");
-		GameRegistry.registerBlock(VenusCobblestone, "VenusCobblestone");
-		GameRegistry.registerBlock(VenusRedGemBlock, "VenusRedGemBlock");
-		GameRegistry.registerBlock(VenusMeteorBlock, "VenusMeteorBlock");
-		GameRegistry.registerBlock(VenusBrick, "VenusBrick");
-		GameRegistry.registerBlock(VenusSulferBlock, "VenusSulferBlock");
-		GameRegistry.registerBlock(VenusRedGemOre, "VenusRedGemOre");
-		GameRegistry.registerBlock(VenusMeteorOre, "VenusMeteorOre");
-		GameRegistry.registerBlock(VenusSulferOre, "VenusSulferOre");
-		GameRegistry.registerBlock(VenusIronOre, "VenusIronOre");
-		GameRegistry.registerBlock(VenusCoalOre, "VenusCoalOre");
-		GameRegistry.registerBlock(VenusTinOre, "VenusTinOre");
-		GameRegistry.registerBlock(VenusCopperOre, "VenusCopperOre");
-		GameRegistry.registerBlock(VenusBasalt, "VenusBasalt");
-		GameRegistry.registerBlock(VenusHalfBasalt, "VenusHalfBasalt");
-		GameRegistry.registerBlock(EvolvedBlazeEgg, "EvolvedBlazeEgg");
-		
-		//Registering Block Names
-        LanguageRegistry.addName(VenusGrass, "Venus Grass");
-        LanguageRegistry.addName(VenusDirt, "Venus Dirt");
-		LanguageRegistry.addName(VenusStone, "Venus Stone");
-        LanguageRegistry.addName(VenusCobblestone, "Venus Cobblestone");
-		LanguageRegistry.addName(VenusRedGemBlock, "Red Gem Block");
-		LanguageRegistry.addName(VenusMeteorBlock, "Meteor Block");
-        LanguageRegistry.addName(VenusBrick, "Venus Brick");
-		LanguageRegistry.addName(VenusSulferBlock, "Sulfer Block");
-		LanguageRegistry.addName(VenusRedGemOre, "Red Gem Ore");
-		LanguageRegistry.addName(VenusMeteorOre, "Meteor Ore");
-		LanguageRegistry.addName(VenusSulferOre, "Sulfer Ore");
-		LanguageRegistry.addName(VenusIronOre, "Iron Ore");
-		LanguageRegistry.addName(VenusCoalOre, "Coal Ore");	
-		LanguageRegistry.addName(VenusTinOre, "Tin Ore");
-		LanguageRegistry.addName(VenusCopperOre, "Copper Ore");
-		LanguageRegistry.addName(VenusBasalt, "Basalt");
-		LanguageRegistry.addName(VenusHalfBasalt, "Basalt Slab");
-		LanguageRegistry.addName(EvolvedBlazeEgg, "Evolved Blaze Egg");
-        
         SchematicRegistry.registerSchematicRecipe(new GCVenusSchematicRocketT3());
 
-        GCVenus.galacticraftVenusTab = new GCVenusCreativeTab(CreativeTabs.getNextID(), GCVenus.MODID, GCVenusItems.spaceship.itemID, 5);
         NetworkRegistry.instance().registerGuiHandler(GCVenus.instance, GCVenus.proxy);
         this.registerTileEntities();
         this.registerCreatures();
