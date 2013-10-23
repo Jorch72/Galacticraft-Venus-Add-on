@@ -1,16 +1,19 @@
 package spacecraft.mods.galacticraft.venus.dimension;
 
+import micdoodle8.mods.galacticraft.api.event.oxygen.GCCoreOxygenSuffocationEvent;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
 import spacecraft.mods.galacticraft.venus.wgen.GCVenusChunkProvider;
 import spacecraft.mods.galacticraft.venus.wgen.GCVenusWorldChunkManager;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraftforge.event.Cancelable;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
