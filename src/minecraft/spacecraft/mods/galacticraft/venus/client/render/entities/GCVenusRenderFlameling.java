@@ -1,8 +1,8 @@
-package spacecraft.mods.galacticraft.venusMobs.client.render.entities;
+package spacecraft.mods.galacticraft.venus.client.render.entities;
 
 import spacecraft.mods.galacticraft.venus.GCVenus;
-import spacecraft.mods.galacticraft.venusMobs.client.model.GCVenusModelFlameling;
-import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityFlameling;
+import spacecraft.mods.galacticraft.venus.client.model.GCVenusModelFlameling;
+import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityFlameling;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;

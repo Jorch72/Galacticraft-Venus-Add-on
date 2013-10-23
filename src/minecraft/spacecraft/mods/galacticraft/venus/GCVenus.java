@@ -6,15 +6,15 @@ import java.util.HashMap;
 import spacecraft.mods.galacticraft.venus.blocks.GCVenusBlocks;
 import spacecraft.mods.galacticraft.venus.dimension.GCVenusTeleportType;
 import spacecraft.mods.galacticraft.venus.dimension.GCVenusWorldProvider;
+import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityAlienVillager;
+import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityEvolvedBlaze;
+import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityFlameling;
 import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityRocketT3;
 import spacecraft.mods.galacticraft.venus.items.GCVenusItems;
 import spacecraft.mods.galacticraft.venus.network.GCVenusPacketHandlerServer;
 import spacecraft.mods.galacticraft.venus.recipe.GCVenusRecipeManager;
 import spacecraft.mods.galacticraft.venus.schematic.GCVenusSchematicRocketT3;
 import spacecraft.mods.galacticraft.venus.blocks.*;
-import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityAlienVillager;
-import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityEvolvedBlaze;
-import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityFlameling;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -85,28 +85,28 @@ public class GCVenus
     public static HashMap<String, ItemStack> blocksList = new HashMap<String, ItemStack>();
 
     //Block Venus Grass
-	public final static Block VenusGrass = new VenusGrass(610, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("galacticraftvenus:grassVenus");
+	public final static Block VenusGrass = new GCVenusGrass(610, Material.grass) .setHardness(0.4F).setStepSound(Block.soundGrassFootstep) .setUnlocalizedName("VenusGrass") .setTextureName("galacticraftvenus:grassVenus");
 
 	//Block Venus Dirt
-	public final static Block VenusDirt = new VenusDirt(611, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("galacticraftvenus:dirtVenus");
+	public final static Block VenusDirt = new GCVenusDirt(611, Material.grass) .setHardness(0.3F).setStepSound(Block.soundGravelFootstep) .setUnlocalizedName("VenusDirt") .setTextureName("galacticraftvenus:dirtVenus");
     
 	//Block Venus Stone
-	public final static Block VenusStone = new VenusStone(612, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusStone") .setTextureName("galacticraftvenus:stoneVenus");
+	public final static Block VenusStone = new GCVenusStone(612, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusStone") .setTextureName("galacticraftvenus:stoneVenus");
 
 	//Block Venus Cobblestone
-	public final static Block VenusCobblestone = new VenusBlock(613, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCobblestone") .setTextureName("galacticraftvenus:cobblestoneVenus");
+	public final static Block VenusCobblestone = new GCVenusBlock(613, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCobblestone") .setTextureName("galacticraftvenus:cobblestoneVenus");
 
 	//Block Venus Gem Block
-	public final static Block VenusRedGemBlock = new VenusBlock(614, Material.rock) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGem") .setTextureName("galacticraftvenus:gemBlock");
+	public final static Block VenusRedGemBlock = new GCVenusBlock(614, Material.rock) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusGem") .setTextureName("galacticraftvenus:gemBlock");
 
 	//Block Venus Meteor Block
-	public final static Block VenusMeteorBlock = new VenusBlock(615, Material.rock) .setHardness(3.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteor") .setTextureName("galacticraftvenus:meteorBlock");
+	public final static Block VenusMeteorBlock = new GCVenusBlock(615, Material.rock) .setHardness(3.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusMeteor") .setTextureName("galacticraftvenus:meteorBlock");
 
 	//Block Venus Brick
-	public final static Block VenusBrick = new VenusBlock(616, Material.rock) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBrick") .setTextureName("galacticraftvenus:venusBrick");
+	public final static Block VenusBrick = new GCVenusBlock(616, Material.rock) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBrick") .setTextureName("galacticraftvenus:venusBrick");
 
 	//Block Venus Sulfer
-	public final static Block VenusSulferBlock = new VenusOre(617, Material.rock) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulfer") .setTextureName("galacticraftvenus:sulferBlock");
+	public final static Block VenusSulferBlock = new GCVenusOre(617, Material.rock) .setHardness(2.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulfer") .setTextureName("galacticraftvenus:sulferBlock");
 
 	//Block Venus Sulfer Ore
 	public final static Block VenusSulferOre = new VenusOre(618, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusSulferOre") .setTextureName("galacticraftvenus:sulferOre");
@@ -130,13 +130,13 @@ public class GCVenus
 	public final static Block VenusCopperOre = new VenusOre(624, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusCopperOre") .setTextureName("galacticraftvenus:copperOre");				
 
 	//Block Venus Basalt
-	public final static Block VenusBasalt = new VenusStone(625, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBasalt") .setTextureName("galacticraftvenus:venusBasalt");				
+	public final static Block VenusBasalt = new GCVenusStone(625, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusBasalt") .setTextureName("galacticraftvenus:venusBasalt");				
 
 	//Block Venus Half Basalt
-	public final static Block VenusHalfBasalt = new VenusHalfSlab(626, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusHalfBasalt") .setTextureName("galacticraftvenus:venusBasalt");				
+	public final static Block VenusHalfBasalt = new GCVenusHalfSlab(626, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("VenusHalfBasalt") .setTextureName("galacticraftvenus:venusBasalt");				
 
 	//Block Evolved Blaze Egg
-	public final static Block EvolvedBlazeEgg = new VenusBlazeEgg(627) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("EvolvedBlazeEgg") .setTextureName("galacticraftvenus:evolvedBlazeEgg");				
+	public final static Block EvolvedBlazeEgg = new GCVenusBlazeEgg(627) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("EvolvedBlazeEgg") .setTextureName("galacticraftvenus:evolvedBlazeEgg");				
 
     
     @EventHandler
@@ -239,8 +239,8 @@ public class GCVenus
         GalacticraftRegistry.registerRocketGui(GCVenusWorldProvider.class, new ResourceLocation(GCVenus.TEXTURE_DOMAIN, "textures/gui/venusRocketGui.png"));
         GalacticraftRegistry.addDungeonLoot(2, new ItemStack(GCVenusItems.schematic, 1, 0));
         
-        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), new ItemStack(GCCoreItems.heavyPlatingTier1), new ItemStack(GCMoonItems.meteoricIronIngot, 1, 1));
-        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 5), new ItemStack(GCVenusItems.venusItemBasic, 1, 2));
+//        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), new ItemStack(GCCoreItems.heavyPlatingTier1), new ItemStack(GCMoonItems.meteoricIronIngot, 1, 1));
+//        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 5), new ItemStack(GCVenusItems.venusItemBasic, 1, 2));
     
         GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(GCVenus.VenusRedGemOre, 5, 24, 0, 75, 7));
         GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(GCVenus.VenusMeteorOre, 6, 22, 0, 60, 7));
@@ -271,7 +271,6 @@ public class GCVenus
 
     public void registerOtherEntities()
     {
-        this.registerGalacticraftNonMobEntity(GCVenusEntityRocketT3.class, "SpaceshipT3", GCVenusConfigManager.idEntitySpaceshipTier3, 150, 1, true);
         this.registerGalacticraftNonMobEntity(GCVenusEntityRocketT3.class, "SpaceshipT3", GCVenusConfigManager.idEntitySpaceshipTier3, 150, 1, true);
     }
 

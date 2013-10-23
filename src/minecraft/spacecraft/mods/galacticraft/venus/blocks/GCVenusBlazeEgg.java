@@ -1,7 +1,6 @@
 package spacecraft.mods.galacticraft.venus.blocks;
 
 import spacecraft.mods.galacticraft.venus.GCVenus;
-import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
 import net.minecraft.block.BlockDragonEgg;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -12,9 +11,9 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GCVenusBlockBlazeEgg extends BlockDragonEgg
+public class GCVenusBlazeEgg extends BlockDragonEgg
 {
-    public GCVenusBlockBlazeEgg(int par1)
+    public GCVenusBlazeEgg(int par1)
     {
         super(par1);
     }
@@ -67,7 +66,7 @@ public class GCVenusBlockBlazeEgg extends BlockDragonEgg
     {
         if (!world.isRemote)
         {
-            EntityBlaze blaze = new EntityBlaze(world);
+        	EntityBlaze blaze = new EntityBlaze(world);
             blaze.setPosition(x + 0.5, y + 1, z + 0.5);
             world.spawnEntityInWorld(blaze);
         }

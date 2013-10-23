@@ -55,8 +55,6 @@ public class GCVenusConfigManager
     public static int idItemSpaceshipTier3;
     public static int idItemSchematicMars;
     public static int idItemRocketEngine;
-    public static int idItemSulferFuel;
-    public static int idItemSulferCanister;
     public static int idItemVenusBattery;
     public static int idArmorJetpack;
     
@@ -135,8 +133,6 @@ public class GCVenusConfigManager
             GCVenusConfigManager.idItemSpaceshipTier3 = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier3", 9906).getInt(9906);
             GCVenusConfigManager.idItemSchematicMars = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSchematicMars", 9917).getInt(9917);
             GCVenusConfigManager.idItemRocketEngine = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemRocketEngineMars", 9939).getInt(9939);
-            GCVenusConfigManager.idItemSulferFuel = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSulferFuel", 9993).getInt(9993);
-            GCVenusConfigManager.idItemSulferCanister = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSulferCanister", 9994).getInt(9994);
             GCVenusConfigManager.idItemVenusBattery = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemVenusBattery", 9995).getInt(9995);
             GCVenusConfigManager.idArmorJetpack = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorJetpack", 8995).getInt(8995);
 

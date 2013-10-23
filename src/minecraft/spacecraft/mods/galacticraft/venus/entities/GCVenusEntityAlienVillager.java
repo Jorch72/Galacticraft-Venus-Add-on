@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.venusMobs.entities;
+package spacecraft.mods.galacticraft.venus.entities;
 
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import net.minecraft.entity.Entity;

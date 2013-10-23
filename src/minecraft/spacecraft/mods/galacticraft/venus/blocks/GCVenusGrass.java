@@ -9,9 +9,9 @@ import net.minecraftforge.common.IPlantable;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
 
-public class VenusGrass extends Block implements IPlantableBlock, ITerraformableBlock
+public class GCVenusGrass extends Block implements IPlantableBlock, ITerraformableBlock
 {
-	public VenusGrass(int id, Material material)
+	public GCVenusGrass(int id, Material material)
     {
     	super( id, material.grass);
         this.setCreativeTab(GCVenus.galacticraftVenusTab);

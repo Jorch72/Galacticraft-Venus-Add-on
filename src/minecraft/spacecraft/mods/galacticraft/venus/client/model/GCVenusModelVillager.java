@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.venusMobs.client.model;
+package spacecraft.mods.galacticraft.venus.client.model;
 
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.client.model.ModelVillager;

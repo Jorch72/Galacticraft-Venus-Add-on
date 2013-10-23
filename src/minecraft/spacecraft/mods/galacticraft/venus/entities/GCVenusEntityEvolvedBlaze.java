@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.venusMobs.entities;
+package spacecraft.mods.galacticraft.venus.entities;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

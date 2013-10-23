@@ -54,8 +54,6 @@ public class GCVenusItems
         GCVenusItems.rocketEngine = new GCVenusItemRocketEngine(GCVenusConfigManager.idItemRocketEngine, "engine");
         GCVenusItems.spaceship = new GCVenusItemSpaceshipTier3(GCVenusConfigManager.idItemSpaceshipTier3).setUnlocalizedName("spaceshipTier3");
         GCVenusItems.schematic = new GCVenusItemSchematic(GCVenusConfigManager.idItemSchematicMars).setUnlocalizedName("schematic");
-        GCVenusItems.sulferFuel = new GCVenusItemSulferFuel(GCVenusConfigManager.idItemSulferFuel, "sulferFuel");
-        GCVenusItems.sulferCanister = new GCVenusItemSulferCanister(GCVenusConfigManager.idItemSulferCanister, "sulferCanister");
         GCVenusItems.venusBattery = new GCVenusItemBattery(GCVenusConfigManager.idItemVenusBattery, "venusBattery");
     }
     

@@ -7,16 +7,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class VenusStone extends Block
+public class GCVenusCobblestone extends Block
 {
-    public VenusStone(int id, Material material)
+    public GCVenusCobblestone(int id, Material material)
     {
     	super( id, material.rock);
         this.setCreativeTab(GCVenus.galacticraftVenusTab);
     }
 
-    public int idDropped(int par1, Random par2Random, int par3)
-    {
-        return GCVenus.VenusCobblestone.blockID;
-    }
 }

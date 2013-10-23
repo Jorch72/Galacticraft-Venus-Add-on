@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.venusMobs.client.model;
+package spacecraft.mods.galacticraft.venus.client.model;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

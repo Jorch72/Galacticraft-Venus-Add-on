@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.venusMobs.client.render.entities;
+package spacecraft.mods.galacticraft.venus.client.render.entities;
 
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.client.renderer.entity.RenderLiving;
@@ -10,8 +10,8 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import spacecraft.mods.galacticraft.venus.GCVenus;
-import spacecraft.mods.galacticraft.venusMobs.client.model.GCVenusModelVillager;
-import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityAlienVillager;
+import spacecraft.mods.galacticraft.venus.client.model.GCVenusModelVillager;
+import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityAlienVillager;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

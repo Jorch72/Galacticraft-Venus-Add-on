@@ -15,11 +15,11 @@ import net.minecraft.util.Facing;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class VenusHalfSlab extends Block
+public class GCVenusHalfSlab extends Block
 {
     private boolean isDoubleSlab;
 
-	public VenusHalfSlab(int id, Material material)
+	public GCVenusHalfSlab(int id, Material material)
     {
     	super( id, material.rock);
         this.setCreativeTab(GCVenus.galacticraftVenusTab);
