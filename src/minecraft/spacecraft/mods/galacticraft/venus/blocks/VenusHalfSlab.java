@@ -1,4 +1,4 @@
-package spacecraft.mods.galacticraft.venusBlocks.block;
+package spacecraft.mods.galacticraft.venus.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -6,7 +6,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import java.util.List;
 import java.util.Random;
 
-import spacecraft.mods.galacticraft.venusBlocks.GalacticraftVenus;
+import spacecraft.mods.galacticraft.venus.GCVenus;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
@@ -22,7 +22,7 @@ public class VenusHalfSlab extends Block
 	public VenusHalfSlab(int id, Material material)
     {
     	super( id, material.rock);
-        this.setCreativeTab(GalacticraftVenus.tabVenus);
+        this.setCreativeTab(GCVenus.galacticraftVenusTab);
     }
 
     /**

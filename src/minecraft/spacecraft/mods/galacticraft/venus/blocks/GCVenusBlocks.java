@@ -23,7 +23,7 @@ public class GCVenusBlocks
     {
         GCVenusBlocks.venusBlock = new GCVenusBlock(GCVenusConfigManager.idBlockVenus).setHardness(2.2F).setUnlocalizedName("venus2");
         GCVenusBlocks.blazeEgg = new GCVenusBlockBlazeEgg(GCVenusConfigManager.idBlockBlazeEgg).setHardness(-1.0F).setUnlocalizedName("blazeEgg");
-		GCVenusBlocks.basaltSlab = new GCVenusBlockBasaltSlab(GCVenusConfigManager.idBlockBasaltSlab).setHardness(-1.0F).setUnlocalizedName("basaltSlab");
+	   	GCVenusBlocks.basaltSlab = new GCVenusBlockBasaltSlab(GCVenusConfigManager.idBlockBasaltSlab).setHardness(-1.0F).setUnlocalizedName("basaltSlab");
     }
 
     public static void setHarvestLevels()

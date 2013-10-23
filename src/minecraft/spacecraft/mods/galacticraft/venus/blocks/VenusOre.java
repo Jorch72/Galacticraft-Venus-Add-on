@@ -1,8 +1,8 @@
-package spacecraft.mods.galacticraft.venusBlocks.block;
+package spacecraft.mods.galacticraft.venus.blocks;
 
 import java.util.Random;
 
-import spacecraft.mods.galacticraft.venusBlocks.GalacticraftVenus;
+import spacecraft.mods.galacticraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import net.minecraft.block.Block;
@@ -17,7 +17,7 @@ public class VenusOre extends Block implements IDetectableResource, IPlantableBl
     public VenusOre(int id, Material material)
     {
             super( id, material.rock);
-        this.setCreativeTab(GalacticraftVenus.tabVenus);
+        this.setCreativeTab(GCVenus.galacticraftVenusTab);
     }
 
     /**

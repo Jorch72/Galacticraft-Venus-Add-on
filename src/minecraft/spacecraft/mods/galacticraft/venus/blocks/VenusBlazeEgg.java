@@ -1,6 +1,6 @@
-package spacecraft.mods.galacticraft.venusBlocks.block;
+package spacecraft.mods.galacticraft.venus.blocks;
 
-import spacecraft.mods.galacticraft.venusBlocks.GalacticraftVenus;
+import spacecraft.mods.galacticraft.venus.GCVenus;
 import spacecraft.mods.galacticraft.venusMobs.entities.GCVenusEntityEvolvedBlaze;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
 import net.minecraft.block.BlockDragonEgg;
@@ -29,7 +29,7 @@ public class VenusBlazeEgg extends BlockDragonEgg
     @Override
     public CreativeTabs getCreativeTabToDisplayOn()
     {
-        return GalacticraftVenus.tabVenus;
+        return GCVenus.galacticraftVenusTab;
     }
 
     @Override
