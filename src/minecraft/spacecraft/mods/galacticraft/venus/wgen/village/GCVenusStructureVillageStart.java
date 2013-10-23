@@ -8,6 +8,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureComponent;
 import net.minecraft.world.gen.structure.StructureStart;
 
+
 class GCVenusStructureVillageStart extends StructureStart
 {
     @SuppressWarnings("unchecked")

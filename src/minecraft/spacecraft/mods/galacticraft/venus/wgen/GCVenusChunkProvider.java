@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 import spacecraft.mods.galacticraft.venus.wgen.dungeon.*;
 import spacecraft.mods.galacticraft.venus.wgen.village.*;
-import spacecraft.mods.galacticraft.venusBlocks.GCVenusConfigManager;
+import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
 import spacecraft.mods.galacticraft.venusBlocks.GalacticraftVenus;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySkeleton;
