@@ -17,6 +17,6 @@ public class GCVenusStone extends Block
 
     public int idDropped(int par1, Random par2Random, int par3)
     {
-        return GCVenus.VenusCobblestone.blockID;
+        return VenusBlocks.VenusCobblestone.blockID;
     }
 }

@@ -18,7 +18,7 @@ public class GCVenusGrass extends Block implements IPlantableBlock, ITerraformab
     }
     public int damageDropped(int par1)
     {
-        return this.blockID == GCVenus.VenusDirt.blockID ? 4 : 0;
+        return this.blockID == VenusBlocks.VenusDirt.blockID ? 4 : 0;
 	}
 	
     @Override

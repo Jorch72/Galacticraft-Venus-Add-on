@@ -2,7 +2,7 @@ package spacecraft.mods.galacticraft.venus.recipe;
 
 import java.util.HashMap;
 
-import spacecraft.mods.galacticraft.venus.blocks.GCVenusBlocks;
+import spacecraft.mods.galacticraft.venus.blocks.VenusBlocks;
 import spacecraft.mods.galacticraft.venus.items.GCVenusItems;
 import spacecraft.mods.galacticraft.venus.util.GCVenusUtil;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
@@ -54,7 +54,7 @@ public class GCVenusRecipeManager
 
         RecipeUtil.addRecipe(new ItemStack(GCVenusItems.gemLeggings), new Object[] { "XXX", "X X", "X X", 'X', new ItemStack(GCVenusItems.venusItemBasic, 1, 2) });
 
-        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 9, 2), new Object[] { "X", 'X', new ItemStack(GCVenusBlocks.venusBlock, 1, 8) });
+//        RecipeUtil.addRecipe(new ItemStack(GCVenusItems.venusItemBasic, 9, 2), new Object[] { "X", 'X', new ItemStack(VenusBlocks.venusBlock, 1, 8) });
 
         
         // Smelting

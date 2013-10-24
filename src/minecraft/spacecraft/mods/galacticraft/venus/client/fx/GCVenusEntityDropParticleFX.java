@@ -1,6 +1,5 @@
 package spacecraft.mods.galacticraft.venus.client.fx;
 
-import spacecraft.mods.galacticraft.venus.blocks.GCVenusBlocks;
 import net.minecraft.block.BlockFluid;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.particle.EntityFX;
