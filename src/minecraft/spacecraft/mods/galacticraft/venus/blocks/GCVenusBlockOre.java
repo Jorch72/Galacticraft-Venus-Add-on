@@ -13,7 +13,7 @@ public class GCVenusBlockOre extends Block implements IDetectableResource
 {
     public GCVenusBlockOre(int id, Material material)
     {
-    	super( id, material.rock);
+     	super( id, material.rock);
 //        this.setUnlocalizedName(name);
 //        this.setTextureName(GCVenus.TEXTURE_PREFIX + name);
         this.setHardness(2.0F);
