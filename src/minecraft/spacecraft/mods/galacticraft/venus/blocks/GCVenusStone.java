@@ -12,6 +12,8 @@ public class GCVenusStone extends Block
     public GCVenusStone(int id, Material material)
     {
     	super( id, material.rock);
+//      this.setUnlocalizedName(name);
+//      this.setTextureName(GCVenus.TEXTURE_PREFIX + name);
         this.setCreativeTab(GCVenus.galacticraftVenusTab);
     }
 

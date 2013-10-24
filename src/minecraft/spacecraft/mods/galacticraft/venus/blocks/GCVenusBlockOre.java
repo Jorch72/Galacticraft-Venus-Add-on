@@ -9,7 +9,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GCVenusBlockOre extends Block implements IDetectableResource, IPlantableBlock
+public class GCVenusBlockOre extends Block implements IDetectableResource
 {
     public GCVenusBlockOre(int id, Material material)
     {
@@ -38,24 +38,7 @@ public class GCVenusBlockOre extends Block implements IDetectableResource, IPlan
         case 2:
             return true;
         default:
-            return false;
-        }
-    }
-    
-    @Override
-    public int requiredLiquidBlocksNearby()
-    {
-        return 5; //Set How LiquidBlocks Is Needed Nearby To Plant in.
-    }
-    
-    @Override
-    public boolean isPlantable(int metadata)
-    {
-        if (metadata >= 5 && metadata <= 13)
-        {
             return true;
         }
-
-        return false;
     }
 }

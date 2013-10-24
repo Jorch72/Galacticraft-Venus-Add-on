@@ -14,6 +14,8 @@ public class GCVenusGrass extends Block implements IPlantableBlock, ITerraformab
 	public GCVenusGrass(int id, Material material)
     {
     	super( id, material.grass);
+//      this.setUnlocalizedName(name);
+//      this.setTextureName(GCVenus.TEXTURE_PREFIX + name);
         this.setCreativeTab(GCVenus.galacticraftVenusTab);
     }
     public int damageDropped(int par1)

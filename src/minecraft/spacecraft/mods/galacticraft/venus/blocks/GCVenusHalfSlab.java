@@ -22,6 +22,8 @@ public class GCVenusHalfSlab extends Block
 	public GCVenusHalfSlab(int id, Material material)
     {
     	super( id, material.rock);
+//      this.setUnlocalizedName(name);
+//      this.setTextureName(GCVenus.TEXTURE_PREFIX + name);
         this.setCreativeTab(GCVenus.galacticraftVenusTab);
     }
 

@@ -15,6 +15,8 @@ public class GCVenusDirt extends Block implements IPlantableBlock, ITerraformabl
 	public GCVenusDirt(int id, Material material)
     {
     	super( id, material.grass);
+//      this.setUnlocalizedName(name);
+//      this.setTextureName(GCVenus.TEXTURE_PREFIX + name);
 		this.setCreativeTab(GCVenus.galacticraftVenusTab);
 	}
     @Override
