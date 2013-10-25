@@ -5,12 +5,12 @@ import icbm.api.IMissile;
 import java.util.ArrayList;
 import java.util.List;
 
+import micdoodle8.mods.galacticraft.api.prefab.entity.EntityTieredRocket;
 import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.ASMHelper.RuntimeInterface;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.entities.EntityTieredRocket;
 import micdoodle8.mods.galacticraft.core.entities.GCCorePlayerMP;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketHandlerClient.EnumClientPacket;
 import micdoodle8.mods.galacticraft.core.tile.GCCoreTileEntityLandingPad;
@@ -370,10 +370,9 @@ public class GCVenusEntityRocketT3 extends EntityTieredRocket implements IInvent
     }
 
     @Override
-    public List<ItemStack> getItemsDropped()
+    public List<ItemStack> getItemsDropped(List<ItemStack> droppedItems)
     {
-        final List<ItemStack> items = new ArrayList<ItemStack>();
-        items.add(new ItemStack(GCVenusItems.spaceship, 1, this.rocketType.getIndex()));
+        droppedItems.add(new ItemStack(GCVenusItems.spaceship, 1, this.rocketType.getIndex()));
 
         if (this.cargoItems != null)
         {
@@ -381,12 +380,12 @@ public class GCVenusEntityRocketT3 extends EntityTieredRocket implements IInvent
             {
                 if (item != null)
                 {
-                    items.add(item);
+                    droppedItems.add(item);
                 }
             }
         }
 
-        return items;
+        return droppedItems;
     }
 
     @Override
@@ -555,7 +554,7 @@ public class GCVenusEntityRocketT3 extends EntityTieredRocket implements IInvent
     @Override
     public int getRocketTier()
     {
-        return 3;
+        return 2;
     }
 
     @Override

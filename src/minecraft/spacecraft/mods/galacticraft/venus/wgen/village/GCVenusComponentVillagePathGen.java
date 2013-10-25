@@ -2,9 +2,9 @@ package spacecraft.mods.galacticraft.venus.wgen.village;
 
 import java.util.List;
 import java.util.Random;
-
 import micdoodle8.mods.galacticraft.moon.blocks.GCMoonBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
@@ -12,7 +12,11 @@ import net.minecraft.world.gen.structure.StructureComponent;
 
 public class GCVenusComponentVillagePathGen extends GCVenusComponentVillageRoadPiece
 {
-    private final int averageGroundLevel;
+    private int averageGroundLevel;
+
+    public GCVenusComponentVillagePathGen()
+    {
+    }
 
     public GCVenusComponentVillagePathGen(GCVenusComponentVillageStartPiece par1ComponentVillageStartPiece, int par2, Random par3Random, StructureBoundingBox par4StructureBoundingBox, int par5)
     {
@@ -22,10 +26,22 @@ public class GCVenusComponentVillagePathGen extends GCVenusComponentVillageRoadP
         this.averageGroundLevel = Math.max(par4StructureBoundingBox.getXSize(), par4StructureBoundingBox.getZSize());
     }
 
-    /**
-     * Initiates construction of the Structure Component picked, at the current
-     * Location of StructGen
-     */
+    @Override
+    protected void func_143012_a(NBTTagCompound nbt)
+    {
+        super.func_143012_a(nbt);
+
+        nbt.setInteger("AvgGroundLevel", this.averageGroundLevel);
+    }
+
+    @Override
+    protected void func_143011_b(NBTTagCompound nbt)
+    {
+        super.func_143011_b(nbt);
+
+        this.averageGroundLevel = nbt.getInteger("AvgGroundLevel");
+    }
+
     @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public void buildComponent(StructureComponent par1StructureComponent, List par2List, Random par3Random)

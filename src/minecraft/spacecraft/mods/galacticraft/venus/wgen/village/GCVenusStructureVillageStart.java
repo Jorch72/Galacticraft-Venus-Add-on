@@ -3,17 +3,29 @@ package spacecraft.mods.galacticraft.venus.wgen.village;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
-
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureComponent;
 import net.minecraft.world.gen.structure.StructureStart;
 
-
-class GCVenusStructureVillageStart extends StructureStart
+public class GCVenusStructureVillageStart extends StructureStart
 {
+    public GCVenusStructureVillageStart()
+    {
+    }
+
     @SuppressWarnings("unchecked")
     public GCVenusStructureVillageStart(World par1World, Random par2Random, int par3, int par4, int par5)
     {
+        try
+        {
+            this.field_143024_c = par3;
+            this.field_143023_d = par4;
+        }
+        catch (NoSuchFieldError e)
+        {
+            ;
+        }
+
         final ArrayList<GCVenusStructureVillagePieceWeight> var6 = GCVenusStructureVillagePieces.getStructureVillageWeightedPieceList(par2Random, par5);
         final GCVenusComponentVillageStartPiece var7 = new GCVenusComponentVillageStartPiece(par1World.getWorldChunkManager(), 0, par2Random, (par3 << 4) + 2, (par4 << 4) + 2, var6, par5);
         this.components.add(var7);

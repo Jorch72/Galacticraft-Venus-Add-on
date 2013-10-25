@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
@@ -12,11 +13,31 @@ public class GCVenusComponentVillageWoodHut extends GCVenusComponentVillage
 {
     private int averageGroundLevel = -1;
 
+    public GCVenusComponentVillageWoodHut()
+    {
+    }
+
     public GCVenusComponentVillageWoodHut(GCVenusComponentVillageStartPiece par1ComponentVillageStartPiece, int par2, Random par3Random, StructureBoundingBox par4StructureBoundingBox, int par5)
     {
         super(par1ComponentVillageStartPiece, par2);
         this.coordBaseMode = par5;
         this.boundingBox = par4StructureBoundingBox;
+    }
+
+    @Override
+    protected void func_143012_a(NBTTagCompound nbt)
+    {
+        super.func_143012_a(nbt);
+
+        nbt.setInteger("AvgGroundLevel", this.averageGroundLevel);
+    }
+
+    @Override
+    protected void func_143011_b(NBTTagCompound nbt)
+    {
+        super.func_143011_b(nbt);
+
+        this.averageGroundLevel = nbt.getInteger("AvgGroundLevel");
     }
 
     public static GCVenusComponentVillageWoodHut func_74908_a(GCVenusComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6, int par7)

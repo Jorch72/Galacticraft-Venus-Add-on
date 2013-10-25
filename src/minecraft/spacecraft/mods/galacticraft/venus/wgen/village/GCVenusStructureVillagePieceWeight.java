@@ -1,6 +1,5 @@
 package spacecraft.mods.galacticraft.venus.wgen.village;
 
-
 public class GCVenusStructureVillagePieceWeight
 {
     public Class<? extends GCVenusComponentVillage> villagePieceClass;

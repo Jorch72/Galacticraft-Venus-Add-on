@@ -177,8 +177,7 @@ public class GCVenus
 
     public void registerOtherEntities()
     {
-        this.registerGalacticraftNonMobEntity(GCVenusEntityRocketT3.class, "SpaceshipT3", GCVenusConfigManager.idEntitySpaceshipTier3, 150, 1, true);
-    }
+    	this.registerGalacticraftNonMobEntity(GCVenusEntityRocketT3.class, "SpaceshipT3", GCVenusConfigManager.idEntitySpaceshipTier3, 150, 1, true);    }
 
     @EventHandler
     public void postLoad(FMLPostInitializationEvent event)

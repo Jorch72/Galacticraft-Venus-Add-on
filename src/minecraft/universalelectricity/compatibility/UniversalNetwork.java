@@ -62,6 +62,8 @@ public class UniversalNetwork extends ElectricityNetwork
 
 				if (totalEnergyRequest > 0)
 				{
+					boolean markRefresh = false;
+					
 					for (TileEntity tileEntity : avaliableEnergyTiles)
 					{
 						if (tileEntity != null && !tileEntity.isInvalid())
@@ -132,9 +134,13 @@ public class UniversalNetwork extends ElectricityNetwork
 						}
 						else
 						{
-							this.refresh();
-							break;
+							markRefresh = true;
 						}
+					}
+					
+					if(markRefresh)
+					{
+						this.refresh();
 					}
 				}
 			}
@@ -181,7 +187,7 @@ public class UniversalNetwork extends ElectricityNetwork
 						{
 							if (((IEnergySink) tileEntity).acceptsEnergyFrom(VectorHelper.getTileEntityFromSide(tileEntity.worldObj, new Vector3(tileEntity), direction), direction) && this.getConductors().contains(VectorHelper.getConnectorFromSide(tileEntity.worldObj, new Vector3(tileEntity), direction)))
 							{
-								ElectricityPack pack = ElectricityPack.getFromWatts((float) (Math.min(((IEnergySink) tileEntity).demandedEnergyUnits(), ((IEnergySink) tileEntity).getMaxSafeInput()) * Compatibility.IC2_RATIO), 1);
+								ElectricityPack pack = ElectricityPack.getFromWatts((float) (((IEnergySink) tileEntity).demandedEnergyUnits() * Compatibility.IC2_RATIO), 1);
 								
 								if (pack.getWatts() > 0)
 								{

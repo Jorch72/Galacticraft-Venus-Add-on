@@ -3,6 +3,7 @@ package spacecraft.mods.galacticraft.venus.wgen.village;
 import java.util.List;
 import java.util.Random;
 import net.minecraft.block.Block;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
@@ -12,10 +13,14 @@ public class GCVenusComponentVillageField2 extends GCVenusComponentVillage
 {
     private int averageGroundLevel = -1;
 
-    private final int cropTypeA;
-    private final int cropTypeB;
-    private final int cropTypeC;
-    private final int cropTypeD;
+    private int cropTypeA;
+    private int cropTypeB;
+    private int cropTypeC;
+    private int cropTypeD;
+
+    public GCVenusComponentVillageField2()
+    {
+    }
 
     public GCVenusComponentVillageField2(GCVenusComponentVillageStartPiece par1ComponentVillageStartPiece, int par2, Random par3Random, StructureBoundingBox par4StructureBoundingBox, int par5)
     {
@@ -28,9 +33,30 @@ public class GCVenusComponentVillageField2 extends GCVenusComponentVillage
         this.cropTypeD = this.getRandomCrop(par3Random);
     }
 
-    /**
-     * Returns a crop type to be planted on this field.
-     */
+    @Override
+    protected void func_143012_a(NBTTagCompound nbt)
+    {
+        super.func_143012_a(nbt);
+
+        nbt.setInteger("AvgGroundLevel", this.averageGroundLevel);
+        nbt.setInteger("CropTypeA", this.cropTypeA);
+        nbt.setInteger("CropTypeB", this.cropTypeB);
+        nbt.setInteger("CropTypeC", this.cropTypeC);
+        nbt.setInteger("CropTypeD", this.cropTypeD);
+    }
+
+    @Override
+    protected void func_143011_b(NBTTagCompound nbt)
+    {
+        super.func_143011_b(nbt);
+
+        this.averageGroundLevel = nbt.getInteger("AvgGroundLevel");
+        this.cropTypeA = nbt.getInteger("CropTypeA");
+        this.cropTypeB = nbt.getInteger("CropTypeB");
+        this.cropTypeC = nbt.getInteger("CropTypeC");
+        this.cropTypeD = nbt.getInteger("CropTypeD");
+    }
+
     private int getRandomCrop(Random par1Random)
     {
         switch (par1Random.nextInt(5))

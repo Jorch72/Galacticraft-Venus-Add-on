@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
-
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
@@ -148,15 +147,9 @@ public class GCVenusStructureVillagePieces
 
             if (var8 != null)
             {
-                // if
-                // (par0ComponentVillageStartPiece.getWorldChunkManager().areBiomesViable(var9,
-                // var10, var13 / 2 + 4,
-                // GCMoonMapGenVillage.villageSpawnBiomes))
-                {
-                    par1List.add(var8);
-                    par0ComponentVillageStartPiece.field_74932_i.add(var8);
-                    return var8;
-                }
+                par1List.add(var8);
+                par0ComponentVillageStartPiece.field_74932_i.add(var8);
+                return var8;
             }
 
             return null;
@@ -180,15 +173,10 @@ public class GCVenusStructureVillagePieces
             if (var8 != null && var8.minY > 10)
             {
                 final GCVenusComponentVillagePathGen var9 = new GCVenusComponentVillagePathGen(par0ComponentVillageStartPiece, par7, par2Random, var8, par6);
-                // if
-                // (par0ComponentVillageStartPiece.getWorldChunkManager().areBiomesViable(var10,
-                // var11, var14 / 2 + 4,
-                // GCMoonMapGenVillage.villageSpawnBiomes))
-                {
-                    par1List.add(var9);
-                    par0ComponentVillageStartPiece.field_74930_j.add(var9);
-                    return var9;
-                }
+
+                par1List.add(var9);
+                par0ComponentVillageStartPiece.field_74930_j.add(var9);
+                return var9;
             }
 
             return null;
