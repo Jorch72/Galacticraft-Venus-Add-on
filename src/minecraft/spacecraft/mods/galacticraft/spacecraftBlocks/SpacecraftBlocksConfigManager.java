@@ -27,15 +27,46 @@ public class SpacecraftBlocksConfigManager
     // DIMENSIONS
 
     // BLOCKS
-	public static int VenusGrassID;
-	public static int VenusDirtID;
-	public static int VenusStoneID;
-	public static int VenusCobblestoneID;
-	public static int VenusRedGemOreID;
-	public static int VenusCoalOreID;
-	public static int VenusTinOreID;
-	public static int VenusCopperOreID;
-	
+    public static int idVenusGrass;
+    public static int idVenusDirt;
+    public static int idVenusStone;
+    public static int idVenusCobblestone;
+    public static int idVenusRedGemBlock;
+    public static int idVenusMeteorBlock;
+    public static int idVenusBrick;
+    public static int idVenusSulferBlock;
+    public static int idVenusRedGemOre;
+    public static int idVenusMeteorOre;
+    public static int idVenusSulferOre;
+    public static int idVenusIronOre;
+    public static int idVenusCoalOre;
+    public static int idVenusTinOre;
+    public static int idVenusCopperOre;
+    public static int idVenusBasalt;
+    public static int idVenusHalfBasalt;
+    public static int idEvolvedBlazeEgg;
+    				
+    public static int idPlutoGrass;
+    public static int idPlutoDirt;
+    public static int idPlutoStone;
+    public static int idPlutoCobblestone;
+    public static int idPlutoBrick;
+    				
+    public static int idMercuryGrass;
+    public static int idMercuryDirt;
+    public static int idMercuryStone;
+    public static int idMercuryCobblestone;
+    public static int idMercuryBrick;
+    public static int idMercuryRedGemOre;
+    public static int idMercuryCoalOre;
+    public static int idMercuryTinOre;
+    public static int idMercuryCopperOre;
+    				
+    public static int idJupiterLightGas;
+    public static int idJupiterMediumGas;
+    public static int idJupiterHeavyGas;
+
+
     // ITEMS
 
     // ARMOR
@@ -56,15 +87,9 @@ public class SpacecraftBlocksConfigManager
         {
             SpacecraftBlocksConfigManager.configuration.load();
 
-//	        GCPlutoBlocksConfigManager.VenusGrassID = GCPlutoBlocksConfigManager.configuration.get("Blocks", "Venus Grass ID", 7004).getInt(7004);	        
-//	        GCPlutoBlocksConfigManager.VenusDirtID= GCPlutoBlocksConfigManager.configuration.get("Blocks", "Venus Dirt ID", 7005).getInt(7005);			
-//			GCPlutoBlocksConfigManager.VenusStoneID= GCPlutoBlocksConfigManager.configuration.get("Blocks", "Venus Stone ID", 7006).getInt(7006);			
-//			GCPlutoBlocksConfigManager.VenusCobblestoneID= GCPlutoBlocksConfigManager.configuration.get("Blocks", "Venus Cobblestone ID", 7007).getInt(7007);			
-//			GCPlutoBlocksConfigManager.VenusRedGemOreID= GCPlutoBlocksConfigManager.configuration.get("Blocks", "Venus Red Gem Ore ID", 7012).getInt(7012);			
-//			GCPlutoBlocksConfigManager.VenusCoalOreID= GCPlutoBlocksConfigManager.configuration.get("Blocks", "Venus Coal Ore ID", 7016).getInt(7016);
-//			GCPlutoBlocksConfigManager.VenusTinOreID= GCPlutoBlocksConfigManager.configuration.get("Blocks", "Venus Tin Ore ID", 7017).getInt(7017);
-//			GCPlutoBlocksConfigManager.VenusCopperOreID= GCPlutoBlocksConfigManager.configuration.get("Blocks", "Venus Copper Ore ID", 7018).getInt(7018);
-      }
+//	        SpacecraftBlocksConfigManager.VenusGrassID = SpacecraftBlocksConfigManager.configuration.get("Blocks", "Venus Grass ID", 7004).getInt(7004);	        
+
+        }
         catch (final Exception e)
         {
             FMLLog.log(Level.SEVERE, e, "Galacticraft Spacecraft Blocks has a problem loading it's configuration");
