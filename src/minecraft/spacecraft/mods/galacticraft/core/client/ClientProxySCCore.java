@@ -93,13 +93,13 @@ public class ClientProxySCCore extends CommonProxySCCore
         //Yellow Cape
         String capeYellowString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeYellow.png";
 
-        ClientProxySCCore.capeMap.put("mattparks", capeBlueString);     
-        ClientProxySCCore.capeMap.put("flashy3", capeOrangeString); 
-        ClientProxySCCore.capeMap.put("ghostheart305", capeRedString); 
-        ClientProxySCCore.capeMap.put("langjam350roxsox", capeBlueString); 
-        ClientProxySCCore.capeMap.put("_Ja1m3", capeRedString); 
-        ClientProxySCCore.capeMap.put("dinammar", capeVioletString); 
-        ClientProxySCCore.capeMap.put("goldenkat99", capeOrangeString); 
+        ClientProxyCore.capeMap.put("mattparks", capeBlueString);     
+        ClientProxyCore.capeMap.put("flashy3", capeOrangeString); 
+        ClientProxyCore.capeMap.put("ghostheart305", capeRedString); 
+        ClientProxyCore.capeMap.put("langjam350roxsox", capeBlueString); 
+        ClientProxyCore.capeMap.put("_Ja1m3", capeRedString); 
+        ClientProxyCore.capeMap.put("dinammar", capeVioletString); 
+        ClientProxyCore.capeMap.put("goldenkat99", capeOrangeString); 
     }
 
     @Override

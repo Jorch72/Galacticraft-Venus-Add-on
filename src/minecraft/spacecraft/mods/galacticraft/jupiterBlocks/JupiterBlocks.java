@@ -65,14 +65,9 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
         {
                 proxy.registerRenderers();
                 //Registering Blocks
-                GameRegistry.registerBlock(JupiterLightGas, "JupiterHeavyGas");
+                GameRegistry.registerBlock(JupiterLightGas, "JupiterLightGas");
                 GameRegistry.registerBlock(JupiterMediumGas, "JupiterMediumGas");
 				GameRegistry.registerBlock(JupiterHeavyGas, "JupiterHeavyGas");
-				
-				//Registering Block Names
-//                LanguageRegistry.addName(PlutoGrass, "Pluto Grass");
-//                LanguageRegistry.addName(PlutoDirt, "Pluto Dirt");
-//				  LanguageRegistry.addName(PlutoStone, "Pluto Stone");
         }
         
         @EventHandler
