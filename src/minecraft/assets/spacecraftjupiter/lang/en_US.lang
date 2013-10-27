@@ -9,7 +9,10 @@
 # ARMOR
 
 # BLOCKS
-				
+tile.lightGas.name=Jupiter Light Gas
+tile.mediumGas.name=Jupiter Medium Gas
+tile.heavyGas.name=Jupiter Heavy Gas
+
 # ENTITYS
 
 # GUI
