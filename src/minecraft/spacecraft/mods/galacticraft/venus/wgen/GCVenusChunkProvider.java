@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import spacecraft.mods.galacticraft.spacecraftBlocks.SpacecraftBlocks;
 import spacecraft.mods.galacticraft.venus.GCVenus;
 import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
 import spacecraft.mods.galacticraft.venus.wgen.dungeon.*;
 import spacecraft.mods.galacticraft.venus.wgen.village.*;
-import spacecraft.mods.galacticraft.venusBlocks.VenusBlocks;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySkeleton;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
@@ -33,11 +33,11 @@ import net.minecraftforge.common.ForgeDirection;
 
 public class GCVenusChunkProvider extends ChunkProviderGenerate
 {
-    final short topBlockID = (short) VenusBlocks.VenusGrass.blockID;
+    final short topBlockID = (short) SpacecraftBlocks.VenusGrass.blockID;
     final byte topBlockMeta = 5;
-    final short fillBlockID = (short) VenusBlocks.VenusDirt.blockID;
+    final short fillBlockID = (short) SpacecraftBlocks.VenusDirt.blockID;
     final byte fillBlockMeta = 3;
-    final short lowerBlockID = (short) VenusBlocks.VenusStone.blockID;
+    final short lowerBlockID = (short) SpacecraftBlocks.VenusStone.blockID;
     final byte lowerBlockMeta = 4;
 
     private final Random rand;
@@ -52,7 +52,7 @@ public class GCVenusChunkProvider extends ChunkProviderGenerate
     private final World worldObj;
     private final GCVenusMapGenVillage villageGenerator = new GCVenusMapGenVillage();
 
-    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(VenusBlocks.VenusBrick.blockID, 14, 8, 16, 3);
+    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(SpacecraftBlocks.VenusBrick.blockID, 14, 8, 16, 3);
 
     {
         this.dungeonGenerator.otherRooms.add(new GCVenusRoomEmpty(null, 0, 0, 0, ForgeDirection.UNKNOWN));

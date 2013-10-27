@@ -3,7 +3,7 @@ package spacecraft.mods.galacticraft.mercury.wgen;
 import java.util.Random;
 
 import spacecraft.mods.galacticraft.mercury.GCMercury;
-import spacecraft.mods.galacticraft.mercuryBlocks.MercuryBlocks;
+import spacecraft.mods.galacticraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.event.wgen.GCCoreEventPopulate;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreWorldGenMinableMeta;
 import net.minecraft.world.World;
@@ -27,11 +27,11 @@ public class GCMercuryBiomeDecorator
 
     public GCMercuryBiomeDecorator(BiomeGenBase par1BiomeGenBase)
     {
-        this.gemGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.MercuryRedGemOre.blockID, 4, 0, true, MercuryBlocks.MercuryRedGemOre.blockID, 4);
-        this.dirtGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.MercuryDirt.blockID, 32, 3, true, MercuryBlocks.MercuryDirt.blockID, 4); 
-        this.coalGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.MercuryCoalOre.blockID, 32, 3, true, MercuryBlocks.MercuryCoalOre.blockID, 4);     
-        this.tinGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.MercuryTinOre.blockID, 32, 3, true, MercuryBlocks.MercuryTinOre.blockID, 4);  
-        this.copperGen = new GCCoreWorldGenMinableMeta(MercuryBlocks.MercuryCopperOre.blockID, 32, 3, true, MercuryBlocks.MercuryCopperOre.blockID, 4);      
+        this.gemGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.MercuryRedGemOre.blockID, 4, 0, true, SpacecraftBlocks.MercuryRedGemOre.blockID, 4);
+        this.dirtGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.MercuryDirt.blockID, 32, 3, true, SpacecraftBlocks.MercuryDirt.blockID, 4); 
+        this.coalGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.MercuryCoalOre.blockID, 32, 3, true, SpacecraftBlocks.MercuryCoalOre.blockID, 4);     
+        this.tinGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.MercuryTinOre.blockID, 32, 3, true, SpacecraftBlocks.MercuryTinOre.blockID, 4);  
+        this.copperGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.MercuryCopperOre.blockID, 32, 3, true,SpacecraftBlocks.MercuryCopperOre.blockID, 4);      
     }
 
     public void decorate(World worldObj, Random rand, int chunkX, int chunkZ)

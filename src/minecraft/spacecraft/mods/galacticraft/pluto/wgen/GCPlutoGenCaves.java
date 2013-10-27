@@ -3,7 +3,7 @@ package spacecraft.mods.galacticraft.pluto.wgen;
 import java.util.Random;
 
 import spacecraft.mods.galacticraft.pluto.GCPluto;
-import spacecraft.mods.galacticraft.plutoBlocks.PlutoBlocks;
+import spacecraft.mods.galacticraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreMapGenBaseMeta;
 import micdoodle8.mods.galacticraft.moon.blocks.GCMoonBlocks;
 import net.minecraft.util.MathHelper;
@@ -170,7 +170,7 @@ public class GCPlutoGenCaves extends GCCoreMapGenBaseMeta
 
                                         if (yfactor > -0.7D && xfactorSq + yfactorSq + zfactorSq < 1.0D)
                                         {
-                                            if (blockIdArray[coords] == PlutoBlocks.PlutoDirt.blockID)
+                                            if (blockIdArray[coords] == SpacecraftBlocks.PlutoDirt.blockID)
                                             {
                                                 if (metaArray[coords] == 3 || metaArray[coords] == 4)
                                                 {

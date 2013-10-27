@@ -3,7 +3,7 @@ package spacecraft.mods.galacticraft.mercury.wgen;
 import java.util.Random;
 
 import spacecraft.mods.galacticraft.mercury.GCMercury;
-import spacecraft.mods.galacticraft.mercuryBlocks.MercuryBlocks;
+import spacecraft.mods.galacticraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreMapGenBaseMeta;
 import micdoodle8.mods.galacticraft.moon.blocks.GCMoonBlocks;
 import net.minecraft.util.MathHelper;
@@ -170,7 +170,7 @@ public class GCMercuryGenCaves extends GCCoreMapGenBaseMeta
 
                                         if (yfactor > -0.7D && xfactorSq + yfactorSq + zfactorSq < 1.0D)
                                         {
-                                            if (blockIdArray[coords] == MercuryBlocks.MercuryDirt.blockID)
+                                            if (blockIdArray[coords] == SpacecraftBlocks.MercuryDirt.blockID)
                                             {
                                                 if (metaArray[coords] == 3 || metaArray[coords] == 4)
                                                 {

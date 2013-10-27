@@ -9,7 +9,6 @@ import spacecraft.mods.galacticraft.pluto.dimension.GCPlutoWorldProvider;
 import spacecraft.mods.galacticraft.pluto.items.GCPlutoItems;
 import spacecraft.mods.galacticraft.pluto.network.GCPlutoPacketHandlerServer;
 import spacecraft.mods.galacticraft.pluto.recipe.GCPlutoRecipeManager;
-import spacecraft.mods.galacticraft.plutoBlocks.PlutoBlocks;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;

@@ -8,11 +8,8 @@ import spacecraft.mods.galacticraft.core.items.SCCoreItems;
 import spacecraft.mods.galacticraft.core.network.SCCorePacketHandlerServer;
 import spacecraft.mods.galacticraft.core.recipe.SCCoreRecipeManager;
 import spacecraft.mods.galacticraft.core.schematic.SCCoreSchematicRocketT3;
-import spacecraft.mods.galacticraft.jupiterBlocks.JupiterBlocks;
-import spacecraft.mods.galacticraft.mercuryBlocks.MercuryBlocks;
-import spacecraft.mods.galacticraft.plutoBlocks.PlutoBlocks;
+import spacecraft.mods.galacticraft.spacecraftBlocks.SpacecraftBlocks;
 import spacecraft.mods.galacticraft.venus.items.GCVenusItems;
-import spacecraft.mods.galacticraft.venusBlocks.VenusBlocks;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -80,25 +77,25 @@ public class SpacecraftCore
 	
 	public static CreativeTabs starcraftMercuryTab = new CreativeTabs("spacecraftMercuryTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(MercuryBlocks.MercuryGrass, 1, 0);
+			return new ItemStack(SpacecraftBlocks.MercuryGrass, 1, 0);
 		}
 	};
 	
 	public static CreativeTabs starcraftVenusTab = new CreativeTabs("spacecraftVenusTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(VenusBlocks.VenusGrass, 1, 0);
+			return new ItemStack(SpacecraftBlocks.VenusGrass, 1, 0);
 		}
 	};
 	
 	public static CreativeTabs starcraftGasTab = new CreativeTabs("spacecraftGasTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(JupiterBlocks.JupiterMediumGas, 1, 0);
+			return new ItemStack(SpacecraftBlocks.JupiterMediumGas, 1, 0);
 		}
 	};
 
 	public static CreativeTabs starcraftPlutoTab = new CreativeTabs("spacecraftPlutoTab") {
 		public ItemStack getIconItemStack() {
-			return new ItemStack(PlutoBlocks.PlutoGrass, 1, 0);
+			return new ItemStack(SpacecraftBlocks.PlutoGrass, 1, 0);
 		}
 	};
 	

@@ -7,7 +7,7 @@ import java.util.Random;
 import spacecraft.mods.galacticraft.jupiter.GCJupiter;
 import spacecraft.mods.galacticraft.jupiter.GCJupiterConfigManager;
 import spacecraft.mods.galacticraft.jupiter.wgen.dungeon.*;
-import spacecraft.mods.galacticraft.jupiterBlocks.JupiterBlocks;
+import spacecraft.mods.galacticraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySkeleton;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;
@@ -32,11 +32,11 @@ import net.minecraftforge.common.ForgeDirection;
 
 public class GCPlutoChunkProvider extends ChunkProviderGenerate
 {
-    final short topBlockID = (short) JupiterBlocks.JupiterLightGas.blockID;
+    final short topBlockID = (short) SpacecraftBlocks.JupiterLightGas.blockID;
     final byte topBlockMeta = 5;
-    final short fillBlockID = (short) JupiterBlocks.JupiterMediumGas.blockID;
+    final short fillBlockID = (short) SpacecraftBlocks.JupiterMediumGas.blockID;
     final byte fillBlockMeta = 3;
-    final short lowerBlockID = (short) JupiterBlocks.JupiterHeavyGas.blockID;
+    final short lowerBlockID = (short) SpacecraftBlocks.JupiterHeavyGas.blockID;
     final byte lowerBlockMeta = 4;
 
     private final Random rand;
@@ -49,8 +49,8 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
     public GCPlutoBiomeDecorator biomedecoratorplanet = new GCPlutoBiomeDecorator(GCPlutoBiomeGenBase.venusFlat);
 
     private final World worldObj;
-    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(JupiterBlocks.JupiterHeavyGas.blockID, 14, 8, 16, 3);
-//Need to make Jupiter Brick
+    private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(SpacecraftBlocks.JupiterHeavyGas.blockID, 14, 8, 16, 3);
+    //Need to make Jupiter Brick
     {
         this.dungeonGenerator.otherRooms.add(new GCPlutoRoomEmpty(null, 0, 0, 0, ForgeDirection.UNKNOWN));
         this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));

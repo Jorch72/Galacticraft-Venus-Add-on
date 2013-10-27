@@ -12,7 +12,7 @@ import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityVenusianVillager
 import spacecraft.mods.galacticraft.venus.items.GCVenusItems;
 import spacecraft.mods.galacticraft.venus.network.GCVenusPacketHandlerServer;
 import spacecraft.mods.galacticraft.venus.recipe.GCVenusRecipeManager;
-import spacecraft.mods.galacticraft.venusBlocks.VenusBlocks;
+import spacecraft.mods.galacticraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -142,14 +142,14 @@ public class GCVenus
 //        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), new ItemStack(GCCoreItems.heavyPlatingTier1), new ItemStack(GCMoonItems.meteoricIronIngot, 1, 1));
 //        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 5), new ItemStack(GCVenusItems.venusItemBasic, 1, 2));
     
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(VenusBlocks.VenusRedGemOre, 5, 24, 0, 75, 7));
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(VenusBlocks.VenusMeteorOre, 6, 22, 0, 60, 7));
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(VenusBlocks.VenusSulferOre, 7, 18, 0, 45, 7));
-//        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(VenusBlocks.VenusDirt, 5, 24, 0, 75, 7));
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(VenusBlocks.VenusIronOre, 6, 22, 0, 60, 7));
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(VenusBlocks.VenusCoalOre, 7, 18, 0, 45, 7));
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(VenusBlocks.VenusTinOre, 8, 3, 0, 25, 7));
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(VenusBlocks.VenusCopperOre, 8, 3, 0, 25, 7));
+        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusRedGemOre, 5, 24, 0, 75, 7));
+        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusMeteorOre, 6, 22, 0, 60, 7));
+        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusSulferOre, 7, 18, 0, 45, 7));
+//        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusDirt, 5, 24, 0, 75, 7));
+        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusIronOre, 6, 22, 0, 60, 7));
+        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusCoalOre, 7, 18, 0, 45, 7));
+        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusTinOre, 8, 3, 0, 25, 7));
+        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.VenusCopperOre, 8, 3, 0, 25, 7));
     }
 
     @EventHandler

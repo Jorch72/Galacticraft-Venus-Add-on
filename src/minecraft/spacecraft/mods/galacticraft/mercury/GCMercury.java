@@ -9,7 +9,7 @@ import spacecraft.mods.galacticraft.mercury.dimension.GCMercuryWorldProvider;
 import spacecraft.mods.galacticraft.mercury.items.GCMercuryItems;
 import spacecraft.mods.galacticraft.mercury.network.GCMercuryPacketHandlerServer;
 import spacecraft.mods.galacticraft.mercury.recipe.GCMercuryRecipeManager;
-import spacecraft.mods.galacticraft.mercuryBlocks.MercuryBlocks;
+import spacecraft.mods.galacticraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -139,11 +139,11 @@ public class GCMercury
 //        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), new ItemStack(GCCoreItems.heavyPlatingTier1), new ItemStack(GCMoonItems.meteoricIronIngot, 1, 1));
 //        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 5), new ItemStack(GCVenusItems.venusItemBasic, 1, 2));
     
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(MercuryBlocks.MercuryRedGemOre, 5, 24, 0, 75, 7));
-//      GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(MercuryBlocks.MercuryDirt, 5, 24, 0, 75, 7));
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(MercuryBlocks.MercuryCoalOre, 7, 18, 0, 45, 7));
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(MercuryBlocks.MercuryTinOre, 8, 3, 0, 25, 7));
-        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(MercuryBlocks.MercuryCopperOre, 8, 3, 0, 25, 7));
+        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.MercuryRedGemOre, 5, 24, 0, 75, 7));
+//      GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.MercuryDirt, 5, 24, 0, 75, 7));
+        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.MercuryCoalOre, 7, 18, 0, 45, 7));
+        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.MercuryTinOre, 8, 3, 0, 25, 7));
+        GameRegistry.registerWorldGenerator(new GCCoreOverworldGenerator(SpacecraftBlocks.MercuryCopperOre, 8, 3, 0, 25, 7));
     }
 
     @EventHandler
