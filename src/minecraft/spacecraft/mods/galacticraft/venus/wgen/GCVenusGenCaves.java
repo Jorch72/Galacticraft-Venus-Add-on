@@ -3,7 +3,7 @@ package spacecraft.mods.galacticraft.venus.wgen;
 import java.util.Random;
 
 import spacecraft.mods.galacticraft.venus.GCVenus;
-import spacecraft.mods.galacticraft.venus.blocks.VenusBlocks;
+import spacecraft.mods.galacticraft.venusBlocks.VenusBlocks;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreMapGenBaseMeta;
 import micdoodle8.mods.galacticraft.moon.blocks.GCMoonBlocks;
 import net.minecraft.util.MathHelper;

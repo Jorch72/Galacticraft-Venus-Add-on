@@ -1,11 +1,11 @@
 package spacecraft.mods.galacticraft.venus.dimension;
 
-import micdoodle8.mods.galacticraft.api.event.oxygen.GCCoreOxygenSuffocationEvent;
-import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
-import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
 import spacecraft.mods.galacticraft.venus.wgen.GCVenusChunkProvider;
 import spacecraft.mods.galacticraft.venus.wgen.GCVenusWorldChunkManager;
+import micdoodle8.mods.galacticraft.api.event.oxygen.GCCoreOxygenSuffocationEvent;
+import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
+import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.MathHelper;

@@ -3,7 +3,7 @@ package spacecraft.mods.galacticraft.venus.wgen;
 import java.util.Random;
 
 import spacecraft.mods.galacticraft.venus.GCVenus;
-import spacecraft.mods.galacticraft.venus.blocks.VenusBlocks;
+import spacecraft.mods.galacticraft.venusBlocks.VenusBlocks;
 import micdoodle8.mods.galacticraft.api.event.wgen.GCCoreEventPopulate;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreWorldGenMinableMeta;
 import net.minecraft.world.World;

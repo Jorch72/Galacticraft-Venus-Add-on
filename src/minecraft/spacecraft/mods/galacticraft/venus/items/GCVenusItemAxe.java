@@ -1,5 +1,6 @@
 package spacecraft.mods.galacticraft.venus.items;
 
+import spacecraft.mods.galacticraft.core.SpacecraftCore;
 import spacecraft.mods.galacticraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -28,13 +29,13 @@ public class GCVenusItemAxe extends ItemAxe
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GCVenus.galacticraftVenusTab;
+        return SpacecraftCore.starcraftVenusTab;
     }
 
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "galacticraftvenus:"));
+        this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "spacecraftvenus:"));
     }
 }

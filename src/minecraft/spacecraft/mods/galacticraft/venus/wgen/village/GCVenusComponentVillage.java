@@ -2,7 +2,8 @@ package spacecraft.mods.galacticraft.venus.wgen.village;
 
 import java.util.List;
 import java.util.Random;
-import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityAlienVillager;
+
+import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityVenusianVillager;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
@@ -134,7 +135,7 @@ public abstract class GCVenusComponentVillage extends StructureComponent
                 }
 
                 ++this.villagersSpawned;
-                final GCVenusEntityAlienVillager var11 = new GCVenusEntityAlienVillager(par1World);
+                final GCVenusEntityVenusianVillager var11 = new GCVenusEntityVenusianVillager(par1World);
                 var11.setLocationAndAngles(var8 + 0.5D, var9, var10 + 0.5D, 0.0F, 0.0F);
                 par1World.spawnEntityInWorld(var11);
             }

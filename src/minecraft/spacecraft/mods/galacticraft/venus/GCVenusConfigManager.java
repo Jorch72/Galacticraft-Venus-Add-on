@@ -52,38 +52,30 @@ public class GCVenusConfigManager
 
     // ITEMS
     public static int idItemVenusBasic;
-    public static int idItemSpaceshipTier3;
-    public static int idItemSchematicMars;
-    public static int idItemRocketEngine;
     public static int idItemVenusBattery;
-    public static int idArmorJetpack;
     
     // ARMOR
-    public static int idArmorGemHelmet;
-    public static int idArmorGemChestplate;
-    public static int idArmorGemLeggings;
-    public static int idArmorGemBoots;
+    public static int idArmorSulferHelmet;
+    public static int idArmorSulferChestplate;
+    public static int idArmorSulferLeggings;
+    public static int idArmorSulferBoots;
 
     // TOOLS
-    public static int idToolGemSword;
-    public static int idToolGemPickaxe;
-    public static int idToolGemAxe;
-    public static int idToolGemSpade;
-    public static int idToolGemHoe;
+    public static int idToolSulferSword;
+    public static int idToolSulferPickaxe;
+    public static int idToolSulferAxe;
+    public static int idToolSulferSpade;
+    public static int idToolSulferHoe;
 
     // ENTITIES
-    public static int idEntitySpaceshipTier3;
-    
+
     // GUI
-    public static int idGuiRocketCraftingBenchT3;
 
     // SCHEMATIC
-    public static int idSchematicRocketT3;
-    public static int idSchematicCargoRocket;
 
     // ACHIEVEMENTS
     public static int idEntityEvolvedBlaze;
-    public static int idEntityAlienVillager;
+    public static int idEntityVenusianVillager;
     public static int idEntityFlameling;
     
     // GENERAL
@@ -130,31 +122,22 @@ public class GCVenusConfigManager
 			GCVenusConfigManager.EvolvedBlazeEggID= GCVenusConfigManager.configuration.get("Blocks", "Evolved Blaze Egg ID", 6021).getInt(6021);
             
             GCVenusConfigManager.idItemVenusBasic = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemvenusItemBasic", 9905).getInt(9905);
-            GCVenusConfigManager.idItemSpaceshipTier3 = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSpaceshipTier3", 9906).getInt(9906);
-            GCVenusConfigManager.idItemSchematicMars = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemSchematicMars", 9917).getInt(9917);
-            GCVenusConfigManager.idItemRocketEngine = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemRocketEngineMars", 9939).getInt(9939);
             GCVenusConfigManager.idItemVenusBattery = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemVenusBattery", 9995).getInt(9995);
-            GCVenusConfigManager.idArmorJetpack = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorJetpack", 8995).getInt(8995);
 
-            GCVenusConfigManager.idToolGemSword = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemSword", 9907).getInt(9907);
-            GCVenusConfigManager.idToolGemPickaxe = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemPickaxe", 9908).getInt(9908);
-            GCVenusConfigManager.idToolGemSpade = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemSpade", 9909).getInt(9909);
-            GCVenusConfigManager.idToolGemHoe = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemHoe", 9910).getInt(9910);
-            GCVenusConfigManager.idToolGemAxe = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolGemAxe", 9911).getInt(9911);
+            GCVenusConfigManager.idToolSulferSword = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolSulferSword", 9907).getInt(9907);
+            GCVenusConfigManager.idToolSulferPickaxe = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolSulferPickaxe", 9908).getInt(9908);
+            GCVenusConfigManager.idToolSulferSpade = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolSulferSpade", 9909).getInt(9909);
+            GCVenusConfigManager.idToolSulferHoe = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolSulferHoe", 9910).getInt(9910);
+            GCVenusConfigManager.idToolSulferAxe = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idToolSulferAxe", 9911).getInt(9911);
 
-            GCVenusConfigManager.idArmorGemHelmet = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGemHelmet", 9912).getInt(9912);
-            GCVenusConfigManager.idArmorGemChestplate = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGemChestplate", 9913).getInt(9913);
-            GCVenusConfigManager.idArmorGemLeggings = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGemLeggings", 9914).getInt(9914);
-            GCVenusConfigManager.idArmorGemBoots = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorGemBoots", 9915).getInt(9915);
-
-            GCVenusConfigManager.idEntitySpaceshipTier3 = GCVenusConfigManager.configuration.get("Entities", "idEntitySpaceshipTier3", 173).getInt(173);
-            GCVenusConfigManager.idGuiRocketCraftingBenchT3 = GCVenusConfigManager.configuration.get("GUI", "idGuiRocketCraftingBenchT3", 143).getInt(143);
-
-            GCVenusConfigManager.idSchematicRocketT3 = GCVenusConfigManager.configuration.get("Schematic", "idSchematicRocketT3", 2).getInt(2);
+            GCVenusConfigManager.idArmorSulferHelmet = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorSulferHelmet", 9912).getInt(9912);
+            GCVenusConfigManager.idArmorSulferChestplate = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorSulferChestplate", 9913).getInt(9913);
+            GCVenusConfigManager.idArmorSulferLeggings = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorSulferLeggings", 9914).getInt(9914);
+            GCVenusConfigManager.idArmorSulferBoots = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idArmorSulferBoots", 9915).getInt(9915);
 
             GCVenusConfigManager.idEntityEvolvedBlaze = GCVenusConfigManager.configuration.get("Entities", "idEntityEvolvedBlaze", 257).getInt(257);
-            GCVenusConfigManager.idEntityAlienVillager = GCVenusConfigManager.configuration.get("Entities", "idEntityAlienVillager", 258).getInt(258);
-            GCVenusConfigManager.idEntityFlameling = GCVenusConfigManager.configuration.get("Entities", "idEntityFlameling", 260).getInt(260);
+            GCVenusConfigManager.idEntityVenusianVillager = GCVenusConfigManager.configuration.get("Entities", "idEntityVenusianVillager", 258).getInt(258);
+            GCVenusConfigManager.idEntityFlameling = GCVenusConfigManager.configuration.get("Entities", "idEntityFlameling", 259).getInt(259);
 
             GCVenusConfigManager.disableGemOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Gem Ore Gen on Venus", false).getBoolean(false);
             GCVenusConfigManager.disableMeteorOreVenus = GCVenusConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Meteor Ore Gen on Venus", false).getBoolean(false);

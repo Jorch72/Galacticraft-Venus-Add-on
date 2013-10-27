@@ -4,6 +4,7 @@ import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
+import spacecraft.mods.galacticraft.core.SpacecraftCore;
 import spacecraft.mods.galacticraft.venus.GCVenus;
 import universalelectricity.core.item.ItemElectric;
 import cpw.mods.fml.relauncher.Side;
@@ -21,7 +22,7 @@ public class GCVenusItemBattery extends ItemElectric
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GCVenus.galacticraftVenusTab;
+        return SpacecraftCore.starcraftVenusTab;
     }
 
     @Override

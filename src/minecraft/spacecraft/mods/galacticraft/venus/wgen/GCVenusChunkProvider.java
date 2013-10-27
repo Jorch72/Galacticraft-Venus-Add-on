@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import spacecraft.mods.galacticraft.venus.blocks.VenusBlocks;
-import spacecraft.mods.galacticraft.venus.wgen.dungeon.*;
-import spacecraft.mods.galacticraft.venus.wgen.village.*;
 import spacecraft.mods.galacticraft.venus.GCVenus;
 import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
+import spacecraft.mods.galacticraft.venus.wgen.dungeon.*;
+import spacecraft.mods.galacticraft.venus.wgen.village.*;
+import spacecraft.mods.galacticraft.venusBlocks.VenusBlocks;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySkeleton;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySpider;

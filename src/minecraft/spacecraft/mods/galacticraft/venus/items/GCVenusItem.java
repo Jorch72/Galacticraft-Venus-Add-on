@@ -2,6 +2,7 @@ package spacecraft.mods.galacticraft.venus.items;
 
 import java.util.List;
 
+import spacecraft.mods.galacticraft.core.SpacecraftCore;
 import spacecraft.mods.galacticraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -19,7 +20,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class GCVenusItem extends Item
 {
-    public static String[] names = { "ingotSulfer", "ingotGem", "itemGem", "reinforcedVenusPlateT3", "venusPlate", "redGemPlate", "sulferPlate", "venusPowerCrystal", "venusPowerCell", "emptyCell", "rawBasalt", "basaltBrick", "vurnBerry", "venusRod" };
+    public static String[] names = { "ingotSulfer", "venusPlate", "sulferPlate", "venusPowerCrystal", "venusPowerCell", "emptyCell", "rawBasalt", "basaltBrick", "vurnBerry", "venusRod", "positiveParticle", "negativeParticle", "strangeParticle" };
     protected Icon[] icons = new Icon[GCVenusItem.names.length];
 
     public GCVenusItem(int par1)
@@ -32,7 +33,7 @@ public class GCVenusItem extends Item
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GCVenus.galacticraftVenusTab;
+        return SpacecraftCore.starcraftVenusTab;
     }
 
     @Override
@@ -84,17 +85,6 @@ public class GCVenusItem extends Item
         }
 
         return "unnamed";
-    }
-
-    @SuppressWarnings({ "unchecked", "rawtypes" })
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
-    {
-        if (par1ItemStack != null && par1ItemStack.getItemDamage() == 3)
-        {
-            par3List.add(LanguageRegistry.instance().getStringLocalization("item.tier3.desc"));
-        }
     }
 
     @Override

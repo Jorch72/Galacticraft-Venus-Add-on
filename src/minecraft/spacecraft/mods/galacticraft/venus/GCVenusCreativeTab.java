@@ -16,7 +16,7 @@ public class GCVenusCreativeTab extends CreativeTabs {
 	@SideOnly(Side.CLIENT)
 	public int getTabIconItemIndex()
 	{
-		return GCVenusItems.spaceship.itemID;
+		return GCVenusItems.sulferSword.itemID;
 	}
  
 	public String getTranslatedTabLabel()

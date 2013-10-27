@@ -1,21 +1,5 @@
 package spacecraft.mods.galacticraft.venus.client;
 
-import spacecraft.mods.galacticraft.venus.CommonProxyVenus;
-import spacecraft.mods.galacticraft.venus.GCVenus;
-import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
-import spacecraft.mods.galacticraft.venus.client.fx.GCVenusEntityDropParticleFX;
-import spacecraft.mods.galacticraft.venus.client.model.GCVenusModelSpaceshipTier3;
-import spacecraft.mods.galacticraft.venus.client.render.entities.GCVenusRenderAlienVillager;
-import spacecraft.mods.galacticraft.venus.client.render.entities.GCVenusRenderEvolvedBlaze;
-import spacecraft.mods.galacticraft.venus.client.render.entities.GCVenusRenderFlameling;
-import spacecraft.mods.galacticraft.venus.client.render.item.GCVenusItemRendererSpaceshipT3;
-import spacecraft.mods.galacticraft.venus.client.sounds.GCVenusSounds;
-import spacecraft.mods.galacticraft.venus.dimension.GCVenusWorldProvider;
-import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityAlienVillager;
-import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityEvolvedBlaze;
-import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityFlameling;
-import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityRocketT3;
-import spacecraft.mods.galacticraft.venus.items.GCVenusItems;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.client.GCCoreCloudRenderer;
 import micdoodle8.mods.galacticraft.core.client.render.entities.GCCoreRenderAlienVillager;
@@ -64,6 +48,20 @@ import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 
+import spacecraft.mods.galacticraft.venus.CommonProxyVenus;
+import spacecraft.mods.galacticraft.venus.GCVenus;
+import spacecraft.mods.galacticraft.venus.GCVenusConfigManager;
+import spacecraft.mods.galacticraft.venus.client.fx.GCVenusEntityDropParticleFX;
+import spacecraft.mods.galacticraft.venus.client.render.entities.GCVenusRenderEvolvedBlaze;
+import spacecraft.mods.galacticraft.venus.client.render.entities.GCVenusRenderFlameling;
+import spacecraft.mods.galacticraft.venus.client.render.entities.GCVenusRenderVenusianVillager;
+import spacecraft.mods.galacticraft.venus.client.sounds.GCVenusSounds;
+import spacecraft.mods.galacticraft.venus.dimension.GCVenusWorldProvider;
+import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityEvolvedBlaze;
+import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityFlameling;
+import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityVenusianVillager;
+import spacecraft.mods.galacticraft.venus.items.GCVenusItems;
+
 public class ClientProxyVenus extends CommonProxyVenus
 {
     private static int eggRenderID;
@@ -83,38 +81,14 @@ public class ClientProxyVenus extends CommonProxyVenus
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
         NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCVenus.CHANNEL, Side.CLIENT);
         ClientProxyVenus.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
-
-        //Blue Cape
-        String capeBlueString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeBlue.png";
-        //Green Cape
-        String capeGreenString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeGreen.png";
-        //Orange Cape
-        String capeOrangeString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeOrange.png";
-        //Red Cape
-        String capeRedString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeRed.png";
-        //Violet Cape
-        String capeVioletString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeViolet.png";
-        //Yellow Cape
-        String capeYellowString = "https://raw.github.com/Super4Ever4MC/Galacticraft-Venus-Add-on/master/capes/capeYellow.png";
-
-        ClientProxyCore.capeMap.put("mattparks", capeBlueString);     
-        ClientProxyCore.capeMap.put("flashy3", capeOrangeString); 
-        ClientProxyCore.capeMap.put("ghostheart305", capeRedString); 
-        ClientProxyCore.capeMap.put("langjam350roxsox", capeBlueString); 
-        ClientProxyCore.capeMap.put("_Ja1m3", capeRedString); 
-        ClientProxyCore.capeMap.put("dinammar", capeVioletString); 
-        ClientProxyCore.capeMap.put("goldenkat99", capeOrangeString); 
     }
 
     @Override
     public void registerRenderInformation()
     {
-        IModelCustom cargoRocketModel = AdvancedModelLoader.loadModel("/assets/galacticraftvenus/models/cargoRocket.obj");
-        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityRocketT3.class, new GCCoreRenderSpaceship(new GCVenusModelSpaceshipTier3(), GCVenus.TEXTURE_DOMAIN, "rocketT3"));
         RenderingRegistry.addNewArmourRendererPrefix("gem");
-        MinecraftForgeClient.registerItemRenderer(GCVenusItems.spaceship.itemID, new GCVenusItemRendererSpaceshipT3(cargoRocketModel));
-    
-        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityAlienVillager.class, new GCVenusRenderAlienVillager());
+
+        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityVenusianVillager.class, new GCVenusRenderVenusianVillager());
         RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityFlameling.class, new GCVenusRenderFlameling());
         //        RenderingRegistry.registerEntityRenderingHandler(GCVenusEntityEvolvedBlaze.class, new GCVenusRenderEvolvedBlaze());
     }
@@ -245,13 +219,9 @@ public class ClientProxyVenus extends CommonProxyVenus
 
                         if (e != null)
                         {
-                            if (e instanceof GCVenusEntityRocketT3)
                             {
-                                final GCVenusEntityRocketT3 eship = (GCVenusEntityRocketT3) e;
 
-                                if (eship.rocketSoundUpdater == null)
                                 {
-                                    eship.rocketSoundUpdater = new GCCoreSoundUpdaterSpaceship(FMLClientHandler.instance().getClient().sndManager, eship, FMLClientHandler.instance().getClient().thePlayer);
                                 }
                             }
                         }

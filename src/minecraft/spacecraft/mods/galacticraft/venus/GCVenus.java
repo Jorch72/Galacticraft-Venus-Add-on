@@ -3,17 +3,16 @@ package spacecraft.mods.galacticraft.venus;
 import java.io.File;
 import java.util.HashMap;
 
+import spacecraft.mods.galacticraft.venus.blocks.*;
 import spacecraft.mods.galacticraft.venus.dimension.GCVenusTeleportType;
 import spacecraft.mods.galacticraft.venus.dimension.GCVenusWorldProvider;
-import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityAlienVillager;
 import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityEvolvedBlaze;
 import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityFlameling;
-import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityRocketT3;
+import spacecraft.mods.galacticraft.venus.entities.GCVenusEntityVenusianVillager;
 import spacecraft.mods.galacticraft.venus.items.GCVenusItems;
 import spacecraft.mods.galacticraft.venus.network.GCVenusPacketHandlerServer;
 import spacecraft.mods.galacticraft.venus.recipe.GCVenusRecipeManager;
-import spacecraft.mods.galacticraft.venus.schematic.GCVenusSchematicRocketT3;
-import spacecraft.mods.galacticraft.venus.blocks.*;
+import spacecraft.mods.galacticraft.venusBlocks.VenusBlocks;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -64,7 +63,7 @@ public class GCVenus
     public static final String CHANNEL = "GCVenus";
     public static final String CHANNELENTITIES = "GCVenusEntities";
 
-    public static final String LANGUAGE_PATH = "/assets/galacticraftvenus/lang/";
+    public static final String LANGUAGE_PATH = "/assets/spacecraftvenus/lang/";
     private static final String[] LANGUAGES_SUPPORTED = new String[] { "en_US" };
 
     @SidedProxy(clientSide = "spacecraft.mods.galacticraft.venus.client.ClientProxyVenus", serverSide = "spacecraft.mods.galacticraft.venus.CommonProxyVenus")
@@ -73,9 +72,7 @@ public class GCVenus
     @Instance(GCVenus.MODID)
     public static GCVenus instance;
 
-    public static CreativeTabs galacticraftVenusTab = new GCVenusCreativeTab(CreativeTabs.getNextID(),"galacticraftVenusTab");
-
-    public static final String TEXTURE_DOMAIN = "galacticraftvenus";
+    public static final String TEXTURE_DOMAIN = "spacecraftvenus";
     public static final String TEXTURE_PREFIX = GCVenus.TEXTURE_DOMAIN + ":";
     
     public static long tick;
@@ -130,9 +127,7 @@ public class GCVenus
             languages++;
         }
 
-        GCLog.info("Galacticraft Venus Loaded: " + languages + " Languages.");
-
-        SchematicRegistry.registerSchematicRecipe(new GCVenusSchematicRocketT3());
+        GCLog.info("Spacecraft Venus Loaded: " + languages + " Languages.");
 
         NetworkRegistry.instance().registerGuiHandler(GCVenus.instance, GCVenus.proxy);
         this.registerTileEntities();
@@ -143,8 +138,7 @@ public class GCVenus
         GalacticraftRegistry.registerTeleportType(GCVenusWorldProvider.class, new GCVenusTeleportType());
         GalacticraftRegistry.registerCelestialBody(new GCVenusPlanet());
         GalacticraftRegistry.registerRocketGui(GCVenusWorldProvider.class, new ResourceLocation(GCVenus.TEXTURE_DOMAIN, "textures/gui/venusRocketGui.png"));
-        GalacticraftRegistry.addDungeonLoot(2, new ItemStack(GCVenusItems.schematic, 1, 0));
-        
+
 //        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), new ItemStack(GCCoreItems.heavyPlatingTier1), new ItemStack(GCMoonItems.meteoricIronIngot, 1, 1));
 //        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 5), new ItemStack(GCVenusItems.venusItemBasic, 1, 2));
     
@@ -170,15 +164,14 @@ public class GCVenus
 
     public void registerCreatures()
     {
-    	GCCoreUtil.registerGalacticraftCreature(GCVenusEntityAlienVillager.class, "AlienVillager", GCVenusConfigManager.idEntityAlienVillager, GCCoreUtil.convertTo32BitColor(255, 103, 181, 145), 12422002);
+    	GCCoreUtil.registerGalacticraftCreature(GCVenusEntityVenusianVillager.class, "VenusianVillager", GCVenusConfigManager.idEntityVenusianVillager, GCCoreUtil.convertTo32BitColor(255, 103, 181, 145), 12422002);
         GCCoreUtil.registerGalacticraftCreature(GCVenusEntityEvolvedBlaze.class, "EvolvedBlaze", GCVenusConfigManager.idEntityEvolvedBlaze, 44975, 7969893);
         GCCoreUtil.registerGalacticraftCreature(GCVenusEntityFlameling.class, "Flameling", GCVenusConfigManager.idEntityFlameling, 44975, 7969893);
     }
 
     public void registerOtherEntities()
     {
-    	this.registerGalacticraftNonMobEntity(GCVenusEntityRocketT3.class, "SpaceshipT3", GCVenusConfigManager.idEntitySpaceshipTier3, 150, 1, true);    }
-
+    }
     @EventHandler
     public void postLoad(FMLPostInitializationEvent event)
     {

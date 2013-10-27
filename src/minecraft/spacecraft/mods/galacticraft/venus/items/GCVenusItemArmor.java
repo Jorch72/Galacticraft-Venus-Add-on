@@ -1,5 +1,6 @@
 package spacecraft.mods.galacticraft.venus.items;
 
+import spacecraft.mods.galacticraft.core.SpacecraftCore;
 import spacecraft.mods.galacticraft.venus.GCVenus;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -36,19 +37,19 @@ public class GCVenusItemArmor extends ItemArmor
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
     {
-        if (this.material == GCVenusItems.ARMORGEM)
+        if (this.material == GCVenusItems.ARMORSULFER)
         {
-            if (stack.getItem().itemID == GCVenusItems.gemHelmet.itemID)
+            if (stack.getItem().itemID == GCVenusItems.sulferHelmet.itemID)
             {
-                return "textures/model/armor/gem_1.png";
+                return "textures/model/armor/sulfer_1.png";
             }
-            else if (stack.getItem().itemID == GCVenusItems.gemChestplate.itemID || stack.getItem().itemID == GCVenusItems.gemBoots.itemID)
+            else if (stack.getItem().itemID == GCVenusItems.sulferChestplate.itemID || stack.getItem().itemID == GCVenusItems.sulferBoots.itemID)
             {
-                return "textures/model/armor/gem_2.png";
+                return "textures/model/armor/sulfer_2.png";
             }
-            else if (stack.getItem().itemID == GCVenusItems.gemLeggings.itemID)
+            else if (stack.getItem().itemID == GCVenusItems.sulferLeggings.itemID)
             {
-                return "textures/model/armor/gem_3.png";
+                return "textures/model/armor/sulfer_3.png";
             }
         }
 
@@ -58,7 +59,7 @@ public class GCVenusItemArmor extends ItemArmor
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GCVenus.galacticraftVenusTab;
+        return SpacecraftCore.starcraftVenusTab;
     }
 
     @Override
@@ -72,6 +73,6 @@ public class GCVenusItemArmor extends ItemArmor
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "galacticraftvenus:"));
+        this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().replace("item.", "spacecraftvenus:"));
     }
 }

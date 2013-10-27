@@ -1,0 +1,24 @@
+# Starcraft Pluto Language File = UNITED STATES ENGLISH
+
+# GENERAL ITEMS
+
+# ITEMS
+item.plutoPlate.name=Pluto Plate
+
+# TOOLS
+
+# ARMOR
+
+# BLOCKS
+tile.PlutoGrass.name=Pluto Grass
+tile.PlutoDirt.name=Pluto Dirt
+tile.PlutoStone.name=Pluto Stone
+tile.PlutoCobblestone.name=Pluto Cobblestone
+tile.PlutoBrick.name=Pluto Brick
+				
+# ENTITYS
+
+# GUI
+gui.choosePlanet.desc.pluto=Very Cold#Frozen Surface#Gravity: 8%
+
+dimension.Pluto.name=Pluto
