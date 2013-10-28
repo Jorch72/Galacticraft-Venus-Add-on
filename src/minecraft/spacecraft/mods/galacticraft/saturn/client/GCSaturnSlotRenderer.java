@@ -1,6 +1,5 @@
 package spacecraft.mods.galacticraft.saturn.client;
 
-import spacecraft.mods.galacticraft.jupiter.GCJupiter;
 import spacecraft.mods.galacticraft.saturn.GCSaturn;
 import micdoodle8.mods.galacticraft.api.world.ICelestialBodyRenderer;
 import net.minecraft.client.renderer.Tessellator;

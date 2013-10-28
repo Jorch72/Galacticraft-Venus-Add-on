@@ -2,7 +2,6 @@ package spacecraft.mods.galacticraft.saturn.wgen;
 
 import java.util.Random;
 
-import spacecraft.mods.galacticraft.jupiter.GCJupiter;
 import spacecraft.mods.galacticraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.api.event.wgen.GCCoreEventPopulate;
 import micdoodle8.mods.galacticraft.core.world.gen.GCCoreWorldGenMinableMeta;

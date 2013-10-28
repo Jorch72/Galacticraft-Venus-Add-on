@@ -16,14 +16,14 @@ import net.minecraftforge.client.IRenderHandler;
 
 import org.lwjgl.opengl.GL11;
 
-import spacecraft.mods.galacticraft.jupiter.GCJupiter;
-import spacecraft.mods.galacticraft.jupiter.dimension.GCJupiterWorldProvider;
+import spacecraft.mods.galacticraft.saturn.GCSaturn;
+import spacecraft.mods.galacticraft.saturn.dimension.GCSaturnWorldProvider;
 import cpw.mods.fml.client.FMLClientHandler;
 
 public class GCSaturnSkyProvider extends IRenderHandler
 {
     private static final ResourceLocation overworldTexture = new ResourceLocation(GalacticraftCore.ASSET_DOMAIN, "textures/gui/planets/overworld.png");
-    private static final ResourceLocation sunTexture = new ResourceLocation(GCJupiter.TEXTURE_DOMAIN, "textures/gui/planets/sun.png");
+    private static final ResourceLocation sunTexture = new ResourceLocation(GCSaturn.TEXTURE_DOMAIN, "textures/gui/planets/sun.png");
 
     public int starGLCallList = GLAllocation.generateDisplayLists(3);
     public int glSkyList;
@@ -80,11 +80,11 @@ public class GCSaturnSkyProvider extends IRenderHandler
     @Override
     public void render(float partialTicks, WorldClient world, Minecraft mc)
     {
-        GCJupiterWorldProvider gcProvider = null;
+        GCSaturnWorldProvider gcProvider = null;
 
-        if (world.provider instanceof GCJupiterWorldProvider)
+        if (world.provider instanceof GCSaturnWorldProvider)
         {
-            gcProvider = (GCJupiterWorldProvider) world.provider;
+            gcProvider = (GCSaturnWorldProvider) world.provider;
         }
 
         float var10;

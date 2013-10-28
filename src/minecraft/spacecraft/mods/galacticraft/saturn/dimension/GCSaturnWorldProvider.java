@@ -1,9 +1,8 @@
 package spacecraft.mods.galacticraft.saturn.dimension;
 
-import spacecraft.mods.galacticraft.jupiter.GCJupiterConfigManager;
-import spacecraft.mods.galacticraft.jupiter.wgen.GCPlutoChunkProvider;
-import spacecraft.mods.galacticraft.jupiter.wgen.GCPlutoWorldChunkManager;
 import spacecraft.mods.galacticraft.saturn.GCSaturnConfigManager;
+import spacecraft.mods.galacticraft.saturn.wgen.GCSaturnChunkProvider;
+import spacecraft.mods.galacticraft.saturn.wgen.GCSaturnWorldChunkManager;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
@@ -46,7 +45,7 @@ public class GCSaturnWorldProvider extends WorldProvider implements IGalacticraf
     @Override
     public void registerWorldChunkManager()
     {
-        this.worldChunkMgr = new GCPlutoWorldChunkManager();
+        this.worldChunkMgr = new GCSaturnWorldChunkManager();
     }
 
     @SideOnly(Side.CLIENT)
@@ -101,7 +100,7 @@ public class GCSaturnWorldProvider extends WorldProvider implements IGalacticraf
     @Override
     public IChunkProvider createChunkGenerator()
     {
-        return new GCPlutoChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
+        return new GCSaturnChunkProvider(this.worldObj, this.worldObj.getSeed(), this.worldObj.getWorldInfo().isMapFeaturesEnabled());
     }
 
     @Override
