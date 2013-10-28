@@ -87,8 +87,6 @@ public class SpacecraftBlocksConfigManager
         {
             SpacecraftBlocksConfigManager.configuration.load();
 
-//	        SpacecraftBlocksConfigManager.idVenusGrass = SpacecraftBlocksConfigManager.configuration.get("Blocks", "Venus Grass ID", 7004).getInt(7004);	        
-
             SpacecraftBlocksConfigManager.idVenusGrass = SpacecraftBlocksConfigManager.configuration.get("Blocks", "Venus Grass ID", 7004).getInt(7004);
             SpacecraftBlocksConfigManager.idVenusDirt = SpacecraftBlocksConfigManager.configuration.get("Blocks", "Venus Dirt ID", 7005).getInt(7005);
             SpacecraftBlocksConfigManager.idVenusStone = SpacecraftBlocksConfigManager.configuration.get("Blocks", "Venus Stone ID", 7006).getInt(7006);
@@ -127,6 +125,8 @@ public class SpacecraftBlocksConfigManager
             SpacecraftBlocksConfigManager.idJupiterLightGas = SpacecraftBlocksConfigManager.configuration.get("Blocks", "Jupiter Light Gas ID", 7036).getInt(7006);
             SpacecraftBlocksConfigManager.idJupiterMediumGas = SpacecraftBlocksConfigManager.configuration.get("Blocks", "Jupiter Medium Gas ID", 7037).getInt(7037);
             SpacecraftBlocksConfigManager.idJupiterHeavyGas = SpacecraftBlocksConfigManager.configuration.get("Blocks", "Jupiter Heavy Gas ID", 7038).getInt(7038);    
+        
+            //Block id's 7539 and up are used by Spacecraft Core
         }
         catch (final Exception e)
         {

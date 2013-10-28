@@ -31,16 +31,18 @@ public class GCVenusItems
     public static void initItems()
     {
         GCVenusItems.venusItemBasic = new GCVenusItem(GCVenusConfigManager.idItemVenusBasic);
+        GCVenusItems.venusBattery = new GCVenusItemBattery(GCVenusConfigManager.idItemVenusBattery, "venusBattery");
+
         GCVenusItems.sulferPickaxe = new GCVenusItemPickaxe(GCVenusConfigManager.idToolSulferPickaxe, GCVenusItems.TOOLSULFER).setUnlocalizedName("sulferPick");
         GCVenusItems.sulferAxe = new GCVenusItemAxe(GCVenusConfigManager.idToolSulferAxe, GCVenusItems.TOOLSULFER).setUnlocalizedName("sulferAxe");
         GCVenusItems.sulferHoe = new GCVenusItemHoe(GCVenusConfigManager.idToolSulferHoe, GCVenusItems.TOOLSULFER).setUnlocalizedName("sulferHoe");
         GCVenusItems.sulferSpade = new GCVenusItemSpade(GCVenusConfigManager.idToolSulferSpade, GCVenusItems.TOOLSULFER).setUnlocalizedName("sulferSpade");
         GCVenusItems.sulferSword = new GCVenusItemSword(GCVenusConfigManager.idToolSulferSword, GCVenusItems.TOOLSULFER).setUnlocalizedName("sulferSword");
+        
         GCVenusItems.sulferHelmet = new GCVenusItemArmor(GCVenusConfigManager.idArmorSulferHelmet, GCVenusItems.ARMORSULFER, 7, 0, false).setUnlocalizedName("sulferHelmet");
         GCVenusItems.sulferChestplate = new GCVenusItemArmor(GCVenusConfigManager.idArmorSulferChestplate, GCVenusItems.ARMORSULFER, 7, 1, false).setUnlocalizedName("sulferChestplate");
         GCVenusItems.sulferLeggings = new GCVenusItemArmor(GCVenusConfigManager.idArmorSulferLeggings, GCVenusItems.ARMORSULFER, 7, 2, false).setUnlocalizedName("sulferLeggings");
         GCVenusItems.sulferBoots = new GCVenusItemArmor(GCVenusConfigManager.idArmorSulferBoots, GCVenusItems.ARMORSULFER, 7, 3, false).setUnlocalizedName("sulferBoots");
-        GCVenusItems.venusBattery = new GCVenusItemBattery(GCVenusConfigManager.idItemVenusBattery, "venusBattery");
     }
     
     public static void registerHarvestLevels()

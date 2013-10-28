@@ -42,10 +42,6 @@ public class GCJupiterConfigManager
     // ACHIEVEMENTS
 
     // GENERAL
-//    public static boolean disableGemOreMercury;
-//    public static boolean disableCoalOreMercury;  
-//    public static boolean disableTinOreMercury;
-//    public static boolean disableCopperOreMercury;
   
     public static boolean generateOtherMods;
 

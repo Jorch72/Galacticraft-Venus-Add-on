@@ -44,10 +44,6 @@ public class GCPlutoConfigManager
     // ACHIEVEMENTS
 
     // GENERAL
-//    public static boolean disableGemOreMercury;
-//    public static boolean disableCoalOreMercury;  
-//    public static boolean disableTinOreMercury;
-//    public static boolean disableCopperOreMercury;
   
     public static boolean generateOtherMods;
 
@@ -59,16 +55,13 @@ public class GCPlutoConfigManager
 
             GCPlutoConfigManager.dimensionIDPluto = GCPlutoConfigManager.configuration.get("Dimensions", "Venus Dimension ID", -48).getInt(-48);
 
-            GCPlutoConfigManager.idBlockPluto = GCPlutoConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockVenus", 5390).getInt(5390);
+            GCPlutoConfigManager.idBlockPluto = GCPlutoConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockVenus", 7653).getInt(7653);
      
-            GCPlutoConfigManager.idItemPlutoBasic = GCPlutoConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemvenusItemBasic", 5905).getInt(5905);
+            GCPlutoConfigManager.idItemPlutoBasic = GCPlutoConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemvenusItemBasic", 7654).getInt(7654);
 
-//            GCPlutoConfigManager.disableGemOreMercury = GCPlutoConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Gem Ore Gen on Mercury", false).getBoolean(false);
-//            GCPlutoConfigManager.disableCoalOreMercury = GCPlutoConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Coal Ore Gen on Mercury", false).getBoolean(false);
-//            GCPlutoConfigManager.disableTinOreMercury = GCPlutoConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Tin Ore Gen on Mercury", false).getBoolean(false);
-//            GCPlutoConfigManager.disableCopperOreMercury = GCPlutoConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Copper Ore Gen on Mercury", false).getBoolean(false);
-
-            GCPlutoConfigManager.generateOtherMods = GCPlutoConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Generate other mod's features on Mercury", false).getBoolean(false);        
+            //Block id's 7755-7756 are used by Starcraft mercury
+            
+            GCPlutoConfigManager.generateOtherMods = GCPlutoConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Generate other mod's features on Pluto", false).getBoolean(false);        
         }
         catch (final Exception e)
         {

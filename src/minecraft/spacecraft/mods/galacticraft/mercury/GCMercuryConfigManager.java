@@ -60,10 +60,12 @@ public class GCMercuryConfigManager
 
             GCMercuryConfigManager.dimensionIDMercury = GCMercuryConfigManager.configuration.get("Dimensions", "Venus Dimension ID", -47).getInt(-47);
 
-            GCMercuryConfigManager.idBlockMercury = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockVenus", 4390).getInt(4390);
+            GCMercuryConfigManager.idBlockMercury = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_BLOCK, "idBlockVenus", 7755).getInt(7755);
      
-            GCMercuryConfigManager.idItemMercuryBasic = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemvenusItemBasic", 3905).getInt(3905);
+            GCMercuryConfigManager.idItemMercuryBasic = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_ITEM, "idItemvenusItemBasic", 7756).getInt(7756);
 
+            //Block id's 7857-7870 used by Spacecraft Venus
+            
             GCMercuryConfigManager.disableGemOreMercury = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Gem Ore Gen on Mercury", false).getBoolean(false);
             GCMercuryConfigManager.disableCoalOreMercury = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Coal Ore Gen on Mercury", false).getBoolean(false);
             GCMercuryConfigManager.disableTinOreMercury = GCMercuryConfigManager.configuration.get(Configuration.CATEGORY_GENERAL, "Disable Tin Ore Gen on Mercury", false).getBoolean(false);

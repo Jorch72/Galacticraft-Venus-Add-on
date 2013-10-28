@@ -10,11 +10,11 @@ item.plutoPlate.name=Pluto Plate
 # ARMOR
 
 # BLOCKS
-tile.PlutoGrass.name=Pluto Grass
-tile.PlutoDirt.name=Pluto Dirt
-tile.PlutoStone.name=Pluto Stone
-tile.PlutoCobblestone.name=Pluto Cobblestone
-tile.PlutoBrick.name=Pluto Brick
+tile.grassPluto.name=Pluto Grass
+tile.dirtPluto.name=Pluto Dirt
+tile.stonePluto.name=Pluto Stone
+tile.cobblestonePluto.name=Pluto Cobblestone
+tile.plutoBrick.name=Pluto Brick
 				
 # ENTITYS
 
