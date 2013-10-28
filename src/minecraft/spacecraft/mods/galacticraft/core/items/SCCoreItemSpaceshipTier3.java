@@ -2,7 +2,6 @@ package spacecraft.mods.galacticraft.core.items;
 
 import java.util.List;
 
-import spacecraft.mods.galacticraft.venus.GCVenus;
 import spacecraft.mods.galacticraft.core.SpacecraftCore;
 import spacecraft.mods.galacticraft.core.entities.SCCoreEntityRocketT3;
 import mekanism.api.EnumColor;
@@ -32,7 +31,7 @@ public class SCCoreItemSpaceshipTier3 extends Item implements IHoldableItem
         super(par1);
         this.setMaxDamage(0);
         this.setHasSubtypes(true);
-        this.setMaxStackSize(1);
+        this.setMaxStackSize(16);
     }
 
     @Override

@@ -292,12 +292,12 @@ public class SCCoreEntityRocketT3 extends EntityTieredRocket
     @Override
     public int getFuelTankCapacity()
     {
-        return 1500;
+        return 3000;
     }
 
     @Override
     public int getPreLaunchWait()
     {
-        return 400;
+        return 600;
     }
 }
