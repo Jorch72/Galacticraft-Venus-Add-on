@@ -1,8 +1,8 @@
 package spacecraft.mods.galacticraft.saturn.wgen;
 
-public class GCPlutoBiomeGenFlat extends GCPlutoBiomeGenBase
+public class GCSaturnBiomeGenFlat extends GCSaturnBiomeGenBase
 {
-    public GCPlutoBiomeGenFlat(int par1)
+    public GCSaturnBiomeGenFlat(int par1)
     {
         super(par1);
         this.setBiomeName("venusFlat");

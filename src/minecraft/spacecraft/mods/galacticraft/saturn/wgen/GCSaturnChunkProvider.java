@@ -28,7 +28,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraftforge.common.ForgeDirection;
 
-public class GCPlutoChunkProvider extends ChunkProviderGenerate
+public class GCSaturnChunkProvider extends ChunkProviderGenerate
 {
     final short topBlockID = (short) SpacecraftBlocks.JupiterLightGas.blockID;
     final byte topBlockMeta = 5;
@@ -44,7 +44,7 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
     private final NoiseModule noiseGen3;
     private final NoiseModule noiseGen4;
 
-    public GCPlutoBiomeDecorator biomedecoratorplanet = new GCPlutoBiomeDecorator(GCPlutoBiomeGenBase.venusFlat);
+    public GCSaturnBiomeDecorator biomedecoratorplanet = new GCSaturnBiomeDecorator(GCSaturnBiomeGenBase.venusFlat);
 
     private final World worldObj;
     private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(SpacecraftBlocks.JupiterHeavyGas.blockID, 14, 8, 16, 3);
@@ -52,9 +52,7 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
     {
     }
 
-    private BiomeGenBase[] biomesForGeneration = { GCPlutoBiomeGenBase.venusFlat };
-
-    private final GCCoreMapGenBaseMeta caveGenerator = new GCPlutoGenCaves();
+    private BiomeGenBase[] biomesForGeneration = { GCSaturnBiomeGenBase.venusFlat };
 
     private static final int CRATER_PROB = 300;
 
@@ -64,7 +62,7 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
     private static final int CHUNK_SIZE_Y = 128;
     private static final int CHUNK_SIZE_Z = 16;
 
-    public GCPlutoChunkProvider(World par1World, long par2, boolean par4)
+    public GCSaturnChunkProvider(World par1World, long par2, boolean par4)
     {
         super(par1World, par2, par4);
         this.worldObj = par1World;
@@ -82,9 +80,9 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
         this.noiseGen3.frequency = 0.01;
         this.noiseGen4.frequency = 0.02;
 
-        for (int x = 0; x < GCPlutoChunkProvider.CHUNK_SIZE_X; x++)
+        for (int x = 0; x < GCSaturnChunkProvider.CHUNK_SIZE_X; x++)
         {
-            for (int z = 0; z < GCPlutoChunkProvider.CHUNK_SIZE_Z; z++)
+            for (int z = 0; z < GCSaturnChunkProvider.CHUNK_SIZE_Z; z++)
             {
                 final double d = this.noiseGen1.getNoise(x + chunkX * 16, z + chunkZ * 16) * 8;
                 final double d2 = this.noiseGen2.getNoise(x + chunkX * 16, z + chunkZ * 16) * 24;
@@ -106,9 +104,9 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
                     yDev = d + (d2 - d) * d3;
                 }
 
-                for (int y = 0; y < GCPlutoChunkProvider.CHUNK_SIZE_Y; y++)
+                for (int y = 0; y < GCSaturnChunkProvider.CHUNK_SIZE_Y; y++)
                 {
-                    if (y < GCPlutoChunkProvider.MID_HEIGHT + yDev)
+                    if (y < GCSaturnChunkProvider.MID_HEIGHT + yDev)
                     {
                         idArray[this.getIndex(x, y, z)] = this.lowerBlockID;
                         metaArray[this.getIndex(x, y, z)] = this.lowerBlockMeta;
@@ -204,7 +202,6 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
         this.generateTerrain(par1, par2, ids, meta);
         this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, par1 * 16, par2 * 16, 16, 16);
         this.replaceBlocksForBiome(par1, par2, ids, meta, this.biomesForGeneration);
-        this.caveGenerator.generate(this, this.worldObj, par1, par2, ids, meta);
         this.dungeonGenerator.generateUsingArrays(this.worldObj, this.worldObj.getSeed(), par1 * 16, 25, par2 * 16, par1, par2, ids, meta);
 
         final Chunk var4 = new Chunk(this.worldObj, ids, meta, par1, par2);

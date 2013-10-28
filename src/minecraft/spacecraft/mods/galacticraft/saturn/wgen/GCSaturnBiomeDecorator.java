@@ -11,7 +11,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 
-public class GCPlutoBiomeDecorator
+public class GCSaturnBiomeDecorator
 {
     protected World worldObj;
     protected Random randomGenerator;
@@ -25,7 +25,7 @@ public class GCPlutoBiomeDecorator
 //    protected WorldGenerator tinGen;
 //    protected WorldGenerator copperGen;
 
-    public GCPlutoBiomeDecorator(BiomeGenBase par1BiomeGenBase)
+    public GCSaturnBiomeDecorator(BiomeGenBase par1BiomeGenBase)
     {
 //        this.gemGen = new GCCoreWorldGenMinableMeta(PlutoBlocks.PlutoBlocks.blockID, 4, 0, true, MercuryBlocks.PlutoBlocks.blockID, 4);
         this.dirtGen = new GCCoreWorldGenMinableMeta(SpacecraftBlocks.JupiterMediumGas.blockID, 32, 3, true, SpacecraftBlocks.JupiterMediumGas.blockID, 4); 
