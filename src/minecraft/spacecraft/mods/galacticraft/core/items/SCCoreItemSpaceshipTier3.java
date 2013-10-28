@@ -2,6 +2,7 @@ package spacecraft.mods.galacticraft.core.items;
 
 import java.util.List;
 
+import spacecraft.mods.galacticraft.venus.GCVenus;
 import spacecraft.mods.galacticraft.core.SpacecraftCore;
 import spacecraft.mods.galacticraft.core.entities.SCCoreEntityRocketT3;
 import mekanism.api.EnumColor;
@@ -31,7 +32,7 @@ public class SCCoreItemSpaceshipTier3 extends Item implements IHoldableItem
         super(par1);
         this.setMaxDamage(0);
         this.setHasSubtypes(true);
-        this.setMaxStackSize(16);
+        this.setMaxStackSize(1);
     }
 
     @Override
@@ -99,6 +100,14 @@ public class SCCoreItemSpaceshipTier3 extends Item implements IHoldableItem
                         par1ItemStack = null;
                     }
                 }
+
+                if (rocket instanceof IRocketType && ((IRocketType) rocket).getType().getPreFueled())
+                {
+                    if (rocket instanceof EntityTieredRocket)
+                    {
+                        ((EntityTieredRocket) rocket).fuelTank.fill(new FluidStack(GalacticraftCore.fluidFuel, rocket.getMaxFuel()), true);
+                    }
+                }
             }
             else
             {
@@ -123,12 +132,7 @@ public class SCCoreItemSpaceshipTier3 extends Item implements IHoldableItem
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack par1ItemStack, EntityPlayer player, List par2List, boolean b)
     {
-        EnumRocketType type = null;
-
-        if (par1ItemStack.getItemDamage() < 10)
-        {
-            type = EnumRocketType.values()[par1ItemStack.getItemDamage()];
-        }
+        EnumRocketType type = EnumRocketType.values()[par1ItemStack.getItemDamage()];
 
         if (!type.getTooltip().isEmpty())
         {
@@ -140,7 +144,6 @@ public class SCCoreItemSpaceshipTier3 extends Item implements IHoldableItem
             par2List.add(EnumColor.RED + "\u00a7o" + "Creative Only");
         }
     }
-
 
     @Override
     public boolean shouldHoldLeftHandUp(EntityPlayer player)
