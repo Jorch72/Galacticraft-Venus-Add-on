@@ -31,7 +31,7 @@ public class SCCoreItemSpaceshipTier3 extends Item implements IHoldableItem
         super(par1);
         this.setMaxDamage(0);
         this.setHasSubtypes(true);
-        this.setMaxStackSize(1);
+        this.setMaxStackSize(16);
     }
 
     @Override
@@ -99,14 +99,6 @@ public class SCCoreItemSpaceshipTier3 extends Item implements IHoldableItem
                         par1ItemStack = null;
                     }
                 }
-
-                if (rocket instanceof IRocketType && ((IRocketType) rocket).getType().getPreFueled())
-                {
-                    if (rocket instanceof EntityTieredRocket)
-                    {
-                        ((EntityTieredRocket) rocket).fuelTank.fill(new FluidStack(GalacticraftCore.fluidFuel, rocket.getMaxFuel()), true);
-                    }
-                }
             }
             else
             {
@@ -124,11 +116,6 @@ public class SCCoreItemSpaceshipTier3 extends Item implements IHoldableItem
         {
             par3List.add(new ItemStack(par1, 1, i));
         }
-
-        for (int i = 11; i < 10 + EnumRocketType.values().length - 1; i++)
-        {
-            par3List.add(new ItemStack(par1, 1, i));
-        }
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -142,10 +129,6 @@ public class SCCoreItemSpaceshipTier3 extends Item implements IHoldableItem
         {
             type = EnumRocketType.values()[par1ItemStack.getItemDamage()];
         }
-        else
-        {
-            type = EnumRocketType.values()[par1ItemStack.getItemDamage() - 10];
-        }
 
         if (!type.getTooltip().isEmpty())
         {
@@ -156,14 +139,8 @@ public class SCCoreItemSpaceshipTier3 extends Item implements IHoldableItem
         {
             par2List.add(EnumColor.RED + "\u00a7o" + "Creative Only");
         }
-
     }
 
-    @Override
-    public String getUnlocalizedName(ItemStack par1ItemStack)
-    {
-        return super.getUnlocalizedName(par1ItemStack) + (par1ItemStack.getItemDamage() < 10 ? ".t2Rocket" : ".cargoRocket");
-    }
 
     @Override
     public boolean shouldHoldLeftHandUp(EntityPlayer player)
