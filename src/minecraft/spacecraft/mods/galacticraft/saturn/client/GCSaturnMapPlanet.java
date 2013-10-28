@@ -5,7 +5,7 @@ import micdoodle8.mods.galacticraft.api.world.IGalaxy;
 import micdoodle8.mods.galacticraft.api.world.IMapObject;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 
-public class GCJupiterMapPlanet implements IMapObject
+public class GCSaturnMapPlanet implements IMapObject
 {
 	@Override
 	public float getPlanetSize() 
@@ -34,7 +34,7 @@ public class GCJupiterMapPlanet implements IMapObject
     @Override
     public ICelestialBodyRenderer getSlotRenderer()
     {
-        return new GCJupiterSlotRenderer();
+        return new GCSaturnSlotRenderer();
     }
 
     @Override

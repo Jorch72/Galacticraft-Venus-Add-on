@@ -3,7 +3,7 @@ package spacecraft.mods.galacticraft.saturn.client.sounds;
 import net.minecraftforge.client.event.sound.SoundLoadEvent;
 import net.minecraftforge.event.ForgeSubscribe;
 
-public class GCJupiterSounds
+public class GCSaturnSounds
 {
     @ForgeSubscribe
     public void onSound(SoundLoadEvent event)

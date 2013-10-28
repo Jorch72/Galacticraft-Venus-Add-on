@@ -12,7 +12,7 @@ import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 
-public class GCJupiterUtil
+public class GCSaturnUtil
 {
     public static void addRocketBenchT3Recipe(ItemStack result, HashMap<Integer, ItemStack> input)
     {

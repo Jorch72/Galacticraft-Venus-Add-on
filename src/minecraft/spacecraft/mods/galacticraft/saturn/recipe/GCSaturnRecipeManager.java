@@ -13,11 +13,11 @@ import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.oredict.OreDictionary;
 
-public class GCJupiterRecipeManager
+public class GCSaturnRecipeManager
 {
     public static void loadRecipes()
     {
-        GCJupiterRecipeManager.addUniversalRecipes();
+        GCSaturnRecipeManager.addUniversalRecipes();
     }
 
     private static void addUniversalRecipes()

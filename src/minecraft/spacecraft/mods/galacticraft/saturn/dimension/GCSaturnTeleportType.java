@@ -15,7 +15,7 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 
-public class GCJupiterTeleportType implements ITeleportType
+public class GCSaturnTeleportType implements ITeleportType
 {
     @Override
     public boolean useParachute()

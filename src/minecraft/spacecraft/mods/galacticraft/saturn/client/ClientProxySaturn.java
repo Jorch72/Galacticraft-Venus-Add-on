@@ -48,13 +48,12 @@ import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 
-import spacecraft.mods.galacticraft.jupiter.CommonProxyJupiter;
-import spacecraft.mods.galacticraft.jupiter.GCJupiter;
-import spacecraft.mods.galacticraft.jupiter.GCJupiterConfigManager;
-import spacecraft.mods.galacticraft.jupiter.client.sounds.GCJupiterSounds;
-import spacecraft.mods.galacticraft.jupiter.dimension.GCJupiterWorldProvider;
+import spacecraft.mods.galacticraft.saturn.CommonProxySaturn;
+import spacecraft.mods.galacticraft.saturn.GCSaturn;
+import spacecraft.mods.galacticraft.saturn.client.sounds.GCSaturnSounds;
+import spacecraft.mods.galacticraft.saturn.dimension.GCSaturnWorldProvider;
 
-public class ClientProxySaturn extends CommonProxyJupiter
+public class ClientProxySaturn extends CommonProxySaturn
 {
     private static int eggRenderID;
     private static int treasureRenderID;
@@ -64,14 +63,14 @@ public class ClientProxySaturn extends CommonProxyJupiter
     @Override
     public void preInit(FMLPreInitializationEvent event)
     {
-        MinecraftForge.EVENT_BUS.register(new GCJupiterSounds());
+        MinecraftForge.EVENT_BUS.register(new GCSaturnSounds());
     }
     
     @Override
     public void init(FMLInitializationEvent event)
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
-        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCJupiter.CHANNEL, Side.CLIENT);
+        NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCSaturn.CHANNEL, Side.CLIENT);
         ClientProxySaturn.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
     }
 
@@ -188,11 +187,11 @@ public class ClientProxySaturn extends CommonProxyJupiter
             {
                 if (world != null)
                 {
-                    if (world.provider instanceof GCJupiterWorldProvider)
+                    if (world.provider instanceof GCSaturnWorldProvider)
                     {
                         if (world.provider.getSkyRenderer() == null)
                         {
-                            world.provider.setSkyRenderer(new GCJupiterSkyProvider());
+                            world.provider.setSkyRenderer(new GCSaturnSkyProvider());
                         }
 
                         if (world.provider.getCloudRenderer() == null)
@@ -226,7 +225,7 @@ public class ClientProxySaturn extends CommonProxyJupiter
         @Override
         public String getLabel()
         {
-            return "Galacticraft Jupiter Client";
+            return "Galacticraft Saturn Client";
         }
 
         @Override

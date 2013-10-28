@@ -298,6 +298,6 @@ public class SCCoreEntityRocketT3 extends EntityTieredRocket
     @Override
     public int getPreLaunchWait()
     {
-        return 600;
+        return 400;
     }
 }

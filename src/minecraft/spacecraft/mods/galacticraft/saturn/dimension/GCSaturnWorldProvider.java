@@ -3,6 +3,7 @@ package spacecraft.mods.galacticraft.saturn.dimension;
 import spacecraft.mods.galacticraft.jupiter.GCJupiterConfigManager;
 import spacecraft.mods.galacticraft.jupiter.wgen.GCPlutoChunkProvider;
 import spacecraft.mods.galacticraft.jupiter.wgen.GCPlutoWorldChunkManager;
+import spacecraft.mods.galacticraft.saturn.GCSaturnConfigManager;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
@@ -15,7 +16,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GCJupiterWorldProvider extends WorldProvider implements IGalacticraftWorldProvider, ISolarLevel
+public class GCSaturnWorldProvider extends WorldProvider implements IGalacticraftWorldProvider, ISolarLevel
 {
     @Override
     public void setDimension(int var1)
@@ -151,25 +152,25 @@ public class GCJupiterWorldProvider extends WorldProvider implements IGalacticra
     @Override
     public String getSaveFolder()
     {
-        return "DIM" + GCJupiterConfigManager.dimensionIDJupiter;
+        return "DIM" + GCSaturnConfigManager.dimensionIDSaturn;
     }
 
     @Override
     public String getWelcomeMessage()
     {
-        return "Entering Jupiter";
+        return "Entering Saturn";
     }
 
     @Override
     public String getDepartMessage()
     {
-        return "Leaving Jupiter";
+        return "Leaving Saturn";
     }
 
     @Override
     public String getDimensionName()
     {
-        return "Jupiter";
+        return "Saturn";
     }
 
     @Override

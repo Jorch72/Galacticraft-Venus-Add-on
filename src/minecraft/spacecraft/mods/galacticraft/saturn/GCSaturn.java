@@ -3,10 +3,10 @@ package spacecraft.mods.galacticraft.saturn;
 import java.io.File;
 import java.util.HashMap;
 
-import spacecraft.mods.galacticraft.jupiter.dimension.GCJupiterTeleportType;
-import spacecraft.mods.galacticraft.jupiter.dimension.GCJupiterWorldProvider;
-import spacecraft.mods.galacticraft.jupiter.network.GCJupiterPacketHandlerServer;
-import spacecraft.mods.galacticraft.jupiter.recipe.GCJupiterRecipeManager;
+import spacecraft.mods.galacticraft.saturn.dimension.GCSaturnTeleportType;
+import spacecraft.mods.galacticraft.saturn.dimension.GCSaturnWorldProvider;
+import spacecraft.mods.galacticraft.saturn.network.GCSaturnPacketHandlerServer;
+import spacecraft.mods.galacticraft.saturn.recipe.GCSaturnRecipeManager;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -127,9 +127,9 @@ public class GCSaturn
         this.registerOtherEntities();
         GCSaturn.proxy.init(event);
 
-        GalacticraftRegistry.registerTeleportType(GCJupiterWorldProvider.class, new GCJupiterTeleportType());
-        GalacticraftRegistry.registerCelestialBody(new GCJupiterPlanet());
-        GalacticraftRegistry.registerRocketGui(GCJupiterWorldProvider.class, new ResourceLocation(GCSaturn.TEXTURE_DOMAIN, "textures/gui/mercuryRocketGui.png"));
+        GalacticraftRegistry.registerTeleportType(GCSaturnWorldProvider.class, new GCSaturnTeleportType());
+        GalacticraftRegistry.registerCelestialBody(new GCSaturnPlanet());
+        GalacticraftRegistry.registerRocketGui(GCSaturnWorldProvider.class, new ResourceLocation(GCSaturn.TEXTURE_DOMAIN, "textures/gui/saturnRocketGui.png"));
 
 //        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 3), new ItemStack(GCCoreItems.heavyPlatingTier1), new ItemStack(GCMoonItems.meteoricIronIngot, 1, 1));
 //        CompressorRecipes.addShapelessRecipe(new ItemStack(GCVenusItems.venusItemBasic, 1, 5), new ItemStack(GCVenusItems.venusItemBasic, 1, 2));
@@ -144,7 +144,7 @@ public class GCSaturn
     @EventHandler
     public void serverStarting(FMLServerStartingEvent event)
     {
-        NetworkRegistry.instance().registerChannel(new GCJupiterPacketHandlerServer(), GCSaturn.CHANNEL, Side.SERVER);
+        NetworkRegistry.instance().registerChannel(new GCSaturnPacketHandlerServer(), GCSaturn.CHANNEL, Side.SERVER);
     }
 
     public void registerTileEntities()
@@ -163,7 +163,7 @@ public class GCSaturn
     {
         GCSaturn.proxy.postInit(event);
         GCSaturn.proxy.registerRenderInformation();
-        GCJupiterRecipeManager.loadRecipes();
+        GCSaturnRecipeManager.loadRecipes();
     }
 
     public void registerGalacticraftCreature(Class<? extends Entity> var0, String var1, int id, int back, int fore)

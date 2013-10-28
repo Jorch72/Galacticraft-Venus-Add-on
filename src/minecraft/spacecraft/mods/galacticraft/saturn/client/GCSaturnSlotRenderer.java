@@ -1,23 +1,24 @@
 package spacecraft.mods.galacticraft.saturn.client;
 
 import spacecraft.mods.galacticraft.jupiter.GCJupiter;
+import spacecraft.mods.galacticraft.saturn.GCSaturn;
 import micdoodle8.mods.galacticraft.api.world.ICelestialBodyRenderer;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.util.ResourceLocation;
 
-public class GCJupiterSlotRenderer implements ICelestialBodyRenderer
+public class GCSaturnSlotRenderer implements ICelestialBodyRenderer
 {
 
     @Override
     public ResourceLocation getPlanetSprite()
     {
-        return new ResourceLocation(GCJupiter.TEXTURE_DOMAIN, "textures/gui/planets/jupiter.png");
+        return new ResourceLocation(GCSaturn.TEXTURE_DOMAIN, "textures/gui/planets/saturn.png");
     }
 
     @Override
     public String getPlanetName()
     {
-        return "Jupiter";
+        return "Saturn";
     }
 
     @Override

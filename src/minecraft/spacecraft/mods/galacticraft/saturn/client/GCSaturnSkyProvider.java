@@ -20,7 +20,7 @@ import spacecraft.mods.galacticraft.jupiter.GCJupiter;
 import spacecraft.mods.galacticraft.jupiter.dimension.GCJupiterWorldProvider;
 import cpw.mods.fml.client.FMLClientHandler;
 
-public class GCJupiterSkyProvider extends IRenderHandler
+public class GCSaturnSkyProvider extends IRenderHandler
 {
     private static final ResourceLocation overworldTexture = new ResourceLocation(GalacticraftCore.ASSET_DOMAIN, "textures/gui/planets/overworld.png");
     private static final ResourceLocation sunTexture = new ResourceLocation(GCJupiter.TEXTURE_DOMAIN, "textures/gui/planets/sun.png");
@@ -29,7 +29,7 @@ public class GCJupiterSkyProvider extends IRenderHandler
     public int glSkyList;
     public int glSkyList2;
 
-    public GCJupiterSkyProvider()
+    public GCSaturnSkyProvider()
     {
         GL11.glPushMatrix();
         GL11.glNewList(this.starGLCallList, GL11.GL_COMPILE);
@@ -158,7 +158,7 @@ public class GCJupiterSkyProvider extends IRenderHandler
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
         GL11.glRotatef(world.getCelestialAngle(partialTicks) * 360.0F, 1.0F, 0.0F, 0.0F);
         var12 = 30.0F;
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCJupiterSkyProvider.sunTexture);
+        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCSaturnSkyProvider.sunTexture);
         var23.startDrawingQuads();
         var23.addVertexWithUV(-var12, 150.0D, -var12, 0.0D, 0.0D);
         var23.addVertexWithUV(var12, 150.0D, -var12, 1.0D, 0.0D);
@@ -178,7 +178,7 @@ public class GCJupiterSkyProvider extends IRenderHandler
         GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
         GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCJupiterSkyProvider.overworldTexture);
+        FMLClientHandler.instance().getClient().renderEngine.bindTexture(GCSaturnSkyProvider.overworldTexture);
         var23.startDrawingQuads();
         var23.addVertexWithUV(-var12, -100.0D, var12, 0, 1);
         var23.addVertexWithUV(var12, -100.0D, var12, 1, 1);

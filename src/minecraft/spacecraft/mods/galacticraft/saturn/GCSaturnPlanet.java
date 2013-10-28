@@ -1,16 +1,16 @@
 package spacecraft.mods.galacticraft.saturn;
 
-import spacecraft.mods.galacticraft.jupiter.client.GCJupiterMapPlanet;
-import spacecraft.mods.galacticraft.jupiter.dimension.GCJupiterWorldProvider;
+import spacecraft.mods.galacticraft.saturn.client.GCSaturnMapPlanet;
+import spacecraft.mods.galacticraft.saturn.dimension.*;
 import micdoodle8.mods.galacticraft.api.world.IGalaxy;
 import micdoodle8.mods.galacticraft.api.world.IMapObject;
 import micdoodle8.mods.galacticraft.api.world.IPlanet;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.world.WorldProvider;
 
-public class GCJupiterPlanet implements IPlanet
+public class GCSaturnPlanet implements IPlanet
 {
-    private final IMapObject Saturn = new GCJupiterMapPlanet();
+    private final IMapObject Saturn = new GCSaturnMapPlanet();
 
     @Override
     public String getName()
@@ -51,7 +51,7 @@ public class GCJupiterPlanet implements IPlanet
     @Override
     public Class<? extends WorldProvider> getWorldProvider()
     {
-        return GCJupiterWorldProvider.class;
+        return GCSaturnWorldProvider.class;
     }
 
     @Override
