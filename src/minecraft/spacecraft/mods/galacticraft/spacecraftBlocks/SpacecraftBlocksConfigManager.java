@@ -57,7 +57,7 @@ public class SpacecraftBlocksConfigManager
     public static int idMercuryStone;
     public static int idMercuryCobblestone;
     public static int idMercuryBrick;
-    public static int idMercuryRedGemOre;
+    public static int idMercuryIridiumOre;
     public static int idMercuryCoalOre;
     public static int idMercuryTinOre;
     public static int idMercuryCopperOre;
@@ -117,7 +117,7 @@ public class SpacecraftBlocksConfigManager
             SpacecraftBlocksConfigManager.idMercuryStone = SpacecraftBlocksConfigManager.configuration.get("Blocks", "Mercury Stone ID", 7029).getInt(7029);
             SpacecraftBlocksConfigManager.idMercuryCobblestone = SpacecraftBlocksConfigManager.configuration.get("Blocks", "Mercury Cobblestone ID", 7030).getInt(7030);
             SpacecraftBlocksConfigManager.idMercuryBrick = SpacecraftBlocksConfigManager.configuration.get("Blocks", "Mercury Brick ID", 7031).getInt(7031);
-            SpacecraftBlocksConfigManager.idMercuryRedGemOre = SpacecraftBlocksConfigManager.configuration.get("Blocks", "Mercury Gem Ore ID", 7032).getInt(7032);
+            SpacecraftBlocksConfigManager.idMercuryIridiumOre = SpacecraftBlocksConfigManager.configuration.get("Blocks", "Mercury Iridium ID", 7032).getInt(7032);
             SpacecraftBlocksConfigManager.idMercuryCoalOre = SpacecraftBlocksConfigManager.configuration.get("Blocks", "Mercury Coal Ore ID", 7033).getInt(7033);
             SpacecraftBlocksConfigManager.idMercuryTinOre = SpacecraftBlocksConfigManager.configuration.get("Blocks", "Mercury Tin Ore ID", 7034).getInt(7034);
             SpacecraftBlocksConfigManager.idMercuryCopperOre = SpacecraftBlocksConfigManager.configuration.get("Blocks", "Mercury Copper Ore ID", 7035).getInt(7035);

@@ -16,7 +16,7 @@ public class GCVenusMapPlanet implements IMapObject
     @Override
     public float getDistanceFromCenter()
     {
-        return 0.8F;
+        return 0.72F;
     }
 
     @Override

@@ -3,7 +3,6 @@ package spacecraft.mods.galacticraft.jupiter.network;
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 
-import spacecraft.mods.galacticraft.jupiter.util.GCJupiterUtil;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityLander;
 import micdoodle8.mods.galacticraft.core.entities.GCCorePlayerMP;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketLanderUpdate;
@@ -91,11 +90,11 @@ public class GCJupiterPacketHandlerServer implements IPacketHandler
         }
         else if (packetType == 1)
         {
-            FMLLog.severe("Galacticraft Venus 2: Received bad packet!");
+            FMLLog.severe("Galacticraft Jupiter: Received bad packet!");
         }
         else if (packetType == 2)
         {
-            FMLLog.severe("Galacticraft Venus 2: Received bad packet!");
+            FMLLog.severe("Galacticraft Jupiter: Received bad packet!");
         }
         else if (packetType == 3)
         {

@@ -21,7 +21,7 @@ public class GCJupiterPlanet implements IPlanet
     @Override
     public boolean isReachable()
     {
-        return false;
+        return true;
     }
 
     @Override

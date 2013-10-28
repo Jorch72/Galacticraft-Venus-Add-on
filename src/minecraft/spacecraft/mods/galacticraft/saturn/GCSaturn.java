@@ -6,7 +6,6 @@ import java.util.HashMap;
 import spacecraft.mods.galacticraft.saturn.dimension.GCSaturnTeleportType;
 import spacecraft.mods.galacticraft.saturn.dimension.GCSaturnWorldProvider;
 import spacecraft.mods.galacticraft.saturn.network.GCSaturnPacketHandlerServer;
-import spacecraft.mods.galacticraft.saturn.recipe.GCSaturnRecipeManager;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -163,7 +162,7 @@ public class GCSaturn
     {
         GCSaturn.proxy.postInit(event);
         GCSaturn.proxy.registerRenderInformation();
-        GCSaturnRecipeManager.loadRecipes();
+//        GCSaturnRecipeManager.loadRecipes();
     }
 
     public void registerGalacticraftCreature(Class<? extends Entity> var0, String var1, int id, int back, int fore)

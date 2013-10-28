@@ -129,7 +129,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 		public final static Block MercuryBrick = new MercuryBlock(716, Material.rock) .setHardness(12.0F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryBrick") .setTextureName("spacecraftmercury:mercuryBrick");
 
 		//Block Mercury Gem Ore
-		public final static Block MercuryRedGemOre = new MercuryOre(720, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryGemOre") .setTextureName("spacecraftmercury:gemOreMercury");
+		public final static Block MercuryIridiumOre = new MercuryOre(720, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryIridiumOre") .setTextureName("spacecraftmercury:iridiumOreMercury");
 
 		//Block Mercury Coal Ore
 		public final static Block MercuryCoalOre = new MercuryOre(722, Material.rock) .setHardness(1.5F).setStepSound(Block.soundStoneFootstep) .setUnlocalizedName("MercuryCoalOre") .setTextureName("spacecraftmercury:coalOreMercury");
@@ -195,7 +195,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 				GameRegistry.registerBlock(MercuryStone, "MercuryStone");
 				GameRegistry.registerBlock(MercuryCobblestone, "MercuryCobblestone");
 				GameRegistry.registerBlock(MercuryBrick, "MercuryBrick");
-				GameRegistry.registerBlock(MercuryRedGemOre, "MercuryRedGemOre");
+				GameRegistry.registerBlock(MercuryIridiumOre, "MercuryIridiumOre");
 				GameRegistry.registerBlock(MercuryCoalOre, "MercuryCoalOre");
 				GameRegistry.registerBlock(MercuryTinOre, "MercuryTinOre");
 				GameRegistry.registerBlock(MercuryCopperOre, "MercuryCopperOre");

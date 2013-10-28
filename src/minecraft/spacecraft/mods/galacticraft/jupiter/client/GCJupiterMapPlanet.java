@@ -16,7 +16,7 @@ public class GCJupiterMapPlanet implements IMapObject
 	@Override
 	public float getDistanceFromCenter() 
 	{
-		return 5.78F;
+		return 5.20F;
 	}
 
 	@Override

@@ -51,20 +51,16 @@ import java.util.Map;
 import spacecraft.mods.galacticraft.jupiter.CommonProxyJupiter;
 import spacecraft.mods.galacticraft.jupiter.GCJupiter;
 import spacecraft.mods.galacticraft.jupiter.GCJupiterConfigManager;
-import spacecraft.mods.galacticraft.jupiter.client.sounds.GCJupiterSounds;
 import spacecraft.mods.galacticraft.jupiter.dimension.GCJupiterWorldProvider;
 
 public class ClientProxyJupiter extends CommonProxyJupiter
 {
-    private static int eggRenderID;
-    private static int treasureRenderID;
-    
     public static ArrayList<SoundPoolEntry> newMusic = new ArrayList<SoundPoolEntry>();
     
     @Override
     public void preInit(FMLPreInitializationEvent event)
     {
-        MinecraftForge.EVENT_BUS.register(new GCJupiterSounds());
+//        MinecraftForge.EVENT_BUS.register(new GCJupiterSounds());
     }
     
     @Override
@@ -72,26 +68,12 @@ public class ClientProxyJupiter extends CommonProxyJupiter
     {
         TickRegistry.registerTickHandler(new TickHandlerClient(), Side.CLIENT);
         NetworkRegistry.instance().registerChannel(new ClientPacketHandler(), GCJupiter.CHANNEL, Side.CLIENT);
-        ClientProxyJupiter.eggRenderID = RenderingRegistry.getNextAvailableRenderId();
     }
 
     @Override
     public void registerRenderInformation()
     {
         RenderingRegistry.addNewArmourRendererPrefix("gem");
-    }
-
-
-    @Override
-    public int getEggRenderID()
-    {
-        return ClientProxyJupiter.eggRenderID;
-    }
-
-    @Override
-    public int getTreasureRenderID()
-    {
-        return ClientProxyJupiter.treasureRenderID;
     }
 
 

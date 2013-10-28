@@ -16,7 +16,7 @@ public class GCPlutoMapPlanet implements IMapObject
 	@Override
 	public float getDistanceFromCenter() 
 	{
-		return 7.78F;
+		return 39.5F;
 	}
 
 	@Override

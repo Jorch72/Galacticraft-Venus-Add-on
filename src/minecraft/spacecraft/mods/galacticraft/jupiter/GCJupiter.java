@@ -6,7 +6,6 @@ import java.util.HashMap;
 import spacecraft.mods.galacticraft.jupiter.dimension.GCJupiterTeleportType;
 import spacecraft.mods.galacticraft.jupiter.dimension.GCJupiterWorldProvider;
 import spacecraft.mods.galacticraft.jupiter.network.GCJupiterPacketHandlerServer;
-import spacecraft.mods.galacticraft.jupiter.recipe.GCJupiterRecipeManager;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -163,7 +162,7 @@ public class GCJupiter
     {
         GCJupiter.proxy.postInit(event);
         GCJupiter.proxy.registerRenderInformation();
-        GCJupiterRecipeManager.loadRecipes();
+//        GCJupiterRecipeManager.loadRecipes();
     }
 
     public void registerGalacticraftCreature(Class<? extends Entity> var0, String var1, int id, int back, int fore)

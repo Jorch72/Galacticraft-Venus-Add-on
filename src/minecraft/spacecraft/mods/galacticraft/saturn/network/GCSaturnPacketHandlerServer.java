@@ -3,7 +3,6 @@ package spacecraft.mods.galacticraft.saturn.network;
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 
-import spacecraft.mods.galacticraft.jupiter.util.GCJupiterUtil;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityLander;
 import micdoodle8.mods.galacticraft.core.entities.GCCorePlayerMP;
 import micdoodle8.mods.galacticraft.core.network.GCCorePacketLanderUpdate;

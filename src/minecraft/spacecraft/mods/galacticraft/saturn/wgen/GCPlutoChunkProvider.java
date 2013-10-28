@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import spacecraft.mods.galacticraft.jupiter.GCJupiter;
-import spacecraft.mods.galacticraft.jupiter.GCJupiterConfigManager;
-import spacecraft.mods.galacticraft.jupiter.wgen.dungeon.*;
+import spacecraft.mods.galacticraft.saturn.GCSaturnConfigManager;
 import spacecraft.mods.galacticraft.spacecraftBlocks.SpacecraftBlocks;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityCreeper;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntitySkeleton;
@@ -52,19 +50,6 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
     private final GCCoreMapGenDungeon dungeonGenerator = new GCCoreMapGenDungeon(SpacecraftBlocks.JupiterHeavyGas.blockID, 14, 8, 16, 3);
     //Need to make Jupiter Brick
     {
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomEmpty(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomSpawner(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomChests(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.otherRooms.add(new GCPlutoRoomChests(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.bossRooms.add(new GCPlutoRoomBoss(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-        this.dungeonGenerator.treasureRooms.add(new GCPlutoRoomTreasure(null, 0, 0, 0, ForgeDirection.UNKNOWN));
     }
 
     private BiomeGenBase[] biomesForGeneration = { GCPlutoBiomeGenBase.venusFlat };
@@ -225,7 +210,7 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
         final Chunk var4 = new Chunk(this.worldObj, ids, meta, par1, par2);
 
          if (!var4.isTerrainPopulated &&
-         GCJupiterConfigManager.generateOtherMods)
+         GCSaturnConfigManager.generateOtherMods)
          {
          var4.isTerrainPopulated = true;
          }
@@ -306,7 +291,7 @@ public class GCPlutoChunkProvider extends ChunkProviderGenerate
     @Override
     public String makeString()
     {
-        return GCJupiterConfigManager.generateOtherMods ? "RandomLevelSource" : "VenusLevelSource";
+        return GCSaturnConfigManager.generateOtherMods ? "RandomLevelSource" : "VenusLevelSource";
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })

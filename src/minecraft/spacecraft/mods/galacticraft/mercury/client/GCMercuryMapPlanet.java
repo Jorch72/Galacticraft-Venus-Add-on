@@ -16,7 +16,7 @@ public class GCMercuryMapPlanet implements IMapObject
 	@Override
 	public float getDistanceFromCenter() 
 	{
-		return 0.6F;
+		return 0.38F;
 	}
 
 	@Override

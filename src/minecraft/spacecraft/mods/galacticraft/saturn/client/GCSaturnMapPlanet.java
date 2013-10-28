@@ -16,7 +16,7 @@ public class GCSaturnMapPlanet implements IMapObject
 	@Override
 	public float getDistanceFromCenter() 
 	{
-		return 5.78F;
+		return 9.54F;
 	}
 
 	@Override

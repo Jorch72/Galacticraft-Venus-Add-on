@@ -30,31 +30,6 @@ public class CommonProxyJupiter implements IGuiHandler
 
     }
 
-    public int getVineRenderID()
-    {
-        return -1;
-    }
-
-    public int getEggRenderID()
-    {
-        return -1;
-    }
-
-    public int getTreasureRenderID()
-    {
-        return -1;
-    }
-
-    public int getMachineRenderID()
-    {
-        return -1;
-    }
-
-    public int getTintedGlassPaneRenderID()
-    {
-        return -1;
-    }
-
     public void spawnParticle(String var1, double var2, double var4, double var6)
     {
         ;

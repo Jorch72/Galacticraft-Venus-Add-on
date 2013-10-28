@@ -50,7 +50,6 @@ import java.util.Map;
 
 import spacecraft.mods.galacticraft.saturn.CommonProxySaturn;
 import spacecraft.mods.galacticraft.saturn.GCSaturn;
-import spacecraft.mods.galacticraft.saturn.client.sounds.GCSaturnSounds;
 import spacecraft.mods.galacticraft.saturn.dimension.GCSaturnWorldProvider;
 
 public class ClientProxySaturn extends CommonProxySaturn
@@ -63,7 +62,7 @@ public class ClientProxySaturn extends CommonProxySaturn
     @Override
     public void preInit(FMLPreInitializationEvent event)
     {
-        MinecraftForge.EVENT_BUS.register(new GCSaturnSounds());
+//        MinecraftForge.EVENT_BUS.register(new GCSaturnSounds());
     }
     
     @Override
