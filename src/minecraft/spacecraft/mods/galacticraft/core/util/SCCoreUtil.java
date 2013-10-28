@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.inventory.GCCoreContainerParachest;
 import micdoodle8.mods.galacticraft.core.inventory.GCCoreContainerRocketRefill;
-import micdoodle8.mods.galacticraft.core.network.GCCorePacketHandlerClient.EnumClientPacket;
 import micdoodle8.mods.galacticraft.core.recipe.GCCoreNasaWorkbenchRecipe;
 import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.entity.player.EntityPlayerMP;

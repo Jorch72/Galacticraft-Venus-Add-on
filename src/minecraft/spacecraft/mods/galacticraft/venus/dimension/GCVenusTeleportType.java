@@ -6,10 +6,10 @@ import micdoodle8.mods.galacticraft.api.vector.Vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.ITeleportType;
 import micdoodle8.mods.galacticraft.core.GCCoreConfigManager;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.entities.GCCorePlayerMP;
-import micdoodle8.mods.galacticraft.core.network.GCCorePacketHandlerClient.EnumClientPacket;
-import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import micdoodle8.mods.galacticraft.core.entities.GCCoreEntityLander;
+import micdoodle8.mods.galacticraft.core.entities.GCCorePlayerMP;
+import micdoodle8.mods.galacticraft.core.network.GCCorePacketHandlerClient.EnumPacketClient;
+import micdoodle8.mods.galacticraft.core.util.PacketUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.world.World;
@@ -47,9 +47,9 @@ public class GCVenusTeleportType implements ITeleportType
     }
 
     @Override
-    public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player)
+    public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player, boolean ridingAutoRocket)
     {
-        if (player instanceof GCCorePlayerMP && ((GCCorePlayerMP) player).getTeleportCooldown() <= 0)
+        if (!ridingAutoRocket && player instanceof GCCorePlayerMP && ((GCCorePlayerMP) player).getTeleportCooldown() <= 0)
         {
             final GCCorePlayerMP gcPlayer = (GCCorePlayerMP) player;
 
@@ -67,7 +67,7 @@ public class GCVenusTeleportType implements ITeleportType
             }
 
             final Object[] toSend2 = { 1 };
-            gcPlayer.playerNetServerHandler.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftCore.CHANNEL, EnumClientPacket.ZOOM_CAMERA, toSend2));
+            gcPlayer.playerNetServerHandler.sendPacketToPlayer(PacketUtil.createPacket(GalacticraftCore.CHANNEL, EnumPacketClient.ZOOM_CAMERA, toSend2));
 
             gcPlayer.setTeleportCooldown(10);
         }

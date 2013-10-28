@@ -5,8 +5,11 @@ import java.util.List;
 import spacecraft.mods.galacticraft.core.SpacecraftCore;
 import spacecraft.mods.galacticraft.core.entities.SCCoreEntityRocketT3;
 import mekanism.api.EnumColor;
+import micdoodle8.mods.galacticraft.api.entity.IRocketType;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
 import micdoodle8.mods.galacticraft.api.item.IHoldableItem;
+import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
+import micdoodle8.mods.galacticraft.api.prefab.entity.EntityTieredRocket;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.blocks.GCCoreBlocks;
 import micdoodle8.mods.galacticraft.core.client.ClientProxyCore;
@@ -64,44 +67,45 @@ public class SCCoreItemSpaceshipTier3 extends Item implements IHoldableItem
                 for (int j = -1; j < 2; j++)
                 {
                     final int id = par3World.getBlockId(par4 + i, par5, par6 + j);
-                    final int id2 = par3World.getBlockId(par4 + i, par5 + 1, par6 + j);
 
-                    if (id == GCCoreBlocks.landingPad.blockID || id == GCCoreBlocks.landingPadFull.blockID || id2 == GCCoreBlocks.landingPadFull.blockID)
+                    if (id == GCCoreBlocks.landingPadFull.blockID)
                     {
-                        amountOfCorrectBlocks++;
+                        amountOfCorrectBlocks = 9;
 
                         centerX = par4 + i + 0.5F;
                         centerY = par5 - 2.2F;
                         centerZ = par6 + j + 0.5F;
-
-                        if (id == GCCoreBlocks.landingPadFull.blockID || id2 == GCCoreBlocks.landingPadFull.blockID)
-                        {
-                            amountOfCorrectBlocks = 9;
-                        }
-
-                        if (id2 == GCCoreBlocks.landingPadFull.blockID)
-                        {
-                            centerX = par4 + i + 0.5F;
-                            centerY = par5 + 1 - 2.2F;
-                            centerZ = par6 + j + 0.5F;
-                        }
                     }
                 }
             }
 
             if (amountOfCorrectBlocks == 9)
             {
-                final SCCoreEntityRocketT3 spaceship = new SCCoreEntityRocketT3(par3World, centerX, centerY + 0.2D, centerZ, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
+                EntitySpaceshipBase rocket = null;
 
-                par3World.spawnEntityInWorld(spaceship);
-                if (!par2EntityPlayer.capabilities.isCreativeMode)
+                if (par1ItemStack.getItemDamage() < 10)
                 {
-                    par2EntityPlayer.inventory.consumeInventoryItem(par1ItemStack.getItem().itemID);
+                    rocket = new SCCoreEntityRocketT3(par3World, centerX, centerY + 4.2D, centerZ, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
                 }
 
-                if (spaceship.rocketType.getPreFueled())
+                par3World.spawnEntityInWorld(rocket);
+
+                if (!par2EntityPlayer.capabilities.isCreativeMode)
                 {
-                    spaceship.spaceshipFuelTank.fill(new FluidStack(GalacticraftCore.fluidFuel, spaceship.getFuelTankCapacity()), true);
+                    par1ItemStack.stackSize--;
+
+                    if (par1ItemStack.stackSize <= 0)
+                    {
+                        par1ItemStack = null;
+                    }
+                }
+
+                if (rocket instanceof IRocketType && ((IRocketType) rocket).getType().getPreFueled())
+                {
+                    if (rocket instanceof EntityTieredRocket)
+                    {
+                        ((EntityTieredRocket) rocket).fuelTank.fill(new FluidStack(GalacticraftCore.fluidFuel, rocket.getMaxFuel()), true);
+                    }
                 }
             }
             else
@@ -120,6 +124,11 @@ public class SCCoreItemSpaceshipTier3 extends Item implements IHoldableItem
         {
             par3List.add(new ItemStack(par1, 1, i));
         }
+
+        for (int i = 11; i < 10 + EnumRocketType.values().length - 1; i++)
+        {
+            par3List.add(new ItemStack(par1, 1, i));
+        }
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -127,7 +136,16 @@ public class SCCoreItemSpaceshipTier3 extends Item implements IHoldableItem
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack par1ItemStack, EntityPlayer player, List par2List, boolean b)
     {
-        EnumRocketType type = EnumRocketType.values()[par1ItemStack.getItemDamage()];
+        EnumRocketType type = null;
+
+        if (par1ItemStack.getItemDamage() < 10)
+        {
+            type = EnumRocketType.values()[par1ItemStack.getItemDamage()];
+        }
+        else
+        {
+            type = EnumRocketType.values()[par1ItemStack.getItemDamage() - 10];
+        }
 
         if (!type.getTooltip().isEmpty())
         {
@@ -138,6 +156,13 @@ public class SCCoreItemSpaceshipTier3 extends Item implements IHoldableItem
         {
             par2List.add(EnumColor.RED + "\u00a7o" + "Creative Only");
         }
+
+    }
+
+    @Override
+    public String getUnlocalizedName(ItemStack par1ItemStack)
+    {
+        return super.getUnlocalizedName(par1ItemStack) + (par1ItemStack.getItemDamage() < 10 ? ".t2Rocket" : ".cargoRocket");
     }
 
     @Override
